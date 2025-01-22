@@ -7,9 +7,9 @@ import Header from '@/component/header';
 export default function Page() {
   return (
     <div className="bg-gray-900">
+       <Header/>
       <ContactForm />
       <Footer />
-     <Header/>
     </div>
   );
 }
