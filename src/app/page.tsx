@@ -1,8 +1,13 @@
+'use client';
+import React from 'react';
+import ContactForm from '@/component/contactForm';
+import Footer from '@/component/footer';
 
-
-export default function Home() {
+export default function Page() {
   return (
-    <h1>Hello</h1>
+    <div className="bg-gray-900">
+      <ContactForm />
+      <Footer />
+    </div>
   );
 }
-                                
