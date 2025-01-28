@@ -15,19 +15,19 @@ const menuData: Menu[] = [
   },
   {
     id: 33,
-    title: "Blog",
+    title: "Contact",
     path: "/blog",
     newTab: false,
   },
   {
     id: 3,
-    title: "Support",
+    title: "Careers",
     path: "/contact",
     newTab: false,
   },
   {
     id: 4,
-    title: "Pages",
+    title: "Services",
     newTab: false,
     submenu: [
       {
@@ -60,18 +60,18 @@ const menuData: Menu[] = [
         path: "/blog-details",
         newTab: false,
       },
-      {
-        id: 46,
-        title: "Sign In Page",
-        path: "/signin",
-        newTab: false,
-      },
-      {
-        id: 47,
-        title: "Sign Up Page",
-        path: "/signup",
-        newTab: false,
-      },
+      // {
+      //   id: 46,
+      //   title: "Sign In Page",
+      //   path: "/signin",
+      //   newTab: false,
+      // },
+      // {
+      //   id: 47,
+      //   title: "Sign Up Page",
+      //   path: "/signup",
+      //   newTab: false,
+      // },
       {
         id: 48,
         title: "Error Page",
