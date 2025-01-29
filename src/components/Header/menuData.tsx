@@ -14,31 +14,31 @@ const menuData: Menu[] = [
     submenu: [
       {
         id: 41,
-        title: "About Page",
+        title: "Full Stack Development",
         path: "/about",
         newTab: false,
       },
       {
         id: 42,
-        title: "Contact Page",
+        title: "UI/UX Design",
         path: "/contact",
         newTab: false,
       },
       {
         id: 43,
-        title: "Blog Grid Page",
+        title: "Mean/Mern Stack Development",
         path: "/blog",
         newTab: false,
       },
       {
         id: 44,
-        title: "Blog Sidebar Page",
+        title: "QA Testing",
         path: "/blog-sidebar",
         newTab: false,
       },
       {
         id: 45,
-        title: "Blog Details Page",
+        title: "Cloud Services",
         path: "/blog-details",
         newTab: false,
       },
@@ -77,7 +77,7 @@ const menuData: Menu[] = [
   {
     id: 33,
     title: "Contact",
-    path: "/blog",
+    path: "/contact",
     newTab: false,
   },
 
