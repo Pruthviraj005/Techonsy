@@ -5,7 +5,8 @@ const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    message: ""
+    message: "",
+    mobileno: ""
   });
 
   const handleSubmit = (e) => {
@@ -75,6 +76,23 @@ const Contact = () => {
                           value={formData.email}
                           onChange={(e) => setFormData({...formData, email: e.target.value})}
                           placeholder="Enter your email"
+                          className="w-full rounded-lg border border-transparent bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary focus:shadow-input dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none transition-all duration-300"
+                          required
+                        />
+                      </div>
+                      <div>
+                        <label
+                          htmlFor="mobileno"
+                          className="mb-3 block text-sm font-medium text-dark dark:text-white"
+                        >
+                          Your Mobile No
+                        </label>
+                        <input
+                          type="number"
+                          id="mobileno"
+                          value={formData.mobileno}
+                          onChange={(e) => setFormData({...formData, mobileno: e.target.value})}
+                          placeholder="Enter your Mobile No."
                           className="w-full rounded-lg border border-transparent bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary focus:shadow-input dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none transition-all duration-300"
                           required
                         />
