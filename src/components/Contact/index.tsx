@@ -62,24 +62,7 @@ const Contact = () => {
                         />
                       </div>
 
-                      {/* Email Input */}
-                      <div>
-                        <label
-                          htmlFor="email"
-                          className="mb-3 block text-sm font-medium text-dark dark:text-white"
-                        >
-                          Your Email
-                        </label>
-                        <input
-                          type="email"
-                          id="email"
-                          value={formData.email}
-                          onChange={(e) => setFormData({...formData, email: e.target.value})}
-                          placeholder="Enter your email"
-                          className="w-full rounded-lg border border-transparent bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary focus:shadow-input dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none transition-all duration-300"
-                          required
-                        />
-                      </div>
+                     
                       <div>
                         <label
                           htmlFor="mobileno"
@@ -98,6 +81,25 @@ const Contact = () => {
                         />
                       </div>
                     </div>
+                       {/* Email Input */}
+                       <div>
+                        <label
+                          htmlFor="email"
+                          className="mb-3 block text-sm font-medium text-dark dark:text-white"
+                        >
+                          Your Email
+                        </label>
+                        <input
+                          type="email"
+                          id="email"
+                          value={formData.email}
+                          onChange={(e) => setFormData({...formData, email: e.target.value})}
+                          placeholder="Enter your email"
+                          className="w-full rounded-lg border border-transparent bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary focus:shadow-input dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none transition-all duration-300"
+                          required
+                        />
+                      </div>
+                    
 
                     {/* Message Input */}
                     <div>
