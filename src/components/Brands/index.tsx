@@ -1,20 +1,46 @@
+"use client";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/autoplay";
 import { Brand } from "@/types/brand";
-import Image from "next/image";
 import brandsData from "./brandsData";
+import Image from "next/image";
 
 const Brands = () => {
   return (
     <section className="pt-16">
-      <div className="container">
-        <div className="-mx-4 flex flex-wrap">
-          <div className="w-full px-4">
-            <div className="flex flex-wrap items-center justify-center rounded-sm bg-gray-light px-8 py-8 dark:bg-gray-dark sm:px-10 md:px-[50px] md:py-[40px] xl:p-[50px] 2xl:px-[70px] 2xl:py-[60px]">
-              {brandsData.map((brand) => (
-                <SingleBrand key={brand.id} brand={brand} />
-              ))}
-            </div>
-          </div>
-        </div>
+      <div className="container text-center">
+        {/* ✅ Heading Section */}
+        <h2 className="text-5xl font-bold text-gray-900 dark:text-white mb-8">
+          Our <span className="text-yellow-500">Clients</span>
+        </h2>
+
+        {/* ✅ Swiper Carousel */}
+        <Swiper
+          modules={[Autoplay]}
+          spaceBetween={30}
+          slidesPerView={5}
+          loop={true}
+          autoplay={{
+            delay: 0,
+            disableOnInteraction: false,
+          }}
+          speed={5000} 
+          breakpoints={{
+            640: { slidesPerView: 2 },
+            768: { slidesPerView: 3 },
+            1024: { slidesPerView: 5 },
+          }}
+          className="w-full"
+        >
+          {brandsData.map((brand) => (
+            <SwiperSlide key={brand.id}>
+              <SingleBrand brand={brand} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
     </section>
   );
@@ -26,15 +52,22 @@ const SingleBrand = ({ brand }: { brand: Brand }) => {
   const { href, image, imageLight, name } = brand;
 
   return (
-    <div className="flex w-1/2 items-center justify-center px-3 py-[15px] sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6">
-      <a
-        href={href}
-        target="_blank"
-        rel="nofollow noreferrer"
-        className="relative h-10 w-full opacity-70 transition hover:opacity-100 dark:opacity-60 dark:hover:opacity-100"
-      >
-        <Image src={imageLight} alt={name} fill className="hidden dark:block" />
-        <Image src={image} alt={name} fill className="block dark:hidden" />
+    <div className="flex items-center justify-center px-3 py-[15px]">
+      <a href={href} target="_blank" rel="nofollow noreferrer">
+        <Image
+          src={image}
+          alt={name}
+          width={150}
+          height={50}
+          className="dark:hidden"
+        />
+        <Image
+          src={imageLight}
+          alt={name}
+          width={150}
+          height={50}
+          className="hidden dark:block"
+        />
       </a>
     </div>
   );
