@@ -1,10 +1,10 @@
-// pages/technology/[slug].js
+// pages/technology
 import React from 'react';
 import { useRouter } from 'next/router';
 
 const Technology = () => {
   const router = useRouter();
-  const { slug } = router.query;
+//   const { slug } = router.query;
 
   return (
     <div>
