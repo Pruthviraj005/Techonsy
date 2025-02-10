@@ -129,7 +129,7 @@ const Header = () => {
             </div>
           )}
           {openSubmenu === item.id && !isMobileMenuOpen && item.title === "Technology" && (  // Desktop Submenu for Technology
-            <div className="lg:absolute left-1/2 -translate-x-1/2 w-screen bg-black shadow-lg py-4">
+            <div className="lg:absolute left-1/2 -translate-x-1/2 w-[700px] bg-black shadow-lg py-4">
               <div className="container mx-auto">
                 {renderDesktopSubmenuTechnology(item.submenu)}
               </div>
