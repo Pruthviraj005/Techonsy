@@ -141,13 +141,13 @@ const menuData: Menu[] = [
         path: "/",
         newTab: false,
         submenu: [
-          { id: 511, title: "HTML5", path: "/Header/technology", newTab: true },
-          { id: 512, title: "CSS3", path: "/", newTab: true},
-          { id: 513, title: "JavaScript", path: "/", newTab: true },
-          { id: 514, title: "jQuery", path: "/", newTab: true },
-          { id: 515, title: "Bootstrap", path: "/", newTab: true },
-          { id: 516, title: "ReactJS", path: "/", newTab: true },
-          { id: 517, title: "Angular", path: "/", newTab: true }
+          { id: 511, title: "HTML5", path: "/", newTab: false },
+          { id: 512, title: "CSS3", path: "/", newTab: false},
+          { id: 513, title: "JavaScript", path: "/", newTab: false },
+          { id: 514, title: "jQuery", path: "/", newTab: false },
+          { id: 515, title: "Bootstrap", path: "/", newTab: false },
+          { id: 516, title: "ReactJS", path: "/", newTab: false },
+          { id: 517, title: "Angular", path: "/", newTab:false}
         ]
       },
       {
