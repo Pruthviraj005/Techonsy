@@ -10,7 +10,7 @@ const menuData: Menu[] = [
   {
     id: 4,
     title: "Services",
-    path: "/",
+    path: "/services",
     newTab: false,
     submenu: [
       {
@@ -22,7 +22,7 @@ const menuData: Menu[] = [
           {
             id: 411,
             title: "Mobile App Development",
-            path: "/",
+            path: "/services/development/MobileApp",
             newTab: false
           },
           {
