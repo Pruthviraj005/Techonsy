@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -8,6 +8,27 @@ const Contact = () => {
     message: "",
     mobileno: ""
   });
+
+  const textareaRef = useRef<HTMLTextAreaElement>(null);
+
+  useEffect(() => {
+    const adjustTextareaHeight = () => {
+      if (textareaRef.current) {
+        textareaRef.current.style.height = "auto";
+        textareaRef.current.style.height = `${textareaRef.current.scrollHeight}px`;
+      }
+    };
+
+    adjustTextareaHeight(); // Adjust on initial load
+
+    // Set up event listener for input changes
+    textareaRef.current?.addEventListener('input', adjustTextareaHeight);
+
+    // Clean up event listener on component unmount
+    return () => {
+      textareaRef.current?.removeEventListener('input', adjustTextareaHeight);
+    };
+  }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -111,12 +132,14 @@ const Contact = () => {
                       </label>
                       <textarea
                         id="message"
+                        ref={textareaRef}
                         value={formData.message}
                         onChange={(e) => setFormData({...formData, message: e.target.value})}
-                        rows={6}
+                        rows={0} 
                         placeholder="Enter your message"
                         className="w-full rounded-lg border border-transparent bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary focus:shadow-input dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none transition-all duration-300 resize-none"
                         required
+                        style={{ height: '1.2rem', overflow: 'hidden' }}
                       ></textarea>
                     </div>
 
