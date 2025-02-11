@@ -261,7 +261,7 @@ const menuData: Menu[] = [
   {
     id: 3,
     title: "Hire Talent",
-    path: "/",
+    path: "/hire",
     newTab: false
   },
   {
