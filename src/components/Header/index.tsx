@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import ThemeToggler from "./ThemeToggler";
 import menuData from './menuData';
@@ -10,9 +10,20 @@ import { Menu } from "@/types/menu";
 const Header = () => {
   const [openSubmenu, setOpenSubmenu] = useState<number | null>(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [dropdownPosition, setDropdownPosition] = useState<'left' | 'right'>('left');
+  const technologyDropdownRef = useRef<HTMLDivElement>(null);
+  const servicesDropdownRef = useRef<HTMLDivElement>(null);
+  const mobileMenuRef = useRef<HTMLDivElement>(null);
+  const [activeHireTalentCategory, setActiveHireTalentCategory] = useState<number | null>(null); // Track active category
+  const hireTalentDropdownRef = useRef<HTMLDivElement>(null);
+  const [hireTalentDropdownPosition, setHireTalentDropdownPosition] = useState<'left' | 'right'>('left');
+  const [activeMobileSubmenu, setActiveMobileSubmenu] = useState<number | null>(null);
 
   const handleSubmenu = (menuId: number) => {
     setOpenSubmenu(openSubmenu === menuId ? null : menuId);
+    if (menuId === 6) { // 6 is the id for Hire Talent
+      setActiveHireTalentCategory(menuData.find(item => item.id === 6)?.submenu?.[0]?.id || null); // Open first category by default
+    }
   };
 
   const toggleMobileMenu = () => {
@@ -27,6 +38,110 @@ const Header = () => {
     setOpenSubmenu(null);
   };
 
+  // Determine if the technology dropdown should be positioned to the left or right
+  useEffect(() => {
+    const checkDropdownPosition = () => {
+      if (technologyDropdownRef.current) {
+        const rect = technologyDropdownRef.current.getBoundingClientRect();
+        const windowWidth = window.innerWidth;
+
+        if (rect.right > windowWidth) {
+          setDropdownPosition('right');
+        } else {
+          setDropdownPosition('left');
+        }
+      }
+    };
+
+    // Initial check and re-check on window resize
+    checkDropdownPosition();
+    window.addEventListener('resize', checkDropdownPosition);
+
+    return () => {
+      window.removeEventListener('resize', checkDropdownPosition);
+    };
+  }, [openSubmenu]);
+
+    // Determine if the hireTalent dropdown should be positioned to the left or right
+  useEffect(() => {
+    const checkHireTalentDropdownPosition = () => {
+      if (hireTalentDropdownRef.current) {
+        const rect = hireTalentDropdownRef.current.getBoundingClientRect();
+        const windowWidth = window.innerWidth;
+
+        if (rect.right > windowWidth) {
+          setHireTalentDropdownPosition('right');
+        } else {
+          setHireTalentDropdownPosition('left');
+        }
+      }
+    };
+
+    // Initial check and re-check on window resize
+    checkHireTalentDropdownPosition();
+    window.addEventListener('resize', checkHireTalentDropdownPosition);
+
+    return () => {
+      window.removeEventListener('resize', checkHireTalentDropdownPosition);
+    };
+  }, [openSubmenu]);
+
+  // Close Technology dropdown on outside click (Desktop)
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (!isMobileMenuOpen && openSubmenu !== null && technologyDropdownRef.current && !technologyDropdownRef.current.contains(event.target as Node)) {
+        setOpenSubmenu(null);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [technologyDropdownRef, openSubmenu, isMobileMenuOpen]);
+
+  // Close Services dropdown on outside click (Desktop)
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (!isMobileMenuOpen && openSubmenu !== null && servicesDropdownRef.current && !servicesDropdownRef.current.contains(event.target as Node)) {
+        setOpenSubmenu(null);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [servicesDropdownRef, openSubmenu, isMobileMenuOpen]);
+
+     // Close Hire Talent dropdown on outside click (Desktop)
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (!isMobileMenuOpen && openSubmenu !== null && hireTalentDropdownRef.current && !hireTalentDropdownRef.current.contains(event.target as Node)) {
+        setOpenSubmenu(null);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [hireTalentDropdownRef, openSubmenu, isMobileMenuOpen]);
+
+  //Close Mobile Menu and Submenus on outside click
+  useEffect(() => {
+    const handleClickOutsideMobile = (event: MouseEvent) => {
+      if (isMobileMenuOpen && mobileMenuRef.current && !mobileMenuRef.current.contains(event.target as Node)) {
+        closeMobileMenu();
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutsideMobile);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutsideMobile);
+    };
+  }, [isMobileMenuOpen]);
+
   const renderDesktopSubmenuServices = (submenu: Menu[]) => (
     <div className="grid grid-cols-3 gap-6 px-6">
       {submenu.map((category) => (
@@ -38,7 +153,7 @@ const Header = () => {
                 <li key={item.id}>
                   <Link
                     href={item.path || '#'}
-                    className="block text-gray-300 hover:text-red-500 text-sm py-1"
+                    className="block text-gray-300 hover:text-sky-500 text-sm py-1"
                     target={item.newTab ? "_blank" : undefined}
                   >
                     {item.title}
@@ -53,17 +168,17 @@ const Header = () => {
   );
 
   const renderDesktopSubmenuTechnology = (submenu: Menu[]) => (
-    <div className="grid grid-cols-5 gap-6 px-6">
+    <div className="grid grid-cols-5 gap-4 px-4"> {/* Reduced gap and padding */}
       {submenu.map((category) => (
-        <div key={category.id} className="space-y-3">
-          <h3 className="text-white font-semibold mb-2">{category.title}</h3>
+        <div key={category.id} className="space-y-2"> {/* Reduced space-y */}
+          <h3 className="text-white font-semibold mb-1 text-sm">{category.title}</h3>  {/* Reduced font size and margin */}
           {category.submenu && (
-            <ul className="space-y-2">
+            <ul className="space-y-1"> {/* Reduced space-y */}
               {category.submenu.map((item) => (
                 <li key={item.id}>
                   <Link
                     href={item.path || '#'}
-                    className="block text-gray-300 hover:text-red-500 text-sm py-1"
+                    className="block text-gray-300 hover:text-sky-500 text-xs py-0.5"  /* Reduced font size and padding */
                     target={item.newTab ? "_blank" : undefined}
                   >
                     {item.title}
@@ -77,18 +192,75 @@ const Header = () => {
     </div>
   );
 
+  const renderDesktopSubmenuHireTalent = (submenu: Menu[]) => {
+    if (!submenu) return null;
+
+    const activeCategory = submenu.find(cat => cat.id === activeHireTalentCategory);
+
+    return (
+      <div className="flex">
+        {/* Left Column: Category List */}
+        <div className="w-1/4 bg-gray-800 p-4">
+          <ul>
+            {submenu.map((category) => (
+              <li
+                key={category.id}
+                className={`text-white hover:text-sky-500 py-2 cursor-pointer ${activeHireTalentCategory === category.id ? 'text-sky-500' : ''}`}
+                onClick={() => setActiveHireTalentCategory(category.id)}
+              >
+                {category.title}
+              </li>
+            ))}
+          </ul>
+        </div>... {/* Right Column: Category Content */}
+        <div className="w-3/4 bg-gray-900 p-6 text-white">
+          {activeCategory && (
+            <>
+              <h3 className="text-2xl font-semibold mb-4">{activeCategory.content}</h3>
+              <p className="mb-4">Experience smooth navigation and user-friendly designs with our front-end expertise.</p>
+              <Link href={activeCategory.buttonLink || "#"} className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded inline-block">
+                {activeCategory.buttonText}
+              </Link>
+              {activeCategory.submenu && (
+                <ul className="mt-4">
+                  {activeCategory.submenu.map((item) => (
+                    <li key={item.id} className="py-1">
+                      <Link
+                        href={item.path || "#"}
+                        className="text-gray-300 hover:text-sky-500 block"
+                      >
+                        {item.title}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </>
+          )}
+        </div>
+      </div>
+    );
+  };
+
   const renderMobileSubmenu = (submenu: Menu[]) => (
-    <div className="flex flex-col space-y-4 overflow-y-auto max-h-[400px]"> {/* Adjust max-h as needed */}
+    <div className="flex flex-col space-y-4 overflow-y-auto max-h-[400px]">
       {submenu.map((category) => (
         <div key={category.id} className="space-y-3">
-          <h3 className="text-white font-semibold mb-2">{category.title}</h3>
+          <h3
+            className="text-white font-semibold mb-2 cursor-pointer"
+            onClick={() =>
+              setActiveMobileSubmenu(activeMobileSubmenu === category.id ? null : category.id)
+            }
+          >
+            {category.title}
+          </h3>
           {category.submenu && (
-            <ul className="space-y-2">
+            <ul className={`${activeMobileSubmenu === category.id ? 'block' : 'hidden'} space-y-2`}>
               {category.submenu.map((item) => (
                 <li key={item.id}>
                   <Link
                     href={item.path || '#'}
-                    className="block text-gray-300 hover:text-red-500 text-sm py-1"
+                    className="block text-gray-300 hover:text-sky-500 text-sm py-1"
                     target={item.newTab ? "_blank" : undefined}
                     onClick={closeMobileMenu}
                   >
@@ -105,11 +277,12 @@ const Header = () => {
 
   const renderMenuItem = (item: Menu) => (
     <div key={item.id} className="relative">
+     <li className="mr-4">
       {item.submenu ? (
         <div>
           <button
             onClick={() => handleSubmenu(item.id)}
-            className="flex items-center text-white hover:text-red-500 font-medium text-base py-2"
+            className="flex items-center text-white font-medium text-base py-2 hover:text-sky-500"
           >
             {item.title}
             <svg
@@ -122,16 +295,41 @@ const Header = () => {
             </svg>
           </button>
           {openSubmenu === item.id && !isMobileMenuOpen && item.title === "Services" && (  // Desktop Submenu for Services
-            <div className="lg:absolute left-0 w-[600px] bg-black shadow-lg py-4">
+            <div className="lg:absolute left-0 w-[600px] bg-black shadow-lg py-4" ref={servicesDropdownRef}>
               <div className="container mx-auto">
                 {renderDesktopSubmenuServices(item.submenu)}
               </div>
             </div>
           )}
           {openSubmenu === item.id && !isMobileMenuOpen && item.title === "Technology" && (  // Desktop Submenu for Technology
-            <div className="lg:absolute left-1/2 -translate-x-1/2 w-[700px] bg-black shadow-lg py-4">
+            <div
+              className={`lg:absolute bg-black shadow-lg py-4`}
+              style={{
+                left: dropdownPosition === 'left' ? '50%' : 'auto',
+                right: dropdownPosition === 'right' ? '0' : 'auto',
+                transform: dropdownPosition === 'left' ? 'translateX(-50%)' : 'none',
+                width: '700px',
+              }}
+              ref={technologyDropdownRef}
+            >
               <div className="container mx-auto">
                 {renderDesktopSubmenuTechnology(item.submenu)}
+              </div>
+            </div>
+          )}
+           {openSubmenu === item.id && !isMobileMenuOpen && item.title === "Hire Talent" && (  // Desktop Submenu for Hire Talent
+            <div
+              className={`lg:absolute bg-black shadow-lg py-4`}
+              style={{
+                left: hireTalentDropdownPosition === 'left' ? '50%' : 'auto',
+                right: hireTalentDropdownPosition === 'right' ? '0' : 'auto',
+                transform: hireTalentDropdownPosition === 'left' ? 'translateX(-50%)' : 'none',
+                width: '800px',
+              }}
+              ref={hireTalentDropdownRef}
+            >
+              <div className="container mx-auto">
+                {renderDesktopSubmenuHireTalent(item.submenu)}
               </div>
             </div>
           )}
@@ -145,13 +343,14 @@ const Header = () => {
       ) : (
         <Link
           href={item.path || '#'}
-          className="text-white hover:text-red-500 font-medium text-base py-2 block"
+          className="text-white font-medium text-base py-2 block hover:text-sky-500"
           target={item.newTab ? "_blank" : undefined}
           onClick={closeMobileMenu}
         >
           {item.title}
         </Link>
       )}
+        </li>
     </div>
   );
 
@@ -174,11 +373,22 @@ const Header = () => {
             </button>
           </div>
 
-          <div className={`lg:flex items-center space-x-12 ${isMobileMenuOpen ? 'flex flex-col fixed top-[72px] left-0 w-full h-[calc(100vh-72px)] bg-[#0B1120] z-50 p-6 overflow-y-auto' : 'hidden'}`}>
-            <nav className="lg:flex flex-col lg:flex-row items-center space-x-12">
+          <div
+            className={`lg:flex items-center justify-between ${isMobileMenuOpen ? 'flex flex-col fixed top-[72px] left-0 w-full h-[calc(100vh-72px)] bg-[#0B1120] z-50 p-6 overflow-y-auto' : 'hidden'}`}
+            ref={mobileMenuRef}
+          >
+            <nav className="lg:flex flex-row items-center  flex-grow">
+               <ul className="lg:flex flex-row items-center space-x-6">
               {menuData.map((item) => renderMenuItem(item))}
+                </ul>
             </nav>
-            <div className="pl-4">
+            <div className="flex items-center  space-x-8">
+              <Link
+                href="/contact"
+                className="bg-[#1DA1F2] hover:bg-[#55ACEE] text-white font-bold py-2 px-4 rounded"
+              >
+                Contact Us
+              </Link>
               <ThemeToggler />
             </div>
           </div>
