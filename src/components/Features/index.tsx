@@ -6,20 +6,20 @@ const Features = () => {
   return (
     <>
       <section id="features" className="py-16 md:py-20 lg:py-28">
-        <div className="container">
-          <SectionTitle
-            title="Services"
-            paragraph="Discover our cutting-edge solutions designed to empower your business. Explore the key features tailored to meet your needs."
-            center
-          />
+  <div className="container text-center">
+    <SectionTitle
+      title="Services"
+      paragraph="Discover our cutting-edge solutions designed to empower your business. Explore the key features tailored to meet your needs."
+      center
+    />
+    <div className="flex gap-[10px] flex-col">
+      {featuresData.map((feature) => (
+        <SingleFeature key={feature.id} feature={feature} />
+      ))}
+    </div>
+  </div>
+</section>
 
-          <div className="grid grid-cols-1 gap-x-8 gap-y-14 md:grid-cols-2 lg:grid-cols-3">
-            {featuresData.map((feature) => (
-              <SingleFeature key={feature.id} feature={feature} />
-            ))}
-          </div>
-        </div>
-      </section>
     </>
   );
 };
