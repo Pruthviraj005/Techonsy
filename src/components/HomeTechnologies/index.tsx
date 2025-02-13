@@ -4,6 +4,7 @@ import React from "react";
 import SingleFeature from "../Features/SingleFeature";
 import Technologies from "./data";
 import RenderTechnologies from "./renderTechnologies";
+import Link from "next/link";
 
 const Technology = () => {
   return (
@@ -14,11 +15,26 @@ const Technology = () => {
           <span className="text-yellow-500">Our Technologies</span>
         </h2>
         <div className="flex flex-col flex-nowrap items-center justify-center gap-[5%] md:flex-row">
-          <div className="w-full self-start md:w-[50%]">
+        <div className="w-full self-start md:w-[50%] pt-[6%]">
             <p className="mb-12 text-justify text-lg sm:text-xl">
               We Create New Solutions And Transform Existing Ones With
               Technologies That Beat Industry Best Timelines
             </p>
+            <div className="rounded-2xl bg-gray-50 dark:bg-gray-800 p-4 bg-opacity-50 p-4 shadow transition-all min-h-[250px] sm:min-h-[200px] md:h-auto">
+              <p className="mb-12 text-justify text-lg text-white sm:text-xl">
+                We Create New Solutions And Transform Existing Ones With
+                Technologies That Beat Industry Best Timelines
+              </p>
+              <div className="flex items-center  space-x-8">
+                <Link
+                  href="/contact"
+                  className="w-full rounded-lg bg-blue-600 px-8 py-4 text-base font-semibold text-white transition-all duration-300 hover:bg-blue-700 sm:w-auto"
+                >
+                  Contact Us
+                </Link>
+              
+              </div>
+            </div> 
           </div>
           {/* Scrollable section */}
           <div
