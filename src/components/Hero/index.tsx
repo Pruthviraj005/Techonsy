@@ -10,11 +10,11 @@ const Hero = () => {
 
   useEffect(() => {
     const solutions = [
-      " in Mobile App Development ",
-      " in Web App Development ",
-      " in Software Development ",
-      " in DevOps Development ",
-      " by Outsourcing Developers "
+      "in Mobile App Development",
+      "in Web App Development",
+      "in Software Development",
+      "in DevOps Development",
+      "by Outsourcing Developers"
     ];
 
     let currentIndex = 0;
@@ -74,7 +74,7 @@ const Hero = () => {
                       className={`text-blue-500 ${animate ? "animateRefinedPop" : ""}`}
                       onAnimationEnd={handleAnimationEnd} // Reset animation on end
                     >
-                      {techSolution}
+                    {" "+techSolution+" "}
                     </span>
                      for your business.
                   </h1>
