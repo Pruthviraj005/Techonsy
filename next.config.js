@@ -1,20 +1,18 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ["localhost"],
+    domains: ["localhost", "assets.aceternity.com"], // Added "assets.aceternity.com" here
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "cdn.sanity.io",
+        hostname: "cdn.sanity.io", // Fixed array brackets; hostname should be a string
         port: "",
       },
     ],
   },
-};
-
-module.exports = {
   eslint: {
     ignoreDuringBuilds: true,
   },
 };
-// nextConfig;
+
+module.exports = nextConfig;
