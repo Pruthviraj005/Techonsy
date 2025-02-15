@@ -8,7 +8,7 @@ const BlockchainSection = () => {
         {/* Left: Image */}
         <div className="w-full md:w-1/2">
           <Image
-            src="/images/bct.webp" // Replace with your image path
+            src="/images/blockchain/bct.webp" // Replace with your image path
             alt="Blockchain Illustration"
             width={500}
             height={500}
