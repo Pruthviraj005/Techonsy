@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
-// import ThemeToggler from "./ThemeToggler";
 import menuData from './menuData';
 import { FiMenu, FiX } from 'react-icons/fi';
 import { Menu } from "@/types/menu";
@@ -32,7 +31,6 @@ const Header = () => {
     setIsMobileMenuOpen(false);
     setActiveMobileSubmenu(null);
   };
-
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -144,7 +142,7 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 0) { // Changed from 50 to 0
+      if (window.scrollY > 0) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
@@ -157,27 +155,19 @@ const Header = () => {
     };
   }, []);
 
+  // Updated Services submenu rendering for desktop
   const renderDesktopSubmenuServices = (submenu: Menu[]) => (
-    <div className="grid grid-cols-3 gap-6 px-6">
-      {submenu.map((category) => (
-        <div key={category.id} className="space-y-3">
-          <h3 className="text-white font-semibold mb-2">{category.title}</h3>
-          {category.submenu && (
-            <ul className="space-y-2">
-              {category.submenu.map((item) => (
-                <li key={item.id}>
-                  <Link
-                    href={item.path || '#'}
-                    className="block text-gray-300 hover:text-sky-500 text-sm py-1"
-                    target={item.newTab ? "_blank" : undefined}
-                    onClick={closeAllMenus}
-                  >
-                    {item.title}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          )}
+    <div className="grid grid-cols-3 gap-6 p-6">
+      {submenu.map((item) => (
+        <div key={item.id}>
+          <Link
+            href={item.path || '#'}
+            className="block text-gray-300 hover:text-sky-500 text-sm py-1"
+            target={item.newTab ? "_blank" : undefined}
+            onClick={closeAllMenus}
+          >
+            {item.title}
+          </Link>
         </div>
       ))}
     </div>
@@ -275,38 +265,62 @@ const Header = () => {
     );
   };
 
-  const renderMobileSubmenu = (submenu: Menu[]) => (
-    <div className="flex flex-col space-y-4 overflow-y-auto max-h-[400px]">
-      {submenu.map((category) => (
-        <div key={category.id} className="space-y-3">
-          <h3
-            className="text-white font-semibold mb-2 cursor-pointer"
-            onClick={() =>
-              setActiveMobileSubmenu(activeMobileSubmenu === category.id ? null : category.id)
-            }
-          >
-            {category.title}
-          </h3>
-          {category.submenu && (
-            <ul className={`${activeMobileSubmenu === category.id ? 'block' : 'hidden'} space-y-2`}>
-              {category.submenu.map((item) => (
-                <li key={item.id}>
-                  <Link
-                    href={item.path || '#'}
-                    className="block text-gray-300 hover:text-sky-500 text-sm py-1"
-                    target={item.newTab ? "_blank" : undefined}
-                    onClick={closeAllMenus}
-                  >
-                    {item.title}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          )}
+  // Updated to handle Services menu specially
+  const renderMobileSubmenu = (submenu: Menu[], menuId: number) => {
+    // Special handling for Services menu (id: 4)
+    if (menuId === 4) {
+      return (
+        <div className="flex flex-col space-y-2 overflow-y-auto max-h-[400px] px-1">
+          {submenu.map((item) => (
+            <div key={item.id}>
+              <Link
+                href={item.path || '#'}
+                className="block text-gray-300 hover:text-sky-500 text-sm py-1"
+                target={item.newTab ? "_blank" : undefined}
+                onClick={closeAllMenus}
+              >
+                {item.title}
+              </Link>
+            </div>
+          ))}
         </div>
-      ))}
-    </div>
-  );
+      );
+    }
+    
+    // Original logic for other menu items
+    return (
+      <div className="flex flex-col space-y-4 overflow-y-auto max-h-[400px]">
+        {submenu.map((category) => (
+          <div key={category.id} className="space-y-3">
+            <h3
+              className="text-white font-semibold mb-2 cursor-pointer"
+              onClick={() =>
+                setActiveMobileSubmenu(activeMobileSubmenu === category.id ? null : category.id)
+              }
+            >
+              {category.title}
+            </h3>
+            {category.submenu && (
+              <ul className={`${activeMobileSubmenu === category.id ? 'block' : 'hidden'} space-y-2`}>
+                {category.submenu.map((item) => (
+                  <li key={item.id}>
+                    <Link
+                      href={item.path || '#'}
+                      className="block text-gray-300 hover:text-sky-500 text-sm py-1"
+                      target={item.newTab ? "_blank" : undefined}
+                      onClick={closeAllMenus}
+                    >
+                      {item.title}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+        ))}
+      </div>
+    );
+  };
 
   const renderMenuItem = (item: Menu) => (
     <div key={item.id} className="relative">
@@ -368,7 +382,7 @@ const Header = () => {
             )}
             {isMobileMenuOpen && openSubmenu === item.id && (
               <div className="bg-black shadow-lg rounded-md py-2 px-4">
-                {renderMobileSubmenu(item.submenu)}
+                {renderMobileSubmenu(item.submenu, item.id)}
               </div>
             )}
           </div>
@@ -385,7 +399,6 @@ const Header = () => {
       </li>
     </div>
   );
-
 
   return (
     <>
