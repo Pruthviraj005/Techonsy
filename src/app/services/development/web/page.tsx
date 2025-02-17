@@ -55,20 +55,23 @@ export default function web() {
           {/* Inner container to hold the content and limit its width */}
           <div className="max-w-screen-lg w-full">
 
-            {/* Web Development Services Heading */}
-            <div className="text-center mb-8">
+            {/* <div className="text-center mb-8">
               <h1 className="text-4xl font-bold text-gray-900 dark:text-white">
                 Web Development Services
               </h1>
-            </div>
+            </div> */}
 
             {/* Hero Section */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
               <div className="order-2 md:order-1">
                 {/* Breadcrumb */}
-                <p className="text-gray-500 text-sm mb-2">
-                  Services / Web Development
-                </p>
+                <div className="mb-8">
+                  <p className="text-sm text-gray-600">
+                    <span>Services</span>
+                    <span className="mx-2">/</span>
+                    <span>Web Development</span>
+                  </p>
+                </div>
 
                 <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-4">
                   Innovative Web Development <br />
@@ -81,7 +84,7 @@ export default function web() {
                   edge technologies for a user-centric web experience. Contact us to transform your
                   digital vision into reality.
                 </p>
-                <button className="bg-blue-500 hover:bg-pink-600 text-white font-bold py-2 px-6 rounded">
+                <button className="bg-blue-500 hover:bg-[#55ACEE] text-white font-bold py-2 px-6 rounded">
                   Contact us
                 </button>
               </div>
@@ -149,7 +152,7 @@ export default function web() {
                     expectations, and identify the potential bottlenecks to ensure smooth
                     functionality.
                   </p>
-                  <button className="bg-blue-500 hover:bg-red-600 text-white font-bold py-2 px-6 rounded">
+                  <button className="bg-blue-500 hover:bg-[#55ACEE] text-white font-bold py-2 px-6 rounded">
                     View More
                   </button>
                 </div>
@@ -176,43 +179,55 @@ export default function web() {
             {/* Our Enterprise Web Application Approach Section */}
             <div className="mt-16 py-12">
               <div className="container mx-auto px-4">
-                <div className="md:flex md:items-start">
+                {/* Title and description with left alignment */}
+                <div className="mb-8">
+                  <h2 className="text-3xl font-semibold text-left" style={{
+                    ...headingStyle,
+                    textAlign: 'left' // Override the center alignment from headingStyle
+                  }}>
+                    Our Enterprise Web Application Approach
+                  </h2>
+                  <p style={approachListStyle} className="max-w-2xl">
+                    With decades of experience, we prioritize customer satisfaction while tailoring our process to
+                    fit all business ecosystems.
+                  </p>
+                </div>
+
+                {/* Content section with image and phases */}
+                <div className="md:flex md:items-start gap-8">
+                  {/* Left section with image */}
                   <div className="md:w-5/12 lg:w-5/12 mb-6 md:mb-0">
-                    <h2 className="text-center mb-2 md:text-left" style={{ ...headingStyle }}>
-                      Our Enterprise Web Application Approach
-                    </h2>
-                    <p className="text-center mb-4 md:text-left" style={approachListStyle}>
-                      With decades of experience, we prioritize customer satisfaction while tailoring our process to
-                      fit all business ecosystems.
-                    </p>
-                    <div className="text-center mb-8">
-                      <img
-                        src="/images/services/image.png"
-                        alt="Enterprise Approach"
-                        className="mx-auto"
-                        style={{
-                          maxWidth: '100%',
-                          maxHeight: '250px',
-                          width: 'auto',
-                          height: 'auto'
-                        }}
-                      />
-                    </div>
+                    <img
+                      src="/images/services/image.png"
+                      alt="Enterprise Approach"
+                      className="max-w-full h-auto"
+                      style={{ maxHeight: '250px' }}
+                    />
                   </div>
-                   <div className="md:w-7/12 lg:w-7/12">
-                    <div className="grid grid-cols-1 gap-4">
-                      {phases.map((phase, index) => (
-                        <div key={index} className="flex items-center mb-2" style={approachListStyle}>
-                          <span className="mr-2">↓</span>
-                          <span>{phase}</span>
-                        </div>
-                      ))}
-                      <div className="flex items-center" style={approachListStyle}>
-                        <span className="mr-2">↑</span>
-                        <span>Support and Maintenance</span>
+
+                  {/* Right section with phases in two columns */}
+                  <div className="md:w-7/12 lg:w-7/12">
+                    <div className="grid grid-cols-2 gap-x-8 gap-y-6">
+                      {/* First column */}
+                      <div className="space-y-6">
+                        {phases.slice(0, 4).map((phase, index) => (
+                          <div key={index} className="flex items-center space-x-2" style={approachListStyle}>
+                            <span>↓</span>
+                            <span>{phase}</span>
+                          </div>
+                        ))}
+                      </div>
+                      {/* Second column */}
+                      <div className="space-y-6">
+                        {phases.slice(4).map((phase, index) => (
+                          <div key={index} className="flex items-center space-x-2" style={approachListStyle}>
+                            <span>{index === phases.slice(4).length - 1 ? '↑' : '↓'}</span>
+                            <span>{phase}</span>
+                          </div>
+                        ))}
                       </div>
                     </div>
-                    <p className="mt-8 text-center md:text-left" style={approachListStyle}>
+                    <p className="mt-8 text-center" style={approachListStyle}>
                       We have a dedicated team to maintain and support your software applications. They will
                       monitor and upgrade the software as your business needs change.
                     </p>
@@ -220,16 +235,15 @@ export default function web() {
                 </div>
               </div>
             </div>
-
             {/* Benefits of Working with a Web Development Company */}
             <div className="mt-16 py-12">
               <div className="container mx-auto px-4">
-                 <h2 className="text-2xl font-semibold text-center mb-4" style={{
-                   ...headingStyle,
-                   whiteSpace: "pre-line", // Allow line breaks in the heading
-                   fontSize: '1.75rem',
-                   textAlign: 'center' as const
-                 }}>
+                <h2 className="text-2xl font-semibold text-center mb-4" style={{
+                  ...headingStyle,
+                  whiteSpace: "pre-line", // Allow line breaks in the heading
+                  fontSize: '1.75rem',
+                  textAlign: 'center' as const
+                }}>
                   Benefits of Working with a{"\n"}Web Development Company in India
                 </h2>
                 <p className="text-center mb-8" style={approachListStyle}>

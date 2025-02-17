@@ -14,118 +14,94 @@ const menuData: Menu[] = [
     newTab: false,
     submenu: [
       {
-        id: 41,
-        title: "Development",
-        path: "/",
-        newTab: false,
-        submenu: [
-          {
-            id: 411,
-            title: "Mobile App Development",
-            path: "/services/development/MobileApp",
-            newTab: false
-          },
-          {
-            id: 412,
-            title: "Web Development",
-            path: "/services/development/web",
-            newTab: false
-          },
-          {
-            id: 413,
-            title: "Cross Platform App Development",
-            path: "/",
-            newTab: false
-          },
-          {
-            id: 414,
-            title: "Ecommerce & CMS",
-            path: "/",
-            newTab: false
-          },
-          {
-            id: 415,
-            title: "UI & UX Designing",
-            path: "/",
-            newTab: false
-          }
-        ]
+        id: 411,
+        title: "Mobile App Development",
+        path: "/services/development/MobileApp",
+        newTab: false
       },
       {
-        id: 42,
-        title: "Technology",
-        path: "/",
-        newTab: false,
-        submenu: [
-          {
-            id: 421,
-            title: "Opensource Development",
-            path: "/",
-            newTab: false
-          },
-          {
-            id: 422,
-            title: "Quality Assurance",
-            path: "/",
-            newTab: false
-          },
-          {
-            id: 423,
-            title: "NFT Development",
-            path: "/",
-            newTab: false
-          },
-          {
-            id: 424,
-            title: "Blockchain Development",
-            path: "/services/technology/BlockChain",
-            newTab: false
-          },
-          {
-            id: 425,
-            title: "App Prototype & Strategy",
-            path: "/",
-            newTab: false
-          }
-        ]
+        id: 412,
+        title: "Web Development",
+        path: "/services/development/web",
+        newTab: false
       },
       {
-        id: 43,
-        title: "Solutions",
+        id: 413,
+        title: "Cross Platform App Development",
         path: "/",
-        newTab: false,
-        submenu: [
-          {
-            id: 431,
-            title: "AI Development",
-            path: "/",
-            newTab: false
-          },
-          {
-            id: 432,
-            title: "IoT Development",
-            path: "/",
-            newTab: false
-          },
-          {
-            id: 433,
-            title: "Cloud Computing",
-            path: "/services/CloudComputing",
-            newTab: false
-          },
-          {
-            id: 434,
-            title: "Consulting Services",
-            path: "/",
-            newTab: false
-          },
-          {
-            id: 435,
-            title: "Software Maintenance & Support",
-            path: "/",
-            newTab: false
-          }
-        ]
+        newTab: false
+      },
+      {
+        id: 414,
+        title: "Ecommerce & CMS",
+        path: "/",
+        newTab: false
+      },
+      {
+        id: 415,
+        title: "UI & UX Designing",
+        path: "/",
+        newTab: false
+      },
+      {
+        id: 421,
+        title: "Opensource Development",
+        path: "/",
+        newTab: false
+      },
+      {
+        id: 422,
+        title: "Quality Assurance",
+        path: "/",
+        newTab: false
+      },
+      {
+        id: 423,
+        title: "NFT Development",
+        path: "/",
+        newTab: false
+      },
+      {
+        id: 424,
+        title: "Blockchain Development",
+        path: "/services/technology/BlockChain",
+        newTab: false
+      },
+      {
+        id: 425,
+        title: "App Prototype & Strategy",
+        path: "/",
+        newTab: false
+      },
+      {
+        id: 431,
+        title: "AI Development",
+        path: "/",
+        newTab: false
+      },
+      {
+        id: 432,
+        title: "IoT Development",
+        path: "/",
+        newTab: false
+      },
+      {
+        id: 433,
+        title: "Cloud Computing",
+        path: "/",
+        newTab: false
+      },
+      {
+        id: 434,
+        title: "Consulting Services",
+        path: "/",
+        newTab: false
+      },
+      {
+        id: 435,
+        title: "Software Maintenance & Support",
+        path: "/",
+        newTab: false
       }
     ]
   },
