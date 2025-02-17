@@ -27,6 +27,13 @@ const Header = () => {
     }
   };
 
+  const closeAllMenus = () => {
+    setOpenSubmenu(null);
+    setIsMobileMenuOpen(false);
+    setActiveMobileSubmenu(null);
+  };
+
+
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
     if (!isMobileMenuOpen) {
@@ -137,7 +144,7 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
+      if (window.scrollY > 0) { // Changed from 50 to 0
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
@@ -145,7 +152,6 @@ const Header = () => {
     };
 
     window.addEventListener('scroll', handleScroll);
-
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
@@ -164,6 +170,7 @@ const Header = () => {
                     href={item.path || '#'}
                     className="block text-gray-300 hover:text-sky-500 text-sm py-1"
                     target={item.newTab ? "_blank" : undefined}
+                    onClick={closeAllMenus}
                   >
                     {item.title}
                   </Link>
@@ -176,30 +183,43 @@ const Header = () => {
     </div>
   );
 
-  const renderDesktopSubmenuTechnology = (submenu: Menu[]) => (
-    <div className="grid grid-cols-5 gap-4 px-4">
-      {submenu.map((category) => (
-        <div key={category.id} className="space-y-2">
-          <h3 className="text-white font-semibold mb-1 text-sm">{category.title}</h3>
-          {category.submenu && (
-            <ul className="space-y-1">
-              {category.submenu.map((item) => (
-                <li key={item.id}>
-                  <Link
-                    href={item.path || '#'}
-                    className="block text-gray-300 hover:text-sky-500 text-xs py-0.5"
-                    target={item.newTab ? "_blank" : undefined}
-                  >
-                    {item.title}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          )}
-        </div>
-      ))}
-    </div>
-  );
+  const renderDesktopSubmenuTechnology = (submenu: Menu[]) => {
+    const rows = [];
+    for (let i = 0; i < submenu.length; i += 4) {
+      rows.push(submenu.slice(i, i + 4));
+    }
+
+    return (
+      <div className="px-4">
+        {rows.map((row, rowIndex) => (
+          <div key={rowIndex} className="grid grid-cols-4 gap-4 mb-6">
+            {row.map((category) => (
+              <div key={category.id} className="space-y-2">
+                <h3 className="text-white font-semibold mb-1 text-sm">{category.title}</h3>
+                {category.submenu && (
+                  <ul className="space-y-1">
+                    {category.submenu.map((item) => (
+                      <li key={item.id}>
+                        <Link
+                          href={item.path || '#'}
+                          className="block text-gray-300 hover:text-sky-500 text-xs py-0.5"
+                          style={{ fontSize: '0.95rem' }}
+                          target={item.newTab ? "_blank" : undefined}
+                          onClick={closeAllMenus}
+                        >
+                          {item.title}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            ))}
+          </div>
+        ))}
+      </div>
+    );
+  };
 
   const renderDesktopSubmenuHireTalent = (submenu: Menu[]) => {
     if (!submenu) return null;
@@ -226,7 +246,11 @@ const Header = () => {
             <>
               <h3 className="text-2xl font-semibold mb-4">{activeCategory.content}</h3>
               <p className="mb-4">Experience smooth navigation and user-friendly designs with our front-end expertise.</p>
-              <Link href={activeCategory.buttonLink || "#"} className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded inline-block">
+              <Link 
+                href={activeCategory.buttonLink || "#"} 
+                className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded inline-block"
+                onClick={closeAllMenus}
+              >
                 {activeCategory.buttonText}
               </Link>
               {activeCategory.submenu && (
@@ -236,6 +260,7 @@ const Header = () => {
                       <Link
                         href={item.path || "#"}
                         className="text-gray-300 hover:text-sky-500 block"
+                        onClick={closeAllMenus}
                       >
                         {item.title}
                       </Link>
@@ -270,7 +295,7 @@ const Header = () => {
                     href={item.path || '#'}
                     className="block text-gray-300 hover:text-sky-500 text-sm py-1"
                     target={item.newTab ? "_blank" : undefined}
-                    onClick={closeMobileMenu}
+                    onClick={closeAllMenus}
                   >
                     {item.title}
                   </Link>
@@ -316,7 +341,7 @@ const Header = () => {
                   left: dropdownPosition === 'left' ? '50%' : 'auto',
                   right: dropdownPosition === 'right' ? '0' : 'auto',
                   transform: dropdownPosition === 'left' ? 'translateX(-50%)' : 'none',
-                  width: '700px',
+                  width: '950px',
                 }}
                 ref={technologyDropdownRef}
               >
@@ -341,7 +366,6 @@ const Header = () => {
                 </div>
               </div>
             )}
-
             {isMobileMenuOpen && openSubmenu === item.id && (
               <div className="bg-black shadow-lg rounded-md py-2 px-4">
                 {renderMobileSubmenu(item.submenu)}
@@ -353,7 +377,7 @@ const Header = () => {
             href={item.path || '#'}
             className="text-white font-medium text-base py-2 block hover:text-sky-500"
             target={item.newTab ? "_blank" : undefined}
-            onClick={closeMobileMenu}
+            onClick={closeAllMenus}
           >
             {item.title}
           </Link>
@@ -362,9 +386,10 @@ const Header = () => {
     </div>
   );
 
+
   return (
     <>
-      <header className={`bg-[#0B1120] fixed w-full top-0 z-50 transition-all duration-300 ${isScrolled ? 'centered-header' : ''}`}>
+       <header className={`bg-[#0B1120] fixed w-full z-50 transition-all duration-200 ${isScrolled ? 'centered-header' : ''}`}>
         <div className="container mx-auto px-6">
           <div className="flex items-center justify-between h-[72px]">
             <Link href="/" className="flex-shrink-0">
@@ -385,35 +410,50 @@ const Header = () => {
               className={`lg:flex items-center justify-between ${isMobileMenuOpen ? 'flex flex-col fixed top-[72px] left-0 w-full h-[calc(100vh-72px)] bg-[#0B1120] z-50 p-6 overflow-y-auto' : 'hidden'}`}
               ref={mobileMenuRef}
             >
-              <nav className="lg:flex flex-row items-center  flex-grow">
+              <nav className="lg:flex flex-row items-center flex-grow">
                 <ul className="lg:flex flex-row items-center space-x-6">
                   {menuData.map((item) => renderMenuItem(item))}
                 </ul>
               </nav>
-              <div className="flex items-center  space-x-8">
+              <div className="flex items-center space-x-8">
                 <Link
                   href="/contact"
                   className="bg-[#1DA1F2] hover:bg-[#55ACEE] text-white font-bold py-2 px-4 rounded"
+                  onClick={closeAllMenus}
                 >
                   Contact Us
                 </Link>
-              
               </div>
             </div>
           </div>
         </div>
       </header>
+     
       <style jsx>{`
         .centered-header {
-          top: 20px;
+          top: 0;
           left: 50%;
           transform: translateX(-50%);
-          width: 90%; /* Adjusted width */
+          width: 90%;
           max-width: 1200px;
-          border-radius: 5px; /* Adjusted border-radius */
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adjusted box-shadow */
-          background-color: rgba(11, 17, 32, 0.95); /* Adjusted background color */
-          padding: 5px 10px; /* Adjusted padding */
+          border-radius: 50px;
+          background-color: rgba(11, 17, 32, 0.98);
+          transition: all 0.2s ease-in-out;
+        }
+
+        header {
+          transition: all 0.2s ease-in-out;
+        }
+
+        header:not(.centered-header) {
+          border-radius: 0;
+        }
+
+        @media (max-width: 1024px) {
+          .centered-header {
+            width: 100%;
+            border-radius: 0;
+          }
         }
       `}</style>
     </>
