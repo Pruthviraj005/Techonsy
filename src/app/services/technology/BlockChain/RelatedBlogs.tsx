@@ -4,17 +4,17 @@ export default function RelatedBlogs() {
   const blogs = [
     {
       title: "An Entrepreneur’s Guide on the Blockchain Technology and Its Uses",
-      image: "/images/bitcoin.jpg", // Replace with actual image path
+      image: "/images/blockchain/bitcoin.jpg", // Replace with actual image path
       link: "#",
     },
     {
       title: "A Comprehensive Guide on Blockchain App Development Cost",
-      image: "/images/bitcoin1.jpg", // Replace with actual image path
+      image: "/images/blockchain/bitcoin1.jpg", // Replace with actual image path
       link: "#",
     },
     {
       title: "How Much Does It Cost to Make A Crypto Wallet App on Blockchain?",
-      image: "/images/bitcoin2.jpg", // Replace with actual image path
+      image: "/images/blockchain/bitcoin2.jpg", // Replace with actual image path
       link: "#",
     },
   ];
