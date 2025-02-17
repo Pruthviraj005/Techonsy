@@ -1,79 +1,72 @@
-'use client'
+'use client';
+
+import { motion } from 'framer-motion';
+import Image from 'next/image';
+import { FaUsers, FaLock, FaHeadphones, FaCode, FaThumbsUp, FaStar } from 'react-icons/fa';
 
 const MobileAppHero = () => {
-    return (
-      <div className="bg-white">
-        {/* Hero Section */}
-        <div className="container mx-auto px-6 py-12">
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            {/* Left Content */}
-            <div>
-              <p className="text-pink-500 font-semibold">Services / Mobile App Development</p>
-              <h1 className="text-4xl font-bold mt-2 leading-tight">
-                Custom Mobile App Development Solutions:
-                <span className="text-pink-500"> Transforming Your Ideas into Reality</span>
-              </h1>
-              <p className="mt-4 text-gray-600">
-                Elevate your business with our expert custom mobile app development services.
-                Our dedicated team crafts tailored solutions, seamlessly integrating cutting-edge
-                technologies and user-centric design.
-              </p>
-              <button className="mt-6 bg-pink-500 text-white py-3 px-6 rounded-lg shadow-lg hover:bg-pink-600">
-                Schedule your free consultation
-              </button>
-            </div>
-  
-            {/* Right Image */}
-            <div className="relative">
-              <img
-                src="/images/mobile-dev.png"
-                alt="Mobile App Development"
-                className="rounded-lg shadow-lg"
-              />
-            </div>
+  return (
+    <div className="bg-black text-white min-h-screen flex items-center justify-center">
+      <div className="container mx-auto px-6 py-16">
+        <motion.h1
+          initial={{ opacity: 0, y: -50, scale: 0.8 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{ duration: 1, ease: 'easeOut' }}
+          className="text-5xl font-bold text-center text-blue-500"
+        >
+          Leading Mobile App Developers
+        </motion.h1>
+
+        <div className="grid md:grid-cols-3 gap-10 items-center mt-16">
+          <div className="space-y-8">
+            <FeatureCard icon={<FaUsers />} title="Team of Experts" text="Top developers assigned to your project." />
+            <FeatureCard icon={<FaHeadphones />} title="1-ON-1 Meetings" text="Personalized guidance at every step." />
+            <FeatureCard icon={<FaCode />} title="Best Code Practices" text="Ensuring high-quality and scalable code." />
           </div>
-        </div>
-  
-        {/* Challenges Section */}
-        <div className="container mx-auto px-6 py-12">
-          <h2 className="text-3xl font-bold text-gray-900">Challenges Faced:</h2>
-          
-          <div className="grid md:grid-cols-3 gap-6 mt-6">
-            {/* Left Box */}
-            <div className="bg-white shadow-lg rounded-lg p-6 border-l-4 border-blue-500">
-              <h3 className="text-xl font-bold text-blue-600">
-                Common <br /> Mobile Application Development Challenges That Businesses Face
-              </h3>
-              <p className="mt-2 text-gray-600">
-                Without professional assistance, businesses may face several mobile app development challenges.
-              </p>
-            </div>
-  
-            {/* Middle Box */}
-            <div className="bg-pink-100 shadow-lg rounded-lg p-6">
-              <ul className="text-gray-700 space-y-2">
-                <li>🚀 Defining Clear Objectives</li>
-                <li>💰 Budget Constraints</li>
-                <li>📱 Ensuring a Seamless User Experience</li>
-                <li>📈 App Marketing and User Acquisition</li>
-                <li>🔧 Post-Launch Maintenance and Updates</li>
-              </ul>
-            </div>
-  
-            {/* Right Box */}
-            <div className="bg-pink-200 shadow-lg rounded-lg p-6">
-              <ul className="text-gray-700 space-y-2">
-                <li>✅ Platform Selection</li>
-                <li>👨‍💻 Finding the Right Development Team</li>
-                <li>🔒 Security and Data Privacy</li>
-                <li>📊 Keeping up with Technology Trends</li>
-              </ul>
-            </div>
+
+          <motion.div
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.8, ease: 'easeOut' }}
+            whileHover={{ rotate: 5, scale: 1.05 }}
+            className="flex justify-center"
+          >
+            <Image
+              src="/images/mobileApp/mobile-dev.png"
+              width={400}
+              height={1000}
+              alt="Mobile App"
+              className="rounded-lg shadow-xl transition-transform duration-300 ease-in-out"
+            />
+          </motion.div>
+
+          <div className="space-y-8">
+            <FeatureCard icon={<FaLock />} title="Privacy & Security" text="Your data remains fully secure." />
+            <FeatureCard icon={<FaThumbsUp />} title="Cross-Platform Dev" text="Build for iOS and Android efficiently." />
+            <FeatureCard icon={<FaStar />} title="Support & Maintenance" text="Ongoing updates and assistance." />
           </div>
         </div>
       </div>
-    );
-  };
-  
-  export default MobileAppHero;
-  
+    </div>
+  );
+};
+
+const FeatureCard = ({ icon, title, text }) => {
+  return (
+    <motion.div
+      initial={{ opacity: 0, x: -20 }}
+      animate={{ opacity: 1, x: 0 }}
+      whileHover={{ scale: 1.05, backgroundColor: '#1E293B' }}
+      transition={{ duration: 0.5, ease: 'easeOut' }}
+      className="flex items-center bg-gray-900 p-5 rounded-lg shadow-lg transform transition-all duration-300"
+    >
+      <div className="text-blue-500 text-3xl mr-4">{icon}</div>
+      <div>
+        <h3 className="text-xl font-semibold">{title}</h3>
+        <p className="text-gray-400">{text}</p>
+      </div>
+    </motion.div>
+  );
+};
+
+export default MobileAppHero;
