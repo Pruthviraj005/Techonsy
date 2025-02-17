@@ -2,14 +2,14 @@ import React from "react";
 import Image from "next/image";
 
 const platforms = [
-  { name: "Ethereum", src: "/images/ethereum.jpg" },
-  { name: "Hyperledger", src: "/images/hyperledger.png" },
-  { name: "Corda", src: "/images/corda.jpg" },
-  { name: "MultiChain", src: "/images/multichain.jpg" },
-  { name: "EOS", src: "/images/eos.png" },
-  { name: "Stellar", src: "/images/stellar.png" },
-  { name: "Tron", src: "/images/tron.png" },
-  { name: "Hedera", src: "/images/hedera.png" },
+  { name: "Ethereum", src: "/images/blockchain/ethereum.jpg" },
+  { name: "Hyperledger", src: "/images/blockchain/hyperledger.png" },
+  { name: "Corda", src: "/images/blockchain/corda.jpg" },
+  { name: "MultiChain", src: "/images/blockchain/multichain.jpg" },
+  { name: "EOS", src: "/images/blockchain/eos.png" },
+  { name: "Stellar", src: "/images/blockchain/stellar.png" },
+  { name: "Tron", src: "/images/blockchain/tron.png" },
+  { name: "Hedera", src: "/images/blockchain/hedera.png" },
 ];
 
 const BlockChainPlatform = () => {

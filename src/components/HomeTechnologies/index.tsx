@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import SingleFeature from "../Features/SingleFeature";
 import Technologies from "./data";
 import RenderTechnologies from "./renderTechnologies";
 import Link from "next/link";
@@ -9,7 +8,7 @@ import Link from "next/link";
 const Technology = () => {
   return (
     <>
-      <section className="container mx-auto max-w-5xl">
+      <section className="container mx-auto max-w-5xl pb-8">
         {/* ✅ Heading Section */}
         <h2 className="mb-8 text-center text-5xl font-bold text-gray-900 dark:text-white">
           <span className="text-yellow-500">Our Technologies</span>
