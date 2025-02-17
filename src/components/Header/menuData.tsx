@@ -104,7 +104,7 @@ const menuData: Menu[] = [
           {
             id: 432,
             title: "IoT Development",
-            path: "/",
+            path: "/services/IOT",
             newTab: false
           },
           {
