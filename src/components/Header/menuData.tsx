@@ -130,7 +130,7 @@ const menuData: Menu[] = [
         newTab: false,
         submenu: [
           { id: 521, title: "Node.js", path: "/", newTab: false },
-          { id: 522, title: "Python", path: "/", newTab: false },
+          { id: 522, title: "Python", path: "/technology/backend/python", newTab: false },
           { id: 523, title: "Java", path: "/technology/backend/java", newTab: false },
           { id: 524, title: "Nest.js", path: "/", newTab: false }
         ]
