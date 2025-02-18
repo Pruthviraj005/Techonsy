@@ -1,4 +1,4 @@
-import Benefits from "./benefits";
+import Benefits from "./Benefits";
 import DevelopmentProcess from "./DevelopmentProcess";
 import IndustryExpertise from "./IndustryExpertise";
 import MobileAppHero from "./MobileApphero";
