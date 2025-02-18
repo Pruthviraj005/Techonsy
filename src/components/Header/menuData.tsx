@@ -94,7 +94,7 @@ const menuData: Menu[] = [
       {
         id: 434,
         title: "Consulting Services",
-        path: "/",
+        path: "/services/consulting-services",
         newTab: false
       },
       {
