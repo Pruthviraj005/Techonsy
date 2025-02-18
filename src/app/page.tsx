@@ -7,6 +7,7 @@ import Contact from "@/components/Contact";
 import Features from "@/components/Features";
 import Hero from "@/components/Hero";
 import Technology from "@/components/HomeTechnologies";
+import IndustryWeServe from "@/components/IndustryWeServe";
 // import Pricing from "@/components/Pricing";
 import Testimonials from "@/components/Testimonials";
 import Video from "@/components/Video";
@@ -25,6 +26,7 @@ export default function Home() {
       <Hero />
       <Features />
       <Technology/>
+      <IndustryWeServe/>
       {/* <Video /> */}
       <Brands />
       {/* <AboutSectionOne /> */}
