@@ -100,7 +100,7 @@ const menuData: Menu[] = [
       {
         id: 435,
         title: "Software Maintenance & Support",
-        path: "/",
+        path: "/services/maintenancesupport",
         newTab: false
       }
     ]
