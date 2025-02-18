@@ -130,47 +130,48 @@ export default function Python () {
                 </section>
             </div>
 
-            {/* information section */}
-            <section className="py-16  border-y-[0.5px] border-slate-500 ">
-                <div className="container mx-auto px-6 text-center w-[1000px]">
-                    {/* Section Heading */}
-                    <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-8">
-                    Craft Your Dream Web App with Python for Powerful and Scalable Business Growth
-                    </h2>
+           
 
-                    <p className="text-xl text-slate-500 dark:text-slate-500 mb-12">
-                    Growing businesses need robust platforms that can adapt and evolve with their needs. Python, the language powering some of the world's top websites and applications, offers unmatched scalability, rapid development cycles, and a cost-effective approach.
-                    </p>
+    <section className="py-16 border-y-[0.5px] border-slate-500">
+      <div className="mx-auto px-4 sm:px-6 text-center max-w-5xl">
+        {/* Section Heading */}
+        <h2 className="text-3xl sm:text-2xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6 md:mb-8">
+          Craft Your Dream Web App with Python for Powerful and Scalable Business Growth
+        </h2>
 
-                    <div className="flex justify-center items-center mb-12">
-                    <h3 className="text-3xl font-semibold text-gray-900 dark:text-white">
-                        Python Development for Scalable Growth
-                    </h3>
-                    </div>
+        <p className="text-lg sm:text-base md:text-xl text-slate-500 dark:text-slate-500 mb-8 md:mb-12">
+          Growing businesses need robust platforms that can adapt and evolve with their needs. Python, the language powering some of the world's top websites and applications, offers unmatched scalability, rapid development cycles, and a cost-effective approach.
+        </p>
 
-                    {/* Description Section */}
-                    <p className="text-lg text-slate-500 dark:text-slate-500 mb-8">
-                        In today’s digital world, a well-designed web application is the foundation of any business. It’s the face you present to the public, the platform that generates traffic, and the engine that powers your online presence. But to create the perfect web application, you need the right tools. That's where Python comes in.
-                    </p>
+        <div className="flex justify-center items-center mb-6 md:mb-12">
+          <h3 className="text-2xl sm:text-xl md:text-3xl font-semibold text-gray-900 dark:text-white">
+            Python Development for Scalable Growth
+          </h3>
+        </div>
 
-                    <p className="text-lg text-slate-500 dark:text-slate-500 mb-12">
-                        At Ahex, we are a team of passionate and experienced Python developers who specialize in crafting custom web applications that meet your specific needs and goals. We leverage the power of Python to build high-performing, scalable, and user-friendly web applications that propel your business forward.
-                    </p>
+        {/* Description Section */}
+        <p className="text-base sm:text-sm md:text-lg text-slate-500 dark:text-slate-500 mb-6 md:mb-8">
+          In today’s digital world, a well-designed web application is the foundation of any business. It’s the face you present to the public, the platform that generates traffic, and the engine that powers your online presence. But to create the perfect web application, you need the right tools. That's where Python comes in.
+        </p>
 
-                    {/* Call to Action Section */}
-                    <div className="mt-8">
-                        <a
-                            className="mt-6 bg-blue-600 px-6 py-3 text-lg font-medium rounded-md hover:bg-blue-900 max-w-[450px] mx-auto transition-all transform hover:scale-105 duration-300 ease-in-out"
-                        >
-                            Contact us for a Free Consultation
-                        </a>
-                    </div>
+        <p className="text-base sm:text-sm md:text-lg text-slate-500 dark:text-slate-500 mb-8 md:mb-12">
+          At Ahex, we are a team of passionate and experienced Python developers who specialize in crafting custom web applications that meet your specific needs and goals. We leverage the power of Python to build high-performing, scalable, and user-friendly web applications that propel your business forward.
+        </p>
 
-                    <p className="mt-8 text-lg text-gray-600 dark:text-gray-300">
-                        Discover how Python development can unlock powerful and scalable growth for your business.
-                    </p>
-                </div>
-            </section>
+        {/* Call to Action Section */}
+        <div className="mt-6 md:mt-8">
+          <a
+            className="mt-4 bg-blue-600 px-6 py-3 text-base sm:text-sm md:text-lg font-medium rounded-md hover:bg-blue-900 max-w-full sm:max-w-[320px] md:max-w-[450px] mx-auto transition-all transform hover:scale-105 duration-300 ease-in-out block"
+          >
+            Contact us for a Free Consultation
+          </a>
+        </div>
+
+        <p className="mt-6 md:mt-8 text-base sm:text-sm md:text-lg text-gray-600 dark:text-gray-300">
+          Discover how Python development can unlock powerful and scalable growth for your business.
+        </p>
+      </div>
+    </section>
 
             {/*Python Tech Stack*/}
             <div className="max-w-5xl mx-auto my-10 p-5">
