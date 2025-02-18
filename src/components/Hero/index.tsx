@@ -2,10 +2,13 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Modal from '../Modal';
+import Contact from '../Contact';
 
 const Hero = () => {
   const [techSolution, setTechSolution] = useState("Mobile App Development");
   const [animate, setAnimate] = useState(false); // Track animation state
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     const solutions = [
@@ -29,6 +32,10 @@ const Hero = () => {
   const handleAnimationEnd = () => {
     setAnimate(false);
   };
+
+  const handleContactClick = () => {
+    setIsModalOpen(true);
+  }
 
   return (
     <>
@@ -83,12 +90,12 @@ const Hero = () => {
                 </p>
 
                 <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-                  <Link
-                    href="/contact"
+                  <button
+                    onClick={handleContactClick}
                     className="w-full rounded-lg bg-blue-600 px-8 py-4 text-base font-semibold text-white transition-all duration-300 hover:bg-blue-700 sm:w-auto"
                   >
                     Work With Us
-                  </Link>
+                  </button>
                 </div>
               </div>
             </div>
@@ -103,6 +110,10 @@ const Hero = () => {
           <div className="h-[500px] w-[500px] rounded-full bg-gradient-to-r from-blue-600 to-purple-600 blur-[120px]" />
         </div>
       </section>
+
+      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+        <Contact />
+      </Modal>
     </>
   );
 };
