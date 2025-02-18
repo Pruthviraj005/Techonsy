@@ -88,7 +88,7 @@ const menuData: Menu[] = [
       {
         id: 433,
         title: "Cloud Computing",
-        path: "/",
+        path: "/services/CloudComputing",
         newTab: false
       },
       {
