@@ -20,89 +20,15 @@ const menuData: Menu[] = [
         newTab: false
       },
       {
-<<<<<<< HEAD
-        id: 42,
-        title: "Technology",
-        path: "/",
-        newTab: false,
-        submenu: [
-          {
-            id: 421,
-            title: "Opensource Development",
-            path: "/",
-            newTab: false
-          },
-          {
-            id: 422,
-            title: "Quality Assurance",
-            path: "/",
-            newTab: false
-          },
-          {
-            id: 423,
-            title: "NFT Development",
-            path: "/services/NFT",
-            newTab: false
-          },
-          {
-            id: 424,
-            title: "Blockchain Development",
-            path: "/services/technology/BlockChain",
-            newTab: false
-          },
-          {
-            id: 425,
-            title: "App Prototype & Strategy",
-            path: "/",
-            newTab: false
-          }
-        ]
-=======
         id: 412,
         title: "Web Development",
         path: "/services/development/web",
         newTab: false
->>>>>>> stage
       },
       {
         id: 413,
         title: "Cross Platform App Development",
         path: "/",
-<<<<<<< HEAD
-        newTab: false,
-        submenu: [
-          {
-            id: 431,
-            title: "AI Development",
-            path: "/",
-            newTab: false
-          },
-          {
-            id: 432,
-            title: "IoT Development",
-            path: "/services/IOT",
-            newTab: false
-          },
-          {
-            id: 433,
-            title: "Cloud Computing",
-            path: "/services/CloudComputing",
-            newTab: false
-          },
-          {
-            id: 434,
-            title: "Consulting Services",
-            path: "/",
-            newTab: false
-          },
-          {
-            id: 435,
-            title: "Software Maintenance & Support",
-            path: "/",
-            newTab: false
-          }
-        ]
-=======
         newTab: false
       },
       {
@@ -156,7 +82,7 @@ const menuData: Menu[] = [
       {
         id: 432,
         title: "IoT Development",
-        path: "/",
+        path: "/services/IOT",
         newTab: false
       },
       {
@@ -176,7 +102,6 @@ const menuData: Menu[] = [
         title: "Software Maintenance & Support",
         path: "/",
         newTab: false
->>>>>>> stage
       }
     ]
   },
