@@ -37,14 +37,11 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="overflow-hidden py-16 md:py-20 lg:py-28 bg-gray-50 dark:bg-gray-900">
-      <div className="container mx-auto px-4">
+    <div className="overflow-hidden bg-gray-50 dark:bg-gray-900 rounded-lg">
+      <div className="container">
         <div className="flex justify-center">
-          <div className="w-full max-w-3xl">
-            <div
-              className="relative mb-12 rounded-lg bg-white dark:bg-gray-dark p-8 shadow-lg transition-all duration-300 hover:shadow-xl sm:p-12"
-              data-wow-delay=".15s"
-            >
+          <div className="w-full">
+            <div className="relative rounded-lg bg-white dark:bg-gray-dark p-8 shadow-lg sm:p-12">
               {/* Decorative Elements */}
               <div className="absolute top-0 left-0 -mt-4 -ml-4 h-16 w-16 rounded-full bg-primary/10 dark:bg-primary/20" />
               <div className="absolute bottom-0 right-0 -mb-4 -mr-4 h-16 w-16 rounded-full bg-primary/10 dark:bg-primary/20" />
@@ -172,7 +169,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
