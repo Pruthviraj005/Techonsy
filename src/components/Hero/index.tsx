@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
@@ -12,11 +12,10 @@ const Hero = () => {
 
   useEffect(() => {
     const solutions = [
-      "in Mobile App Development",
-      "in Web App Development",
-      "in Software Development",
-      "in DevOps Development",
-      "by Outsourcing Developers"
+      "DevOps Development",
+      "Web App Development",
+      "AI Development",
+      "UI & UX Designing",
     ];
 
     let currentIndex = 0;
@@ -75,21 +74,19 @@ const Hero = () => {
               <div className="mx-auto max-w-[1000px]">
                 <div className="">
                   <h1 className="mb-5 text-4xl font-bold leading-tight text-white sm:text-5xl sm:leading-tight md:text-6xl md:leading-tight">
-                    We help you 
+                    We specialize in
                     <span
                       className={`text-blue-500 ${animate ? "animateRefinedPop" : ""}`}
                       onAnimationEnd={handleAnimationEnd} // Reset animation on end
                     >
-                    {" "+techSolution+" "}
+                      {" " + techSolution + " "}
                     </span>
-                     for your business.
+                    to drive your business forward.
                   </h1>
                 </div>
-                <p className="mb-12 text-lg leading-relaxed text-gray-300 sm:text-xl text-center">
-                  TECHONSY delivers cutting-edge IT solutions that empower
-                  businesses to thrive in the digital age. From custom software
-                  development to cloud infrastructure, we're your trusted
-                  technology partner.
+                <p className="mb-12 text-center text-xl leading-relaxed text-gray-300 sm:text-2xl">
+                  Empowering businesses with AI-driven innovation, custom
+                  software, and seamless IT outsourcing for scalable growth.
                 </p>
 
                 <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
@@ -97,14 +94,8 @@ const Hero = () => {
                     onClick={handleContactClick}
                     className="w-full rounded-lg bg-blue-600 px-8 py-4 text-base font-semibold text-white transition-all duration-300 hover:bg-blue-700 sm:w-auto"
                   >
-                    Get Started
+                    Work With Us
                   </button>
-                  <Link
-                    href="/services"
-                    className="w-full rounded-lg border border-gray-600 bg-transparent px-8 py-4 text-base font-semibold text-white transition-all duration-300 hover:bg-gray-800 sm:w-auto"
-                  >
-                    Our Services
-                  </Link>
                 </div>
               </div>
             </div>
