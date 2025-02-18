@@ -3,84 +3,36 @@
 import {services , technologies, cards, cards2, expertise} from "./data";
 
 import AnimetedLine from "../../../../components/Animation/Services/Javascript/Animatedline"
-import { useEffect, useState } from "react";
+
 
 
 export default function JavaScript() {
-  const [opacity, setOpacity] = useState(0.7); // Default to 70%
-
-  useEffect(() => {
-    const updateOpacity = () => {
-      const width = window.innerWidth;
-      if (width > 800 && width < 1300) {
-        setOpacity(0.35);
-      } else if (width <= 800) {
-        setOpacity(0.25);
-      } else {
-        setOpacity(0.7);
-      }
-    };
-
-    updateOpacity(); // Run once on mount
-    window.addEventListener("resize", updateOpacity);
-    return () => window.removeEventListener("resize", updateOpacity);
-  }, []);
+  
   return (
   <>
     {/* hero */}
     <section className="bg-gradient-to-br from-[#1b1f2a] to-[#4b3a72] px-6 lg:px-24 flex flex-col z-1 relative">
-       <div className="h-[90vh] flex items-center bg-yellow-400 relative overflow-hidden">
-         {/* Text Content */}
-         <div className="relative z-10 max-w-xl ml-8 md:ml-16 lg:ml-20 lg:pr-20 text-left text-white">
-           <h1 className="text-5xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
-             Develop high-performing, dynamic applications with JavaScript!
-           </h1>
-           <p className="text-base md:text-lg mb-6 text-justify">
-             Create next-gen web and mobile solutions with custom JavaScript development.
-             Craft bespoke JavaScript applications for your enterprise with clear structure,
-             intuitive site architecture, and easy-to-recognize links.
-           </p>
-         </div>
-     
-         {/* Background Image with Responsive Opacity */}
-         <div 
-           className="absolute w-[60vh] md:w-[70vh] lg:w-[80vh] h-[60vh] md:h-[70vh] lg:h-[80vh] 
-                      right-5 md:right-10 bottom-5 md:bottom-10 bg-contain bg-no-repeat bg-center 
-                      opacity-25 md:opacity-35 lg:opacity-70 transition-opacity duration-500 ease-in-out"
-           style={{ 
-             backgroundImage: `url(/images/technology/frontend/javascript/javascript.svg)`,
-             opacity: window.innerWidth > 800 && window.innerWidth < 1300 ? 0.35 : undefined,
-           }}
-         ></div>
-       </div>
-    </section>
-
-
-    {/* Unsurpassed JavaScript development capabilities */}
-    <section className="mt-20 px-6 lg:px-24 flex flex-col z-1 relative pb-10 max-w-[1000px] mx-auto">
-       <div className="max-w-4xl mx-auto text-center lg:text-left">
-         <h1 className="text-3xl md:text-5xl font-bold text-white">
-           Unsurpassed JavaScript development capabilities for exceptional results
-         </h1>
-         <p className="mt-4 text-gray-400 text-lg">
-           JavaScript is considered one of the most prominent and in-demand programming languages widely used for mobile app and web development.
-         </p>
-       </div>
-       <AnimetedLine />
-       <div className="relative flex flex-col lg:flex-row items-center lg:items-start justify-between gap-8 mt-10">
-         {/* Background Image Section */}
-         <div
-           className="rounded-xl w-full lg:w-[50%] h-[100px] md:h-[100px] lg:h-[200px] bg-center bg-cover bg-no-repeat"
-           style={{ backgroundImage: `url(/images/technology/frontend/javascript/image-01.png)` }}
-         ></div>
-         
-         {/* Text Section */}
-         <div className="relative z-10 max-w-xl text-left text-white px-4">
-           <p>
-             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis possimus perspiciatis, in et sapiente aliquid officia similique, tempore facilis fuga obcaecati deleniti voluptatibus. Perspiciatis, quia exercitationem ducimus expedita incidunt officia!
-           </p>
-         </div>
-       </div>
+      <div className="h-[90vh] flex items-center bg-yellow-400 relative overflow-hidden">
+        {/* Text Content */}
+        <div className="relative z-10 max-w-xl ml-8 md:ml-16 lg:ml-20 lg:pr-20 text-left text-white">
+          <h1 className="text-5xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
+            Develop high-performing, dynamic applications with JavaScript!
+          </h1>
+          <p className="text-base md:text-lg mb-6 text-justify">
+            Create next-gen web and mobile solutions with custom JavaScript development.
+            Craft bespoke JavaScript applications for your enterprise with clear structure,
+            intuitive site architecture, and easy-to-recognize links.
+          </p>
+        </div>
+    
+        {/* Background Image with Responsive Opacity */}
+        <div 
+          className="absolute w-[60vh] md:w-[70vh] lg:w-[80vh] h-[60vh] md:h-[70vh] lg:h-[80vh] 
+                     right-5 md:right-10 bottom-5 md:bottom-10 bg-contain bg-no-repeat bg-center 
+                     opacity-25 md:opacity-35 lg:opacity-70 transition-opacity duration-500 ease-in-out"
+          style={{ backgroundImage: 'url(/images/technology/frontend/javascript/javascript.svg)' }}
+        ></div>
+      </div>
     </section>
     {/* Ahex JavaScript Development Services */}
     <section className="bg-slate-900 px-6 lg:px-24 flex flex-col z-1 relative p-10 max-w-[1000px] mx-auto">
