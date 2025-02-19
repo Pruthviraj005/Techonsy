@@ -141,8 +141,8 @@ const menuData: Menu[] = [
         path: "/",
         newTab: false,
         submenu: [
-          { id: 531, title: "Android", path: "/", newTab: false },
-          { id: 532, title: "iOS", path: "/", newTab: false },
+          { id: 531, title: "Android", path: "/technology/MobileDevelopment/Android", newTab: false },
+          { id: 532, title: "iOS", path: "/technology/MobileDevelopment/IOS", newTab: false },
           { id: 533, title: "Flutter", path: "/", newTab: false },
           { id: 534, title: "React Native", path: "/", newTab: false }
         ]
