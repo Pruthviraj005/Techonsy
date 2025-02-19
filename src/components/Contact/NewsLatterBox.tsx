@@ -6,39 +6,42 @@ const NewsLatterBox = () => {
   const { theme } = useTheme();
 
   return (
-    <div className="relative z-10 rounded-sm bg-white p-8 shadow-three dark:bg-gray-dark sm:p-11 lg:p-8 xl:p-11">
-      <h3 className="mb-4 text-2xl font-bold leading-tight text-black dark:text-white">
-        Subscribe to receive future updates
-      </h3>
-      <p className="mb-11 border-b border-body-color border-opacity-25 pb-11 text-base leading-relaxed text-body-color dark:border-white dark:border-opacity-25">
-        Lorem ipsum dolor sited Sed ullam corper consectur adipiscing Mae ornare
-        massa quis lectus.
-      </p>
-      <div>
-        <input
-          type="text"
-          name="name"
-          placeholder="Enter your name"
-          className="border-stroke mb-4 w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
-        />
-        <input
-          type="email"
-          name="email"
-          placeholder="Enter your email"
-          className="border-stroke mb-4 w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
-        />
-        <input
-          type="submit"
-          value="Subscribe"
-          className="mb-5 flex w-full cursor-pointer items-center justify-center rounded-sm bg-primary px-9 py-4 text-base font-medium text-white shadow-submit duration-300 hover:bg-primary/90 dark:shadow-submit-dark"
-        />
-        <p className="text-center text-base leading-relaxed text-body-color dark:text-body-color-dark">
-          No spam guaranteed, So please don’t send any spam mail.
+    <div className="relative z-10 rounded-lg bg-white p-8 shadow-three dark:bg-gray-dark sm:p-11 lg:p-8 xl:p-11">
+      <div className="relative z-20">
+        <h3 className="mb-6 text-2xl font-bold leading-tight text-black dark:text-white">
+          Subscribe to receive future updates
+        </h3>
+        <p className="mb-8 text-base leading-relaxed text-body-color dark:text-body-color-dark">
+          Lorem ipsum dolor sited Sed ullam corper consectur adipiscing Mae ornare
+          massa quis lectus.
+        </p>
+        <div className="mb-8">
+          <input
+            type="text"
+            name="name"
+            placeholder="Enter your name"
+            className="mb-4 w-full rounded-lg border border-stroke bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Enter your email"
+            className="mb-4 w-full rounded-lg border border-stroke bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
+          />
+          <button
+            type="submit"
+            className="w-full rounded-lg bg-primary px-6 py-3 text-base font-medium text-white transition-all duration-300 hover:bg-primary/90 hover:shadow-lg"
+          >
+            Subscribe
+          </button>
+        </div>
+        <p className="text-center text-sm text-body-color dark:text-body-color-dark">
+          No spam guaranteed, So please don't send any spam mail.
         </p>
       </div>
 
-      <div>
-        <span className="absolute left-2 top-7">
+      <div className="absolute inset-0 z-10 overflow-hidden">
+        <span className="absolute left-2 top-7 opacity-20">
           <svg
             width="57"
             height="65"
@@ -74,7 +77,7 @@ const NewsLatterBox = () => {
           </svg>
         </span>
 
-        <span className="absolute bottom-24 left-1.5">
+        <span className="absolute bottom-24 left-1.5 opacity-20">
           <svg
             width="39"
             height="32"
@@ -110,7 +113,7 @@ const NewsLatterBox = () => {
           </svg>
         </span>
 
-        <span className="absolute right-2 top-[140px]">
+        <span className="absolute right-2 top-[140px] opacity-20">
           <svg
             width="38"
             height="38"
@@ -146,7 +149,7 @@ const NewsLatterBox = () => {
           </svg>
         </span>
 
-        <span className="absolute right-0 top-0">
+        <span className="absolute right-0 top-0 opacity-20">
           <svg
             width="162"
             height="91"

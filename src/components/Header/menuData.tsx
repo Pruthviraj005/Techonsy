@@ -16,13 +16,13 @@ const menuData: Menu[] = [
       {
         id: 411,
         title: "Mobile App Development",
-        path: "/services/development/MobileApp",
+        path: "/services/MobileApp",
         newTab: false
       },
       {
         id: 412,
         title: "Web Development",
-        path: "/services/development/web",
+        path: "/services/web",
         newTab: false
       },
       {
@@ -64,7 +64,7 @@ const menuData: Menu[] = [
       {
         id: 424,
         title: "Blockchain Development",
-        path: "/services/technology/BlockChain",
+        path: "/services/BlockChain",
         newTab: false
       },
       {
@@ -82,13 +82,13 @@ const menuData: Menu[] = [
       {
         id: 432,
         title: "IoT Development",
-        path: "/",
+        path: "/services/IOT",
         newTab: false
       },
       {
         id: 433,
         title: "Cloud Computing",
-        path: "/",
+        path: "/services/CloudComputing",
         newTab: false
       },
       {
@@ -100,7 +100,7 @@ const menuData: Menu[] = [
       {
         id: 435,
         title: "Software Maintenance & Support",
-        path: "/",
+        path: "/services/maintenancesupport",
         newTab: false
       }
     ]
@@ -117,7 +117,7 @@ const menuData: Menu[] = [
         path: "/",
         newTab: false,
         submenu: [
-          { id: 511, title: "React.js", path: "/", newTab: false },
+          { id: 511, title: "React.js", path: "", newTab: false },
           { id: 512, title: "Angular", path: "/technology/Angular", newTab: false },
           { id: 513, title: "JavaScript", path: "/technology/frontend/javascript", newTab: false },
           { id: 514, title: "Next.js", path: "/", newTab: false }
@@ -130,8 +130,8 @@ const menuData: Menu[] = [
         newTab: false,
         submenu: [
           { id: 521, title: "Node.js", path: "/", newTab: false },
-          { id: 522, title: "Python", path: "/", newTab: false },
-          { id: 523, title: "Java", path: "/", newTab: false },
+          { id: 522, title: "Python", path: "/technology/backend/python", newTab: false },
+          { id: 523, title: "Java", path: "/technology/backend/java", newTab: false },
           { id: 524, title: "Nest.js", path: "/", newTab: false }
         ]
       },
