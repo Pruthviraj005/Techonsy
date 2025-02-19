@@ -16,13 +16,13 @@ const menuData: Menu[] = [
       {
         id: 411,
         title: "Mobile App Development",
-        path: "/services/development/MobileApp",
+        path: "/services/MobileApp",
         newTab: false
       },
       {
         id: 412,
         title: "Web Development",
-        path: "/services/development/web",
+        path: "/services/web",
         newTab: false
       },
       {
@@ -64,7 +64,7 @@ const menuData: Menu[] = [
       {
         id: 424,
         title: "Blockchain Development",
-        path: "/services/technology/BlockChain",
+        path: "/services/BlockChain",
         newTab: false
       },
       {
@@ -94,13 +94,13 @@ const menuData: Menu[] = [
       {
         id: 434,
         title: "Consulting Services",
-        path: "/",
+        path: "/services/consulting-services",
         newTab: false
       },
       {
         id: 435,
         title: "Software Maintenance & Support",
-        path: "/",
+        path: "/services/maintenancesupport",
         newTab: false
       }
     ]
@@ -131,7 +131,7 @@ const menuData: Menu[] = [
         submenu: [
           { id: 521, title: "Node.js", path: "/", newTab: false },
           { id: 522, title: "Python", path: "/", newTab: false },
-          { id: 523, title: "Java", path: "/", newTab: false },
+          { id: 523, title: "Java", path: "/technology/backend/java", newTab: false },
           { id: 524, title: "Nest.js", path: "/", newTab: false }
         ]
       },
