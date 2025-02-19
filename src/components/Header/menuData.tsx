@@ -58,7 +58,7 @@ const menuData: Menu[] = [
       {
         id: 423,
         title: "NFT Development",
-        path: "/",
+        path: "/services/NFTMarketplace",
         newTab: false
       },
       {
