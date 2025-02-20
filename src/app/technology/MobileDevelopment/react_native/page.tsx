@@ -6,6 +6,7 @@ import TechToolsSection from "./TechTools"
 import TechnologyStack from "./TechnologyStack"
 import WorkWithUs from "./Workwithus"
 import Industries from "./Industries"
+import ReactNativeServices from "./services"
 
 export default function ReactNative()
 {
@@ -17,6 +18,7 @@ export default function ReactNative()
             <BusinessGrowthSection/>
             <TechToolsSection/>
             <TechnologyStack/>
+            <ReactNativeServices/>
             <WorkWithUs/>
             <Industries/>
         </div>

@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <div className="relative overflow-hidden border-b-[1px] border-cyan-600">
+    <div className="relative overflow-hidden ">
       {/* Background Effect */}
       <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-indigo-600 to-blue-700 opacity-90"></div>
 
@@ -18,7 +18,7 @@ export default function Hero() {
       <section className="relative text-white py-10 px-6 md:px-16 flex flex-col md:flex-row items-center max-w-[1000px] mx-auto">
         {/* Left Section */}
         <div className="text-center md:text-left py-10">
-          <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-6 pt-10">
+          <h2 className="text-3xl sm:text-6xl md:text-6xl font-bold mb-6 pt-10">
             <span className="text-cyan-500">React Native</span> Development
           </h2>
           <div className="flex flex-col items-center md:items-start gap-6">
@@ -26,8 +26,8 @@ export default function Hero() {
               Craft exceptional React Native applications that exhibit unparalleled speed, reliability, scalability, and captivating user experiences.
               Rely on our proficient team of app developers, boasting over a decade of expertise, to construct extraordinary apps that flawlessly align with your unique specifications and aspirations.
             </p>
-            <button className="bg-white text-blue-500 px-6 py-3 rounded-full font-semibold shadow-md hover:bg-blue-100 transition hover:scale-110 duration-500 w-full sm:w-1/2 md:w-[40%]">
-              Get Started →
+            <button className="bg-white text-blue-500 w-[50%] px-6 py-3 rounded-full font-semibold shadow-md hover:bg-blue-100 transition hover:scale-110 duration-500  sm:w-1/2 md:w-[40%]">
+              Get Started
             </button>
           </div>
         </div>

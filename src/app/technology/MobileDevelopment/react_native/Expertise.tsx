@@ -61,34 +61,32 @@ export default function ExpertiseSection() {
   }, []);
 
   return (
-    <div className="relative bg-gradient-to-b from-gray-900 to-black py-10 border-t-[0.5px] border-t-cyan-700 ">
-  {/* Optional SVG Background for Texture */}
-  
+    <div className="relative bg-gradient-to-b from-gray-900 to-black py-10 border-y-[0.5px] border-y-cyan-700 ">
+      {/* Optional SVG Background for Texture */}
+      <section className="relative  px-6 md:px-16 text-white max-w-[1000px] mx-auto">
+        {/* Title */}
+        <h2 className="text-3xl md:text-5xl font-bold text-center mb-6 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500 py-16">
+          Solution Development Expertise Includes
+        </h2>
 
-  <section className="relative  px-6 md:px-16 text-white max-w-[1000px] mx-auto">
-    {/* Title */}
-    <h2 className="text-3xl md:text-5xl font-bold text-center mb-6 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500 py-16">
-      Solution Development Expertise Includes
-    </h2>
-
-    {/* Cards */}
-    <div className="grid md:grid-cols-3 gap-8">
-      {expertiseData.map((item, index) => (
-        <div
-          key={index}
-          className={`rounded-2xl p-8 shadow-lg bg-white/10 backdrop-blur-md hover:scale-105 transition transform duration-500 border border-gray-700`}
-        >
-          {/* Centered Icon */}
-          <div className="flex justify-center items-center mb-4">{item.icon}</div>
-          <h3 className="text-xl font-semibold mb-4 text-center text-gray-200">
-            {item.title}
-          </h3>
-          <p className="text-md text-center text-gray-400">{item.description}</p>
+        {/* Cards */}
+        <div className="grid md:grid-cols-3 gap-8">
+          {expertiseData.map((item, index) => (
+            <div
+              key={index}
+              className={`rounded-2xl p-8 shadow-lg bg-white/10 backdrop-blur-md hover:scale-105 transition transform duration-500 border border-gray-700`}
+            >
+              {/* Centered Icon */}
+              <div className="flex justify-center items-center mb-4">{item.icon}</div>
+                <h3 className="text-xl font-semibold mb-4 text-center text-gray-200">
+                  {item.title}
+                </h3>
+                <p className="text-md text-center text-gray-400">{item.description}</p>
+            </div>
+          ))}
         </div>
-      ))}
+        
+      </section>
     </div>
-    
-  </section>
-</div>
   );
 }
