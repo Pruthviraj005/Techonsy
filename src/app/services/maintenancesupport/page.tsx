@@ -17,17 +17,17 @@ export default function Home() {
         <section className="relative flex flex-col items-center justify-center text-center min-h-[80vh]  py-10" >
             <div className="h-full  bg-gradient-to-r from-blue-900 via-indigo-900 to-purple-900 absolute w-[100vw] border-b-[1px] border-b-cyan-600"></div>
             <div className="absolute   bg-black w-[100vw] mx-auto bg-opacity-70 h-full  "></div>
-            <div className="relative z-10 px-6  flex flex-col gap-10 mt-16">
+            <div className="relative z-10 px-6  flex flex-col gap-8 mt-16">
                 <div>
-                <h1 className="text-4xl md:text-5xl font-bold mb-4 ">Software Maintenance and Support</h1>
-                <p className="text-lg md:text-xl text-gray-300">
-                    Stay light years ahead with simplistic software maintenance services
-                </p>
+                    <h1 className="text-4xl md:text-5xl font-bold mb-4 ">Software Maintenance and Support</h1>
+                    <p className="text-lg md:text-xl text-gray-300">
+                        Stay light years ahead with simplistic software maintenance services
+                    </p>
                 </div>
-                <p className="text-md md:text-lg mt-2 text-gray-400">
+                <p className="text-md md:text-lg  text-gray-400">
                     Enhance your business productivity by infusing flexibility, scalability, and rapid realization of ROI with intuitive and bespoke software application maintenance services.
                 </p>
-                <button className="mt-6 bg-blue-600 px-6 py-3 text-lg font-medium rounded-md hover:bg-blue-900 max-w-[450px] mx-auto transition-all transform hover:scale-105 duration-300 ease-in-out">
+                <button className=" mt-6 w-[85%] bg-blue-600 px-2 py-2 text-lg font-medium rounded-md hover:bg-blue-900 max-w-[450px] mx-auto transition-all transform hover:scale-105 duration-300 ease-in-out">
                     Consult Software Maintenance Experts →
                 </button>
             </div>

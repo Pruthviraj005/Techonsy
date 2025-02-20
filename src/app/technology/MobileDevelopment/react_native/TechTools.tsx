@@ -26,10 +26,10 @@ export default function TechToolsSection() {
       <section className="max-w-[1000px] mx-auto py-12 px-4">
         {/* Section Title */}
         <h2 className="text-4xl font-bold text-slate-100 mb-4 transition-opacity duration-700 ease-in-out opacity-100">
-          Get the Best of React Native for Your App
+          Unlock the Full Potential of React Native for Your App
         </h2>
         <p className="text-gray-400 max-w-2xl mx-auto transition-opacity duration-700 ease-in-out opacity-100 py-6">
-          Your iOS App is developed using the best tools, technologies, industry best practices, and workflows. We are committed to building your product of the utmost quality. Here are some of the tools and practices we implement.
+          We craft high-quality React Native apps using cutting-edge tools, technologies, and industry best practices. Our commitment to excellence ensures seamless performance, scalability, and a superior user experience. Here’s how we make it happen.
         </p>
 
         {/* Tools List */}

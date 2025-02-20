@@ -77,15 +77,14 @@ export default function Python () {
                 
             {/* top section*/}
                 <div className="absolute   bg-black w-[100vw] mx-auto bg-opacity-50 bg-blur-[200px] h-full"></div>
-                <div className="lg:w-[1000px] text-white flex flex-col justify-center items-center my-20 gap-4 z-10">
-                    <div className="flex flex-row justify-center items-center " >
-                        <div >
+                <div className="lg:w-[1000px] text-white flex flex-col justify-center items-center my-20 gap-7 z-10 pt-8">
+                    <div className="flex flex-row justify-center items-center text-center " >
+                        <div className="hidden sm:block">
                             <Image
                                 src={img}
                                 alt="Python Development"
                                 width={400}
                                 height={400}
-                                className=""
                             />
                         </div>
                         <h1 className="text-4xl lg:text-6xl font-bold  ">
@@ -115,7 +114,7 @@ export default function Python () {
                     </p>
                 </header>
 
-                <section className="py-10">
+                <section className="">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mt-6 px-10 content-center">
                         {services.map((service, index) => (
                             <div key={index} className="group border-[0.5px] border-cyan-600 border-opacity-50 p-6 rounded-3xl shadow-md bg-slate-900 backdrop-blur-3xl text-center">

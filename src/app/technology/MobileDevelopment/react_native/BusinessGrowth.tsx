@@ -35,11 +35,11 @@ export default function BusinessGrowthSection() {
   const [activeTab, setActiveTab] = useState("Startup");
 
   return (
-    <div className="relative py-14 border-t-[0.5px] border-t-cyan-600 mt-14 mx-6">
+    <div className="relative py-14  mt-14 mx-6">
       
       <div className="absolute inset-0 w-slg opacity-30  bg-gradient-to-br from-[#182a44] to-[#084e7a] blur-[100px]  animate-rotate rounded-full  z-0"></div>
 
-      <section className="max-w-[1000px] mx-auto py-10">
+      <section className="max-w-[1000px] mx-auto">
         {/* Title */}
         <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-center mb-6 
                bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-400 
