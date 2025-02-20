@@ -58,7 +58,7 @@ const menuData: Menu[] = [
       {
         id: 423,
         title: "NFT Development",
-        path: "/",
+        path: "/services/NFTMarketplace",
         newTab: false
       },
       {
@@ -82,7 +82,7 @@ const menuData: Menu[] = [
       {
         id: 432,
         title: "IoT Development",
-        path: "/",
+        path: "/services/IOT",
         newTab: false
       },
       {
@@ -94,13 +94,13 @@ const menuData: Menu[] = [
       {
         id: 434,
         title: "Consulting Services",
-        path: "/",
+        path: "/services/consulting-services",
         newTab: false
       },
       {
         id: 435,
         title: "Software Maintenance & Support",
-        path: "/",
+        path: "/services/maintenancesupport",
         newTab: false
       }
     ]
@@ -117,9 +117,9 @@ const menuData: Menu[] = [
         path: "/",
         newTab: false,
         submenu: [
-          { id: 511, title: "React.js", path: "/technology/frontend/reactjs", newTab: false },
-          { id: 512, title: "Angular", path: "/", newTab: false },
-          { id: 513, title: "JavaScript", path: "/", newTab: false },
+          { id: 511, title: "React.js", path: "technology/frontend/reactjs", newTab: false },
+          { id: 512, title: "Angular", path: "/technology/Angular", newTab: false },
+          { id: 513, title: "JavaScript", path: "/technology/frontend/javascript", newTab: false },
           { id: 514, title: "Next.js", path: "/", newTab: false }
         ]
       },
@@ -130,7 +130,7 @@ const menuData: Menu[] = [
         newTab: false,
         submenu: [
           { id: 521, title: "Node.js", path: "/", newTab: false },
-          { id: 522, title: "Python", path: "/", newTab: false },
+          { id: 522, title: "Python", path: "/technology/backend/python", newTab: false },
           { id: 523, title: "Java", path: "/technology/backend/java", newTab: false },
           { id: 524, title: "Nest.js", path: "/", newTab: false }
         ]
@@ -141,8 +141,8 @@ const menuData: Menu[] = [
         path: "/",
         newTab: false,
         submenu: [
-          { id: 531, title: "Android", path: "/", newTab: false },
-          { id: 532, title: "iOS", path: "/", newTab: false },
+          { id: 531, title: "Android", path: "/technology/MobileDevelopment/Android", newTab: false },
+          { id: 532, title: "iOS", path: "/technology/MobileDevelopment/IOS", newTab: false },
           { id: 533, title: "Flutter", path: "/", newTab: false },
           { id: 534, title: "React Native", path: "/", newTab: false }
         ]
