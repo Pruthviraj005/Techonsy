@@ -1,6 +1,7 @@
 'use client'
 
-import { Spotlight } from "@/components/ui/spotlight-new"
+import { Spotlight } from '../../../../components/ui/spotlight-new'
+import React from "react"
 
 export default function BlockChainBanner() {
   return (
@@ -30,7 +31,7 @@ export default function BlockChainBanner() {
 
           <button className=" top-10 relative px-8 py-3 text-lg font-semibold text-white transition-all duration-300 ease-in-out rounded-lg shadow-lg group">
             <span className="absolute inset-0 bg-gradient-to-r from-black via-blue-800 to-black rounded-lg animate-border"></span>
-            <span className="absolute inset-0 m-[2px] bg-gray-900 rounded-lg group-hover:bg-white transition-all duration-300"></span>
+            <span className="absolute inset-0 m-[2px] bg-gray-900 rounded-lg group-hover:bg-gray-950 transition-all duration-300"></span>
             <span className="relative z-10">🚀 Consult Our Experts</span>
           </button>
           <style>

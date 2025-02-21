@@ -16,13 +16,13 @@ const menuData: Menu[] = [
       {
         id: 411,
         title: "Mobile App Development",
-        path: "/services/development/MobileApp",
+        path: "/services/MobileApp",
         newTab: false
       },
       {
         id: 412,
         title: "Web Development",
-        path: "/services/development/web",
+        path: "/services/web",
         newTab: false
       },
       {
@@ -58,13 +58,13 @@ const menuData: Menu[] = [
       {
         id: 423,
         title: "NFT Development",
-        path: "/",
+        path: "/services/NFTMarketplace",
         newTab: false
       },
       {
         id: 424,
         title: "Blockchain Development",
-        path: "/services/technology/BlockChain",
+        path: "/services/BlockChain",
         newTab: false
       },
       {
@@ -82,25 +82,25 @@ const menuData: Menu[] = [
       {
         id: 432,
         title: "IoT Development",
-        path: "/",
+        path: "/services/IOT",
         newTab: false
       },
       {
         id: 433,
         title: "Cloud Computing",
-        path: "/",
+        path: "/services/CloudComputing",
         newTab: false
       },
       {
         id: 434,
         title: "Consulting Services",
-        path: "/",
+        path: "/services/consulting-services",
         newTab: false
       },
       {
         id: 435,
         title: "Software Maintenance & Support",
-        path: "/",
+        path: "/services/maintenancesupport",
         newTab: false
       }
     ]
@@ -117,9 +117,9 @@ const menuData: Menu[] = [
         path: "/",
         newTab: false,
         submenu: [
-          { id: 511, title: "React.js", path: "/", newTab: false },
-          { id: 512, title: "Angular", path: "/", newTab: false },
-          { id: 513, title: "JavaScript", path: "/", newTab: false },
+          { id: 511, title: "React.js", path: "technology/frontend/reactjs", newTab: false },
+          { id: 512, title: "Angular", path: "/technology/frontend/Angular", newTab: false },
+          { id: 513, title: "JavaScript", path: "/technology/frontend/javascript", newTab: false },
           { id: 514, title: "Next.js", path: "/", newTab: false }
         ]
       },
@@ -130,8 +130,8 @@ const menuData: Menu[] = [
         newTab: false,
         submenu: [
           { id: 521, title: "Node.js", path: "/", newTab: false },
-          { id: 522, title: "Python", path: "/", newTab: false },
-          { id: 523, title: "Java", path: "/", newTab: false },
+          { id: 522, title: "Python", path: "/technology/backend/python", newTab: false },
+          { id: 523, title: "Java", path: "/technology/backend/java", newTab: false },
           { id: 524, title: "Nest.js", path: "/", newTab: false }
         ]
       },
@@ -141,10 +141,10 @@ const menuData: Menu[] = [
         path: "/",
         newTab: false,
         submenu: [
-          { id: 531, title: "Android", path: "/", newTab: false },
-          { id: 532, title: "iOS", path: "/", newTab: false },
+          { id: 531, title: "Android", path: "/technology/MobileDevelopment/Android", newTab: false },
+          { id: 532, title: "iOS", path: "/technology/MobileDevelopment/IOS", newTab: false },
           { id: 533, title: "Flutter", path: "/", newTab: false },
-          { id: 534, title: "React Native", path: "/", newTab: false }
+          { id: 534, title: "React Native", path: "/technology/MobileDevelopment/react_native", newTab: false }
         ]
       },
       {
@@ -153,10 +153,10 @@ const menuData: Menu[] = [
         path: "/",
         newTab: false,
         submenu: [
-          { id: 541, title: "MySQL", path: "/", newTab: false },
-          { id: 542, title: "PostgreSQL", path: "/", newTab: false },
-          { id: 543, title: "MongoDB", path: "/", newTab: false },
-          { id: 544, title: "Firebase", path: "/", newTab: false },
+          { id: 541, title: "MySQL", path: "/technology/databases/mysql", newTab: false },
+          { id: 542, title: "PostgreSQL", path: "/technology/databases/PostgreSQL", newTab: false },
+          { id: 543, title: "MongoDB", path: "/technology/databases/mongodb", newTab: false },
+          { id: 544, title: "Firebase", path: "/technology/databases/firebase", newTab: false },
           { id: 545, title: "Supabase", path: "/", newTab: false }
         ]
       },
@@ -178,7 +178,7 @@ const menuData: Menu[] = [
         path: "/",
         newTab: false,
         submenu: [
-          { id: 561, title: "Google Cloud", path: "/", newTab: false },
+          { id: 561, title: "Google Cloud", path: "/technology/cloud-services/google-cloud", newTab: false },
           { id: 562, title: "AWS", path: "/", newTab: false },
           { id: 563, title: "Microsoft Azure", path: "/", newTab: false }
         ]

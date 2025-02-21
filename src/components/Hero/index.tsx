@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
@@ -7,29 +7,27 @@ import Contact from '../Contact';
 
 const Hero = () => {
   const [techSolution, setTechSolution] = useState("Mobile App Development");
-  const [animate, setAnimate] = useState(false); // Track animation state
+  const [animate, setAnimate] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     const solutions = [
-      "in Mobile App Development",
-      "in Web App Development",
-      "in Software Development",
-      "in DevOps Development",
-      "by Outsourcing Developers"
+      "DevOps Development",
+      "Web App Development",
+      "AI Development",
+      "UI & UX Designing",
     ];
 
     let currentIndex = 0;
     const interval = setInterval(() => {
       currentIndex = (currentIndex + 1) % solutions.length;
       setTechSolution(solutions[currentIndex]);
-      setAnimate(true); // Trigger the animation when text changes
-    }, 4000); // Switch every 4 seconds
+      setAnimate(true);
+    }, 4000);
 
-    return () => clearInterval(interval); // Cleanup the interval on component unmount
+    return () => clearInterval(interval);
   }, []);
 
-  // Reset animation by clearing the class after the animation ends
   const handleAnimationEnd = () => {
     setAnimate(false);
   };
