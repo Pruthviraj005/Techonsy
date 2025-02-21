@@ -5,6 +5,7 @@ import Link from 'next/link';
 import menuData from './menuData';
 import { FiMenu, FiX } from 'react-icons/fi';
 import { Menu } from "@/types/menu";
+import { motion, useScroll, useTransform } from 'framer-motion';
 
 const Header = () => {
   const [openSubmenu, setOpenSubmenu] = useState<number | null>(null);
@@ -18,6 +19,17 @@ const Header = () => {
   const [hireTalentDropdownPosition, setHireTalentDropdownPosition] = useState<'left' | 'right'>('left');
   const [activeMobileSubmenu, setActiveMobileSubmenu] = useState<number | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
+
+  const { scrollY } = useScroll();
+  const headerBackground = useTransform(
+    scrollY,
+    [0, 100],
+    ["rgba(11, 17, 32, 1)", "rgba(11, 17, 32, 0.98)"]
+  );
+  const headerScale = useTransform(scrollY, [0, 100], [1, 0.95]);
+  const headerBorderRadius = useTransform(scrollY, [0, 100], [0, 50]);
+  const headerWidth = useTransform(scrollY, [0, 100], ["100%", "90%"]);
+  const headerTranslateY = useTransform(scrollY, [0, 100], [0, 10]);
 
   const handleSubmenu = (menuId: number) => {
     setOpenSubmenu(openSubmenu === menuId ? null : menuId);
@@ -402,7 +414,26 @@ const Header = () => {
 
   return (
     <>
-       <header className={`bg-[#0B1120] fixed w-full z-50 transition-all duration-200 ${isScrolled ? 'centered-header' : ''}`}>
+      <motion.header
+        style={{
+          position: 'fixed',
+          width: headerWidth,
+          backgroundColor: headerBackground,
+          borderRadius: headerBorderRadius,
+          scale: headerScale,
+          y: headerTranslateY,
+          left: '50%',
+          x: '-50%',
+          zIndex: 50,
+        }}
+        initial={{ y: -100 }}
+        animate={{ y: 0 }}
+        transition={{
+          type: "spring",
+          stiffness: 100,
+          damping: 20,
+        }}
+      >
         <div className="container mx-auto px-6">
           <div className="flex items-center justify-between h-[72px]">
             <Link href="/" className="flex-shrink-0">
@@ -440,32 +471,15 @@ const Header = () => {
             </div>
           </div>
         </div>
-      </header>
-     
+      </motion.header>
+
       <style jsx>{`
-        .centered-header {
-          top: 0;
-          left: 50%;
-          transform: translateX(-50%);
-          width: 90%;
-          max-width: 1200px;
-          border-radius: 50px;
-          background-color: rgba(11, 17, 32, 0.98);
-          transition: all 0.2s ease-in-out;
-        }
-
-        header {
-          transition: all 0.2s ease-in-out;
-        }
-
-        header:not(.centered-header) {
-          border-radius: 0;
-        }
-
         @media (max-width: 1024px) {
-          .centered-header {
-            width: 100%;
-            border-radius: 0;
+          header {
+            width: 100% !important;
+            border-radius: 0 !important;
+            transform: none !important;
+            left: 0 !important;
           }
         }
       `}</style>
