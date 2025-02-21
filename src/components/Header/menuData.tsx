@@ -156,7 +156,7 @@ const menuData: Menu[] = [
           { id: 541, title: "MySQL", path: "/", newTab: false },
           { id: 542, title: "PostgreSQL", path: "/technology/Databases/PostgreSQL", newTab: false },
           { id: 543, title: "MongoDB", path: "/technology/Databases/mongodb", newTab: false },
-          { id: 544, title: "Firebase", path: "/", newTab: false },
+          { id: 544, title: "Firebase", path: "/technology/Databases/firebase", newTab: false },
           { id: 545, title: "Supabase", path: "/", newTab: false }
         ]
       },
