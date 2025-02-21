@@ -1,3 +1,4 @@
+'use client';
 import React, { useState, useEffect } from 'react';
 import { ShoppingCart, Heart, Home, Cpu, Factory, BookOpen } from 'lucide-react';
 

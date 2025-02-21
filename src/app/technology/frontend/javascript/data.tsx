@@ -1,3 +1,4 @@
+'use client';
 import { FaBolt, FaRocket, FaCodeBranch, FaStar, FaSync, FaCogs } from 'react-icons/fa';
 import { FaAward } from "react-icons/fa6";
 import { MdSavings, MdAutoGraph  } from "react-icons/md";
