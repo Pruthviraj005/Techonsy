@@ -1,3 +1,4 @@
+'use client';
 import React, { useState, useEffect } from 'react';
 import { Cpu, Database, FileText, Share2, Users, Layers } from 'lucide-react';
 

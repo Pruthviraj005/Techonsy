@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 
 const ServiceCard = ({ icon, title, description, delay }) => (
