@@ -143,8 +143,8 @@ const menuData: Menu[] = [
         submenu: [
           { id: 531, title: "Android", path: "/technology/MobileDevelopment/Android", newTab: false },
           { id: 532, title: "iOS", path: "/technology/MobileDevelopment/IOS", newTab: false },
-          { id: 533, title: "Flutter", path: "/", newTab: false },
-          { id: 534, title: "React Native", path: "/", newTab: false }
+          { id: 533, title: "Flutter", path: "", newTab: false },
+          { id: 534, title: "React Native", path: "/technology/MobileDevelopment/react_native", newTab: false }
         ]
       },
       {
@@ -153,9 +153,9 @@ const menuData: Menu[] = [
         path: "/",
         newTab: false,
         submenu: [
-          { id: 541, title: "MySQL", path: "/", newTab: false },
-          { id: 542, title: "PostgreSQL", path: "/technology/Databases/PostgreSQL", newTab: false },
-          { id: 543, title: "MongoDB", path: "/technology/Databases/mongodb", newTab: false },
+          { id: 541, title: "MySQL", path: "/technology/databases/mysql", newTab: false },
+          { id: 542, title: "PostgreSQL", path: "/technology/databases/PostgreSQL", newTab: false },
+          { id: 543, title: "MongoDB", path: "/technology/databases/mongodb", newTab: false },
           { id: 544, title: "Firebase", path: "/technology/Databases/firebase", newTab: false },
           { id: 545, title: "Supabase", path: "/", newTab: false }
         ]
