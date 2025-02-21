@@ -12,11 +12,11 @@ export default function JavaScript() {
   <>
     {/* hero */}
     <section className="bg-gradient-to-br from-[#1b1f2a] to-[#4b3a72] px-6 lg:px-24 flex flex-col z-1 relative">
-      <div className="h-[90vh] flex items-center bg-yellow-400 relative overflow-hidden">
+      <div className="h-[90vh] flex items-center bg-yellow-400 relative overflow-hidden mt-12">
         {/* Text Content */}
         <div className="relative z-10 max-w-xl ml-8 md:ml-16 lg:ml-20 lg:pr-20 text-left text-white">
           <h1 className="text-5xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
-            Develop high-performing, dynamic applications with JavaScript!
+            Develop high-performing, dynamic applications with <span className="text-[#FFB200]">JavaScript!</span>
           </h1>
           <p className="text-base md:text-lg mb-6 text-justify">
             Create next-gen web and mobile solutions with custom JavaScript development.
@@ -37,9 +37,11 @@ export default function JavaScript() {
     {/* Ahex JavaScript Development Services */}
     <section className="bg-slate-900 px-4 sm:px-6 lg:px-24 flex flex-col z-1 relative py-12 max-w-[1000px] mx-auto">
          {/* Title */}
-         <h2 className="text-3xl sm:text-4xl font-bold text-center text-white">
-           Ahex JavaScript Development Services
+        
+         <h2 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#5ab2f7] to-[#6f7bf7] text-center">
+           JavaScript Development Services
          </h2>
+         
          <AnimetedLine />
        
          {/* Services Grid */}
@@ -62,7 +64,9 @@ export default function JavaScript() {
      </section>
     {/* Our JavaScript Development Tools & Technologies */}
     <section className="py-12 text-white text-center px-6 max-w-[1000px] mx-auto">
-       <h2 className="text-3xl font-bold">Our JavaScript Development Tools & Technologies</h2>
+       <h2 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#5ab2f7] to-[#12cff3] text-center">
+       Our JavaScript Development Tools & Technologies
+        </h2>
        <AnimetedLine />
        
        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-5 gap-8 px-6 mt-8">
@@ -80,7 +84,7 @@ export default function JavaScript() {
      </section>
      {/*Why does JavaScript stand out from other technologies? */}
     <section className="py-12 px-6 text-center max-w-[1000px] mx-auto">
-       <h2 className="text-3xl font-bold text-white">Why does JavaScript stand out from other technologies?</h2>
+       <h2 className="text-3xl font-bold text-[#12cff3]">Why does JavaScript stand out from other technologies?</h2>
        <AnimetedLine />
        
        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
@@ -101,7 +105,7 @@ export default function JavaScript() {
 
 
     <section className="py-12 px-6 text-center max-w-[1000px] mx-auto">
-      <h2 className="text-3xl font-bold text-white">Why Work with us?</h2>
+      <h2 className="text-3xl font-bold text-[#12cff3]">Why Work with us?</h2>
       <AnimetedLine />
     
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
@@ -145,7 +149,7 @@ export default function JavaScript() {
         </div>
 
         {/* Responsive Circular Cards */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-6 mt-10 ml-10 mx-auto">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 mt-10 ml-10 mx-auto">
           {expertise.map((industry, index) => (
             <div
               key={index}

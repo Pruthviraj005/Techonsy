@@ -178,7 +178,7 @@ const menuData: Menu[] = [
         path: "/",
         newTab: false,
         submenu: [
-          { id: 561, title: "Google Cloud", path: "/", newTab: false },
+          { id: 561, title: "Google Cloud", path: "/technology/cloud-services/google-cloud", newTab: false },
           { id: 562, title: "AWS", path: "/", newTab: false },
           { id: 563, title: "Microsoft Azure", path: "/", newTab: false }
         ]

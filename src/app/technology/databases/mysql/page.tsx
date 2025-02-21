@@ -1,8 +1,8 @@
 import Hero from './hero'
 import ManagedMySql from './ManagedMySql'
 import MySqlServerDevelopment from './mysqlserverdevelopment'
-import WhyMySql from './whychoose'
-import WhyWork from './whywork'
+import WhyMySql from './performance'
+
 import ExperienceAcross from './experianceacross'
 export default function MySql(){
     return(<>
@@ -10,7 +10,6 @@ export default function MySql(){
      <ManagedMySql/>
      <MySqlServerDevelopment/>
      <WhyMySql/>
-     <WhyWork/>
      <ExperienceAcross/>
     </>)
 }

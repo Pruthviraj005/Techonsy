@@ -6,47 +6,27 @@ import { useInView } from "react-intersection-observer";
 
 const services = [
   {
-    title: "Custom Database Solutions",
+    title: "High Performance",
     description:
       "Leverage our expertise to build tailor-made MySQL database solutions that meet your unique business requirements, ensuring efficient data management and retrieval.",
     icon: "💾",
     glowColor: "blue-500",
   },
   {
-    title: "Performance Optimization",
+    title: "Scalability",
     description:
       "Improve the performance of your MySQL databases with advanced optimization techniques, including query tuning, indexing, and caching, to enhance application responsiveness and scalability.",
     icon: "⚡",
     glowColor: "pink-500",
   },
   {
-    title: "Scalable Architecture",
+    title: "Realibility",
     description:
       "Design scalable database architectures that can handle growing data volumes and user loads, ensuring smooth operations and high availability for your applications.",
     icon: "🔄",
     glowColor: "green-500",
   },
-  {
-    title: "Data Migration and Integration",
-    description:
-      "Seamlessly migrate your existing data to MySQL or integrate MySQL with other systems, enabling seamless data flow and interoperability across your enterprise ecosystem.",
-    icon: "🔗",
-    glowColor: "blue-500",
-  },
-  {
-    title: "Database Administration and Support",
-    description:
-      "Ensure the smooth operation of your MySQL databases with comprehensive administration and support services, including monitoring, backup and recovery, and troubleshooting to minimize downtime and maximize uptime.",
-    icon: "🛠️",
-    glowColor: "pink-500",
-  },
-  {
-    title: "Security and Compliance",
-    description:
-      "Implement robust security measures and compliance standards to protect your sensitive data, including access controls, encryption, and regular security audits.",
-    icon: "🔒",
-    glowColor: "green-500",
-  },
+  
 ];
 
 const MySqlServerDevelopment = () => {
@@ -75,15 +55,12 @@ const MySqlServerDevelopment = () => {
       <div className="absolute bottom-10 right-20 w-32 h-32 bg-pink-500 opacity-20 rounded-full filter blur-3xl animate-float-reverse"></div>
 
       <div className="max-w-[1000px] mx-auto text-center relative z-10">
-        <h2 className="text-3xl font-bold text-gray-200 mb-4">
-          Our MySQL Database Services
+         <h2 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#91EAE4] to-[#7F7FD5] mb-4">
+            Why Choose MySQL Server
         </h2>
         <div className="w-16 h-1 bg-blue-600 mx-auto mb-8"></div>
         <p className="text-gray-400 mb-8">
-          Deploy developers and data architects to help your enterprise design,
-          develop, and administer MySQL database applications. Improve your
-          environment with robust solutions for security, adaptability, and
-          migration.
+        MySQL offers high performance, scalability, and robust security, making it the ideal choice for seamless and reliable database management. Optimize efficiency, reduce costs, and power your applications with MySQL’s advanced features.
         </p>
 
         {/* Card Grid */}

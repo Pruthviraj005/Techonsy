@@ -30,14 +30,11 @@ const ManagedMySql=()=>{
         {/* Right Content */}
         <div className="max-w-lg">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Gain Fully Managed MySQL Database Services for your Business
+          Fully Managed MySQL Solutions for High Performance<span className="text-blue-400">& Cost Efficiency</span>
           </h2>
           <div className="w-12 h-1 bg-blue-600 mb-4"></div>
           <p className="text-lg text-gray-300 leading-relaxed">
-            Unlock innovation and support critical database deployments with our comprehensive MySQL services. Benefit from unmatched reliability, flexibility, and high-performance storage, along with data encryption and process optimizations.
-          </p>
-          <p className="text-lg text-gray-300 leading-relaxed mt-4">
-            Achieve millisecond latency and high throughput, tailored to your performance requirements while optimizing cost. Replicate data across availability zones and enjoy guaranteed uptime ensuring data durability and avoiding downtime and data loss. Seamlessly reduce costs with MySQL automation and cold data tiering, achieving up to 70% savings in cloud storage expenses.
+          Unlock innovation and power critical database deployments with our fully managed MySQL services. Enjoy unmatched reliability, flexibility, and high-performance storage with built-in data encryption    and process optimizations. Achieve millisecond latency, high throughput, and seamless data replication across availability zones for guaranteed uptime and durability. Optimize costs with MySQL automation and cold data tiering, reducing cloud storage expenses by up to 70% while ensuring top-tier performance and security.
           </p>
         </div>
       </div>
