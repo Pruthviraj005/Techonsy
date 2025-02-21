@@ -1,6 +1,7 @@
 'use client'
 
-import { Spotlight } from "@/components/ui/spotlight-new"
+import { Spotlight } from '../../../../components/ui/spotlight-new'
+import React from "react"
 
 export default function BlockChainBanner() {
   return (

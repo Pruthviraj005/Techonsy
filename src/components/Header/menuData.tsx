@@ -58,7 +58,7 @@ const menuData: Menu[] = [
       {
         id: 423,
         title: "NFT Development",
-        path: "/",
+        path: "/services/NFTMarketplace",
         newTab: false
       },
       {
@@ -117,8 +117,8 @@ const menuData: Menu[] = [
         path: "/",
         newTab: false,
         submenu: [
-          { id: 511, title: "React.js", path: "", newTab: false },
-          { id: 512, title: "Angular", path: "/technology/Angular", newTab: false },
+          { id: 511, title: "React.js", path: "technology/frontend/reactjs", newTab: false },
+          { id: 512, title: "Angular", path: "/technology/frontend/Angular", newTab: false },
           { id: 513, title: "JavaScript", path: "/technology/frontend/javascript", newTab: false },
           { id: 514, title: "Next.js", path: "/", newTab: false }
         ]
@@ -141,8 +141,8 @@ const menuData: Menu[] = [
         path: "/",
         newTab: false,
         submenu: [
-          { id: 531, title: "Android", path: "/", newTab: false },
-          { id: 532, title: "iOS", path: "/", newTab: false },
+          { id: 531, title: "Android", path: "/technology/MobileDevelopment/Android", newTab: false },
+          { id: 532, title: "iOS", path: "/technology/MobileDevelopment/IOS", newTab: false },
           { id: 533, title: "Flutter", path: "/", newTab: false },
           { id: 534, title: "React Native", path: "/", newTab: false }
         ]
@@ -154,8 +154,8 @@ const menuData: Menu[] = [
         newTab: false,
         submenu: [
           { id: 541, title: "MySQL", path: "/technology/databases/mysql", newTab: false },
-          { id: 542, title: "PostgreSQL", path: "/", newTab: false },
-          { id: 543, title: "MongoDB", path: "/", newTab: false },
+          { id: 542, title: "PostgreSQL", path: "/technology/databases/PostgreSQL", newTab: false },
+          { id: 543, title: "MongoDB", path: "/technology/databases/mongodb", newTab: false },
           { id: 544, title: "Firebase", path: "/", newTab: false },
           { id: 545, title: "Supabase", path: "/", newTab: false }
         ]
