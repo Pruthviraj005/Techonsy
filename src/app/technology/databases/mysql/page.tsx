@@ -1,3 +1,4 @@
+'use client';
 import Hero from './hero'
 import ManagedMySql from './ManagedMySql'
 import MySqlServerDevelopment from './mysqlserverdevelopment'

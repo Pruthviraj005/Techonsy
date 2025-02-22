@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import { Database, Code, Users, Search, GitBranch, ShieldCheck } from 'lucide-react';
 
