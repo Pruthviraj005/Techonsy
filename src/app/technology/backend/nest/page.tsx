@@ -1,3 +1,4 @@
+'use client';
 import HeroSection from "./hero";
 import Development from "./development";
 import Process from "./process"

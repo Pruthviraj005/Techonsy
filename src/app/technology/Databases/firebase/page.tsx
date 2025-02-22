@@ -1,3 +1,4 @@
+'use client';
 import FeaturesGrid from "./FeaturesGrid";
 import FirebaseDevelopment from "./FirebaseDevelopment";
 import FirebaseServices from "./FirebaseServices";
