@@ -1,4 +1,4 @@
-
+'use client';
 import HeroSection from "./hero"
 import GoogleAppEngineSection from "./exp";
 import Experiance from "./experience";
