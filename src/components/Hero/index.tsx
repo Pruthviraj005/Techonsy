@@ -203,16 +203,18 @@ const Hero = () => {
 
               <h1 className="relative z-10 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white">
                 <div className="flex flex-col gap-1 sm:gap-2">
-                  <div className="flex flex-col sm:flex-row flex-wrap items-baseline">
-                    <span className="block whitespace-nowrap">We help you</span>
+                  <div className="flex flex-col items-baseline">
+                    <span className="block whitespace-nowrap">We help in</span>
                     {/* <span className="block whitespace-nowrap sm:ml-2">you</span> */}
                     <span
-                      className={`block sm:inline-block sm:ml-2 bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent ${
+                      className={`block bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent ${
                         animate ? "animateRefinedPop" : ""
                       }`}
                       style={{ 
                         maxWidth: '100%',
-                        overflowWrap: 'break-word'
+                        overflowWrap: 'break-word',
+                        minHeight: '1.5em',
+                        lineHeight: '1.5'
                       }}
                       onAnimationEnd={handleAnimationEnd}
                     >
