@@ -159,7 +159,7 @@ const IndustryWeServe = () => {
         {/* Industry Cards Container with touch events */}
         <div 
           ref={containerRef}
-          className="flex overflow-x-auto pb-8 space-x-6 snap-x snap-mandatory hide-scrollbar scroll-smooth"
+          className="flex overflow-x-auto pb-8 space-x-6 snap-x snap-mandatory hide-scrollbar scroll-smooth max-w-[calc(100vw-2rem)] md:max-w-[calc(100vw-4rem)] lg:max-w-[1200px] mx-auto"
           onMouseEnter={() => setIsInteracting(true)}
           onMouseLeave={() => setIsInteracting(false)}
           onTouchStart={handleTouchStart}
@@ -184,7 +184,7 @@ const IndustryWeServe = () => {
               <motion.div
                 whileHover={!isMobile ? { scale: 1.02, y: -5 } : {}}
                 transition={{ type: "spring", stiffness: 300 }}
-                className="w-[300px] bg-white/80 dark:bg-gray-800/80 backdrop-blur-lg rounded-2xl shadow-xl overflow-hidden group relative touch-pan-x"
+                className="w-[300px] md:w-[350px] bg-white/80 dark:bg-gray-800/80 backdrop-blur-lg rounded-2xl shadow-xl overflow-hidden group relative touch-pan-x"
               >
                 {/* Gradient Border */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${industry.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`} />
@@ -246,21 +246,6 @@ const IndustryWeServe = () => {
             </motion.div>
           ))}
         </div>
-
-        {/* Scroll Indicators - Show only on desktop and when not interacting */}
-        {!isInteracting && !isMobile && (
-          <div className="mt-8 flex justify-center space-x-2">
-            <div className="text-sm text-gray-500 dark:text-gray-400">
-              {isMobile ? "Swipe to explore" : "Hover to pause automatic scrolling"}
-            </div>
-            <motion.div
-              animate={{ x: [0, 10, 0] }}
-              transition={{ repeat: Infinity, duration: 1.5 }}
-            >
-              →
-            </motion.div>
-          </div>
-        )}
       </div>
     </section>
   );

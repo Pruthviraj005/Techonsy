@@ -120,7 +120,7 @@ const menuData: Menu[] = [
           { id: 511, title: "React.js", path: "technology/frontend/reactjs", newTab: false },
           { id: 512, title: "Angular", path: "/technology/frontend/Angular", newTab: false },
           { id: 513, title: "JavaScript", path: "/technology/frontend/javascript", newTab: false },
-          { id: 514, title: "Next.js", path: "/", newTab: false }
+          { id: 514, title: "Next.js", path: "/technology/frontend/next", newTab: false }
         ]
       },
       {
@@ -166,7 +166,7 @@ const menuData: Menu[] = [
         path: "/",
         newTab: false,
         submenu: [
-          { id: 551, title: "MERN Stack", path: "/", newTab: false },
+          { id: 551, title: "MERN Stack", path: "/technology/full-stack-frameworks/mern-stack", newTab: false },
           { id: 552, title: "MEAN Stack", path: "/", newTab: false },
           { id: 553, title: "Next.js", path: "/", newTab: false },
           { id: 554, title: "Nest.js", path: "/", newTab: false }
@@ -384,7 +384,7 @@ const menuData: Menu[] = [
   {
     id: 2,
     title: "About Us",
-    path: "/",
+    path: "/about",
     newTab: false
   },
   {
