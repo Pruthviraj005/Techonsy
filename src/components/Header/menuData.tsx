@@ -58,7 +58,7 @@ const menuData: Menu[] = [
       {
         id: 423,
         title: "NFT Development",
-        path: "/",
+        path: "/services/NFTMarketplace",
         newTab: false
       },
       {
@@ -117,10 +117,10 @@ const menuData: Menu[] = [
         path: "/",
         newTab: false,
         submenu: [
-          { id: 511, title: "React.js", path: "/", newTab: false },
-          { id: 512, title: "Angular", path: "/technology/Angular", newTab: false },
-          { id: 513, title: "JavaScript", path: "/", newTab: false },
-          { id: 514, title: "Next.js", path: "/", newTab: false }
+          { id: 511, title: "React.js", path: "technology/frontend/reactjs", newTab: false },
+          { id: 512, title: "Angular", path: "/technology/frontend/Angular", newTab: false },
+          { id: 513, title: "JavaScript", path: "/technology/frontend/javascript", newTab: false },
+          { id: 514, title: "Next.js", path: "/technology/frontend/next", newTab: false }
         ]
       },
       {
@@ -130,9 +130,9 @@ const menuData: Menu[] = [
         newTab: false,
         submenu: [
           { id: 521, title: "Node.js", path: "/", newTab: false },
-          { id: 522, title: "Python", path: "/", newTab: false },
+          { id: 522, title: "Python", path: "/technology/backend/python", newTab: false },
           { id: 523, title: "Java", path: "/technology/backend/java", newTab: false },
-          { id: 524, title: "Nest.js", path: "/", newTab: false }
+          { id: 524, title: "Nest.js", path: "/technology/backend/nest", newTab: false }
         ]
       },
       {
@@ -144,7 +144,7 @@ const menuData: Menu[] = [
           { id: 531, title: "Android", path: "/technology/MobileDevelopment/Android", newTab: false },
           { id: 532, title: "iOS", path: "/technology/MobileDevelopment/IOS", newTab: false },
           { id: 533, title: "Flutter", path: "/", newTab: false },
-          { id: 534, title: "React Native", path: "/", newTab: false }
+          { id: 534, title: "React Native", path: "/technology/MobileDevelopment/react_native", newTab: false }
         ]
       },
       {
@@ -153,10 +153,10 @@ const menuData: Menu[] = [
         path: "/",
         newTab: false,
         submenu: [
-          { id: 541, title: "MySQL", path: "/", newTab: false },
-          { id: 542, title: "PostgreSQL", path: "/", newTab: false },
-          { id: 543, title: "MongoDB", path: "/", newTab: false },
-          { id: 544, title: "Firebase", path: "/", newTab: false },
+          { id: 541, title: "MySQL", path: "/technology/databases/mysql", newTab: false },
+          { id: 542, title: "PostgreSQL", path: "/technology/databases/PostgreSQL", newTab: false },
+          { id: 543, title: "MongoDB", path: "/technology/databases/mongodb", newTab: false },
+          { id: 544, title: "Firebase", path: "/technology/databases/firebase", newTab: false },
           { id: 545, title: "Supabase", path: "/", newTab: false }
         ]
       },
@@ -166,7 +166,7 @@ const menuData: Menu[] = [
         path: "/",
         newTab: false,
         submenu: [
-          { id: 551, title: "MERN Stack", path: "/", newTab: false },
+          { id: 551, title: "MERN Stack", path: "/technology/full-stack-frameworks/mern-stack", newTab: false },
           { id: 552, title: "MEAN Stack", path: "/", newTab: false },
           { id: 553, title: "Next.js", path: "/", newTab: false },
           { id: 554, title: "Nest.js", path: "/", newTab: false }
@@ -178,8 +178,8 @@ const menuData: Menu[] = [
         path: "/",
         newTab: false,
         submenu: [
-          { id: 561, title: "Google Cloud", path: "/", newTab: false },
-          { id: 562, title: "AWS", path: "/", newTab: false },
+          { id: 561, title: "Google Cloud", path: "/technology/cloud-services/google-cloud", newTab: false },
+          { id: 562, title: "AWS", path: "/technology/cloud-services/aws", newTab: false },
           { id: 563, title: "Microsoft Azure", path: "/", newTab: false }
         ]
       },
@@ -201,7 +201,7 @@ const menuData: Menu[] = [
         path: "/",
         newTab: false,
         submenu: [
-          { id: 581, title: "DevOps", path: "/", newTab: false },
+          { id: 581, title: "DevOps", path: "/technology/devops_infrastructure/devops", newTab: false },
           { id: 582, title: "CI/CD Pipelines", path: "/", newTab: false },
           { id: 583, title: "Kubernetes", path: "/", newTab: false },
           { id: 584, title: "Docker", path: "/", newTab: false }
@@ -384,7 +384,7 @@ const menuData: Menu[] = [
   {
     id: 2,
     title: "About Us",
-    path: "/",
+    path: "/about",
     newTab: false
   },
   {

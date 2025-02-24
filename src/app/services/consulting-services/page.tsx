@@ -162,8 +162,7 @@ export default function ConsultingServices() {
           src={project.image}
           alt={project.title}
           width={400}
-          height={400
-          }
+          height={400}
           className="w-full h-full object-cover rounded-md group-hover:scale-105 transition-transform duration-300"
         />
       </div>
