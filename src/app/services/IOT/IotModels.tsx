@@ -1,4 +1,3 @@
-import { FaMoneyBillWave, FaUserTie, FaTools } from "react-icons/fa";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
@@ -34,30 +33,27 @@ export default function PricingCards() {
       >
         Affordable IoT Application Development Models
       </motion.h2>
-      <p className="text-gray-300 text-center mt-8">
-        We always focus on delivering quality IoT app development solutions. Also, we offer reasonable </p>
-      <p className="text-gray-300 text-center">solutions to develop IoT apps. Here is a glimpse of our pocket-friendly IoT app development models.
+      <p className="text-gray-300 text-center mt-8 max-w-2xl mx-auto">
+        We always focus on delivering quality IoT app development solutions. Also, we offer reasonable
+        solutions to develop IoT apps. Here is a glimpse of our pocket-friendly IoT app development models.
       </p>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-10">
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-10 justify-center">
         {pricingOptions.map((option, index) => (
           <motion.div
             key={index}
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: index * 0.2 }}
-            className="relative bg-gray-800 rounded-3xl p-8 shadow-lg transform transition-all overflow-hidden border border-gray-500"
+            className="relative bg-gray-800 rounded-3xl p-8 shadow-lg border border-gray-500 
+                       flex flex-col items-center text-center space-y-4"
           >
-            <motion.div
-              // animate={{ borderColor: ["blue","lightblue","gray","white"] }}
-              // transition={{ repeat: Infinity, duration: 3, ease: "linear" }}
-              // className="absolute inset-0 border-1 border-transparent rounded-3xl"
-            />
-            <div className="flex justify-center mb-6 relative">{option.icon}</div>
-            <h3 className="text-2xl font-bold text-center mb-4 text-white relative">{option.title}</h3>
-            <p className="text-gray-300 text-center mb-6 text-lg leading-relaxed relative">{option.description}</p>
-            <ul className="space-y-3 text-lg relative">
+            <div className="flex justify-center">{option.icon}</div>
+            <h3 className="text-2xl font-bold text-white">{option.title}</h3>
+            <p className="text-gray-300 text-lg leading-relaxed">{option.description}</p>
+            <ul className="space-y-3 text-lg">
               {option.features.map((feature, idx) => (
-                <li key={idx} className="flex items-center gap-3">
+                <li key={idx} className="flex items-center gap-3 justify-normal">
                   <span className="text-green-400 text-xl">✔</span> {feature}
                 </li>
               ))}
