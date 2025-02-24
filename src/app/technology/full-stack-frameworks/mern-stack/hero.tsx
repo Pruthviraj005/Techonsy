@@ -51,7 +51,7 @@ const Hero = () => {
               alt="Express.js Logo"
               width={80}
               height={80}
-              className="object-contain"
+              className="object-contain invert"
             />
           </motion.div>
           <motion.div className="flex items-center justify-center p-2" animate={{ x: [0, 50, 0, -50, 0], y: [0, 0, -50, 50, 0] }} transition={{ duration: 4, repeat: Infinity }}>
