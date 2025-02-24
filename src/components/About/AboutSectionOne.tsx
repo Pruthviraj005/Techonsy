@@ -13,7 +13,7 @@ const ImageWithOverlay = () => (
       {/* Image */}
       <div className="absolute inset-0 overflow-hidden">
         <Image
-          src="/images/about/meeting-image2.jpg"
+          src="/images/about/meeting-image.jpg"
           alt="Team meeting"
           width={800}
           height={600}
