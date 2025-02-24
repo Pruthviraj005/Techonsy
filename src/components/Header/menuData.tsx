@@ -129,7 +129,7 @@ const menuData: Menu[] = [
         path: "/",
         newTab: false,
         submenu: [
-          { id: 521, title: "Node.js", path: "/", newTab: false },
+          { id: 521, title: "Node.js", path: "/technology/backend/nodejs", newTab: false },
           { id: 522, title: "Python", path: "/technology/backend/python", newTab: false },
           { id: 523, title: "Java", path: "/technology/backend/java", newTab: false },
           { id: 524, title: "Nest.js", path: "/technology/backend/nest", newTab: false }
@@ -167,7 +167,7 @@ const menuData: Menu[] = [
         newTab: false,
         submenu: [
           { id: 551, title: "MERN Stack", path: "/technology/full-stack-frameworks/mern-stack", newTab: false },
-          { id: 552, title: "MEAN Stack", path: "/", newTab: false },
+          { id: 552, title: "MEAN Stack", path: "/technology/full-stack-frameworks/mean-stack", newTab: false },
           { id: 553, title: "Next.js", path: "/", newTab: false },
           { id: 554, title: "Nest.js", path: "/", newTab: false }
         ]
