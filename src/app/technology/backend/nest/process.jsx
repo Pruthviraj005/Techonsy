@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Search, CloudRain, Layout, Code, BarChart, Upload, ShieldCheck, FileText } from 'lucide-react';
+import { Search, CloudRain, Layout, Code, Upload, ShieldCheck, FileText } from 'lucide-react';
 
 const processSteps = [
     { title: 'Product Analysis', icon: <Search size={24} />, description: 'Researching market needs and identifying opportunities.' },
@@ -15,26 +15,30 @@ const processSteps = [
 
 export default function ProcessFlow() {
     return (
-        <section className="w-full max-w-5xl mx-auto py-10 px-4 md:px-6 lg:px-8  text-white">
-            <h2 className="text-4xl font-bold text-center mb-8 text-red-500">Our Process</h2>
-            <div className="relative flex flex-col items-center">
-                {processSteps.map((step, index) => (
-                    <motion.div
-                        key={index}
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5, delay: index * 0.2 }}
-                        className={`flex items-center gap-4 p-4 rounded-lg shadow-lg bg-gray-900 text-white w-full max-w-lg mb-4 border border-red-600 ${index % 2 === 0 ? 'self-start' : 'self-end'}`}
-                    >
-                        <div className="p-3 bg-red-600 text-white rounded-full">
-                            {step.icon}
-                        </div>
-                        <div>
-                            <h3 className="text-lg font-semibold text-red-400">{step.title}</h3>
-                            <p className="text-sm text-gray-300">{step.description}</p>
-                        </div>
-                    </motion.div>
-                ))}
+        <section className="w-full py-16 px-6 bg-gradient-to-br from-[#0A192F] via-[#1B1F3B] to-[#3B4252]">
+            <div className="max-w-[1000px] mx-auto">
+                <h2 className="text-4xl font-bold text-center mb-10 text-transparent bg-clip-text bg-gradient-to-r from-[#3b82f6] to-[#a855f7]">
+                    Our Process
+                </h2>
+                <div className="relative flex flex-col items-center">
+                    {processSteps.map((step, index) => (
+                        <motion.div
+                            key={index}
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5, delay: index * 0.2 }}
+                            className={`flex items-center gap-4 p-5 rounded-lg shadow-lg bg-gray-900 text-white w-full max-w-lg mb-5 border border-transparent ${index % 2 === 0 ? 'self-start' : 'self-end'} transition-all duration-300 hover:shadow-2xl hover:border-blue-500`}
+                        >
+                            <div className="p-3 bg-gradient-to-r from-[#3b82f6] to-[#a855f7] text-white rounded-full shadow-md">
+                                {step.icon}
+                            </div>
+                            <div>
+                                <h3 className="text-lg font-semibold text-blue-400">{step.title}</h3>
+                                <p className="text-sm text-gray-300">{step.description}</p>
+                            </div>
+                        </motion.div>
+                    ))}
+                </div>
             </div>
         </section>
     );
