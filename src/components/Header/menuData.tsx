@@ -167,7 +167,7 @@ const menuData: Menu[] = [
         newTab: false,
         submenu: [
           { id: 551, title: "MERN Stack", path: "/technology/full-stack-frameworks/mern-stack", newTab: false },
-          { id: 552, title: "MEAN Stack", path: "/", newTab: false },
+          { id: 552, title: "MEAN Stack", path: "/technology/full-stack-frameworks/mean-stack", newTab: false },
           { id: 553, title: "Next.js", path: "/", newTab: false },
           { id: 554, title: "Nest.js", path: "/", newTab: false }
         ]

@@ -39,7 +39,16 @@ const benefits = [
 
 const IosExpertise = () => {
   useEffect(() => {
-    AOS.init({ duration: 800 });
+    AOS.init({
+      duration: 1000, // Smooth animation duration
+      easing: "ease-in-out", // Smoother easing
+      once: true, // Run animation once
+      delay: 100, // Adds delay for a cascading effect
+    });
+
+    return () => {
+      AOS.refresh(); // Refresh AOS on unmount
+    };
   }, []);
 
   return (
@@ -55,6 +64,7 @@ const IosExpertise = () => {
               key={index}
               className="bg-slate-900 p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105 flex flex-col border border-slate-800 hover:border-blue-600"
               data-aos="fade-up"
+              data-aos-delay={index * 100} // Adds staggered delay for smooth effect
             >
               <div className="text-4xl mb-4 text-blue-600">{benefit.icon}</div>
               <h3 className="text-xl font-semibold text-blue-500">{benefit.title}</h3>
