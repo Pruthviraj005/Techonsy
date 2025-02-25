@@ -27,7 +27,7 @@ export default function BlockChainBanner() {
 
         {/* Right Section - Image */}
         <div className="md:w-1/2 flex justify-center mt-10 md:mt-0">
-          <Image src="/images/blockchain/banner.png" alt="ios" width={700} height={500} className="bg-transparent" />
+          <Image src="/images/blockchain/on_chain.png" alt="ios" width={700} height={500} className="bg-transparent" />
         </div>
       </div>
     </section>
