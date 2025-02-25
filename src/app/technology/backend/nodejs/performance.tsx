@@ -21,7 +21,7 @@ export default function NodeJsShowcase() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
-        <h1 className="text-4xl bg-clip-text text-transparent font-bold bg-gradient-to-r from-[#00bcd4] to-[#b388eb]">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl bg-clip-text text-transparent font-bold bg-gradient-to-r from-[#00bcd4] to-[#b388eb]">
           Unleash Unleash the Power of High-Performance Node.js Development
            
         </h1>

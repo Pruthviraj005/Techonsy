@@ -59,7 +59,7 @@ export default function Expertise() {
 
             {/* Content Display */}
             <div className="md:w-2/3 p-6 flex flex-col items-start justify-center text-left">
-                <h2 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#00bcd4] to-[#b388eb] mb-6">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#00bcd4] to-[#b388eb] mb-6">
                     Node.js Technology Expertise
                 </h2>
                 {selected && (

@@ -5,12 +5,11 @@ import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
 import bgData from "./bg.json"; // Import the JSON file
 
-
 const Lottie = dynamic(() => import("react-lottie-player"), { ssr: false });
 
 const Hero = () => {
   return (
-    <section className="relative flex justify-center items-center min-h-screen bg-gray-900 text-white py-16 px-6">
+    <section className="relative flex justify-center items-center min-h-screen bg-gray-900 text-white py-12 px-4 sm:px-6">
       {/* Lottie Animation Background */}
       <Lottie
         animationData={bgData}
@@ -23,20 +22,20 @@ const Hero = () => {
       <div className="absolute inset-0 bg-gray-900/60" />
 
       {/* Content Wrapper */}
-      <div className="relative mt-10 container mx-auto max-w-[1000px] grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      <div className="relative container mx-auto max-w-[1000px] grid grid-cols-2 gap-6 items-center">
         {/* Left Content */}
-        <div className="max-w-lg p-4">
-          <h1 className="text-5xl md:text-5xl font-bold mb-4 text-center md:text-left">
+        <div className="flex flex-col justify-center max-w-lg p-4 h-full">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3">
             Powering Innovation with Scalable <span className="text-[#339933]">Node.js</span> Solutions
           </h1>
-          <p className="text-lg leading-relaxed mb-6 text-center md:text-left">
+          <p className="text-sm sm:text-base leading-relaxed mb-4">
             We deliver high-performance, scalable Node.js solutions tailored to your business needs. Our experts analyze your processes, identify challenges, and craft seamless, real-time applications that enhance efficiency and drive growth.
           </p>
-          <div className="flex justify-center md:justify-start">
+          <div>
             <motion.a
               href="#"
-              whileHover={{ scale: 1.1 }}
-              className="inline-block bg-blue-600 text-white font-semibold text-lg py-3 px-6 rounded-lg shadow-md hover:bg-blue-700 transition-all duration-300"
+              whileHover={{ scale: 1.05 }}
+              className="inline-block bg-blue-600 text-white font-medium text-sm sm:text-base py-2 px-4 sm:py-3 sm:px-6 rounded-lg shadow-md hover:bg-blue-700 transition-all duration-300"
             >
               Get Started →
             </motion.a>
@@ -49,7 +48,7 @@ const Hero = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
           whileHover={{ scale: 1.05, rotate: 3 }}
-          className="flex justify-center"
+          className="flex justify-end items-center h-full"
         >
           <motion.div
             animate={{
@@ -61,14 +60,14 @@ const Hero = () => {
               repeat: Infinity,
               ease: "easeInOut",
             }}
-            className="p-4 relative"
+            className="p-4 relative flex items-center"
           >
             <Image
               src="/images/technology/backend/nodejs/node.svg"
               alt="Node.js Logo"
-              width={300}
-              height={300}
-              className="object-contain"
+              width={250}
+              height={250}
+              className="object-contain w-32 sm:w-48 md:w-64"
             />
           </motion.div>
         </motion.div>

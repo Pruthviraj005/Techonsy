@@ -1,96 +1,99 @@
 'use client';
 
+import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { MessageCircle, Rocket, Layout, Video, Server, Database } from 'lucide-react';
+import { Package, Radio, Zap, Database, Shield, Cpu, Code, Network } from 'lucide-react';
 
-const solutions = [
-    {
-        title: 'Interactive Chat Solutions',
-        description: 'Enhance customer engagement with AI-powered chatbots built on Node.js. Ensure seamless real-time interactions and instant query resolution.',
-        icon: <MessageCircle size={28} className="text-[#00bcd4]" />, 
+const expertiseAreas = [
+    { 
+        name: 'Node Package Manager (NPM)', 
+        description: 'A robust package manager for managing Node.js libraries and dependencies.',
+        icon: <Package size={24} className="text-[#00bcd4]" />
     },
-    {
-        title: 'MVP Development',
-        description: 'Accelerate time-to-market with robust MVPs powered by Node.js. Identify potential flaws early and optimize performance.',
-        icon: <Rocket size={28} className="text-[#00bcd4]" />, 
+    { 
+        name: 'Asynchronous Model', 
+        description: 'Handles multiple operations concurrently for efficient performance.',
+        icon: <Radio size={24} className="text-[#00bcd4]" />
     },
-    {
-        title: 'Single Page Applications (SPA)',
-        description: 'Deliver lightning-fast, dynamic user experiences with high-performance SPAs using Node.js for real-time interactions.',
-        icon: <Layout size={28} className="text-[#00bcd4]" />, 
+    { 
+        name: 'Exceptional Speed', 
+        description: 'Optimized for high-speed execution with V8 JavaScript engine.',
+        icon: <Zap size={24} className="text-[#00bcd4]" />
     },
-    {
-        title: 'Streaming Applications',
-        description: 'Build highly scalable and interactive streaming platforms with Node.js. Optimize real-time data flow for better engagement.',
-        icon: <Video size={28} className="text-[#00bcd4]" />, 
+    { 
+        name: 'Faster Database Management', 
+        description: 'Seamless integration with SQL and NoSQL databases for efficient data handling.',
+        icon: <Database size={24} className="text-[#00bcd4]" />
     },
-    {
-        title: 'REST API Development',
-        description: 'Develop secure, high-speed RESTful APIs with Node.js. Ensure seamless integration and smooth communication.',
-        icon: <Server size={28} className="text-[#00bcd4]" />, 
+    { 
+        name: 'Security', 
+        description: 'Built-in security features and best practices to safeguard applications.',
+        icon: <Shield size={24} className="text-[#00bcd4]" />
     },
-    {
-        title: 'Data-Driven Backend Solutions',
-        description: 'Utilize Node.js for scalable backend systems. Process large datasets, optimize performance, and unlock valuable insights.',
-        icon: <Database size={28} className="text-[#00bcd4]" />, 
+    { 
+        name: 'Low Memory Footprint', 
+        description: 'Optimized resource utilization for running lightweight applications.',
+        icon: <Cpu size={24} className="text-[#00bcd4]" />
+    },
+    { 
+        name: 'OOP in TypeScript', 
+        description: 'Enhancing Node.js with TypeScript’s object-oriented programming features.',
+        icon: <Code size={24} className="text-[#00bcd4]" />
+    },
+    { 
+        name: 'Single-threaded Event Loop Architecture', 
+        description: 'Uses event-driven architecture for handling concurrent requests.',
+        icon: <Network size={24} className="text-[#00bcd4]" />
     }
 ];
 
-export default function NodeJsSolutions() {
-    return (
-        <section className="relative w-full max-w-[1000px] mx-auto py-16 px-6 bg-transparent overflow-hidden text-white text-center">
-            {/* Background Gradient Animation */}
-            <motion.div 
-                initial={{ opacity: 0 }} 
-                animate={{ opacity: 1 }} 
-                transition={{ duration: 1.5 }}
-                className="absolute inset-0 w-full h-full bg-transparent opacity-25 z-0" 
-            />
-            
-            <motion.h2 
-                initial={{ opacity: 0, y: -20 }} 
-                animate={{ opacity: 1, y: 0 }} 
-                transition={{ duration: 1 }}
-                className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#00bcd4] to-[#b388eb] relative z-10 mb-12"
-            >
-                Innovative Node.js Solutions for Scalable, High-Performance Applications
-            </motion.h2>
+export default function NodeJsSolutionExpertise() {
+    const [selected, setSelected] = useState(null);
 
-            <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-center">
-                {solutions.map((solution, index) => (
+    return (
+        <section className="relative w-full max-w-[1000px] mx-auto py-16 px-4 sm:px-6 md:px-10 bg-[#121826] overflow-hidden text-white text-center min-h-[500px] flex flex-col justify-center">
+            {/* SVG Background */}
+            <div className="absolute inset-0 w-full h-full opacity-10 pointer-events-none">
+                <svg className="w-full h-full" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="150" cy="100" r="80" fill="#00bcd4" opacity="0.3" />
+                    <circle cx="650" cy="300" r="100" fill="#00bcd4" opacity="0.3" />
+                    <circle cx="400" cy="500" r="60" fill="#00bcd4" opacity="0.3" />
+                    <path d="M200,400 Q400,200 600,400" stroke="#00bcd4" strokeWidth="2" fill="transparent" opacity="0.2"/>
+                </svg>
+            </div>
+
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-white mb-8">
+                Our Node.js Solution Development Expertise
+            </h2>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6 sm:gap-8 relative z-10">
+                {expertiseAreas.map((expertise, index) => (
                     <motion.div
                         key={index}
-                        initial={{ opacity: 0, y: 20, scale: 0.9 }}
-                        animate={{ opacity: 1, y: 0, scale: 1 }}
-                        whileHover={{ scale: 1.1, rotate: 3 }}
+                        onClick={() => setSelected(selected === index ? null : index)}
+                        onMouseEnter={() => setSelected(index)}
+                        onMouseLeave={() => setSelected(null)}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: index * 0.1 }}
-                        className="relative group w-full max-w-[250px] h-[250px] flex items-center justify-center rounded-full border-2 border-[#00bcd4] p-4 hover:shadow-lg hover:shadow-[#00bcd4] transition-transform mx-auto"
+                        className={`flex flex-col items-start bg-[#1e293b] p-5 sm:p-6 rounded-lg shadow-lg transition-all cursor-pointer w-full min-h-[120px] ${
+                            selected === index ? 'shadow-[#00bcd4] scale-105' : 'hover:shadow-[#00bcd4]'
+                        }`}
                     >
-                        <motion.div 
-                            initial={{ scale: 1 }}
-                            animate={{ scale: [1, 1.05, 1] }}
-                            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                            className="absolute inset-0 bg-[#1e293b] opacity-80 rounded-full" 
-                        />
-                        <div className="relative z-10 flex flex-col items-center text-center">
-                            {solution.icon}
-                            <motion.h3 
-                                initial={{ opacity: 0 }}
-                                animate={{ opacity: 1 }}
-                                transition={{ duration: 1, delay: index * 0.2 }}
-                                className="text-lg font-semibold text-[#00bcd4] mt-2"
-                            >
-                                {solution.title}
-                            </motion.h3>
-                            <motion.p 
-                                initial={{ opacity: 0 }}
-                                animate={{ opacity: 1 }}
-                                transition={{ duration: 1.2, delay: index * 0.3 }}
-                                className="text-gray-300 text-xs mt-1"
-                            >
-                                {solution.description}
-                            </motion.p>
+                        <div className="flex items-center w-full space-x-3 sm:space-x-4">
+                            {expertise.icon}
+                            <h3 className="text-sm sm:text-lg font-semibold text-[#00bcd4] text-left">{expertise.name}</h3>
                         </div>
+                        {selected === index && (
+                            <motion.p
+                                initial={{ opacity: 0, height: 0 }}
+                                animate={{ opacity: 1, height: 'auto' }}
+                                transition={{ duration: 0.3 }}
+                                className="text-gray-300 text-xs sm:text-sm mt-2 text-left w-full"
+                            >
+                                {expertise.description}
+                            </motion.p>
+                        )}
                     </motion.div>
                 ))}
             </div>
