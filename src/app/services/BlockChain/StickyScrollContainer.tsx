@@ -5,50 +5,30 @@ import { Code, ShieldCheck, Wallet, Layers, FileText, TrendingUp, Lock, Shopping
 
 const services = [
   {
-    title: "Blockchain Consulting and Strategy",
-    description: "We offer expert blockchain consulting and strategic guidance to help launch proficient blockchain solutions. Whether you're starting from scratch or revamping an existing system, our solutions are secure and business-focused.",
+    title: " Proven Expertise",
+    description: " Leverage our deep industry knowledge and hands-on experience in delivering secure and scalable blockchain solutions.",
     icon: <Code size={32} className="text-white" />
   },
   {
-    title: "dApps Development",
-    description: "Develop secure, scalable, and efficient decentralized applications (dApps) tailored to your business needs, ensuring optimal blockchain integration.",
+    title: "Security & Transparency",
+    description: "Build trust with blockchain-powered systems ensuring data integrity, immutability, and robust security.",
     icon: <ShieldCheck size={32} className="text-white" />
   },
   {
-    title: "Cryptocurrency Wallet and Exchange Development",
-    description: "We build secure and feature-rich cryptocurrency wallets and exchange platforms to facilitate seamless digital asset transactions.",
+    title: " Custom Solutions",
+    description: "Get tailored blockchain applications designed to fit your unique business needs and operational goals.",
     icon: <Wallet size={32} className="text-white" />
   },
   {
-    title: "Layer-2 Development",
-    description: "Enhance blockchain scalability with Layer-2 solutions, reducing transaction costs and increasing processing speeds.",
+    title: "End-to-End Support",
+    description: " From ideation to deployment and beyond, we provide continuous support, maintenance, and optimization.",
     icon: <Layers size={32} className="text-white" />
   },
   {
-    title: "Smart Contract Audit and Development",
-    description: "Ensure secure, error-free smart contracts through our rigorous auditing and development services.",
-    icon: <FileText size={32} className="text-white" />
-  },
-  {
-    title: "Tokenomics and ICO Development",
-    description: "We design robust tokenomics strategies and assist in launching Initial Coin Offerings (ICOs) for startups and enterprises.",
+    title: "Innovative Approach ",
+    description: "Stay ahead with cutting-edge blockchain technologies, ensuring efficiency, automation, and seamless integrations.",
     icon: <TrendingUp size={32} className="text-white" />
-  },
-  {
-    title: "Blockchain Security and Compliance",
-    description: "Our blockchain security solutions ensure compliance with industry regulations and safeguard against potential vulnerabilities.",
-    icon: <Lock size={32} className="text-white" />
-  },
-  {
-    title: "NFT Marketplace Development",
-    description: "Create a fully functional NFT marketplace for digital collectibles, arts, and assets with secure smart contract integration.",
-    icon: <ShoppingCart size={32} className="text-white" />
-  },
-  {
-    title: "Decentralized Finance (DeFi) Solutions",
-    description: "We develop DeFi platforms including lending, borrowing, and staking solutions to enhance financial inclusivity and decentralization.",
-    icon: <Banknote size={32} className="text-white" />
-  },
+  }
 ];
 
 export default function StickyScrollContainer() {

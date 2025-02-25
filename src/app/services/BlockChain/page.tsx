@@ -5,18 +5,20 @@ import BlockChainIndustrySection from "./BlockChainIndustrySection";
 import BlockChainPlatform from "./BlockChainPlatformSection";
 import BlockchainSection from "./BlockChainSection";
 import BlockChainDevelopmentProcess from "./BlockChainDevelopmentProcess";
-import BlockchainSecurity from "./BlockChainConsultingServices";
 import RelatedBlogs from './RelatedBlogs'
+import BlockChainSolutions from "./BlockChainSolutions";
+import WhyChooseUs from "./WhyChooseUs";
 
 const BlockChain = () => {
   return (
     <>
       <BlockChainBanner />
       <BlockchainSection />
-      <BlockChainPlatform />
-      <BlockChainIndustrySection />
+      <BlockChainSolutions />
       <BlockChainDevelopmentProcess />
-      <BlockchainSecurity />
+      <BlockChainPlatform />
+      <WhyChooseUs />
+      <BlockChainIndustrySection />
       <RelatedBlogs />
     </>
   );

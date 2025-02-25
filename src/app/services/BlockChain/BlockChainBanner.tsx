@@ -1,54 +1,35 @@
-'use client';
+'use client'
 
-import { Spotlight } from "@/components/ui/spotlight-new";
+import Image from "next/image";
 
 export default function BlockChainBanner() {
   return (
-    <div className="relative w-full min-h-[60vh] sm:min-h-[70vh] md:min-h-screen flex items-center justify-center dark:bg-gray-900 dark:bg-grid-white/[0.2] bg-grid-black/[0.2] bg-opacity-65">
-      <Spotlight />
+    <section className="bg-gradient-to-r from-black to-[#0a1f44] text-white py-16 px-6 sm:px-12 pt-40">
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between">
 
-      {/* Background Video/Image */}
-      {/* <video
-        className="absolute top-0 left-0 w-full h-full object-cover opacity-70"
-        src="" // Replace with your video file
-        autoPlay
-        loop
-        muted
-      /> */}
+        {/* Left Section - Text Content */}
+        <div className="md:w-1/2 text-center md:text-left">
+          <h2 className="text-4xl sm:text-5xl font-bold leading-tight">
+            Blockchain Development<br className="hidden sm:block" /> Transforming Industries with Decentralized Solutions
+          </h2>
+          <p className="mt-4 text-gray-300 leading-relaxed">
+            Blockchain has reshaped the IT landscape, extending far beyond cryptocurrencies. Initially adopted in financial markets, its decentralized and transparent nature now drives innovation across multiple industries, offering secure, efficient, and tamper-proof solutions.
+          </p>
 
-      {/* Overlay */}
-      <div className="absolute top-0 left-0 w-full h-full bg-black/50"></div>
+          {/* CTA Button */}
+          <a
+            href="#"
+            className="mt-6 inline-block bg-blue-500 hover:bg-blue-600 text-white font-medium px-6 py-3 rounded-lg transition duration-300"
+          >
+            Get Started
+          </a>
+        </div>
 
-      {/* Content */}
-      <div className="relative text-center text-white px-6 max-w-4xl">
-        <h1 className="text-[clamp(2rem,5vw,3.5rem)] font-bold leading-tight">
-          Blockchain <br className="hidden md:block" /> Development Services
-        </h1>
-        <p className="mt-4 text-[clamp(1rem,2vw,1.25rem)] text-gray-300">
-          Tap into the blockchain universe with our world-class custom decentralized solutions.
-        </p>
-
-        <button className="relative mt-6 px-6 py-3 text-lg font-semibold text-white transition-all duration-300 ease-in-out rounded-lg shadow-lg group">
-          <span className="absolute inset-0 bg-gradient-to-r from-black via-blue-800 to-black rounded-lg animate-border"></span>
-          <span className="absolute inset-0 m-[2px] bg-gray-900 rounded-lg group-hover:bg-gray-950 transition-all duration-300"></span>
-          <span className="relative z-10">🚀 Consult Our Experts</span>
-        </button>
+        {/* Right Section - Image */}
+        <div className="md:w-1/2 flex justify-center mt-10 md:mt-0">
+          <Image src="/images/blockchain/banner.png" alt="ios" width={700} height={500} className="bg-transparent" />
+        </div>
       </div>
-
-      {/* Keyframe animation for border effect */}
-      <style>
-        {`
-          @keyframes borderAnimation {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-          }
-          .animate-border {
-            background-size: 200% 200%;
-            animation: borderAnimation 3s linear infinite;
-          }
-        `}
-      </style>
-    </div>
+    </section>
   );
 }

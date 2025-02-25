@@ -7,7 +7,7 @@ export default function BlockChainBanner() {
   return (
     <>
       <div className="relative w-full h-screen flex items-center justify-center dark:bg-gray-900 dark:bg-grid-white/[0.2] bg-grid-black/[0.2] bg-opacity-65">
-      <Spotlight />
+        <Spotlight />
         {/* Background Video/Image */}
         {/* <video
           className="absolute top-0 left-0 w-full h-full object-cover opacity-70"
@@ -23,10 +23,10 @@ export default function BlockChainBanner() {
         {/* Content */}
         <div className="relative text-center text-white px-4">
           <h1 className="text-5xl md:text-7xl font-bold">
-            Blockchain <br /> Development Services
+            Blockchain Development: <br /> Transforming Industries with Decentralized Solutions
           </h1>
           <p className="mt-4 text-lg md:text-xl">
-            Tap into the blockchain universe with our world-class custom decentralized solutions
+            Blockchain has reshaped the IT landscape, extending far beyond cryptocurrencies. Initially adopted in financial markets, its decentralized and transparent nature now drives innovation across multiple industries, offering secure, efficient, and tamper-proof solutions.
           </p>
 
           <button className=" top-10 relative px-8 py-3 text-lg font-semibold text-white transition-all duration-300 ease-in-out rounded-lg shadow-lg group">

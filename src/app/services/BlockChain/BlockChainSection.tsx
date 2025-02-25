@@ -19,19 +19,16 @@ const BlockchainSection = () => {
         {/* Right: Content */}
         <div className="w-full md:w-1/2">
           <h2 className="text-3xl md:text-4xl font-bold leading-tight">
-            Kick-Start Your Digitization Goals with{" "}
-            <span className="text-red-500">Our Blockchain Development Services</span>
+            Unlock the Power of Blockchain with{" "}
+            <span className="text-blue-500">Expert Development Solutions</span>
           </h2>
           <p className="mt-4 text-gray-300">
-            Our extensive blockchain development solutions allow you to use blockchain technology efficiently within your business.
-            We create and build customized blockchain solutions for enterprises and start-ups using various blockchain protocols, such as Ethereum, Hyperledger, and Solana.
-            We build decentralized solutions that meet industry demands.
+            Our blockchain specialists ensure seamless implementation, enhancing security and efficiency for business applications. With customizable development modules, we tailor solutions to meet unique business needs.
           </p>
           <p className="mt-4 text-gray-300">
-            At JPSoft, we provide complete customized Blockchain development and consultancy services to help companies take advantage of the rapidly growing blockchain market.
-            Our highly experienced team will work closely with you to develop an efficient plan of action for your blockchain journey.
+            Harness the reliability of blockchain for verifiable, traceable transactions. A well-crafted MVP validates your idea, setting it apart from competitors while increasing investor confidence and minimizing risk ensuring a strong foundation for success.
           </p>
-          <button className="mt-6 px-6 py-3 bg-red-500 text-white text-lg font-medium rounded-lg hover:bg-red-600 transition flex items-center gap-2">
+          <button className="mt-6 px-6 py-3 bg-blue-500 text-white text-lg font-medium rounded-lg hover:bg-blue-600 transition flex items-center gap-2">
             🚀 Talk to Our Experts →
           </button>
         </div>
