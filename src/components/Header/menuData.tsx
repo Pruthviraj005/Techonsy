@@ -157,7 +157,7 @@ const menuData: Menu[] = [
           { id: 542, title: "PostgreSQL", path: "/technology/databases/PostgreSQL", newTab: false },
           { id: 543, title: "MongoDB", path: "/technology/databases/mongodb", newTab: false },
           { id: 544, title: "Firebase", path: "/technology/databases/firebase", newTab: false },
-          { id: 545, title: "Supabase", path: "/", newTab: false }
+          { id: 545, title: "Supabase", path: "/technology/databases/supabase", newTab: false }
         ]
       },
       {
@@ -180,7 +180,7 @@ const menuData: Menu[] = [
         submenu: [
           { id: 561, title: "Google Cloud", path: "/technology/cloud-services/google-cloud", newTab: false },
           { id: 562, title: "AWS", path: "/technology/cloud-services/aws", newTab: false },
-          { id: 563, title: "Microsoft Azure", path: "/", newTab: false }
+          { id: 563, title: "Microsoft Azure", path: "/technology/cloud-services/azure", newTab: false }
         ]
       },
       {
