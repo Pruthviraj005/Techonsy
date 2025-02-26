@@ -19,6 +19,9 @@ const Header = () => {
   const [hireTalentDropdownPosition, setHireTalentDropdownPosition] = useState<'left' | 'right'>('left');
   const [activeMobileSubmenu, setActiveMobileSubmenu] = useState<number | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [activeLink, setActiveLink] = useState(null);
+  const [activeService,setActiveService] = useState(null);
+  const [menuDataLink,setMenuDataLink] = useState(null)
 
   const { scrollY } = useScroll();
   const headerBackground = useTransform(
@@ -42,6 +45,7 @@ const Header = () => {
     setOpenSubmenu(null);
     setIsMobileMenuOpen(false);
     setActiveMobileSubmenu(null);
+   
   };
 
   const toggleMobileMenu = () => {
@@ -174,9 +178,16 @@ const Header = () => {
         <div key={item.id}>
           <Link
             href={item.path || '#'}
-            className="block text-gray-300 hover:text-sky-500 text-sm py-1"
+            className={`block text-gray-300 hover:text-sky-500 text-sm py-1 ${
+              activeLink === item.id
+                ? "text-sky-500"
+                : "text-gray-300 hover:text-sky-500"
+            }`}
             target={item.newTab ? "_blank" : undefined}
-            onClick={closeAllMenus}
+            onClick={() => {
+              setActiveLink(item.id);
+              closeAllMenus();
+            }}
           >
             {item.title}
           </Link>
@@ -193,33 +204,42 @@ const Header = () => {
 
     return (
       <div className="px-4">
-        {rows.map((row, rowIndex) => (
-          <div key={rowIndex} className="grid grid-cols-4 gap-4 mb-6">
-            {row.map((category) => (
-              <div key={category.id} className="space-y-2">
-                <h3 className="text-white font-semibold mb-1 text-sm">{category.title}</h3>
-                {category.submenu && (
-                  <ul className="space-y-1">
-                    {category.submenu.map((item) => (
-                      <li key={item.id}>
-                        <Link
-                          href={item.path || '#'}
-                          className="block text-gray-300 hover:text-sky-500 text-xs py-0.5"
-                          style={{ fontSize: '0.95rem' }}
-                          target={item.newTab ? "_blank" : undefined}
-                          onClick={closeAllMenus}
-                        >
-                          {item.title}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </div>
-            ))}
-          </div>
-        ))}
-      </div>
+      {rows.map((row, rowIndex) => (
+        <div key={rowIndex} className="grid grid-cols-4 gap-4 mb-6">
+          {row.map((category) => (
+            <div key={category.id} className="space-y-2" >
+              <h3 className="text-white font-semibold mb-1 text-sm">
+                {category.title}
+              </h3>
+              {category.submenu && (
+                <ul className="space-y-1">
+                  {category.submenu.map((item) => (
+                    <li key={item.id}>
+                      <Link
+                        href={item.path || "#"}
+                        className={`block text-xs py-0.5 ${
+                          activeLink === item.id
+                            ? "text-sky-500"
+                            : "text-gray-300 hover:text-sky-500"
+                        }`}
+                        style={{ fontSize: "0.95rem" }}
+                        target={item.newTab ? "_blank" : undefined}
+                        onClick={() => {
+                          setActiveLink(item.id);
+                          closeAllMenus();
+                        }}
+                      >
+                        {item.title}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          ))}
+        </div>
+      ))}
+    </div>
     );
   };
 
@@ -290,6 +310,7 @@ const Header = () => {
                 className="block text-gray-300 hover:text-sky-500 text-sm py-1"
                 target={item.newTab ? "_blank" : undefined}
                 onClick={closeAllMenus}
+                
               >
                 {item.title}
               </Link>
@@ -340,8 +361,15 @@ const Header = () => {
         {item.submenu ? (
           <div>
             <button
-              onClick={() => handleSubmenu(item.id)}
-              className="flex items-center text-white font-medium text-base py-2 hover:text-sky-500"
+              onClick={() => {handleSubmenu(item.id)
+                setMenuDataLink(item.id)
+                }}
+              // className="flex items-center text-white font-medium text-base py-2 hover:text-sky-500  "
+              className={`flex items-center  font-medium text-base py-2 hover:text-sky-500 ${
+                menuDataLink === item.id
+                  ? "text-sky-500"
+                  : "text-gray-300 hover:text-sky-500"
+              }`}
             >
               {item.title}
               <svg
@@ -415,28 +443,34 @@ const Header = () => {
   return (
     <>
       <motion.header
-        style={{
-          position: 'fixed',
-          width: headerWidth,
-          backgroundColor: headerBackground,
-          borderRadius: headerBorderRadius,
-          scale: headerScale,
-          y: headerTranslateY,
-          left: '50%',
-          x: '-50%',
-          zIndex: 50,
+      style={{
+        position: 'fixed',
+        width: headerWidth,
+        backgroundColor: headerBackground,
+        borderRadius: headerBorderRadius,
+        scale: headerScale,
+        y: headerTranslateY,
+        left: '50%',
+        x: '-50%',
+        zIndex: 50,
+        willChange: 'transform, opacity', // Optimized for performance
         }}
-        initial={{ y: -100 }}
-        animate={{ y: 0 }}
+        initial={{ y: -120, opacity: 0, scale: 0.85 }} 
+        animate={{ y: 0, opacity: 1, scale: 1 }} 
         transition={{
           type: "spring",
-          stiffness: 100,
-          damping: 20,
+          stiffness: 160,  // Increased stiffness for a snappier feel
+          damping: 20,     // Balanced damping for smooth deceleration
+          mass: 0.6,       // Reduced mass for quicker response
+          velocity: 2,     // Higher initial velocity for a more dynamic entry
         }}
-      >
+        >
         <div className="container mx-auto px-6">
           <div className="flex items-center justify-between h-[72px]">
-            <Link href="/" className="flex-shrink-0">
+            <Link href="/" className="flex-shrink-0" onClick={() => {
+               setActiveLink(null);
+               setMenuDataLink(null);
+            }}>
               <img
                 src="/images/logo/techonsylogo.png"
                 alt="Techonsy"

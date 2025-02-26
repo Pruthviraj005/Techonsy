@@ -2,10 +2,11 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
+import Modal from "../Modal";
+import Contact from "../Contact";
 
 export default function ButtonComp() {
   const [isModalOpen, setIsModalOpen] = useState(false);
-
   return (
     <div className="flex flex-col sm:flex-row items-start justify-start gap-3 sm:gap-4 mt-8 sm:mt-0">
       <motion.button
@@ -23,6 +24,9 @@ export default function ButtonComp() {
           Get Started
         </span>
       </motion.button>
+      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+          <Contact isPopup={true} onClose={() => setIsModalOpen(false)} />
+        </Modal>
     </div>
   );
 }
