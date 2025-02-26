@@ -31,7 +31,7 @@ const services = [
   }
 ];
 
-const ReactJSDevelopmentServices = () => {
+const Services = () => {
   return (
     <section className="py-16 px-6 bg-gray-900 text-white">
       <motion.div 
@@ -70,4 +70,4 @@ const ReactJSDevelopmentServices = () => {
   );
 };
 
-export default ReactJSDevelopmentServices;
+export default Services;

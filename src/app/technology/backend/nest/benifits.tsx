@@ -24,7 +24,7 @@ function CardContent({ children }) {
     return <div className="flex items-center gap-4">{children}</div>;
 }
 
-export default function BenefitsSection() {
+export default function Benifits() {
     return (
         <section className="w-full flex justify-center py-10 px-4 md:px-6 lg:px-8">
             <div className="max-w-[1000px] w-full text-center">

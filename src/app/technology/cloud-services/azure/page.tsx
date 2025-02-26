@@ -1,9 +1,9 @@
-import Hero from './hero'
-import Trust from './trust'
-import Expertise from './expertise'
-import Benefits from './benifits'
-import Services from './services'
-import ExperienceAcross from './experianceacross'
+import Hero from './Hero'
+import Trust from './Trust'
+import Expertise from './Expertise'
+import Benefits from './Benefits'
+import Services from './Services'
+import ExperienceAcross from './ExperienceAcross'
 
 export default function Azure(){
     return(<>

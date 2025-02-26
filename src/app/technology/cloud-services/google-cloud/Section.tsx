@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import { BsCursorFill } from "react-icons/bs";
 
-export default function GoogleAppEngineSection() {
+export default function Section() {
   return (
     <section className="relative min-h-screen flex justify-center items-center py-16 px-8">
       {/* Glowing Gradient Background */}

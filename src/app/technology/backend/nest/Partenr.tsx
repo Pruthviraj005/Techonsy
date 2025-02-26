@@ -13,7 +13,7 @@ const benefits = [
     { title: 'Clear Documentation', description: 'It is open-source and comes with simple documentation. In addition, the developer community for NestJs is active and always eager to help.', icon: <BookOpen size={24} className="text-[#00bcd4]" /> }
 ];
 
-export default function BenefitsSection() {
+export default function Partner() {
     const [selected, setSelected] = useState(null);
 
     return (

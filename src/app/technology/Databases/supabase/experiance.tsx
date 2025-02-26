@@ -5,7 +5,7 @@ import animationData from "./experiance.json"; // Update the path as per your pr
 
 const Lottie = dynamic(() => import("react-lottie-player"), { ssr: false });
 
-export default function GoogleAppEngineSection() {
+export default function Experiance() {
   return (
     <section className="relative flex justify-center items-center py-16 px-6 min-h-screen">
       {/* Background Effect */}

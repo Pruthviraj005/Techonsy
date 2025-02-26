@@ -1,19 +1,19 @@
 'use client';
-import HeroSection from "./hero"
-import GoogleAppEngineSection from "./exp";
-import Experiance from "./experience";
-import GoogleCloudTools from "./tools";
-import CloudCapabilities from "./capabilities"; 
-import WhyChoose from "./whychoose";
-import ExperienceAcross from "./experianceacross";
+import Hero from "./Hero"
+import Section from "./Section";
+import Experiance from "./Experiance";
+import Tools from "./Tools";
+import Capabilities from "./Capabilities"; 
+import WhyChoose from "./WhyChoose";
+import ExperienceAcross from "./ExperienceAcross";
 export default function Googlecloud(){
     return(
         <>
-         <HeroSection/>
+         <Hero/>
          <Experiance/>
-         <GoogleAppEngineSection/>
-         <GoogleCloudTools/>
-         <CloudCapabilities/>
+         <Section/>
+         <Tools/>
+         <Capabilities/>
          <WhyChoose/>
          <ExperienceAcross/>
         </>

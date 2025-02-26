@@ -47,7 +47,7 @@ const expertiseAreas = [
     }
 ];
 
-export default function NodeJsSolutionExpertise() {
+export default function Solution() {
     const [selected, setSelected] = useState(null);
 
     return (

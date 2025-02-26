@@ -1,14 +1,14 @@
 'use client';
-import HeroSection from "./hero";
-import Development from "./development";
-import Process from "./process"
-import Benefits from "./benifits";
-import Partner from "./partner";
-import ExperienceAcross from './experience'
+import Hero from "./Hero";
+import Development from "./Development";
+import Process from "./Process"
+import Benefits from "./Benifits";
+import Partner from "./Partenr";
+import ExperienceAcross from './ExperienceAcross'
 
 export default function Nest(){
     return(<>
-      <HeroSection/>
+      <Hero/>
       <Development/>
       <Process/>
       <Benefits/>

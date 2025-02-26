@@ -36,7 +36,7 @@ const features = [
   }
 ];
 
-export default function SupabaseShowcase() {
+export default function Section() {
   return (
     <section className="relative py-16 px-6 max-w-6xl mx-auto text-white text-center min-h-screen overflow-y-auto">
       {/* Background Animation */}

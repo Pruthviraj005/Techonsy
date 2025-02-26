@@ -13,7 +13,7 @@ const services = [
   "Conduct thorough audits and enhance database security"
 ];
 
-const MySQLServices = () => {
+const WhyMySql = () => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -53,4 +53,4 @@ const MySQLServices = () => {
   );
 }
 
-export default MySQLServices;
+export default WhyMySql;

@@ -55,7 +55,7 @@ const tabData = [
   },
 ];
 
-export default function BlueShadowTabs() {
+export default function Experiance() {
   const [activeTab, setActiveTab] = useState("tab1");
 
   return (

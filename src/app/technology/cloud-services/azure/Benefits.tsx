@@ -42,7 +42,7 @@ const benefits = [
     }
 ];
 
-export default function AzureBenefits() {
+export default function Benefits() {
     return (
         <section className="py-16 px-6 max-w-6xl mx-auto text-white text-center">
             <motion.h2 

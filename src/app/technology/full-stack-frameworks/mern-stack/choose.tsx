@@ -10,7 +10,7 @@ const benefits = [
   { title: "Fast Delivery", description: "Our modular approach enables rapid prototyping, faster development cycles, and quicker time-to-market.", icon: <FaClock size={50} className="text-red-400" /> }
 ];
 
-const MERNStackWhyChooseUs = () => {
+const Choose = () => {
   return (
     <section className="relative py-16 text-white bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 overflow-hidden">
       {/* SVG Background */}
@@ -65,4 +65,4 @@ const MERNStackWhyChooseUs = () => {
   );
 };
 
-export default MERNStackWhyChooseUs;
+export default Choose;

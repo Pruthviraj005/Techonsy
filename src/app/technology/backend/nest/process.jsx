@@ -13,7 +13,7 @@ const processSteps = [
     { title: 'Monitoring and Reporting', icon: <FileText size={24} />, description: 'Tracking performance and gathering user feedback.' }
 ];
 
-export default function ProcessFlow() {
+export default function Process() {
     return (
         <section className="w-full py-16 px-6 bg-gradient-to-br from-[#0A192F] via-[#1B1F3B] to-[#3B4252]">
             <div className="max-w-[1000px] mx-auto">

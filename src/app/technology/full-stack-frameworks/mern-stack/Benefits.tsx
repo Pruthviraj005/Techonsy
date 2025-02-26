@@ -13,7 +13,7 @@ const benefits = [
   { title: "Immersive User Interfaces", description: "Craft dynamic and interactive interfaces with React.js, enhancing user engagement.", icon: <FaReact size={40} className="text-cyan-400" /> }
 ];
 
-const MERNStackBenefits = () => {
+const Benefits = () => {
   return (
     <section className="relative py-16 bg-gray-900 text-white overflow-hidden">
       {/* SVG Background */}
@@ -70,4 +70,4 @@ const MERNStackBenefits = () => {
   );
 };
 
-export default MERNStackBenefits;
+export default Benefits;

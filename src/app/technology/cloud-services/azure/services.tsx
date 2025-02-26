@@ -30,7 +30,7 @@ const expertiseSteps = [
     }
 ];
 
-export default function AzureExpertiseTimeline() {
+export default function Services() {
     return (
         <section className="py-16 px-6 max-w-6xl mx-auto text-white">
             <motion.h2 

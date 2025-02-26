@@ -30,7 +30,7 @@ const features = [
   },
 ];
 
-export default function WhyChooseUs() {
+export default function Select() {
   return (
     <section className="relative py-16 px-6 w-full flex justify-center">
       <div className="max-w-[1000px] w-full text-white text-center overflow-hidden">

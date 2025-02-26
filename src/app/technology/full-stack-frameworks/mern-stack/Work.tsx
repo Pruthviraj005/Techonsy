@@ -17,7 +17,7 @@ const industries = [
   { title: "Education", icon:<FaSchool />, color: "shadow-purple-500" },
 ];
 
-const ExperienceAcross = () => {
+const Work = () => {
   return (
     <section className="relative py-16 px-4 flex justify-center overflow-hidden">
       {/* Background Gradient */}
@@ -56,4 +56,4 @@ const ExperienceAcross = () => {
   );
 };
 
-export default ExperienceAcross;
+export default Work;

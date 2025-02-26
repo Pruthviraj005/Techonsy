@@ -25,7 +25,7 @@ const blogs = [
   },
 ];
 
-export default function BlogSection() {
+export default function Blog() {
   return (
     <section className="w-full max-w-[1000px] mx-auto p-6 sm:p-10 text-white bg-gray-900 rounded-2xl shadow-lg">
       <h2 className="text-3xl sm:text-4xl font-bold mt-52 mb-12 text-center bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">

@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-const HeroSection = () => {
+const Hero = () => {
   return (
     <section className="bg-[#1a252f] py-12 px-6 flex justify-center items-center min-h-screen">
       <div className="container mx-auto max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-10 items-center px-4">
@@ -51,4 +51,4 @@ const HeroSection = () => {
   );
 };
 
-export default HeroSection;
+export default Hero;

@@ -26,7 +26,7 @@ const roadmapSteps = [
     }
 ];
 
-export default function NodeJsRoadmap() {
+export default function Partner() {
     return (
         <section className="relative w-full max-w-[1000px] mx-auto py-16 px-6 bg-[#121826] overflow-hidden text-white text-center">
             {/* Animated SVG Background */}

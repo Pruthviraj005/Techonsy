@@ -4,7 +4,7 @@
 import { motion } from "framer-motion";
 import { FaRocket, FaClock, FaBolt, FaShieldAlt, FaSyncAlt } from "react-icons/fa";
 
-export default function NodeJsShowcase() {
+export default function Performance() {
   const features = [
     { icon: <FaRocket size={50} />, title: "Node Package Manager (NPM)", desc: "Accelerate development with a vast repository of reusable modules.", color: "text-blue-400" },
     { icon: <FaClock size={50} />, title: "Asynchronous Model", desc: "Achieve high efficiency with non-blocking operations.", color: "text-yellow-400" },

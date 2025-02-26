@@ -11,7 +11,7 @@ const tools = [
   { name: 'Google Cloud SQL', src: '/images/technology/cloud-services/google-cloud/cloud_sql.svg' },
 ];
 
-export default function GoogleCloudTools() {
+export default function Tools() {
   return (
     <section className="bg-gray-900 text-white py-16 px-8">
       <div className="max-w-[1000px] mx-auto text-center">

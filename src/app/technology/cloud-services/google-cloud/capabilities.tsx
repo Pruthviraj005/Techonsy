@@ -36,7 +36,7 @@ const capabilities = [
   },
 ];
 
-export default function CloudCapabilities() {
+export default function Capabilities() {
   return (
     <section className="relative bg-gray-900 text-white py-16 px-8 overflow-hidden">
       {/* Gradient Shadows at Top Right & Bottom Left */}

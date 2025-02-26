@@ -1,20 +1,20 @@
 
-import Hero from './hero'
-import Unlock from './unlock'
-import ReactJSDevelopmentServices from './services';
-import Benefits from  './benifits'
-import MERNStackWhyChooseUs from './choose'
-import WhyChoose from './workwithus';
+import Hero from './Hero'
+import Unlock from './Unlock'
+import Services from './Services';
+import Benefits from  './Benefits'
+import Choose from './Choose'
+import Work from './Work';
 
 export default function MernStack(){
     return(
         <>
         <Hero />
         <Unlock />
-        <ReactJSDevelopmentServices />
+        <Services />
         <Benefits />
-        <MERNStackWhyChooseUs />
-        <WhyChoose />
+        <Choose />
+        <Work />
         </>
     );
 }
