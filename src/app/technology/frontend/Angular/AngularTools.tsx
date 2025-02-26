@@ -1,6 +1,5 @@
-'use client';
+// components/AngularTools.js
 
-import { motion } from 'framer-motion';
 import React from 'react';
 
 const AngularTools = () => {
@@ -14,31 +13,14 @@ const AngularTools = () => {
   ];
 
   return (
-    <div className="bg-black py-16 text-center">
-      <div className="max-w-[1000px] w-11/12 mx-auto text-white">
-        {/* Heading with Motion Effect */}
-        <motion.h2 
-          className="text-3xl md:text-4xl font-bold mb-8  text-slate-200  "
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          Our Angular Development <span className='bg-gradient-to-r from-blue-400 text-transparent via-purple-400 to-pink-500 bg-clip-text'>Tools & Technologies</span>
-        </motion.h2>
-
-
-        {/* Grid Container */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 justify-center">
+    <div className="bg-black p-8 text-center">
+      <div className='w-11/12 mx-auto'>
+        <h2 className="text-white text-3xl font-bold mb-4">Our Angular Development Tools & Technologies</h2>
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 justify-center mt-10 pl-6">
           {tools.map((tool, index) => (
-            <motion.div 
-              key={index}
-              className="bg-gray-900 text-slate-300 p-4 shadow-lg rounded-full border-[0.5px] border-gray-700 text-lg font-semibold text-center
-                         transition-all duration-300 cursor-pointer hover:bg-blue-700 hover:text-white"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-            >
+            <div key={index} className="bg-gray-100 text-blue-800 m-2 p-4 shadow-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-xl w-full text-lg font-semibold">
               {tool}
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

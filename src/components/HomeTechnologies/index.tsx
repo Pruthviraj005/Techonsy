@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect, useMemo } from "react";
+import React, { useState, useEffect, useMemo, useRef } from "react";
 import { motion, useAnimation } from "framer-motion";
 import Technologies from "./data";
 import RenderTechnologies from "./renderTechnologies";
@@ -10,12 +10,22 @@ const Technology = () => {
   const [isPaused, setIsPaused] = useState(false);
   const controls = useAnimation();
 
-  // Create a triple-length array for smoother infinite scroll
-  const extendedTechnologies = useMemo(() => [
-    ...Technologies,
-    ...Technologies,
-    ...Technologies
-  ], []);
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const itemHeight = 150; // Approximate height of each technology item
+  const containerHeight = Technologies.length * itemHeight;
+  
+  // Calculate how many items we need to show based on container height
+  const visibleItems = useMemo(() => {
+    const items = [];
+    const totalVisible = Math.ceil((500 / itemHeight) * 3); // Show 3x the visible items
+    
+    for (let i = 0; i < totalVisible; i++) {
+      const index = i % Technologies.length;
+      items.push({ ...Technologies[index], key: `tech-${i}` });
+    }
+    return items;
+  }, []);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -27,26 +37,42 @@ const Technology = () => {
     },
   };
 
-  // Optimized animation with smooth reset
   const startAnimation = async () => {
+    const scrollDuration = 30; // Duration for one complete scroll (in seconds) - faster speed
+    const scrollDistance = containerHeight;
+    
     while (true) {
       try {
+        // Animate to the end
         await controls.start({
-          y: [-2, -(extendedTechnologies.length * 33.33) + "%"],
+          y: -scrollDistance,
           transition: {
-            duration: 190 * 3, // Increased duration for longer scroll
+            duration: scrollDuration,
             ease: "linear",
-            times: [0, 1]
-          },
+            repeat: Infinity,
+            repeatType: "loop"
+          }
         });
-        // Smooth reset without opacity change
-        await controls.set({ y: -2 });
       } catch (error) {
-        // Animation was stopped
         break;
       }
     }
   };
+
+  // Handle scroll position and reset
+  useEffect(() => {
+    const handleScroll = () => {
+      if (containerRef.current) {
+        const currentScroll = Math.abs(parseFloat(containerRef.current.style.transform.split('translateY(')[1]));
+        if (currentScroll >= containerHeight) {
+          controls.set({ y: 0 });
+        }
+      }
+    };
+
+    const interval = setInterval(handleScroll, 100);
+    return () => clearInterval(interval);
+  }, [containerHeight]);
 
   useEffect(() => {
     if (!isPaused) {
@@ -153,9 +179,9 @@ const Technology = () => {
                     WebkitFontSmoothing: "antialiased"
                   }}
                 >
-                  {extendedTechnologies.map((technology, index) => (
+                  {visibleItems.map((technology) => (
                     <motion.div
-                      key={`${technology.id}-${index}`}
+                      key={technology.key}
                       initial={{ opacity: 1 }}
                       className="transform transition-all duration-300 hover:scale-[1.02]"
                       onClick={handleFeatureClick}
