@@ -14,7 +14,7 @@ const DevelopmentProcess = () => {
   return (
     <div className='relative bg-black text-white py-16 px-6 md:px-12'>
       <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 to-black/80 opacity-60" />
-      <section className="max-w-[1000px] mx-auto">
+      <section className="max-w-6xl mx-auto">
         {/* Background Gradient Effect */}
        
         

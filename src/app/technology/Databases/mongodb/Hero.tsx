@@ -6,7 +6,7 @@ import Image from "next/image";
 const Hero = () => {
   return (
     <div className=" bg-gray-900 w-full">
-      <div className="flex flex-col md:flex-row items-center justify-center  text-white pt-24 lg:pb-24 px-8 max-w-[1000px] mx-auto">
+      <div className="flex flex-col md:flex-row items-center justify-center  text-white pt-24 lg:pb-24 px-8 max-w-6xl mx-auto">
         <motion.div
           className=" text-center md:text-left px-4 flex flex-col lg:gap-10  lg:mt-10 "
           initial={{ opacity: 0, x: -20 }}

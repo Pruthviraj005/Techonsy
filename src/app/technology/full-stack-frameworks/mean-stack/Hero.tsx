@@ -31,7 +31,7 @@ export default function Hero() {
         }}
         transition={{ duration: 20, repeat: Infinity, repeatType: 'mirror' }}
       />
-      <div className="relative min-h-screen mx-auto flex  items-center justify-center overflow-hidden px-4 sm:px-6 lg:px-8 pt-20 md:py-20 max-w-[1000px]">
+      <div className="relative min-h-screen mx-auto flex  items-center justify-center overflow-hidden px-4 sm:px-6 lg:px-8 pt-20 md:py-20 max-w-6xl">
         <div className="relative z-10 max-w-7xl mx-auto w-full text-center flex flex-col">
           <motion.h1 
             className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-6 md:mb-8"

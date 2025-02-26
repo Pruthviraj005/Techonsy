@@ -38,7 +38,7 @@ const features = [
 const Development = () => {
   return (
     <div className="py-12 bg-gray-900">
-      <div className="max-w-[1000px] mx-auto px-4 sm:px-6 ">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 ">
         <div className="text-center">
           <h2 className="text-3xl font-bold text-white mb-2">
             Why Choose PostgreSQL Development

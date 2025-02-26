@@ -6,7 +6,7 @@ import Image from 'next/image';
 export default function AndroidDevelopment() {
   return (
     <div className='w-full bg-gradient-to-br from-[#0a0f1a] via-slate-950 to-black'>
-      <section className="max-w-[1000px] mx-auto relative flex flex-col lg:flex-row items-center justify-between py-20 px-6 lg:px-0
+      <section className="max-w-6xl mx-auto relative flex flex-col lg:flex-row items-center justify-between py-20 px-6 lg:px-0
         text-center lg:text-left  text-white ">
 
         {/* Text Content */}

@@ -10,7 +10,7 @@ const Unlock = () => {
   return (
     <section className="relative min-h-screen flex justify-center items-center py-16 px-6">
       {/* Glowing Gradient Background */}
-      <div className="relative z-10 container max-w-[1000px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      <div className="relative z-10 container max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
 
         {/* Left Animated Image */}
         <motion.div

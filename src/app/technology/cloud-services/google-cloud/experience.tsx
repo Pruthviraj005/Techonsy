@@ -60,7 +60,7 @@ export default function BlueShadowTabs() {
 
   return (
     <section className="flex justify-center items-center  bg-gray-900 text-white p-6 min-h-[70vh] border-b-[0.5px] border-cyan-800">
-      <div className="w-full max-w-[1000px]  flex flex-col justify-between min-h-[60vh] md:min-h-[50vh] lg:min-h-[40vh]">
+      <div className="w-full max-w-6xl  flex flex-col justify-between min-h-[60vh] md:min-h-[50vh] lg:min-h-[40vh]">
         {/* Title */}
         <div className="text-center p-4">
           <h2 className="text-2xl md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#91EAE4] to-[#7F7FD5]">

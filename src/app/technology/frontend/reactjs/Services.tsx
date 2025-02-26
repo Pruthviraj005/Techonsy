@@ -94,7 +94,7 @@ const Services = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
-        className="max-w-[1000px] mx-auto text-center mb-16 space-y-4"
+        className="max-w-6xl mx-auto text-center mb-16 space-y-4"
       >
         <h2 className="text-4xl font-bold text-white">ReactJS Development Services</h2>
         <div className="w-24 h-1 bg-blue-500 mx-auto rounded-full animate-pulse" />
@@ -109,7 +109,7 @@ const Services = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8, delay: 0.2 }}
-        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-[1000px] mx-auto"
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto"
       >
         {services.map((service, index) => (
           <ServiceCard key={index} icon={service.icon} title={service.title} description={service.description} delay={index * 200} />

@@ -31,7 +31,7 @@ export default function Hero() {
         />
       </div>
 
-      <div className="relative max-w-[1000px] mx-auto flex flex-col md:flex-row items-center gap-6 px-4 mt-16">
+      <div className="relative max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-6 px-4 mt-16">
         {/* Left Content */}
         <motion.div
           className="flex-1 text-center md:text-left gap-9"

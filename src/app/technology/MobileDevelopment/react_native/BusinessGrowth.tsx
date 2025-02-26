@@ -39,7 +39,7 @@ export default function BusinessGrowthSection() {
       
       <div className="absolute inset-0 w-slg opacity-30  bg-gradient-to-br from-[#182a44] to-[#084e7a] blur-[100px]  animate-rotate rounded-full  z-0"></div>
 
-      <section className="max-w-[1000px] mx-auto">
+      <section className="max-w-6xl mx-auto">
         {/* Title */}
         <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-center mb-6 
                bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-400 

@@ -28,7 +28,7 @@ const features = [
 const WhyChooseUs = () => {
   return (
     <div className="py-20 bg-gray-900">
-      <div className="max-w-5xl mx-auto px-6 sm:px-10 lg:px-12">
+      <div className="max-w-6xl mx-auto px-6 sm:px-10 lg:px-12">
         {/* Section Heading */}
         <div className="text-center mb-12">
           <h2 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">

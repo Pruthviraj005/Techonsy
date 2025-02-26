@@ -6,7 +6,7 @@ import Image from "next/image";
 export default function IosBanner() {
   return (
     <section className="text-white py-16 px-6 lg:px-0 bg-gradient-to-br from-[#0a0f1a] via-[#020617] to-[#000]">
-      <div className="max-w-[1000px] mx-auto flex flex-col md:flex-row items-center justify-between mt-14 mb-4">
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between mt-14 mb-4">
 
         {/* Left Section - Text Content */}
         <div className="md:w-1/2 text-center md:text-left lg:ml-10">

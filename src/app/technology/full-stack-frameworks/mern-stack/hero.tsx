@@ -13,7 +13,7 @@ const Hero = () => {
       style={{ backgroundImage: "url('/images/technology/fullstack-frameworks/mern-stack/bg.svg')" }}
     >
       <div className="absolute bg-black w-[100vw] mx-auto bg-opacity-50 h-full"></div>
-      <div className="my-20 lg:my-0 pt-10 lg:pt-0 lg:mt-10 container mx-auto max-w-[1000px] grid grid-cols-1 md:grid-cols-2 gap-8 items-center z-10  ">
+      <div className="my-20 lg:my-0 pt-10 lg:pt-0 lg:mt-10 container mx-auto max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-8 items-center z-10  ">
         {/* Left Content */}
         <div className="text-white max-w-lg ">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 text-center md:text-left">

@@ -7,7 +7,7 @@ import Image from "next/image";
 export default function IosProcess() {
   return (
     <section className="bg-slate-950 text-slate-200 py-20 px-6 sm:px-12">
-      <div className="max-w-[1000px] mx-auto">
+      <div className="max-w-6xl mx-auto">
         {/* Heading */}
         <h2 className="text-center text-4xl sm:text-5xl font-bold text-yellow-400">
           Streamlined Approach to iOS App Development

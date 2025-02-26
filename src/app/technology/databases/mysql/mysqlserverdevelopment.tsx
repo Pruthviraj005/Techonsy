@@ -51,11 +51,11 @@ const MySqlServerDevelopment = () => {
       <div className="absolute inset-0 w-full opacity-50 bg-gradient-to-r from-[#0d1b2a] to-[#1b263b] blur-[50px] animate-pulse"></div>
 
       {/* Floating Blobs for Unique Aesthetic */}
-      <div className="max-w-[1000px] mx-auto">
+      <div className="max-w-6xl mx-auto">
         <div className="absolute top-10 left-20 w-40 h-40 bg-blue-500 opacity-20 rounded-full filter blur-3xl animate-float"></div>
         <div className="absolute bottom-10 right-20 w-32 h-32 bg-pink-500 opacity-20 rounded-full filter blur-3xl animate-float-reverse"></div>
 
-        <div className="max-w-[1000px] mx-auto text-center relative z-10">
+        <div className="max-w-6xl mx-auto text-center relative z-10">
           <h2 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#91EAE4] to-[#7F7FD5] mb-4">
               Why Choose MySQL Server
           </h2>

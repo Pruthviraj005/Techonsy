@@ -16,7 +16,7 @@ const benefits = [
 const MERNStackBenefits = () => {
   return (
     <section className="relative py-16 bg-gray-900 text-white overflow-hidden">
-      <div className="max-w-[1000px] mx-auto">
+      <div className="max-w-6xl mx-auto">
       {/* SVG Background */}
         {/* <div className="absolute inset-0">
           <svg className="absolute top-0 left-0 w-full h-full opacity-15" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -35,7 +35,7 @@ const MERNStackBenefits = () => {
           initial={{ opacity: 0 }} 
           animate={{ opacity: 1 }} 
           transition={{ duration: 1 }}
-          className="relative max-w-[1000px] mx-auto text-center mb-12 px-6"
+          className="relative max-w-6xl mx-auto text-center mb-12 px-6"
         >
           <h2 className="text-4xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 inline-block text-transparent bg-clip-text">
             Top Benefits of MERN Stack Development
@@ -46,7 +46,7 @@ const MERNStackBenefits = () => {
         </motion.div>
 
         {/* Timeline Layout */}
-        <div className="relative max-w-[1000px] mx-auto px-6">
+        <div className="relative max-w-6xl mx-auto px-6">
           {/* Vertical Line */}
           <div className="border-l-4 border-blue-500 absolute left-1/2 transform -translate-x-1/2 h-full opacity-50"></div>
 

@@ -49,7 +49,7 @@ const MongoBenefits = () => {
 
   return (
     <div className="min-h-screen bg-gray-900 text-white py-16 px-4">
-      <div className="max-w-[1000px] mx-auto">
+      <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h1 className="text-4xl font-bold mb-4">Unlock the Power of MongoDB for Scalable Development</h1>
           <div className="w-16 h-1 bg-blue-500 mx-auto"></div>

@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 export default function AngularDevelopment() {
   return (
     <div className='py-16 px-6 md:px-20 text-white bg-gradient-to-br from-[#01030482] via-[#011327] to-[#01030482]'>
-      <section className='max-w-[1000px] mx-auto'>
+      <section className='max-w-6xl mx-auto'>
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           
           {/* Left Side - Image */}

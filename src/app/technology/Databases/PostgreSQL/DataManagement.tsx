@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 const DataManagement = () => {
   return (
     <section className="relative   py-20 px-6">
-      <div className="container max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center text-white">
+      <div className="container max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center text-white">
         {/* Left: Text Content */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}

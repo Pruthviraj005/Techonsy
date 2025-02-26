@@ -32,7 +32,7 @@ export default function AndroidAdvantage() {
 
   return (
     <div className='bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900'>
-      <section className="max-w-[1000px] mx-auto px-6 lg:px-0  py-12 text-center">
+      <section className="max-w-6xl mx-auto px-6 lg:px-0  py-12 text-center">
         {/* Section Title */}
         <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-12 tracking-wide">
           Empowering Businesses Through <span className="bg-gradient-to-r from-blue-500 to-teal-500 text-transparent bg-clip-text">Android Apps</span>

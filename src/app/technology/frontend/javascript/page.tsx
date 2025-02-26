@@ -51,7 +51,7 @@ export default function JavaScript() {
     {/* Ahex JavaScript Development Services */}
     <section className="bg-slate-900 px-4 sm:px-6 lg:px-24 flex flex-col z-1 relative py-12  mx-auto">
          {/* Title */}
-      <div className="max-w-[1000px] mx-auto">
+      <div className="max-w-6xl mx-auto">
          <h2 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#5ab2f7] to-[#6f7bf7] text-center">
            JavaScript Development Services
          </h2>
@@ -79,7 +79,7 @@ export default function JavaScript() {
      </section>
     {/* Our JavaScript Development Tools & Technologies */}
     <section className="py-12 text-white text-center px-6  mx-auto">
-       <div className="max-w-[1000px] mx-auto">
+       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#5ab2f7] to-[#12cff3] text-center">
           Our JavaScript Development Tools & Technologies
             </h2>
@@ -100,7 +100,7 @@ export default function JavaScript() {
        </div>
      </section>
      {/*Why does JavaScript stand out from other technologies? */}
-    <section className="py-12 px-6 text-center max-w-[1000px] mx-auto">
+    <section className="py-12 px-6 text-center max-w-6xl mx-auto">
        <h2 className="text-3xl font-bold text-[#12cff3]">Why does JavaScript stand out from other technologies?</h2>
        <AnimetedLine />
        
@@ -121,7 +121,7 @@ export default function JavaScript() {
     </section>
 
 
-    <section className="py-12 px-6 text-center max-w-[1000px] mx-auto">
+    <section className="py-12 px-6 text-center max-w-6xl mx-auto">
       <h2 className="text-3xl font-bold text-[#12cff3]">Why Work with us?</h2>
       <AnimetedLine />
     

@@ -49,7 +49,7 @@ const ReactFeatures = () => {
         <div className="absolute -bottom-40 -right-40 w-[500px] h-[500px] bg-[#33045427] rounded-full blur-3xl animate-pulse delay-700" />
       </div>
 
-      <div className="relative max-w-[1000px] w-full px-6 sm:px-10 py-16 text-center">
+      <div className="relative max-w-6xl w-full px-6 sm:px-10 py-16 text-center">
         {/* Header */}
         <h2 className="text-5xl font-bold text-white mb-6 animate-fade-in">
           Top  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">React JS</span>  Features 

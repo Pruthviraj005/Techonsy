@@ -34,7 +34,7 @@ export default function JavaServices() {
 
   return (
     <div className="bg-gray-900 text-white py-16 px-8">
-      <div className="max-w-[1000px] mx-auto">
+      <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl font-bold text-center text-blue-500 mb-8">Enterprise Java Development Services</h2>
         <p className="text-center text-gray-400 max-w-3xl mx-auto mb-12">
           From Java consulting to product deployment, we offer end-to-end Java development services, including post-deployment support.

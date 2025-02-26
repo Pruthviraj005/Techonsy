@@ -10,7 +10,7 @@ const Hero = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/90 to-transparent"></div>
 
       {/* Content Container */}
-      <div className="relative z-10 max-w-[1000px] text-center px-6 md:px-12 flex flex-col gap-6" >
+      <div className="relative z-10 max-w-6xl text-center px-6 md:px-12 flex flex-col gap-6" >
         {/* Java Themed Gradient Heading */}
         <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-[#efe1d0fc] via-[#de9c5f] to-[#df6f82] bg-clip-text text-transparent">
           Java Development Company

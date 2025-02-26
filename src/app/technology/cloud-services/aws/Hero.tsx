@@ -19,7 +19,7 @@ const Hero = () => {
         }}
       />
 
-      <div className="container mx-auto max-w-[1000px] px-6 lg:py-28">
+      <div className="container mx-auto max-w-6xl px-6 lg:py-28">
         <div className="flex flex-col md:flex-row items-center justify-between gap-12">
           {/* Text Content */}
           <motion.div 

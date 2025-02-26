@@ -79,7 +79,7 @@ export default function Python () {
           <div className="absolute bg-black w-full h-full bg-opacity-50 blur-[200px]"></div>
 
           {/* Content Section */}
-          <div className="lg:w-[1000px] text-white flex flex-col justify-center items-center my-20 gap-4 z-10 text-center">
+          <div className="max-w-6xl text-white flex flex-col justify-center items-center my-20 gap-4 z-10 text-center">
             <div className="flex flex-col md:flex-row justify-center items-center gap-4">
               {/* Hide Image on Mobile */}
               <div className="hidden md:block">
@@ -112,7 +112,7 @@ export default function Python () {
           </div>
         </div>
 
-        <div className="my-10 lg:w-[1000px] mx-auto relative  ">
+        <div className="my-10 max-w-[1000px] mx-auto relative  ">
             <div className="absolute inset-0 w-slg opacity-20  bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 blur-[100px]  animate-rotate rounded-full  z-0"></div>
             <header className="text-center py-10 ">
                 <h1 className="text-4xl font-bold">Our Python Development Services Includes</h1>
@@ -180,7 +180,7 @@ export default function Python () {
         </section>
 
         {/*Python Tech Stack*/}
-        <div className="max-w-5xl mx-auto my-10 p-5">
+        <div className="max-w-6xl mx-auto my-10 p-5">
           <h2 className="text-center text-4xl font-bold mb-10">Python Tech Stack</h2>
           <div className="w-full overflow-hidden flex flex-col gap-4">
             {techStack.map((tech, index) => (

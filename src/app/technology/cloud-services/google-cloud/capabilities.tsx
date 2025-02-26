@@ -44,7 +44,7 @@ export default function CloudCapabilities() {
       <div className="absolute bottom-[-100px] left-[-100px] w-[300px] h-[300px] bg-gray-700 opacity-50 blur-[80px] rounded-full"></div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-[1000px] mx-auto">
+      <div className="relative z-10 max-w-6xl mx-auto">
         <div className="text-center">
           <h2 className="text-3xl font-bold mb-6 text-white drop-shadow-[0_0_15px_rgba(34,197,94,0.8)]">
             Our Capabilities on Google Cloud Solutions

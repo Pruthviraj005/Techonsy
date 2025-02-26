@@ -5,7 +5,7 @@ import Button from "@/components/Common/ButtonComp";
 const ReactServices = () => {
   return (
     <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8 bg-gray-900 text-white  border-b-[0.5px] border-b-cyan-900">
-      <div className="max-w-[1000px] mx-auto">
+      <div className="max-w-6xl mx-auto">
         {/* Header */}
         <motion.div 
           initial={{ opacity: 0, y: -20 }} 

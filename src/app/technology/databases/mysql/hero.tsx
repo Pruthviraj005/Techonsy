@@ -7,7 +7,7 @@ import ButtonComp from "@/components/Common/ButtonComp";
 const Hero = () => {
   return (
     <section className="bg-gray-900 py-16 px-6 flex justify-center items-center min-h-screen border-b-[0.5px] border-cyan-900">
-      <div className="mt-10 container mx-auto max-w-[1000px] grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      <div className="mt-10 container mx-auto max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         {/* Left Content */}
         <div className="text-white max-w-lg p-4">
           <h1 className="text-5xl md:text-5xl font-bold mb-4 text-center md:text-left">

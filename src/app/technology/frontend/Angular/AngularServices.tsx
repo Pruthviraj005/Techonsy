@@ -45,7 +45,7 @@ const services = [
 export default function AngularServices() {
   return (
     <div className="min-h-screen bg-slate-950 text-white py-12 px-6">
-      <div className='max-w-[1000px] mx-auto'>
+      <div className='max-w-6xl mx-auto'>
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold">Our AngularJS Development Services</h2>
           <p className="text-gray-400 mt-2">

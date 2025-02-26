@@ -18,7 +18,7 @@ const MySQLServices = () => {
 
   return (
     <section
-      className="bg-transparent text-white p-8 rounded-xl shadow-lg max-w-[1000px] mx-auto"
+      className="bg-transparent text-white p-8 rounded-xl shadow-lg max-w-6xl mx-auto"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >

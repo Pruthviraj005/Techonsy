@@ -42,7 +42,7 @@ export default function DevOpsInfographic() {
       className="bg-gradient-to-r from-[#172946] to-[#000d25] py-16 px-4 sm:px-6 md:px-16 text-white w-full border-y-[0.5px] border-y-cyan-500 relative"
     >
       <div className="absolute inset-0 backdrop-blur-lg"></div>
-      <div className="max-w-[1000px] mx-auto relative z-10">
+      <div className="max-w-6xl mx-auto relative z-10">
         <motion.h2 
           initial={{ opacity: 0, y: -20 }} 
           animate={isInView ? { opacity: 1, y: 0 } : {}} 

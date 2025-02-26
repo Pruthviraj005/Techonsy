@@ -49,7 +49,7 @@ const MongoDBCompactServices = () => {
 
   return (
     <div className='bg-gray-900 p-8 '>
-      <div className=" rounded-lg  max-w-[1000px] mx-auto">
+      <div className=" rounded-lg  max-w-6xl mx-auto">
         <div className="mb-8">
           <h2 className="text-3xl font-bold text-white  text-center">
           Why Partner with <span className="text-blue-400 relative">

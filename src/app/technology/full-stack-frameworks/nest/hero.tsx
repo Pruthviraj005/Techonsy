@@ -26,7 +26,7 @@ const Hero = () => {
         </svg>
       </div> */}
 
-      <div className="relative container mx-auto max-w-[1000px] w-full px-4 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      <div className="relative container mx-auto max-w-6xl w-full px-4 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         {/* Left Content */}
         <motion.div className="text-white max-w-lg p-4" {...easeInAnimation}>
           <h1 className="text-4xl sm:text-5xl font-bold mb-4 text-center md:text-left">

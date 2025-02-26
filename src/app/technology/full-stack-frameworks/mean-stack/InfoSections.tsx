@@ -24,7 +24,7 @@ export default function InfoSection() {
 
   return (
     <section id="info-section" className="bg-slate-900 py-16 px-4 sm:px-6 md:px-16 border-y-[0.5px] border-cyan-900">
-      <div className="max-w-[1000px] mx-auto">
+      <div className="max-w-6xl mx-auto">
         {/* Title */}
         <motion.h2 
           initial={{ opacity: 0, y: 20 }} 

@@ -15,7 +15,7 @@ export default function Hero() {
       <div className="absolute bg-black w-full bg-opacity-70 h-full"></div>
 
       {/* Content */}
-      <section className="relative text-white py-10 px-6 md:px-16 flex flex-col md:flex-row items-center max-w-[1000px] mx-auto">
+      <section className="relative text-white py-10 px-6 md:px-16 flex flex-col md:flex-row items-center max-w-6xl mx-auto">
         {/* Left Section */}
         <div className="text-center md:text-left py-10">
           <h2 className="text-3xl sm:text-5xl md:text-5xl font-bold mb-6 pt-10  ">

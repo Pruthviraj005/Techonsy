@@ -14,7 +14,7 @@ export default function FirebaseDevelopment() {
 
   return (
     <section className="bg-slate-900 py-16 px-4 sm:px-6 md:px-16">
-      <div className="max-w-[1000px] mx-auto">
+      <div className="max-w-6xl mx-auto">
         {/* Title */}
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 animate-fadeIn">
             Build Scalable & High-Performance Apps with Firebase

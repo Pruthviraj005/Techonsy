@@ -39,14 +39,14 @@ export default function AngularBenefits() {
   ];
   return (
     <div className="min-h-screen flex flex-col items-center bg-gradient-to-t from-[#0a192f] to-[#000000] text-white py-16 px-4 border-t-[0.5px] border-t-cyan-950">
-      <div className="max-w-[1000px] w-full text-center">
+      <div className="max-w-6xl w-full text-center">
         <h1 className="text-3xl sm:text-4xl font-extrabold mb-4 bg-clip-text text-transparent 
                        bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-500">
           Discover the Benefits of Angular
         </h1>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-[1000px] pt-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl pt-10">
         {angularBenefitsData.map((card, index) => (
           <motion.div
                       key={index}

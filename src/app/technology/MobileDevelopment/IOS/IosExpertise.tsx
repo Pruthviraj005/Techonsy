@@ -53,7 +53,7 @@ const IosExpertise = () => {
 
   return (
     <section className="py-16 bg-slate-950">
-      <div className="container mx-auto px-6 max-w-[1000px]">
+      <div className="container mx-auto px-6 max-w-6xl">
         <h2 className="text-3xl lg:text-5xl font-bold text-slate-200 mb-8 text-center">
           Proven <span className="text-blue-600">Expertise</span>
         </h2>

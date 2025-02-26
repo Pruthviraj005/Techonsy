@@ -5,7 +5,7 @@ import Image from "next/image";
 const MongoDBFeature = () => {
   return (
     <div>
-      <div className="flex flex-col md:flex-row items-center justify-between  text-white p-10 min-h-[70vh] max-w-[1000px] mx-auto ">
+      <div className="flex flex-col md:flex-row items-center justify-between  text-white p-10 min-h-[70vh] max-w-6xl mx-auto ">
         <motion.div
           className="md:w-1/2 flex justify-center"
           initial={{ opacity: 0, x: -50 }}

@@ -19,7 +19,7 @@ const MERNStackWhyChooseUs = () => {
         initial={{ opacity: 0 }} 
         animate={{ opacity: 1 }} 
         transition={{ duration: 1 }}
-        className="relative max-w-[1000px] mx-auto text-center mb-12"
+        className="relative max-w-6xl mx-auto text-center mb-12"
       >
         <h2 className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 inline-block text-transparent bg-clip-text">
           Why Choose Us for MERN Stack Development
@@ -30,7 +30,7 @@ const MERNStackWhyChooseUs = () => {
       </motion.div>
 
       {/* Feature Grid */}
-      <div className="relative grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 max-w-[1000px] mx-auto">
+      <div className="relative grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 max-w-6xl mx-auto">
         {benefits.map((benefit, index) => (
           <motion.div 
             key={index} 

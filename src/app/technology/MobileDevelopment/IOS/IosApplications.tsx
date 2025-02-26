@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function IosApplications() {
   return (
     <section className="relative from-[#0a1f44] via-black to-gray-900 text-white py-16 px-6 sm:px-12">
-      <div className="max-w-[1000px] mx-auto text-center">
+      <div className="max-w-6xl mx-auto text-center">
         {/* Heading */}
         <h2 className="text-2xl sm:text-4xl font-bold leading-tight">
           Empowering Enterprises with Revolutionary <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">iOS App</span>  Solutions

@@ -10,7 +10,7 @@ export default function GoogleAppEngineSection() {
       <div className="absolute inset-0 w-full opacity-50  blur-[30px] animate-rotate rounded-full z-0"></div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-[1000px] w-full mx-auto flex flex-col md:flex-row items-center gap-10  p-10 rounded-lg shadow-lg">
+      <div className="relative z-10 max-w-6xl w-full mx-auto flex flex-col md:flex-row items-center gap-10  p-10 rounded-lg shadow-lg">
         <div className="md:w-1/2">
           <h2 className="text-3xl font-bold leading-tight text-white">
             Experience Unmatched Transformation with Google App Engine Services

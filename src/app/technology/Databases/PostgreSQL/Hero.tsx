@@ -18,7 +18,7 @@ const Hero = () => {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="relative z-10 text-center md:text-left  mt-24 lg:mt-0 mb-10 lg:mb-0 "
       >
-        <div className='max-w-[1000px] mx-auto flex flex-col gap-6 '>
+        <div className='max-w-6xl mx-auto flex flex-col gap-6 '>
           <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight drop-shadow-lg ">
             Maximize Performance with <span className="text-blue-400">PostgreSQL Expertise</span>
           </h1>

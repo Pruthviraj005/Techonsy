@@ -57,7 +57,7 @@ export default function AndroidDevelopmentProcess() {
 
   return (
     <div className='w-full'>
-      <section className=" px-6 md:px-12 lg:px-0 py-12 max-w-[1000px] mx-auto">
+      <section className=" px-6 md:px-12 lg:px-0 py-12 max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Left Content */}
           <div>

@@ -39,7 +39,7 @@ export default function AngularChoice() {
   ];
   return (
     <div className="min-h-screen flex flex-col items-center bg-gradient-to-b from-[#0a192f] to-[#000000] text-white py-16 px-4">
-      <div className="max-w-[1000px] w-full text-center">
+      <div className="max-w-6xl w-full text-center">
         {/* Heading with Gradient */}
         <h1 className="text-3xl sm:text-4xl font-extrabold mb-4 bg-clip-text text-transparent 
                        bg-gradient-to-r from-blue-400 via-purple-400 to-pink-500">
@@ -51,7 +51,7 @@ export default function AngularChoice() {
       </div>
 
       {/* Grid Section */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-[1000px]">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl">
         {cardData.map((card, index) => (
           <motion.div
             key={index}

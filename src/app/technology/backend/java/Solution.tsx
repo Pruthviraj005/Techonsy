@@ -95,7 +95,7 @@ const Solution = () => {
             />
           ))}
         </div>
-        <div className='max-w-[1000px] mx-auto '>
+        <div className='max-w-6xl mx-auto '>
           <div className="relative z-10 container mx-auto px-4 py-16">
             {/* Section 1: Java Full Stack Development */}
             <motion.div

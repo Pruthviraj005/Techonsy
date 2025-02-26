@@ -7,7 +7,7 @@ import { FaArrowRight } from 'react-icons/fa';
 export default function AngularBanner() {
   return (
     <div className="max-h-screen w-full border-b-[0.5px] border-b-purple-950 bg-gradient-to-br from-[#141d3d] via-[#020617] to-[#031024]">
-      <section className="relative flex flex-col md:flex-row items-center justify-between text-white py-16 px-6 md:px-20 max-w-[1000px] mx-auto">
+      <section className="relative flex flex-col md:flex-row items-center justify-between text-white py-16 px-6 md:px-20 max-w-6xl mx-auto">
         
         {/* Text Content */}
         <div className="max-w-2xl text-center md:text-left">

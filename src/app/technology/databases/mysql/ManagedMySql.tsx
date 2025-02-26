@@ -8,7 +8,7 @@ const ManagedMySql=()=>{
         <div className="absolute inset-0 w-full h-full opacity-50 blur-3xl z-0 
           bg-[radial-gradient(circle_at_center,_#1b3a6b_10%,_#0a2a52_40%,_#020617_90%)]">
         </div>
-        <section className=" flex justify-center items-center py-16 px-6 overflow-hidden max-w-[1000px] mx-auto">
+        <section className=" flex justify-center items-center py-16 px-6 overflow-hidden max-w-6xl mx-auto">
           {/* Radial Gradient Background */}
          
 

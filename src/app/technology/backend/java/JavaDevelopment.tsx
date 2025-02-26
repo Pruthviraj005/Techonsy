@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 export default function JavaDevelopment() {
   return (
     <div className="bg-gradient-to-b from-black via-gray-900 to-black text-white py-16 px-6 md:px-20">
-      <div className="max-w-[1000px] mx-auto">
+      <div className="max-w-6xl mx-auto">
       {/* Header Section */}
         <motion.h2 
           initial={{ opacity: 0, y: -50 }}

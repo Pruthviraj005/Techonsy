@@ -92,7 +92,7 @@ const WhyChooseUsSection = () => {
         ))}
       </div>
 
-      <div className="max-w-[1000px] mx-auto relative">
+      <div className="max-w-6xl mx-auto relative">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
