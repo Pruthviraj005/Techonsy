@@ -1,7 +1,7 @@
-import Hero from './Hero'
-import Experiance from './Experiance'
-import Section from './Section'
-import Select from './Select'
+import Hero from './hero'
+import Experiance from './experiance'
+import Section from './section'
+import Select from './select'
 import ExperienceAcross from './ExperienceAcross'
 
 export default function Supabase(){

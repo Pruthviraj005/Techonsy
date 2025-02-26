@@ -1,11 +1,12 @@
-import Hero from './Hero'
-import Services from './Service';
-import Expertise from './Expertise';
+
+import Services from './service';
+import Expertise from './expertise';
 import Solution from './Solution';
-import Performance from './Performance';
-import List from './List';
+import Performance from './performance';
+import List from './list';
 import ExperienceAcross from './ExperienceAcross'
 import Partner from './Partner';
+import Hero from './hero';
 export default function Node(){
     return(<>
     <Hero/>
