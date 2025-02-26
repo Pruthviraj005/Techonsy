@@ -1,65 +1,75 @@
 'use client';
 import React from 'react';
+import { motion } from 'framer-motion';
 
 // Data array for IoT services
 const services = [
   {
-    title: 'IoT Consulting and Strategy',
+    title: 'Cost-effective',
     description:
-      'We provide IoT consulting services to help organizations define their IoT strategy, assess their IoT needs, and plan the implementation of IoT solutions.',
+      'IoT is the most popular technology that helps organizations to carry out the functionalities which makes it a cost-effective approach.',
   },
   {
-    title: 'IoT Mobile App Development',
+    title: 'Boost Productivity',
     description:
-      'We offer mobile applications for smartphones and tablets that provide users with a convenient interface to control and monitor IoT devices remotely.',
+      'IoT technology assists businesses to improve their productivity and efficiency.',
   },
   {
-    title: 'Web-based IoT Development',
+    title: 'Better Customer Experience',
     description:
-      "Technology's dedicated team develops web apps that enable users to access and control their IoT devices via a web browser, dashboard, or portal.",
+      "IoT improves the overall customer experience by embedding highly advanced tools and technologies.",
   },
   {
-    title: 'IoT Support and Maintenance',
+    title: 'Business Opportunities',
     description:
-      'We offer ongoing support and maintenance services to ensure that IoT applications and devices continue to function effectively and securely.',
+      'IoT offers several business opportunities by enabling advanced analytics, artificial intelligence, and smart utility, etc.'
   },
   {
-    title: 'Hire IoT App Developers',
+    title: 'Mobility',
     description:
-      'Hire dedicated IoT app developers from Technology and say goodbye to all your business worries right away. Choose from our flexible hiring models available.',
+      'IoT enables businesses to let their employees conduct their work virtually from any location.',
   },
   {
-    title: 'IoT App Integration',
+    title: 'Automation and Control',
     description:
-      'Our IoT app integration services connect IoT devices and platforms to create seamless ecosystems. We enable data sharing, automation, and facilitating smart home systems in industrial monitoring, and meet these challenges.',
+      'IoT allows the interconnection of the devices enables a large amount of automation and control in the workings.',
   },
 ];
 
 export default function IotServices() {
   return (
-    <div className="bg-gray-950 text-white min-h-screen py-16 px-6 md:px-20">
+    <div className="bg-gray-950 text-gray-50 min-h-screen py-16 px-6 md:px-20">
       {/* Header Section */}
-      <div className="text-center max-w-3xl mx-auto">
-        <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-          Reliable IoT App Development Services
+      <motion.div 
+        initial={{ opacity: 0, y: -50 }} 
+        animate={{ opacity: 1, y: 0 }} 
+        transition={{ duration: 1, ease: 'easeInOut' }}
+        className="text-center max-w-3xl mx-auto"
+      >
+        <h1 className="text-4xl md:text-5xl font-bold mb-6 text-gray-50">
+          Key Benefits Of IoT
         </h1>
-        <p className="text-lg text-gray-300 mb-8">
+        <p className="text-lg text-gray-200 mb-8">
           When it comes to seeking reliable IoT app development services, there is no better destination than Technology. We have a team of dedicated IoT app developers who can be your savior. So, let’s connect and redefine business excellence with our top-notch IoT application development services.
         </p>
-      </div>
+      </motion.div>
 
       {/* Services Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
         {services.map((service, index) => (
-          <div
+          <motion.div
             key={index}
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.7, delay: index * 0.2, ease: 'easeInOut' }}
+            whileHover={{ scale: 1.08, transition: { duration: 0.3, ease: 'easeInOut' } }}
             className="bg-gray-900 p-8 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300"
           >
-            <h2 className="text-2xl font-bold text-blue-500 mb-4 text-center font-sans">
+            <h2 className="text-2xl font-bold bg-gradient-to-r from-blue-300 to-blue-500 text-transparent bg-clip-text mb-4 text-center font-sans">
               {service.title}
             </h2>
-            <p className="text-gray-300 text-center">{service.description}</p>
-          </div>
+            <p className="text-gray-200 text-center">{service.description}</p>
+          </motion.div>
         ))}
       </div>
     </div>

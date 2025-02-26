@@ -18,7 +18,7 @@ function IotDevelopment() {
       {/* Header Section */}
       <div className="text-center max-w-3xl mx-auto">
         <h2 className="text-2xl md:text-3xl font-bold mb-4 text-blue-900">
-          How We Approach IoT Development Projects
+          IoT Developement Process
         </h2>
         <div className="w-32 h-1 bg-blue-300 mx-auto mb-4"></div>
         <p className="text-lg text-gray-600">
@@ -29,20 +29,9 @@ function IotDevelopment() {
       </div>
 
       {/* Steps Timeline */}
-      <div className="flex flex-col md:flex-row justify-center items-center mt-12 relative">
+      <div className="flex flex-col md:flex-row justify-center items-center relative">
         <div className="w-full flex flex-wrap justify-center items-center">
-          {steps.map((step, index) => (
-            <div key={index} className="relative text-center flex flex-col items-center w-40 md:w-48">
-              {/* Icon inside Circle */}
-              <div className="relative flex items-center justify-center w-20 h-20 rounded-full">
-                <Image src={step.icon} alt={step.title} width={100} height={100} />
-              </div>
-
-
-              {/* Step Title */}
-              <p className="mt-4 text-sm md:text-md font-medium">{step.title}</p>
-            </div>
-          ))}
+          <Image src="/images/iot/developement.png" alt="development" width={1200} height={500} />
         </div>
       </div>
     </div>
