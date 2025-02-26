@@ -45,27 +45,29 @@ const services = [
 export default function AngularServices() {
   return (
     <div className="min-h-screen bg-slate-950 text-white py-12 px-6">
-      <div className="text-center mb-12">
-        <h2 className="text-3xl font-bold">Our AngularJS Development Services</h2>
-        <p className="text-gray-400 mt-2">
-          Develop high-quality, driven, interactive web applications with Ahex's well-configured development services to meet the desired business objectives.
-        </p>
-      </div>
+      <div className='max-w-[1000px] mx-auto'>
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold">Our AngularJS Development Services</h2>
+          <p className="text-gray-400 mt-2">
+            Develop high-quality, driven, interactive web applications with Ahex's well-configured development services to meet the desired business objectives.
+          </p>
+        </div>
 
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
-        {services.map((service, index) => (
-          <motion.div
-            key={index}
-            className="bg-slate-950 border border-slate-800 p-6 rounded-2xl shadow-white flex flex-col items-center text-center hover:bg-slate-900"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.2 }}
-          >
-            <Image src={service.icon} alt={service.title} width={80} height={80} />
-            <h3 className="text-xl font-semibold mt-4">{service.title}</h3>
-            <p className="text-gray-400 mt-2 font-light">{service.description}</p>
-          </motion.div>
-        ))}
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
+          {services.map((service, index) => (
+            <motion.div
+              key={index}
+              className="bg-slate-950 border border-slate-800 p-6 rounded-2xl shadow-white flex flex-col items-center text-center hover:bg-slate-900"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.2 }}
+            >
+              <Image src={service.icon} alt={service.title} width={80} height={80} />
+              <h3 className="text-xl font-semibold mt-4">{service.title}</h3>
+              <p className="text-gray-400 mt-2 font-light">{service.description}</p>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </div>
   );

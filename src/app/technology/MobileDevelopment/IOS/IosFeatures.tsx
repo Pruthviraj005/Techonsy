@@ -37,7 +37,7 @@ const IosFeatures = () => {
 
   return (
     <section className="py-16 bg-gray-900">
-      <div className="container mx-auto px-6 text-center">
+      <div className="container mx-auto px-6 text-center max-w-[1000px]">
         <h2 className="text-3xl font-bold text-gray-50 mb-8">
         Top Reasons to Choose iOS App Development
         </h2>

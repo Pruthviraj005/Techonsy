@@ -16,7 +16,7 @@ function page() {
       <IosFeatures />
       <IosExpertise />
       <IndustriesWeServe />
-      <RelatedBlogs />
+      {/* <RelatedBlogs /> */}
     </>
   )
 }

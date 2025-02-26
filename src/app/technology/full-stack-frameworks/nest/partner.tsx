@@ -26,7 +26,7 @@ export default function BenefitsSection() {
                         onClick={() => setSelected(index)}
                         className={`w-full flex items-center gap-3 p-3 rounded-lg text-left transition ${
                             selected === index 
-                                ? 'bg-[#00bcd4] text-black shadow-lg shadow-[#00bcd4]'
+                                ? 'bg-[#00bcd4] text-black shadow-lg shadow-[#42787f]'
                                 : 'bg-[#1e293b] text-white hover:bg-[#334155]'
                         }`}
                     >

@@ -1,49 +1,74 @@
-'use client'
+'use client';
 
 import Image from "next/image";
+import { motion } from "framer-motion"; // Import Framer Motion
 import InfoCard from "./InfoCards";
 
 export default function AngularChoice() {
+  const cardData = [
+    {
+      title: "Easy-to-use",
+      description: "Angular’s component-based architecture simplifies managing complex applications.",
+      icon: "/images/angular/easy-to-use.png",
+    },
+    {
+      title: "Performance & Speed",
+      description: "Angular tools optimize speed, improving reloading and overall performance.",
+      icon: "/images/angular/performance.png",
+    },
+    {
+      title: "Dynamic Development",
+      description: "Beyond reusable components, Angular enables highly interactive applications.",
+      icon: "/images/angular/dynamic.png",
+    },
+    {
+      title: "Easy Testing",
+      description: "Automated testing is seamless with Angular, requiring no rigid order.",
+      icon: "/images/angular/easy-testing.png",
+    },
+    {
+      title: "Community Support",
+      description: "AngularJS boasts a vast developer community offering strong support.",
+      icon: "/images/angular/community.png",
+    },
+    {
+      title: "MVC Architecture",
+      description: "Angular’s MVC pattern ensures clear separation of UI and logic.",
+      icon: "/images/angular/mvc.png",
+    },
+  ];
   return (
-    <div className="min-h-screen flex flex-col items-center bg-gradient-to-b from-blue-900 to-black text-white py-10 px-4 sm:px-6 lg:px-8">
-      <h1 className="text-3xl sm:text-4xl font-extrabold mb-4 text-center">
-        Why is AngularJS considered the best choice for Web App Development?
-      </h1>
-      <h2 className="text-lg sm:text-xl mb-8 font-light text-center">
-        Here&apos;s why Angular is the best choice for web app development
-      </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-6xl">
-        <InfoCard
-          title="Easy-to-use"
-          description="Angular development incorporates a component-based architecture that enables the management of complex applications with ease."
-          icon={<Image src="/images/angular/easy-to-use.png" alt="mvc" width={80} height={80} />}
-        />
-        <InfoCard
-          title="Performance and Speed"
-          description="The features of Angular Tools are incredible, resulting in enhanced speed and reloading of web pages."
-          icon={<Image src="/images/angular/performance.png" alt="mvc" width={80} height={80} />}
-        />
-        <InfoCard
-          title="Dynamic Development"
-          description="Dynamic Development in AngularJS extends beyond just reusable components."
-          icon={<Image src="/images/angular/dynamic.png" alt="mvc" width={80} height={80} />}
-        />
-        <InfoCard
-          title="Easy Testing"
-          description="You can easily conduct automated testing in Angular applications without complying with any order."
-          icon={<Image src="/images/angular/easy-testing.png" alt="mvc" width={80} height={80} />}
-        />
-        <InfoCard
-          title="Community Backup"
-          description="At Ahex, we offer hassle-free services so you don&apos;t have to get bothered with backup. We have a large community of AngularJS developers who&apos;re inclined towards providing the best services!"
-          icon={<Image src="/images/angular/community.png" alt="mvc" width={80} height={80} />}
-        />
-        <InfoCard
-          title="MVC Working Pattern"
-          description="MVC extensively separates the user interface from application logic."
-          icon={<Image src="/images/angular/mvc.png" alt="mvc" width={80} height={80} />}
-        />
+    <div className="min-h-screen flex flex-col items-center bg-gradient-to-b from-[#0a192f] to-[#000000] text-white py-16 px-4">
+      <div className="max-w-[1000px] w-full text-center">
+        {/* Heading with Gradient */}
+        <h1 className="text-3xl sm:text-4xl font-extrabold mb-4 bg-clip-text text-transparent 
+                       bg-gradient-to-r from-blue-400 via-purple-400 to-pink-500">
+          Why is AngularJS the Best Choice for Web App Development?
+        </h1>
+        <h2 className="text-lg sm:text-xl mb-10 font-light">
+          Here&apos;s why Angular is a top choice for modern web apps
+        </h2>
+      </div>
+
+      {/* Grid Section */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-[1000px]">
+        {cardData.map((card, index) => (
+          <motion.div
+            key={index}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.98 }}
+            className="relative p-6 rounded-xl bg-opacity-10 bg-white shadow-md 
+                       backdrop-blur-lg border border-gray-700 transition-all duration-300 
+                       hover:shadow-xl hover:border-blue-800"
+          >
+            <Image src={card.icon} alt={card.title} width={80} height={80} />
+            <h3 className="text-xl font-semibold mt-4">{card.title}</h3>
+            <p className="text-sm text-gray-300 mt-2">{card.description}</p>
+          </motion.div>
+        ))}
       </div>
     </div>
   );
 }
+
+// Card Data

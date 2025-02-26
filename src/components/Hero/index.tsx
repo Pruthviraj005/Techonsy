@@ -246,19 +246,7 @@ const Hero = () => {
                     Get Started
                   </span>
                 </button>
-                {/* <Link
-                  href="/contact"
-                  className="group relative inline-flex items-center justify-center px-6 py-3 text-sm sm:text-base font-semibold text-white overflow-hidden rounded-lg transition-all duration-300"
-                >
-                  <span className="absolute inset-0 w-full h-full border-2 border-white/20 group-hover:border-white/40 rounded-lg backdrop-blur-sm bg-white/5"></span>
-                  <span className="absolute inset-0 w-full h-full transition-all duration-300 group-hover:bg-gradient-to-br from-white/10 to-transparent"></span>
-                  <span className="relative flex items-center gap-2">
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                    </svg>
-                    Book a Call
-                  </span>
-                </Link> */}
+                
               </div>
             </div>
 

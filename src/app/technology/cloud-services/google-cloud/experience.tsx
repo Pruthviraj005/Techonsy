@@ -59,8 +59,8 @@ export default function BlueShadowTabs() {
   const [activeTab, setActiveTab] = useState("tab1");
 
   return (
-    <section className="flex justify-center items-center  bg-gray-900 text-white p-6 min-h-[70vh]">
-      <div className="w-full max-w-[1000px] border border-blue-400 bg-gray-900 rounded-lg p-6 shadow-lg shadow-blue-400 flex flex-col justify-between min-h-[60vh] md:min-h-[50vh] lg:min-h-[40vh]">
+    <section className="flex justify-center items-center  bg-gray-900 text-white p-6 min-h-[70vh] border-b-[0.5px] border-cyan-800">
+      <div className="w-full max-w-[1000px]  flex flex-col justify-between min-h-[60vh] md:min-h-[50vh] lg:min-h-[40vh]">
         {/* Title */}
         <div className="text-center p-4">
           <h2 className="text-2xl md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#91EAE4] to-[#7F7FD5]">

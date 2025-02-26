@@ -44,11 +44,11 @@ const FeatureCard = ({ icon, title, description, index }) => {
       transition={{ duration: 0.5, delay: index * 0.1 }}
       className="relative group"
     >
-      <div className="bg-gradient-to-br from-blue-950 to-black p-6 rounded-xl hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-300 border border-blue-900/30">
+      <div className=" p-6 rounded-xl hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-300 border border-blue-900/30 min-h-[320px] flex flex-col justify-between">
         {/* Glowing orb effect */}
         <div className="absolute -top-2 -left-2 w-4 h-4 bg-blue-500 rounded-full blur-lg group-hover:blur-xl group-hover:scale-150 transition-all duration-300" />
-        
-        <div className="relative">
+
+        <div className="relative flex flex-col flex-grow">
           <motion.div
             whileHover={{ scale: 1.1, rotate: 360 }}
             transition={{ duration: 0.3 }}
@@ -56,12 +56,12 @@ const FeatureCard = ({ icon, title, description, index }) => {
           >
             {icon}
           </motion.div>
-          
+
           <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-blue-400 transition-colors duration-300">
             {title}
           </h3>
-          
-          <p className="text-blue-100/80 leading-relaxed">
+
+          <p className="text-blue-100/80 leading-relaxed flex-grow">
             {description}
           </p>
         </div>
@@ -72,7 +72,7 @@ const FeatureCard = ({ icon, title, description, index }) => {
 
 const WhyChooseUsSection = () => {
   return (
-    <div className="bg-gradient-to-br from-black via-blue-950 to-black py-24 px-4 relative overflow-hidden">
+    <div className="bg-gradient-to-br from-black via-[#0013248b] to-black py-24 px-4 relative overflow-hidden">
       {/* Animated background grid */}
       <div className="absolute inset-0 grid grid-cols-8 grid-rows-8 gap-4 opacity-20">
         {[...Array(64)].map((_, i) => (
@@ -92,7 +92,7 @@ const WhyChooseUsSection = () => {
         ))}
       </div>
 
-      <div className="max-w-7xl mx-auto relative">
+      <div className="max-w-[1000px] mx-auto relative">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -123,11 +123,11 @@ const WhyChooseUsSection = () => {
         </div>
       </div>
       
-      {/* Floating particles */}
+      {/* Floating particles
       {[...Array(20)].map((_, i) => (
         <motion.div
           key={i}
-          className="absolute w-1 h-1 bg-blue-400/20 rounded-full"
+          className="absolute w-1 h-[90%] bg-[#0d011a3f] rounded-full"
           style={{
             left: `${Math.random() * 100}%`,
             top: `${Math.random() * 100}%`,
@@ -143,7 +143,7 @@ const WhyChooseUsSection = () => {
             delay: Math.random() * 2,
           }}
         />
-      ))}
+      ))} */}
     </div>
   );
 };

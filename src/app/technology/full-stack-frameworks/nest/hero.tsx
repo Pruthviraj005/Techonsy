@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import ButtonComp from "@/components/Common/ButtonComp";
 
 const easeInAnimation = {
   initial: { opacity: 0, x: -50 },
@@ -11,8 +12,8 @@ const easeInAnimation = {
 
 const Hero = () => {
   return (
-    <section className="relative py-16 px-6 flex justify-center items-center min-h-screen overflow-hidden bg-gradient-to-br from-[#0d1b2a] via-[#1b263b] to-[#415a77]">
-      {/* SVG Background */}
+    <section className="relative py-16 px-6 flex justify-center items-center min-h-screen overflow-hidden bg-gradient-to-br from-[#121921cb] via-[#161f30] to-[#0e151d]">
+      {/* SVG Background
       <div className="absolute inset-0">
         <svg className="absolute top-0 left-0 w-full h-full opacity-20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
           <path fill="url(#heroGradient)" fillOpacity="1" d="M0,128L1440,320L1440,320L0,320Z"></path>
@@ -23,14 +24,14 @@ const Hero = () => {
             </linearGradient>
           </defs>
         </svg>
-      </div>
+      </div> */}
 
       <div className="relative container mx-auto max-w-[1000px] w-full px-4 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         {/* Left Content */}
         <motion.div className="text-white max-w-lg p-4" {...easeInAnimation}>
           <h1 className="text-4xl sm:text-5xl font-bold mb-4 text-center md:text-left">
             <motion.span className="text-[#3b82f6] text-6xl sm:text-7xl inline-block" 
-              style={{ WebkitTextStroke: '2px white', textShadow: '0 0 10px #3b82f6' }} 
+              style={{ WebkitTextStroke: '1px white', textShadow: '0 0 5px #3b82f6' }} 
               {...easeInAnimation}
             >
               NestJS
@@ -41,13 +42,14 @@ const Hero = () => {
             Leverage the power of <span className="text-blue-400 font-semibold">NestJS</span>, a TypeScript-based framework, to build scalable, high-performance web applications. Our expert developers create robust, future-proof solutions tailored to your business needs, ensuring seamless growth and optimal performance.
           </p>
           <div className="flex justify-center md:justify-start">
-            <motion.a
+            {/* <motion.a
               href="#"
               whileHover={{ scale: 1.1 }}
               className="inline-block bg-[#3b82f6] text-white font-semibold text-lg py-3 px-6 rounded-lg shadow-md hover:bg-transparent hover:border-white border-2 transition-all duration-300"
             >
               Get Started →
-            </motion.a>
+            </motion.a> */}
+            <ButtonComp/>
           </div>
         </motion.div>
 

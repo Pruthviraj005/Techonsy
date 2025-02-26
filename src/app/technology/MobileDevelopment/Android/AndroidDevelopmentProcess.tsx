@@ -56,62 +56,64 @@ export default function AndroidDevelopmentProcess() {
   ];
 
   return (
-    <section className="px-4 sm:px-8 md:px-12 lg:px-20 py-12 max-w-7xl mx-auto">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-        {/* Left Content */}
-        <div>
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-50 leading-tight lg:mt-28">
-            A Proven <span className="bg-gradient-to-r from-blue-500 to-teal-500 text-transparent bg-clip-text">
-              Development
-            </span> Process You Can Trust
-          </h2>
-          <p className="text-gray-300 mt-4 text-lg">
-            Our flexible, iterative approach ensures transparency at every stage, providing a clear roadmap with detailed milestones and deliverables from start to finish.
-          </p>
-        </div>
+    <div className='w-full'>
+      <section className=" px-6 md:px-12 lg:px-0 py-12 max-w-[1000px] mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          {/* Left Content */}
+          <div>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-50 leading-tight lg:mt-28">
+              A Proven <span className="bg-gradient-to-r from-blue-500 to-teal-500 text-transparent bg-clip-text">
+                Development
+              </span> Process You Can Trust
+            </h2>
+            <p className="text-gray-300 mt-4 text-lg">
+              Our flexible, iterative approach ensures transparency at every stage, providing a clear roadmap with detailed milestones and deliverables from start to finish.
+            </p>
+          </div>
 
-        {/* Right Content - Accordion */}
-        <div className="space-y-4">
-          {sections.map((section) => (
-            <div 
-              key={section.id} 
-              className="border border-gray-700 rounded-lg shadow-lg bg-gray-900 bg-opacity-50 backdrop-blur-lg p-4 transition-all duration-300"
-            >
-              <button
-                className="flex justify-between items-center w-full text-left p-2 hover:bg-gray-800 rounded-md transition-all duration-300"
-                onClick={() => setOpenSection(openSection === section.id ? null : section.id)}
+          {/* Right Content - Accordion */}
+          <div className="space-y-4">
+            {sections.map((section) => (
+              <div 
+                key={section.id} 
+                className="border border-gray-700 rounded-lg shadow-lg bg-gray-900 bg-opacity-50 backdrop-blur-lg p-4 transition-all duration-300"
               >
-                <div className="flex items-center gap-3">
-                  {section.icon}
-                  <span className="text-lg font-semibold text-gray-200">{section.title}</span>
-                </div>
-                {openSection === section.id ? <FaChevronUp className="text-teal-400" /> : <FaChevronDown className="text-teal-400" />}
-              </button>
-
-              {openSection === section.id && (
-                <motion.div
-                  initial={{ opacity: 0, height: 0 }}
-                  animate={{ opacity: 1, height: 'auto' }}
-                  transition={{ duration: 0.4 }}
-                  className="mt-3 bg-gray-800 bg-opacity-80 p-4 rounded-md"
+                <button
+                  className="flex justify-between items-center w-full text-left p-2 hover:bg-gray-800 rounded-md transition-all duration-300"
+                  onClick={() => setOpenSection(openSection === section.id ? null : section.id)}
                 >
-                  <ul className="list-none space-y-3">
-                    {section.content.map((item, index) => (
-                      <li 
-                        key={index} 
-                        className="flex items-start gap-3 text-gray-300 text-md leading-relaxed"
-                      >
-                        <span className="w-2 h-2 bg-teal-400 rounded-full mt-2"></span>
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </motion.div>
-              )}
-            </div>
-          ))}
+                  <div className="flex items-center gap-3">
+                    {section.icon}
+                    <span className="text-lg font-semibold text-gray-200">{section.title}</span>
+                  </div>
+                  {openSection === section.id ? <FaChevronUp className="text-teal-400" /> : <FaChevronDown className="text-teal-400" />}
+                </button>
+
+                {openSection === section.id && (
+                  <motion.div
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: 'auto' }}
+                    transition={{ duration: 0.4 }}
+                    className="mt-3 bg-gray-800 bg-opacity-80 p-4 rounded-md"
+                  >
+                    <ul className="list-none space-y-3">
+                      {section.content.map((item, index) => (
+                        <li 
+                          key={index} 
+                          className="flex items-start gap-3 text-gray-300 text-md leading-relaxed"
+                        >
+                          <span className="w-2 h-2 bg-teal-400 rounded-full mt-2"></span>
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </motion.div>
+                )}
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 }

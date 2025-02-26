@@ -22,7 +22,7 @@ export default function TechToolsSection() {
   }, []);
 
   return (
-    <div className="py-16 bg-gradient-to-b from-blue-900 via-slate-900 to-black text-center border-t-[0.5px] border-t-cyan-700 ">
+    <div className="py-16 bg-gradient-to-b from-[#15253966] via-slate-900 to-black text-center border-t-[0.5px] border-t-cyan-700 ">
       <section className="max-w-[1000px] mx-auto py-12 px-4">
         {/* Section Title */}
         <h2 className="text-4xl font-bold text-slate-100 mb-4 transition-opacity duration-700 ease-in-out opacity-100">

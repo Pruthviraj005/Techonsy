@@ -4,11 +4,11 @@ import Image from "next/image";
 
 export default function IosApplications() {
   return (
-    <section className="relative bg-gradient-to-b from-[#0a1f44] via-black to-gray-900 text-white py-16 px-6 sm:px-12">
-      <div className="max-w-6xl mx-auto text-center">
+    <section className="relative from-[#0a1f44] via-black to-gray-900 text-white py-16 px-6 sm:px-12">
+      <div className="max-w-[1000px] mx-auto text-center">
         {/* Heading */}
-        <h2 className="text-3xl sm:text-5xl font-bold leading-tight">
-          Empowering Enterprises with Revolutionary iOS App Solutions
+        <h2 className="text-2xl sm:text-4xl font-bold leading-tight">
+          Empowering Enterprises with Revolutionary <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">iOS App</span>  Solutions
         </h2>
 
         {/* Divider */}
@@ -23,8 +23,8 @@ export default function IosApplications() {
             <Image
               src="/images/ios/ios1.png" // Replace with your actual image path
               alt="iOS Development"
-              width={500}
-              height={500}
+              width={400}
+              height={400}
               className="rounded-lg shadow-lg"
             />
           </div>

@@ -1,4 +1,5 @@
 "use client";
+import ButtonComp from "@/components/Common/ButtonComp";
 import img from "../../../../../public/images/technology/reactNative/react-native-logo.png";
 import Image from "next/image";
 
@@ -6,7 +7,7 @@ export default function Hero() {
   return (
     <div className="relative overflow-hidden ">
       {/* Background Effect */}
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-indigo-600 to-blue-700 opacity-90"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-950 via-indigo-950 to-blue-950 opacity-90"></div>
 
       {/* Floating Blobs */}
       <div className="absolute -top-20 left-5 sm:left-10 w-40 sm:w-72 h-40 sm:h-72 bg-blue-400 opacity-40 blur-3xl rounded-full animate-blob"></div>
@@ -26,9 +27,10 @@ export default function Hero() {
               Craft exceptional React Native applications that exhibit unparalleled speed, reliability, scalability, and captivating user experiences.
               Rely on our proficient team of app developers, boasting over a decade of expertise, to construct extraordinary apps that flawlessly align with your unique specifications and aspirations.
             </p>
-            <button className="bg-white text-blue-500 w-[50%] px-6 py-3 rounded-full font-semibold shadow-md hover:bg-blue-100 transition hover:scale-110 duration-500  sm:w-1/2 md:w-[40%]">
+            <ButtonComp/>
+            {/* <button className="bg-white text-blue-500 w-[50%] px-6 py-3 rounded-full font-semibold shadow-md hover:bg-blue-100 transition hover:scale-110 duration-500  sm:w-1/2 md:w-[40%]">
               Get Started
-            </button>
+            </button> */}
           </div>
         </div>
 

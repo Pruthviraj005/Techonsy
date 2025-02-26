@@ -34,45 +34,47 @@ export default function JavaServices() {
 
   return (
     <div className="bg-gray-900 text-white py-16 px-8">
-      <h2 className="text-4xl font-bold text-center text-blue-500 mb-8">Enterprise Java Development Services</h2>
-      <p className="text-center text-gray-400 max-w-3xl mx-auto mb-12">
-        From Java consulting to product deployment, we offer end-to-end Java development services, including post-deployment support.
-      </p>
-      <div className="relative flex flex-wrap justify-center gap-12 max-w-6xl mx-auto">
-        {services.map((service, index) => (
-          <motion.div
-            key={index}
-            className="relative group w-48 h-48 flex flex-col items-center justify-center text-center p-4 rounded-full border-2 border-blue-500 hover:bg-blue-600 hover:scale-110 transition transform duration-300"
-            whileHover={{ scale: 1.1 }}
-          >
-            <div className="text-blue-300 text-5xl mb-3">{service.icon}</div>
-            <h3 className="text-lg font-semibold">{service.title}</h3>
-          </motion.div>
-        ))}
-      </div>
-
-      <h2 className="text-3xl font-bold text-center text-blue-500 mt-16 mb-8">Our Battle-Tested Java Technology Stack</h2>
-      <div className="max-w-5xl mx-auto">
-        <div className="flex justify-center gap-8 text-lg font-semibold text-gray-400">
-          {techCategories.map((category, index) => (
-            <div 
-              key={index} 
-              className={`cursor-pointer transition duration-200 ${selectedCategory === category ? "text-blue-500" : "hover:text-blue-500"}`}
-              onClick={() => setSelectedCategory(category)}
+      <div className="max-w-[1000px] mx-auto">
+        <h2 className="text-4xl font-bold text-center text-blue-500 mb-8">Enterprise Java Development Services</h2>
+        <p className="text-center text-gray-400 max-w-3xl mx-auto mb-12">
+          From Java consulting to product deployment, we offer end-to-end Java development services, including post-deployment support.
+        </p>
+        <div className="relative flex flex-wrap justify-center gap-12 max-w-6xl mx-auto">
+          {services.map((service, index) => (
+            <motion.div
+              key={index}
+              className="relative group w-48 h-48 flex flex-col items-center justify-center text-center p-4 rounded-full border-2 border-blue-500 hover:bg-blue-600 hover:scale-110 transition transform duration-300"
+              whileHover={{ scale: 1.1 }}
             >
-              {category}
-            </div>
+              <div className="text-blue-300 text-5xl mb-3">{service.icon}</div>
+              <h3 className="text-lg font-semibold">{service.title}</h3>
+            </motion.div>
           ))}
         </div>
-        <div className="mt-6 border-b border-gray-600"></div>
-        <div className="mt-6">
-          <h3 className="text-2xl text-blue-400 font-bold mb-4">{selectedCategory}</h3>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 text-center text-blue-300">
-            {techStack[selectedCategory].map((tech, subIndex) => (
-              <div key={subIndex} className="flex items-center gap-2">
-                <span className="text-blue-500">▪</span> {tech}
+
+        <h2 className="text-3xl font-bold text-center text-blue-500 mt-16 mb-8">Our Battle-Tested Java Technology Stack</h2>
+        <div className="max-w-5xl mx-auto">
+          <div className="flex justify-center gap-8 text-lg font-semibold text-gray-400">
+            {techCategories.map((category, index) => (
+              <div 
+                key={index} 
+                className={`cursor-pointer transition duration-200 ${selectedCategory === category ? "text-blue-500" : "hover:text-blue-500"}`}
+                onClick={() => setSelectedCategory(category)}
+              >
+                {category}
               </div>
             ))}
+          </div>
+          <div className="mt-6 border-b border-gray-600"></div>
+          <div className="mt-6">
+            <h3 className="text-2xl text-blue-400 font-bold mb-4">{selectedCategory}</h3>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 text-center text-blue-300">
+              {techStack[selectedCategory].map((tech, subIndex) => (
+                <div key={subIndex} className="flex items-center gap-2">
+                  <span className="text-blue-500">▪</span> {tech}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

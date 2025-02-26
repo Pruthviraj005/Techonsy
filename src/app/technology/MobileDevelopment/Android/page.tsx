@@ -14,7 +14,7 @@ function page() {
     <AndroidAdvantage />
     <AndroidDevelopmentProcess />
     <IndustriesWeServe />
-    <RelatedBlogs />
+    {/* <RelatedBlogs /> */}
     </>
   )
 }
