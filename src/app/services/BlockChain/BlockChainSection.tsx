@@ -19,18 +19,16 @@ const BlockchainSection = () => {
         {/* Right: Content */}
         <div className="w-full md:w-1/2">
           <h2 className="text-3xl md:text-4xl font-bold leading-tight">
-            Unlock the Power of Blockchain with{" "}
-            <span className="text-blue-500">Expert Development Solutions</span>
+            Accelerate Your Digital Transformation with {" "}
+            <span className="text-blue-500">Blockchain Development Services</span>
           </h2>
           <p className="mt-4 text-gray-300">
-            Our blockchain specialists ensure seamless implementation, enhancing security and efficiency for business applications. With customizable development modules, we tailor solutions to meet unique business needs.
+            Leverage the power of blockchain technology to drive innovation within your business. We design and implement customized blockchain solutions using top protocols like Ethereum, Hyperledger, and Solana for enterprises and startups. Our decentralized solutions are built to meet the evolving needs of your industry.
           </p>
           <p className="mt-4 text-gray-300">
-            Harness the reliability of blockchain for verifiable, traceable transactions. A well-crafted MVP validates your idea, setting it apart from competitors while increasing investor confidence and minimizing risk ensuring a strong foundation for success.
+            We offer end-to-end blockchain development and consultancy services to help businesses capitalize on the rapidly expanding blockchain market. Our team works closely with you to create a strategic roadmap for your blockchain journey.
+
           </p>
-          <button className="mt-6 px-6 py-3 bg-blue-500 text-white text-lg font-medium rounded-lg hover:bg-blue-600 transition flex items-center gap-2">
-            🚀 Talk to Our Experts →
-          </button>
         </div>
       </div>
     </section>

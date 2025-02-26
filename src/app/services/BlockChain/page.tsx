@@ -6,7 +6,6 @@ import BlockChainPlatform from "./BlockChainPlatformSection";
 import BlockchainSection from "./BlockChainSection";
 import BlockChainDevelopmentProcess from "./BlockChainDevelopmentProcess";
 import RelatedBlogs from './RelatedBlogs'
-import BlockChainSolutions from "./BlockChainSolutions";
 import WhyChooseUs from "./WhyChooseUs";
 
 const BlockChain = () => {
@@ -14,11 +13,10 @@ const BlockChain = () => {
     <>
       <BlockChainBanner />
       <BlockchainSection />
-      <BlockChainSolutions />
-      <BlockChainDevelopmentProcess />
       <BlockChainPlatform />
-      <WhyChooseUs />
       <BlockChainIndustrySection />
+      <BlockChainDevelopmentProcess />
+      <WhyChooseUs />
       <RelatedBlogs />
     </>
   );
