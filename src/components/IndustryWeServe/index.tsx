@@ -182,7 +182,7 @@ const IndustryWeServe = () => {
               viewport={{ once: true, margin: "-100px" }}
             >
               <motion.div
-                whileHover={!isMobile ? { scale: 1.02, y: -5 } : {}}
+                whileHover={!isMobile ? { scale: 0.9, y: -5 } : {}}
                 transition={{ type: "spring", stiffness: 300 }}
                 className="w-[300px] md:w-[350px] bg-white/80 dark:bg-gray-800/80 backdrop-blur-lg rounded-2xl shadow-xl overflow-hidden group relative touch-pan-x"
               >

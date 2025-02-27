@@ -22,7 +22,7 @@ function page() {
       <AngularFeatures />
       <WhyWorkWithUs />
       <AngularIndustry />
-      <RelatedBlogs />
+      {/* <RelatedBlogs /> */}
     </>
   )
 }

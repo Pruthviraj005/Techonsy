@@ -37,7 +37,7 @@ export default function TechnologyStack() {
 
   return (
     <div className="bg-slate-900 text-white py-16 px-4 sm:px-8 md:px-16 border-t-[0.5px] border-t-cyan-700">
-      <section className="max-w-[1000px] mx-auto">
+      <section className="max-w-6xl mx-auto">
         {/* Title */}
         <h2 className="text-3xl md:text-5xl font-bold text-center mb-8">
           Technology Stack

@@ -1,44 +1,68 @@
-'use client'
+'use client';
 
 import Image from "next/image";
+import { motion } from "framer-motion";
 import InfoCard from "./InfoCards";
 
 export default function AngularBenefits() {
+  const angularBenefitsData = [
+    {
+      title: "Directives",
+      description: "Directives empower AngularJS developers to create dynamic HTML applications efficiently.",
+      icon: <Image src="/images/angular/directives.png" alt="Directives" width={70} height={70}  />,
+    },
+    {
+      title: "Reusable Components",
+      description: "Conceal complex CSS and DOM structures while focusing on app functionality.",
+      icon: <Image src="/images/angular/reusable-component.png" alt="Reusable Components" width={80} height={80} />,
+    },
+    {
+      title: "Localization",
+      description: "Developers can build applications from scratch with Angular's local filters and directives.",
+      icon: <Image src="/images/angular/localization.png" alt="Localization" width={80} height={80} />,
+    },
+    {
+      title: "Validating Forms",
+      description: "Set validation criteria easily in Angular, accelerating development.",
+      icon: <Image src="/images/angular/validating-forms.png" alt="Validating Forms" width={80} height={80} />,
+    },
+    {
+      title: "Server Communication",
+      description: "Efficiently manage data flow using third-party libraries and built-in services.",
+      icon: <Image src="/images/angular/server-communication.png" alt="Server Communication" width={80} height={80} />,
+    },
+    {
+      title: "Dependency Injection",
+      description: "Angular’s dependency injections simplify application structure and logic.",
+      icon: <Image src="/images/angular/injections.png" alt="Injections" width={80} height={80} />,
+    },
+  ];
   return (
-    <div className="min-h-screen flex flex-col items-center bg-gradient-to-b from-black to-blue-900 text-white py-10 mt-10 px-4 sm:px-6 lg:px-8">
-      <h1 className="text-3xl sm:text-4xl font-extrabold mb-4 text-center">Discover the Benefits of Angular</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-6xl mt-10">
-        <InfoCard
-          title="Directives"
-          description="Directives are the powerful component of AngularJS that empowers AngularJS developers to develop HTML-based applications, facilitating rapid development."
-          icon={<Image src="/images/angular/directives.png" alt="directives" width={70} height={70} />}
-        />
-        <InfoCard
-          title="Reusable Components"
-          description="Reusable components stand as the most essential feature for Angular Developers, enabling them to conceal complex CSS and DOM structures while effectively directing attention towards application functionality."
-          icon={<Image src="/images/angular/reusable-component.png" alt="reusable components" width={80} height={80} />}
-        />
-        <InfoCard
-          title="Localization"
-          description="The developers can easily build the application from scratch with Angular's local filters and directives. Undoubtedly, the effectiveness bar gets raised!"
-          icon={<Image src="/images/angular/localization.png" alt="localization" width={80} height={80} />}
-        />
-        <InfoCard
-          title="Validating Forms"
-          description="Client-side form validation significantly enhances the user experience in Angular Development. Instead of writing code, developers can set the validation criteria with Angular, leading to accelerated application development."
-          icon={<Image src="/images/angular/validating-forms.png" alt="validating forms" width={80} height={80} />}
-        />
-        <InfoCard
-          title="Server Communication"
-          description="The server communication uses third-party libraries that can efficiently manage the obstructed data to take leverage of XHR and built-in services."
-          icon={<Image src="/images/angular/server-communication.png" alt="server communication" width={80} height={80} />}
-        />
-        <InfoCard
-          title="Injections"
-          description="The dependency injections in Angular successfully enable the declarative explanation of AngularJS applications and abate the need for harsh methods."
-          icon={<Image src="/images/angular/injections.png" alt="injections" width={80} height={80} />}
-        />
+    <div className="min-h-screen flex flex-col items-center bg-gradient-to-t from-[#0a192f] to-[#000000] text-white py-16 px-4 border-t-[0.5px] border-t-cyan-950">
+      <div className="max-w-6xl w-full text-center">
+        <h1 className="text-3xl sm:text-4xl font-extrabold mb-4 bg-clip-text text-transparent 
+                       bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-500">
+          Discover the Benefits of Angular
+        </h1>
+      </div>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl pt-10">
+        {angularBenefitsData.map((card, index) => (
+          <motion.div
+                      key={index}
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.98 }}
+                      className="relative p-6 rounded-xl bg-opacity-10 bg-white shadow-md 
+                                 backdrop-blur-lg border border-gray-700 transition-all duration-300 
+                                 hover:shadow-xl hover:border-blue-800"
+                    >
+                      {card.icon}
+                      <h3 className="text-xl font-semibold mt-4">{card.title}</h3>
+                      <p className="text-sm text-gray-300 mt-2">{card.description}</p>
+                    </motion.div>
+        ))}
       </div>
     </div>
   );
 }
+

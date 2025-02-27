@@ -8,7 +8,7 @@ const Lottie = dynamic(() => import("react-lottie-player"), { ssr: false });
 
 const Service = () => {
   return (
-    <section className="flex flex-col md:flex-row items-center justify-between max-w-[1000px] w-full mx-auto px-6 md:px-10 gap-10 overflow-hidden p-10">
+    <section className="flex flex-col md:flex-row items-center justify-between max-w-6xl w-full mx-auto px-6 md:px-10 gap-10 overflow-hidden p-10">
       {/* Left Text Content */}
       <motion.div
         initial={{ opacity: 0, x: -50 }}

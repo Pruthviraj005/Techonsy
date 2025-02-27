@@ -17,7 +17,7 @@ export default function HeroSection() {
             className="absolute inset-0 z-0 h-screen"
         />
       
-        <div className="relative flex flex-col items-center justify-center h-screen overflow-hidden text-white max-w-[1000px] mx-auto text-center gap-10 pb-10   ">
+        <div className="relative flex flex-col items-center justify-center h-screen overflow-hidden text-white max-w-6xl mx-auto text-center gap-10 pb-10   ">
             {/* Logo */}
 
             {/* Hero Content */}

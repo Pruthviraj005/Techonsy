@@ -28,7 +28,7 @@ const roadmapSteps = [
 
 export default function NodeJsRoadmap() {
     return (
-        <section className="relative w-full max-w-[1000px] mx-auto py-16 px-6 bg-[#121826] overflow-hidden text-white text-center">
+        <section className="relative w-full max-w-6xl mx-auto py-16 px-6 bg-[#121826] overflow-hidden text-white text-center">
             {/* Animated SVG Background */}
             <div className="absolute inset-0 w-full h-full overflow-hidden z-0">
                 <svg className="absolute top-0 left-0 w-full h-full opacity-10 animate-wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -47,7 +47,7 @@ export default function NodeJsRoadmap() {
             </motion.h2>
 
             {/* Roadmap Steps */}
-            <div className="relative z-10 flex flex-col items-center gap-8 w-full max-w-[1000px] mx-auto px-4">
+            <div className="relative z-10 flex flex-col items-center gap-8 w-full max-w-6xl mx-auto px-4">
                 {roadmapSteps.map((step, index) => (
                     <motion.div
                         key={index}

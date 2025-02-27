@@ -43,7 +43,7 @@ const features = [
 export default function FeaturesGrid() {
   return (
     <section className="py-12 px-6 md:px-12 lg:px-24 bg-gray-900 text-white border-t-[0.5px] border-t-cyan-600">
-      <div className="max-w-[1000px] mx-auto text-center">
+      <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-4xl font-bold mb-8 text-gradient bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
           Why Choose Us for Firebase Development Services
         </h2>

@@ -37,7 +37,7 @@ const services = [
 export default function FirebaseServices() {
   return (
     <div className="w-full bg-gradient-to-r from-gray-900 to-black text-white py-16 px-6 sm:px-12 md:px-20 border-t-[0.5px] border-y-cyan-600">
-        <section className="max-w-[1000px] mx-auto">
+        <section className="max-w-6xl mx-auto">
         <div className="max-w-5xl mx-auto text-center">
         <h2 className="text-4xl font-bold bg-gradient-to-r from-yellow to-red-500 text-transparent bg-clip-text">
         End-to-End Firebase Development & Cloud Solutions

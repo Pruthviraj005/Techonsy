@@ -1,4 +1,5 @@
 "use client";
+import ButtonComp from '@/components/Common/ButtonComp';
 import img from '../../../../../public/images/technology/databases/firebase/Logomark_Full Color.svg';
 
 import Image from "next/image";
@@ -14,7 +15,7 @@ export default function Hero() {
       <div className="absolute bg-black w-full bg-opacity-70 h-full"></div>
 
       {/* Content */}
-      <section className="relative text-white py-10 px-6 md:px-16 flex flex-col md:flex-row items-center max-w-[1000px] mx-auto">
+      <section className="relative text-white py-10 px-6 md:px-16 flex flex-col md:flex-row items-center max-w-6xl mx-auto">
         {/* Left Section */}
         <div className="text-center md:text-left py-10">
           <h2 className="text-3xl sm:text-5xl md:text-5xl font-bold mb-6 pt-10  ">
@@ -24,9 +25,7 @@ export default function Hero() {
             <p className="text-md sm:text-lg text-slate-300 text-center md:text-justify max-w-md">
             Build fast, efficient, and scalable apps with Firebase, streamlining backend development for Android, iOS, and web platforms. Leverage Firebase’s powerful tools for seamless integration and high-performance backend systems
             </p>
-            <button className="bg-black text-red-500 border-[0.5px] border-[#FFC400] border-opacity-80 w-[50%] px-6 py-3 rounded-full font-semibold shadow-md hover:bg-blue-100 transition hover:scale-110 duration-500  sm:w-1/2 md:w-[40%]">
-                Get Started
-            </button>
+            <ButtonComp/>
           </div>
         </div>
 

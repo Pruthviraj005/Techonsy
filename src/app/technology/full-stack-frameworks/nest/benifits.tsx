@@ -27,7 +27,7 @@ function CardContent({ children }) {
 export default function BenefitsSection() {
     return (
         <section className="w-full flex justify-center py-10 px-4 md:px-6 lg:px-8">
-            <div className="max-w-[1000px] w-full text-center">
+            <div className="max-w-6xl w-full text-center">
                 <h2 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500 mb-6">
                     Why Choose NestJs?
                 </h2>
