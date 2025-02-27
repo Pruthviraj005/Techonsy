@@ -15,7 +15,7 @@ const AngularFeatures = () => {
 
   return (
     <section className=" text-white py-16 md:py-24 border-y-[0.5px] border-cyan-950">
-      <div className="container mx-auto px-6 md:px-12 lg:px-20">
+      <div className="container max-w-6xl mx-auto px-6 md:px-12 ">
         <h2 className="text-5xl md:text-6xl font-extrabold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-500">
           Features of Angular
         </h2>
