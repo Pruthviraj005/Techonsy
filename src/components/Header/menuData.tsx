@@ -202,8 +202,8 @@ const menuData: Menu[] = [
         newTab: false,
         submenu: [
           { id: 581, title: "DevOps", path: "/technology/devops_infrastructure/devops", newTab: false },
-          { id: 582, title: "RAG", path: "/", newTab: false },
-          { id: 583, title: "Jenkins", path: "/", newTab: false },
+          { id: 582, title: "RAG", path: "/technology/devops_infrastructure/rag", newTab: false },
+          { id: 583, title: "Jenkins", path: "/technology/devops_infrastructure/jenkins", newTab: false },
           
         ]
       }

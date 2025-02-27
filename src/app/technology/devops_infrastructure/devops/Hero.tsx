@@ -4,7 +4,7 @@ import background from '../../../../../public/images/technology/Devops_infrastru
 import logo from '../../../../../public/images/technology/Devops_infrastructure/devops/devops-2.svg';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { FaDocker, FaAws, FaLinux, FaGithub } from 'react-icons/fa';
+
 
 export default function HeroSection() {
   return (
