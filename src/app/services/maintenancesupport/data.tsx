@@ -3,25 +3,25 @@ import { FaLock, FaStopwatch, FaTachometerAlt, FaTools } from "react-icons/fa";
 // Features Data
 export const features = [
   {
-    icon: <FaLock size={40} className="text-teal-500" />,
+    icon: <FaLock size={40} className="text-blue-300 hover:text-blue-400" />,
     title: "Secure and Stable App",
     description:
       "Discover end-to-end application maintenance and support service models designed to cater to your business concerns with 24/7/365 availability and highly secure access procedures.",
   },
   {
-    icon: <FaStopwatch size={40} className="text-teal-500" />,
+    icon: <FaStopwatch size={40} className="text-blue-300 hover:text-blue-400" />,
     title: "Minimal Downtime",
     description:
       "Acquire vetted industry concepts of adaptive, corrective, preventive, and perfective app maintenance. Ensure minimal downtime with your applications up and running effectively.",
   },
   {
-    icon: <FaTachometerAlt size={40} className="text-teal-500" />,
+    icon: <FaTachometerAlt size={40} className="text-blue-300 hover:text-blue-400" />,
     title: "High Performance",
     description:
-      "Now access deep evaluation of your software’s performance alongside bespoke tuning of applications to align it with your business with powerful tools and vetted experience.",
+      "Now access deep evaluation of your software performance alongside bespoke tuning of applications to align it with your business with powerful tools and vetted experience.",
   },
   {
-    icon: <FaTools size={40} className="text-teal-500" />,
+    icon: <FaTools size={40} className="text-blue-300 hover:text-blue-400" />,
     title: "Feature Customization",
     description:
       "Deploy industry veterans to conduct deep analyses of your enterprise while remaining aligned to your niche and vertical for hyper-targeted customizations and upgrades.",
@@ -31,130 +31,141 @@ export const features = [
 // Maintenance Data
 export const maintenanceData = [
   {
-    title: "Adaptive Software Maintenance",
+    title: "Tailored Solutions for Every Need",
     description:
-      "When your software environment undergoes significant changes, deploy our maintenance experts to fine-tune your application to continue to perform optimally in alignment with the altered conditions while maintaining stability and utility.",
+      " Choose the right maintenance approach to resolve issues, optimize performance, and drive sustainable growth for your enterprise applications.",
   },
   {
-    title: "Perfective Software Maintenance",
+    title: "Adaptive Optimization",
     description:
-      "Augment your enterprise application to boost performance levels while ramping up its operational life. Access transformative functionalities for market-leading usability while uprooting performance-stalling issues to ensure efficiency.",
+      "Ensure your software adapts to environmental changes, maintaining stability and peak performance even as conditions evolve.",
   },
   {
-    title: "Corrective Software Maintenance",
+    title: "Performance Enhancement",
     description:
-      "Now deploy maintenance teams with hands-on expertise in detecting and fixing bugs while removing glitches to eliminate instances that reduce the quality of your UX. Conduct corrective repairs in SOS situations as well as a maintenance practice.",
+      " Boost your software's efficiency and extend its lifespan with targeted upgrades that improve usability and functionality.",
   },
   {
-    title: "Preventive Software Maintenance",
+    title: "Bug Fixes & Troubleshooting",
     description:
-      "Now have your software re-engineered to future-proof it in the ever-evolving IT landscape. Effectively enhance existing operational characteristics while building in relevant features and functionalities and weeding out obsolete elements.",
+      " Quickly resolve bugs and glitches to ensure a smooth, uninterrupted user experience.",
   },
+  {
+    title: "Future-Proofing",
+    description: "Update your software to stay ahead of industry changes by eliminating outdated features and integrating essential improvements."
+  }
 ];
 
 // Approach Data
 export const approachData = [
   {
-    title: "Requirement Collection",
+    title: "Customized Solutions for Your Business Needs",
     description:
-      "Our teams start with acquiring the documentation and process details of your development initiative. This assists in achieving clarity in terms of maintenance objectives.",
-    icon: "📜",
+      "We craft software maintenance strategies tailored to the unique challenges of your business, ensuring optimal performance and efficiency.",
+    icon: "⚙️", // Represents customization and system settings
   },
   {
-    title: "Program Analysis",
+    title: "Requirement Analysis",
     description:
-      "Resting on detailed knowledge sharing and analytics for enterprise applications to effectively understand each cog of the application to streamline your software.",
-    icon: "🧠",
+      "We start by gathering detailed documentation and process information to understand your maintenance goals clearly.",
+    icon: "📋", // Represents documentation and analysis
   },
   {
-    title: "Maintenance Proposal",
+    title: "Comprehensive Program Review",
     description:
-      "Rely on our acclaimed maintenance teams to devise a hyper-aligned maintenance strategy with a duly detailed maintenance proposal for your scrutiny and approval.",
-    icon: "📑",
+      "Our team conducts an in-depth analysis of your application to ensure seamless operation and identify areas for improvement.",
+    icon: "🔍", // Represents deep analysis and review
   },
   {
-    title: "Infrastructural Stability Evaluation",
+    title: "Strategic Maintenance Plan",
     description:
-      "Deploy software maintenance teams to analyze the extensibility and scalability of your IT infrastructure for a deep understanding of your processes and utilities.",
-    icon: "🏗️",
+      "We propose a tailored maintenance strategy, ensuring it aligns with your business needs for approval and execution.",
+    icon: "📌", // Represents planning and strategy execution
   },
   {
-    title: "Testing",
+    title: "Infrastructure Evaluation",
     description:
-      "Rest assured of rigorous testing procedures upon the implementation of your maintenance strategies to ensure a smooth transition and quality assurance.",
-    icon: "✅",
+      "We assess the scalability and stability of your IT infrastructure to enhance your software’s performance and future readiness.",
+    icon: "🏗️", // Represents building a strong foundation (infrastructure)
   },
   {
-    title: "Release and Reporting",
+    title: "Thorough Testing",
     description:
-      "Leverage teams with curated expertise in compiling responses and actions into legible reports, ensuring transparency and strategic decision-making.",
-    icon: "📊",
+      "Our rigorous testing processes guarantee smooth implementation and the highest quality standards for your maintenance plan.",
+    icon: "🛠️", // Represents testing and fixing issues
   },
+  {
+    title: "Transparent Reporting",
+    description:
+      "We provide clear, concise reports to keep you informed and facilitate strategic decision-making for continuous improvement.",
+    icon: "📊", // Represents reports and analytics
+  }
 ];
+
 
 // Maintenance Services
 export const maintenanceServices = [
   {
-    title: "Ongoing App Enhancement",
+    title: "Continuous App Enhancement",
     description:
-      "Avail additional support like bug fixing, problem analysis and resolution, and on-call support for apps running on your process apps to make them robust.",
+      " Benefit from ongoing support, bug fixing, issue resolution, and on-demand assistance to ensure your app remains robust and performs optimally.",
   },
   {
-    title: "App Maintenance / Support",
+    title: "Regular App Maintenance & Support",
     description:
-      "Indulge in regular app modernization activities to upkeep with the pace of business. Our support teams extend help round the clock.",
+      " Stay ahead with consistent app modernization services that align with the fast-paced business environment. Our dedicated support teams are available around the clock.",
   },
   {
-    title: "Perfective Upgrades",
+    title: "Tailored Feature Upgrades",
     description:
-      "Think of adaptable features for your enterprise app and we will craft it. Upgrade a range of new functionalities and features to stay ahead of competition.",
+      " Enhance your enterprise app with adaptable features and functionalities that keep you competitive and agile in your industry.",
   },
   {
-    title: "Performance Monitoring",
+    title: "Performance Monitoring & Optimization",
     description:
-      "Employ a team of expert quality analysts to perform in-depth analysis of your processes and suggest modifications for technical requirements.",
+      "Our expert quality analysts provide detailed performance reviews and suggest modifications to improve your app’s efficiency and technical capabilities.",
   },
   {
-    title: "Technical Improvements",
+    title: "Technical Revamps",
     description:
-      "Change the DNA of your enterprise apps to yield better results. Rewrite codes, restructure app architecture, and optimize technology frameworks.",
+      " Refine the core of your app by optimizing code, restructuring architecture, and updating technology frameworks for better results.",
   },
   {
-    title: "Security Review / Compliance",
+    title: "Security & Compliance Audits",
     description:
-      "A team of experts to carry out continuous and scheduled checks on app functionalities and compliance standards for a seamless process.",
+      " Ensure the security and regulatory compliance of your app through regular audits, minimizing vulnerabilities and enhancing user trust.",
   },
   {
     title: "SLA-driven Software Support",
     description:
-      "Ensure your business requirements like network uptime, speed, and customer service availability are met with robust software support.",
+      " Meet critical business requirements, including network uptime, speed, and customer service availability, through reliable software support.",
   },
   {
-    title: "Backups and Recovery",
+    title: "Data Backups & Recovery",
     description:
-      "Entrust our dynamic servers to store your enterprise data securely and make it easily accessible to you through valid authentication.",
+      " Secure your enterprise data with our dynamic servers, ensuring safe backups and easy access with valid authentication for smooth recovery.",
   },
 ];
 
 export const offeringServices = [
-    {
-        title: "Modification and Reconfiguration",
-        description:
-            "We look into your existing software and carry out necessary modifications essential to the operating functions. We make alterations in the data format, support utility modifications, reconfigure hardware, regulate and integrate new OS.",
-    },
-    {
-        title: "Bug and Glitch Removal",
-        description:
-            "Radixweb’s Software Support Team fixes software errors in your enterprise app without any time lapse. Our corrective services include eradication of bugs, setting glitches with the core algorithm – logical, coding, and design errors.",
-    },
-    {
-        title: "Enhancements and Insertions",
-        description:
-            "We conduct continuous and rigorous modifications for your enterprise software before its launch. Our support services help you refine your software through editing, modifications, software enhancements, insertions, deletions, and changes.",
-    },
-    {
-        title: "Detailed Analysis for Future-Proofing",
-        description:
-            "Our support team is capable of analyzing the future needs of your business and probable concerns based on customer’s feedback and past occurrences. We aim at planning and incorporating solutions to meet future requirements.",
-    },
+  {
+    title: "Software Modifications & Reconfiguration",
+    description:
+      " Enhance your software’s functionality by implementing essential changes, including data format adjustments, hardware reconfigurations, OS integration, and support utility modifications.",
+  },
+  {
+    title: "Bug Fixing & Glitch Removal",
+    description:
+      " Eliminate software errors swiftly with our expert team, ensuring smooth app performance through prompt bug fixes and resolving glitches within the core algorithm.",
+  },
+  {
+    title: "Ongoing Software Enhancements",
+    description:
+      "Keep your software in peak condition with continuous refinements, updates, and feature enhancements, ensuring it evolves to meet changing business needs.",
+  },
+  {
+    title: "Future-Proofing Analysis",
+    description:
+      " Leverage detailed analysis to anticipate future business requirements, incorporating proactive solutions based on customer feedback and past data to ensure long-term success.",
+  },
 ]
