@@ -3,24 +3,24 @@ import { Server, ShieldCheck, Brain, PlugZap } from "lucide-react";
 
 const expertiseOptions = [
   {
-    icon: <Server className="w-16 h-16 text-blue-400" />, 
-    title: "Expertise in Full-Stack IoT Solutions",
-    description: "From sensor integration to cloud deployment, we deliver end-to-end IoT solutions tailored to your business needs.",
+    icon: <Server className="w-16 h-16 text-blue-400" />,
+    title: "Tailored IoT Solutions",
+    description: "We create secure, scalable, and customized IoT applications to meet your unique business needs.",
   },
   {
-    icon: <ShieldCheck className="w-16 h-16 text-green-400" />, 
-    title: "Scalable & Secure Architecture",
-    description: "We build future-proof IoT ecosystems with robust security, seamless connectivity, and scalable infrastructure.",
+    icon: <ShieldCheck className="w-16 h-16 text-green-400" />,
+    title: "End-to-End Expertise",
+    description: "From hardware selection to full-scale development, we handle every aspect of your IoT project.",
   },
   {
-    icon: <Brain className="w-16 h-16 text-yellow-400" />, 
-    title: "AI-Driven Insights & Automation",
-    description: "Enhance decision-making and operational efficiency with AI-powered analytics and real-time automation.",
+    icon: <Brain className="w-16 h-16 text-yellow-400" />,
+    title: "Seamless Integration",
+    description: "We ensure smooth integration with existing systems, providing a connected and optimized ecosystem.",
   },
   {
-    icon: <PlugZap className="w-16 h-16 text-purple-400" />, 
-    title: "Seamless Integration & Customization",
-    description: "We ensure smooth IoT adoption by integrating devices, cloud platforms, and existing enterprise systems effortlessly.",
+    icon: <PlugZap className="w-16 h-16 text-purple-400" />,
+    title: "Continuous Support ",
+    description: "Our team offers ongoing maintenance and support to keep your IoT solutions running efficiently.",
   },
 ];
 
@@ -39,7 +39,7 @@ export default function WhyChooseUs() {
         We always focus on delivering quality IoT app development solutions. Our expertise ensures secure, scalable, and AI-driven IoT ecosystems tailored to your business.
       </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-10 justify-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mt-10 justify-center">
         {expertiseOptions.map((option, index) => (
           <motion.div
             key={index}

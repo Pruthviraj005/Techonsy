@@ -19,14 +19,10 @@ const IotSection = () => {
         {/* Right: Content */}
         <div className="w-full md:w-1/2">
           <h2 className="text-3xl md:text-4xl font-bold leading-tight">
-            IoT Application Development & Consulting Services
+            Smart IoT Solutions
           </h2>
           <p className="mt-4 text-gray-300">
-            Transform your business with intelligent IoT solutions designed to enhance connectivity, automation, and efficiency. Our IoT development services cover everything from strategy and consulting to seamless integration into your existing infrastructure.
-
-          </p>
-          <p className="mt-4 text-gray-300">
-            With extensive expertise in IoT architecture, we integrate gateways, cloud platforms, and edge devices to create scalable and secure IoT ecosystems. Whether upgrading analog products or building connected devices from scratch, our full-stack IoT solutions help businesses unlock new possibilities and drive digital transformation.
+            Unlock the power of the Internet of Things with custom IoT applications designed for seamless device connectivity and real-time data collection. Our solutions enhance efficiency, optimize operations, and drive innovation across businesses of all sizes.
 
           </p>
         </div>
