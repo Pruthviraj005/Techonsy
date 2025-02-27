@@ -43,7 +43,7 @@ const AWSBenefitsSection = () => {
   };
 
   return (
-    <div className="bg-gradient-to-br from-black via-blue-950 to-black min-h-screen py-20 px-4 relative overflow-hidden">
+    <div className=" min-h-screen py-20 px-4 relative overflow-hidden">
       {/* Animated background elements */}
       {[...Array(20)].map((_, i) => (
         <motion.div
@@ -84,7 +84,7 @@ const AWSBenefitsSection = () => {
           />
         </motion.div>
 
-        <div className="flex flex-col lg:flex-row items-center gap-12">
+        <div className="flex flex-col lg:flex-row items-center gap-12 max-w-6xl mx-auto">
           {/* Left side - Animated Illustration */}
           <motion.div 
             className="w-full lg:w-1/2"

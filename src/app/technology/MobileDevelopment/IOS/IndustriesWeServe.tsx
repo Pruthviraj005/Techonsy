@@ -1,5 +1,6 @@
 'use client';
 
+import IndustryWeServe from '@/components/IndustryWeServe';
 import { FaShoppingCart, FaHeartbeat, FaHome, FaBrain, FaIndustry, FaBook } from 'react-icons/fa';
 
 const industries = [
@@ -13,29 +14,32 @@ const industries = [
 
 export default function IndustriesWeServe() {
   return (
-    <section className="py-12 px-6 md:px-12 lg:px-20 max-w-7xl mx-auto">
-      {/* Section Title */}
-      <h2 className="text-4xl font-bold text-center text-white mb-12">
-        Industries <span className="text-yellow-400">We Serve</span>
-      </h2>
+    <div>
+      <IndustryWeServe/>
+    </div>
+    // <section className="py-12 px-6 md:px-12 lg:px-20 max-w-7xl mx-auto">
+    //   {/* Section Title */}
+    //   <h2 className="text-4xl font-bold text-center text-white mb-12">
+    //     Industries <span className="text-yellow-400">We Serve</span>
+    //   </h2>
 
-      {/* Grid Layout */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 gap-8">
-        {industries.map((industry, index) => (
-          <div
-            key={index}
-            className={`flex flex-col items-center justify-center p-8 rounded-2xl shadow-lg transition-all duration-300 hover:scale-110 ${industry.bg} border border-gray-300/50 backdrop-blur-xl bg-opacity-80 hover:shadow-xl hover:-translate-y-2`}
-          >
-            {/* Icon with Animation */}
-            <div className={`p-4 rounded-full text-white text-5xl shadow-lg transition-all duration-300 transform hover:rotate-6 hover:scale-125 ${industry.shadow}`}>
-              <industry.icon />
-            </div>
+    //   {/* Grid Layout */}
+    //   <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 gap-8">
+    //     {industries.map((industry, index) => (
+    //       <div
+    //         key={index}
+    //         className={`flex flex-col items-center justify-center p-8 rounded-2xl shadow-lg transition-all duration-300 hover:scale-110 ${industry.bg} border border-gray-300/50 backdrop-blur-xl bg-opacity-80 hover:shadow-xl hover:-translate-y-2`}
+    //       >
+    //         {/* Icon with Animation */}
+    //         <div className={`p-4 rounded-full text-white text-5xl shadow-lg transition-all duration-300 transform hover:rotate-6 hover:scale-125 ${industry.shadow}`}>
+    //           <industry.icon />
+    //         </div>
 
-            {/* Industry Name */}
-            <p className="mt-4 text-xl font-semibold text-black text-center tracking-wide">{industry.name}</p>
-          </div>
-        ))}
-      </div>
-    </section>
+    //         {/* Industry Name */}
+    //         <p className="mt-4 text-xl font-semibold text-black text-center tracking-wide">{industry.name}</p>
+    //       </div>
+    //     ))}
+    //   </div>
+    // </section>
   );
 }

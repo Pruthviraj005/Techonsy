@@ -24,7 +24,7 @@ const technologies = [
 export default function FirebaseTechnologies() {
   return (
     <section className="py-12 px-6 md:px-12 lg:px-24 bg-slate-900 border-t-[0.5px] border-cyan-700 ">
-      <div className="mx-auto text-center max-w-[1000px]  py-8">
+      <div className="mx-auto text-center max-w-6xl  py-8">
         <h2 className="text-3xl md:text-4xl font-bold mb-10 text-center">
           Our Firebase Development Technologies
         </h2>

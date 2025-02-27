@@ -38,7 +38,7 @@ const solutions = [
 
 export default function NodeJsSolutions() {
     return (
-        <section className="relative w-full max-w-[1000px] mx-auto py-16 px-6 bg-transparent overflow-hidden text-white text-center">
+        <section className="relative w-full max-w-6xl mx-auto py-16 px-6 bg-transparent overflow-hidden text-white text-center">
             {/* Background Gradient Animation */}
             <motion.div 
                 initial={{ opacity: 0 }} 

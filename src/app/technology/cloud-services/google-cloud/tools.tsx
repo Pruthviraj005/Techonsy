@@ -14,7 +14,7 @@ const tools = [
 export default function GoogleCloudTools() {
   return (
     <section className="bg-gray-900 text-white py-16 px-8">
-      <div className="max-w-[1000px] mx-auto text-center">
+      <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-3xl font-bold mb-10 text-white drop-shadow-[0_0_15px_rgba(0,200,255,0.8)]">
           Google Cloud Tools We Use
         </h2>

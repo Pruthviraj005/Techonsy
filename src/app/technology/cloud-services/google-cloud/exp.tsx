@@ -7,10 +7,10 @@ export default function GoogleAppEngineSection() {
   return (
     <section className="relative min-h-screen flex justify-center items-center py-16 px-8">
       {/* Glowing Gradient Background */}
-      <div className="absolute inset-0 w-full opacity-50 bg-gradient-to-br from-[#182a44] to-[#084e7a] blur-[30px] animate-rotate rounded-full z-0"></div>
+      <div className="absolute inset-0 w-full opacity-50  blur-[30px] animate-rotate rounded-full z-0"></div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-[1000px] w-full mx-auto flex flex-col md:flex-row items-center gap-10  p-10 rounded-lg shadow-lg">
+      <div className="relative z-10 max-w-6xl w-full mx-auto flex flex-col md:flex-row items-center gap-10  p-10 rounded-lg shadow-lg">
         <div className="md:w-1/2">
           <h2 className="text-3xl font-bold leading-tight text-white">
             Experience Unmatched Transformation with Google App Engine Services

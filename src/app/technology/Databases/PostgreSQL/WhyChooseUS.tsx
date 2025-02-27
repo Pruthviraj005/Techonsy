@@ -27,48 +27,45 @@ const features = [
 
 const WhyChooseUs = () => {
   return (
-    <div className="py-16 bg-gray-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="py-20 bg-gray-900">
+      <div className="max-w-6xl mx-auto px-6 sm:px-10 lg:px-12">
+        {/* Section Heading */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-white-900">
+          <h2 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
             Why Choose Us for Custom Development
           </h2>
-          <div className="w-24 h-1 bg-blue-500 mx-auto my-4"></div>
-          <p className="text-lg text-white200 max-w-3xl mx-auto mt-4">
+          <div className="w-24 h-1 bg-blue-500 mx-auto mt-4"></div>
+          <p className="text-lg text-gray-300 max-w-3xl mx-auto mt-4">
             Optimize your application's performance, security, and launch speed with our tailored services!
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {/* Features Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {features.map((feature, index) => (
             <div
               key={index}
-              className="group relative p-6 text-center transition-all duration-300 hover:translate-y-[-8px]"
+              className="group relative p-6 text-center bg-gray-800 rounded-xl shadow-lg transition-all duration-300 hover:translate-y-[-8px] hover:shadow-2xl"
             >
               {/* Icon Container */}
-              <div className="relative mx-auto mb-4">
-                {/* Blue circle background */}
-                <div className="absolute inset-0 rounded-full bg-white-100 transform transition-transform group-hover:scale-110"></div>
-                {/* Icon */}
-                <div className="relative p-4">
-                  <feature.Icon 
-                    className="h-8 w-8 text-blue-600 mx-auto" 
-                    strokeWidth={1.5}
-                  />
-                </div>
+              <div className="relative mx-auto mb-4 w-16 h-16 flex items-center justify-center rounded-full bg-gradient-to-r from-blue-500 to-purple-500 group-hover:scale-110 transition-transform">
+                <feature.Icon 
+                  className="h-8 w-8 text-white" 
+                  strokeWidth={1.5}
+                />
               </div>
 
               {/* Content */}
               <div className="mt-4">
-                <h3 className="text-xl font-semibold text-white-900 mb-2">
+                <h3 className="text-xl font-semibold text-white mb-2">
                   {feature.title}
                 </h3>
-                <p className="text-white-600">
+                <p className="text-gray-300">
                   {feature.description}
                 </p>
               </div>
 
-              {/* Bottom Border */}
+              {/* Bottom Border Animation */}
               <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-16 h-1 bg-blue-500 opacity-0 transition-opacity group-hover:opacity-100"></div>
             </div>
           ))}
