@@ -1,0 +1,39 @@
+html {
+	--s: 40px;
+	--t: 1px;
+	background: linear-gradient(180deg, #111827, #1a1f2e, #21262e, #2a2e37, #313a42);
+	overflow: hidden;
+	height: 100%;
+}
+
+body {
+	color: #d1fae5; /* Light green inspired by Node.js */
+	height: 100%;
+	perspective: 650px;
+	mask-image: linear-gradient(transparent calc(50% + var(--s)), black);
+	margin: 0;
+}
+
+div {
+	width: 200%;
+	min-width: 700px;
+	aspect-ratio: 1;
+	background: linear-gradient(currentColor var(--t), transparent 0),
+		linear-gradient(90deg, currentColor var(--t), transparent 0);
+	background-size: var(--s) var(--s);
+	position: relative;
+	animation: translate 3s infinite linear;
+	transform-origin: top;
+	position: absolute;
+	inset: 0;
+	top: 45%;
+	rotate: x 77.5deg;
+	left: -50%;
+	scale: 1.15;
+}
+
+@keyframes translate {
+	from {
+		transform: translateY(calc(var(--s) * -1));
+	}
+}
