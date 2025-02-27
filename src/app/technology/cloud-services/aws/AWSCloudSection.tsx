@@ -27,7 +27,7 @@ const CloudServiceImage: React.FC<CloudServiceImageProps> = ({ imagePath, delay,
 
 const AWSCloudSection = () => {
   return (
-    <div className="bg-gradient-to-br from-blue-950 via-black to-blue-950 py-32 px-6 relative overflow-hidden min-h-screen">
+    <div className="bg-gradient-to-br from-[#111f34] via-black to- py-32 px-6 relative overflow-hidden min-h-screen">
       {/* Animated background gradient */}
       <motion.div 
         className="absolute inset-0 opacity-20"
@@ -40,7 +40,7 @@ const AWSCloudSection = () => {
           repeatType: "reverse"
         }}
         style={{
-          backgroundImage: 'linear-gradient(45deg, transparent 0%, #3b82f6 50%, transparent 100%)',
+          backgroundImage: 'linear-gradient(45deg, transparent 0%,#111f34 50%, transparent 100%)',
           backgroundSize: '200% 200%'
         }}
       />
@@ -68,7 +68,7 @@ const AWSCloudSection = () => {
         ))}
       </div>
       
-      <div className="max-w-7xl mx-auto relative">
+      <div className="max-w-6xl mx-auto relative">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}

@@ -31,7 +31,7 @@ export default function Hero() {
         />
       </div>
 
-      <div className="relative max-w-5xl flex flex-col md:flex-row items-center gap-10 mt-16">
+      <div className="relative max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-6 px-4 mt-16">
         {/* Left Content */}
         <motion.div
           className="flex-1 text-center md:text-left gap-9"
@@ -96,7 +96,7 @@ export default function Hero() {
               width={250}
               height={250}
               alt="Next.js Logo"
-              className="w-32 sm:w-40 md:w-48 lg:w-56 xl:w-64 2xl:w-80 h-auto drop-shadow-2xl filter brightness-125 invert"
+              className="w-32 sm:w-40 md:w-48 lg:w-72 xl:w-64 2xl:w-80 h-auto drop-shadow-2xl filter brightness-125 invert"
             />
           </motion.div>
         </motion.div>

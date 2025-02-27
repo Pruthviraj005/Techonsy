@@ -63,7 +63,7 @@ export default function ExpertiseSection() {
   return (
     <div className="relative bg-gradient-to-b from-gray-900 to-black py-10 border-y-[0.5px] border-y-cyan-700 ">
       {/* Optional SVG Background for Texture */}
-      <section className="relative  px-6 md:px-16 text-white max-w-[1000px] mx-auto">
+      <section className="relative  px-6 md:px-16 text-white max-w-6xl mx-auto">
         {/* Title */}
         <h2 className="text-3xl md:text-5xl font-bold text-center mb-6 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500 py-16">
           Solution Development Expertise Includes
