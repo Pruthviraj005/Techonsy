@@ -29,7 +29,7 @@ const ExperienceAcross = () => {
       
 
     //   {/* Content */}
-    //   <div className="relative max-w-6xl mx-auto text-center z-10">
+    //   <div className="relative max-w-[1000px] mx-auto text-center z-10">
     //     <h4 className="text-sm font-semibold text-blue-400 tracking-wider uppercase">
     //       Work for Any Industry
     //     </h4>

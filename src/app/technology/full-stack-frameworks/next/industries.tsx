@@ -14,6 +14,9 @@ export default function Industries()
     ];
     
     return (
+      <div>
+        <IndustryWeServe/>
+      </div>
         // <section className="pt-16 mb-14 max-w-6xl mx-auto">
         //     <div className="container text-center max-w-full px-4 sm:px-6 lg:px-8 mx-auto">
         //         <h2 className="text-xl sm:text-lg md:text-xl font-bold text-gray-900 dark:text-white mb-6 md:mb-8">
@@ -40,6 +43,5 @@ export default function Industries()
         //         </div>
         //     </div>
         // </section>
-        <IndustryWeServe/>
     )
 }

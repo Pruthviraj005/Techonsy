@@ -1,19 +1,25 @@
 'use client';
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const ServiceCard = ({ icon, title, description, delay }) => (
-  <div className={`bg-white/5 backdrop-blur-sm p-6 rounded-xl hover:transform hover:scale-105 
-    transition-all duration-300 border border-blue-500/20 hover:border-blue-500/50 
-    group animate-fade-in`} style={{ animationDelay: `${delay}ms` }}>
+  <motion.div
+    initial={{ opacity: 0, y: 50 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.6, delay: delay / 1000 }}
+    className="bg-gray-800/60 backdrop-blur-lg p-6 rounded-xl shadow-lg hover:scale-105 
+      transition-transform duration-300 border border-gray-700 hover:border-blue-500"
+  >
     <div className="flex flex-col items-center text-center space-y-4">
       <div className="w-16 h-16 flex items-center justify-center bg-gradient-to-br from-blue-600 to-blue-800 
-        rounded-lg group-hover:from-blue-500 group-hover:to-blue-700 transition-all duration-300">
+        rounded-lg transition-all duration-300">
         {icon}
       </div>
       <h3 className="text-xl font-semibold text-white">{title}</h3>
-      <p className="text-gray-300 leading-relaxed">{description}</p>
+      <p className="text-gray-400 leading-relaxed">{description}</p>
     </div>
-  </div>
+  </motion.div>
 );
 
 const Services = () => {
@@ -27,7 +33,7 @@ const Services = () => {
         </svg>
       ),
       title: "ReactJS Web Solutions",
-      description: "Get React applications developed by our experts who have an expertise in developing scalable, secure and interactive websites that cater to your business requirements."
+      description: "Expert React applications tailored for your business."
     },
     {
       icon: (
@@ -37,7 +43,7 @@ const Services = () => {
         </svg>
       ),
       title: "ReactJS Native App Development",
-      description: "We offer React Native App Development Services by incorporating the latest tools, technologies, and libraries to develop native mobile applications."
+      description: "Build cross-platform mobile apps with React Native."
     },
     {
       icon: (
@@ -48,7 +54,7 @@ const Services = () => {
         </svg>
       ),
       title: "ReactJS UI/UX Development",
-      description: "Build a user-friendly interface and incredible web applications that can easily hook users. Our creative team of UI/UX designers offers highly user-engaging development services."
+      description: "Craft intuitive and engaging UI/UX experiences."
     },
     {
       icon: (
@@ -57,7 +63,7 @@ const Services = () => {
         </svg>
       ),
       title: "ReactJS Front-End Development",
-      description: "Brace yourself to experience the unparalleled ReactJS front-end development services at Ahex. We've developed a strong expertise in this technology."
+      description: "Cutting-edge front-end solutions with React."
     },
     {
       icon: (
@@ -67,8 +73,8 @@ const Services = () => {
           <path d="M2 12l10 5 10-5" />
         </svg>
       ),
-      title: "ReactJS Component Library Development",
-      description: "Our team will aid you in creating and using the component library to develop an excellent React application considering the expected project requirements."
+      title: "Component Library Development",
+      description: "Reusable and scalable React component libraries."
     },
     {
       icon: (
@@ -77,38 +83,38 @@ const Services = () => {
         </svg>
       ),
       title: "ReactJS Plugin Development",
-      description: "We offer customized plugins and extensions that can be reused for a host of applications, resulting in less development time with an ideal blend of Flux and React."
+      description: "Custom React plugins for optimized development."
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 to-blue-900 py-16 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        {/* Header */}
-        <div className="text-center mb-16 space-y-4">
-          <h2 className="text-4xl font-bold text-white animate-fade-in">
-            ReactJS Development Services
-          </h2>
-          <div className="w-24 h-1 bg-blue-500 mx-auto rounded-full animate-pulse" />
-          <p className="max-w-3xl mx-auto text-gray-300 animate-fade-in">
-            Leverage the high-quality, effective ReactJS development services to build powerful and interactive applications, 
-            including dynamic web pages, single-page applications, progressive web apps, and more.
-          </p>
-        </div>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 to-black py-16 px-4 sm:px-6 lg:px-8">
+      <motion.div
+        initial={{ opacity: 0, y: -50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+        className="max-w-6xl mx-auto text-center mb-16 space-y-4"
+      >
+        <h2 className="text-4xl font-bold text-white">ReactJS Development Services</h2>
+        <div className="w-24 h-1 bg-blue-500 mx-auto rounded-full animate-pulse" />
+        <p className="max-w-3xl mx-auto text-gray-300">
+          Leverage high-quality ReactJS services for building interactive applications, including SPAs, PWAs, and dynamic web platforms.
+        </p>
+      </motion.div>
 
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <ServiceCard 
-              key={index}
-              icon={service.icon}
-              title={service.title}
-              description={service.description}
-              delay={index * 200}
-            />
-          ))}
-        </div>
-      </div>
+      {/* Services Grid */}
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto"
+      >
+        {services.map((service, index) => (
+          <ServiceCard key={index} icon={service.icon} title={service.title} description={service.description} delay={index * 200} />
+        ))}
+      </motion.div>
     </div>
   );
 };

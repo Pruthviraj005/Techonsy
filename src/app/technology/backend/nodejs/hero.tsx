@@ -23,7 +23,7 @@ const Hero = () => {
       <div className="absolute inset-0 bg-gray-900/60" />
 
       {/* Content Wrapper */}
-      <div className="relative mt-10 container mx-auto max-w-[1000px] grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      <div className="relative mt-10 container mx-auto max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         {/* Left Content */}
         <div className="max-w-lg p-4">
           <h1 className="text-5xl md:text-5xl font-bold mb-4 text-center md:text-left">

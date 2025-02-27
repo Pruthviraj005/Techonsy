@@ -15,7 +15,7 @@ const processSteps = [
 
 export default function ProcessFlow() {
     return (
-        <section className="w-full py-16 px-6 bg-gradient-to-br from-[#0A192F] via-[#1B1F3B] to-[#3B4252]">
+        <section className="w-full py-16 px-6 bg-gradient-to-br from-[#0A192F] via-[#15182e] to-[#13161c]">
             <div className="max-w-[1000px] mx-auto">
                 <h2 className="text-4xl font-bold text-center mb-10 text-transparent bg-clip-text bg-gradient-to-r from-[#3b82f6] to-[#a855f7]">
                     Our Process

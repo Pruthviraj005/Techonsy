@@ -38,7 +38,7 @@ export default function Expertise() {
     const [selected, setSelected] = useState('Database');
 
     return (
-        <section className="w-full max-w-[1000px] mx-auto flex flex-col md:flex-row py-10 px-4 md:px-6 lg:px-8 bg-[#121826] text-left">
+        <section className="w-full max-w-6xl mx-auto flex flex-col md:flex-row py-10 px-4 md:px-6 lg:px-8 bg-[#121826] text-left">
             {/* Sidebar */}
             <div className="md:w-1/3 border-r border-[#374151] p-4 space-y-4">
                 {categories.map((category) => (

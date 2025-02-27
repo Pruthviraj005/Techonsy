@@ -1,3 +1,4 @@
+import IndustryWeServe from "@/components/IndustryWeServe";
 import { FaShoppingCart, FaRegMoneyBillAlt, FaBuilding, FaUtensils, FaGraduationCap, FaHeartbeat, FaRocketchat } from "react-icons/fa";
 
 
@@ -14,26 +15,27 @@ export default function Industries()
     ];
     
     return (
-        <section className="pt-16 mb-14 max-w-[1000px] mx-auto">
-            <div className="container text-center max-w-full px-4 sm:px-6 lg:px-8 mx-auto">
-                <h2 className="text-xl sm:text-lg md:text-xl font-bold text-gray-900 dark:text-white mb-6 md:mb-8">
-                   Work for Any Industry
-                  </h2>
-                <p className="text-3xl sm:text-2xl md:text-4xl text-gray-600 mb-8 md:mb-12">
-                   Experience Across Different Industries
-                </p>
+        <IndustryWeServe/>
+        // <section className="pt-16 mb-14 max-w-6xl mx-auto">
+        //     <div className="container text-center max-w-full px-4 sm:px-6 lg:px-8 mx-auto">
+        //         <h2 className="text-xl sm:text-lg md:text-xl font-bold text-gray-900 dark:text-white mb-6 md:mb-8">
+        //            Work for Any Industry
+        //           </h2>
+        //         <p className="text-3xl sm:text-2xl md:text-4xl text-gray-600 mb-8 md:mb-12">
+        //            Experience Across Different Industries
+        //         </p>
        
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-12">
-                    {industriesData.map((industry) => (
-                    <div key={industry.id} className="flex flex-col items-center justify-center">
-                        <div className="mb-4">{industry.icon}</div>
-                        <h3 className="text-lg sm:text-base md:text-xl font-semibold text-gray-900 dark:text-white">
-                          {industry.name}
-                        </h3>
-                    </div>
-                   ))}
-                </div>
-            </div>
-        </section>
+        //         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-12">
+        //             {industriesData.map((industry) => (
+        //             <div key={industry.id} className="flex flex-col items-center justify-center">
+        //                 <div className="mb-4">{industry.icon}</div>
+        //                 <h3 className="text-lg sm:text-base md:text-xl font-semibold text-gray-900 dark:text-white">
+        //                   {industry.name}
+        //                 </h3>
+        //             </div>
+        //            ))}
+        //         </div>
+        //     </div>
+        // </section>
     )
 }

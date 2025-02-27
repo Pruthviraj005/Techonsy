@@ -55,7 +55,7 @@ export default function TechExpertise() {
 
   return (
     <section className="bg-gradient-to-r from-[#172946] to-[#000d25] text-white py-12 px-4 sm:px-6 md:px-12">
-        <div className='max-w-[1000px] mx-auto'>
+        <div className='max-w-6xl mx-auto'>
 
         
       {/* Title */}
