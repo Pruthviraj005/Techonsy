@@ -1,3 +1,4 @@
+import IndustryWeServe from "@/components/IndustryWeServe"
 import DevOpsServices from "./DevOpsServices"
 import HeroSection from "./Hero"
 import InfoSection from "./SecondSection"
@@ -11,6 +12,7 @@ export default function Devops()
             <InfoSection/>
             <DevOpsServices/>
             <TechExpertise/>
+            <IndustryWeServe/>
         </div>
     )
 }

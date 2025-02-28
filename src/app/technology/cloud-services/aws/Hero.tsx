@@ -1,4 +1,5 @@
 'use client';
+import ButtonComp from '@/components/Common/ButtonComp';
 import { motion } from 'framer-motion';
 import { ChevronRight } from 'lucide-react';
 import Image from 'next/image';
@@ -46,14 +47,7 @@ const Hero = () => {
               Future-proof your business with intelligent AWS development services. Build robust, scalable cloud infrastructure and manage seamless implementation for long-term success.
             </motion.p>
 
-            <motion.button 
-              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full flex items-center gap-2 group transition-all duration-300 mx-auto md:mx-0"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Get Started
-              <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </motion.button>
+            <ButtonComp/>
           </motion.div>
 
           {/* Logo/Image Section - Hidden on Mobile */}

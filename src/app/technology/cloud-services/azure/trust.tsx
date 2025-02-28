@@ -7,10 +7,23 @@ const Trust = () => {
   return (
     <section className="relative min-h-screen flex justify-center items-center py-16 px-6">
       {/* Glowing Gradient Background */}
-      <div className="absolute inset-0 w-full opacity-50 bg-gradient-to-br from-[#182a44] to-[#084e7a] blur-[30px] animate-rotate rounded-full z-0"></div>
+      <div
+      className="mx-auto my-auto"
+        style={{
+          position: "absolute",
+          inset: 0,
+          width: "70%",
+          height:'70%',
+          opacity: 0.5,
+          background: "radial-gradient(circle, #182a44 0%, #084e7a 100%)",
+          filter: "blur(100px)",
+          borderRadius: "50%",
+          zIndex: 0,
+        }}
+      ></div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      <div className="relative z-10 container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center max-w-6xl">
         {/* Left Image */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}

@@ -6,6 +6,7 @@ import ScrollUp from "@/components/Common/ScrollUp";
 import { Inter } from "next/font/google";
 import "node_modules/react-modal-video/css/modal-video.css";
 import "../styles/index.css";
+import { Toaster } from "react-hot-toast";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,6 +25,7 @@ export default function RootLayout({
 
       <body className={`bg-[#FCFCFC] dark:bg-black ${inter.className}`}>
         <Providers>
+          <Toaster position="top-center" reverseOrder={false} />
           <Header />
           {children}
           <Footer />
