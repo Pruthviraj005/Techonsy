@@ -1,225 +1,106 @@
-import Image from "next/image";
-import React from "react";
-import { Timeline } from "@/components/ui/timeline";
+'use client';
+
+import { useState, useRef, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import { HiOutlineLightBulb, HiOutlineQrcode, HiOutlineShieldCheck, HiOutlineClipboardCheck, HiOutlineCloudUpload, HiOutlineDesktopComputer, HiOutlinePuzzle } from 'react-icons/hi';
+import Image from 'next/image';
+import { HiOutlineQrCode } from 'react-icons/hi2';
 
 export default function BlockChainDevelopmentProcess() {
-  const data = [
-    {
-      title: "Requirement Gathering and Elicitation",
-      content: (
-        <div>
-          <p className="text-neutral-800 dark:text-neutral-200 text-md lg:text-lg font-normal mb-8">
-            Experts analyze project requirements, assess risks, and provide innovative solutions to enhance your idea.
-          </p>
-          <div className="grid grid-cols-2 gap-4">
-            <Image
-              src="https://assets.aceternity.com/templates/startup-1.webp"
-              alt="startup template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-            <Image
-              src="https://assets.aceternity.com/templates/startup-2.webp"
-              alt="startup template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-            <Image
-              src="https://assets.aceternity.com/templates/startup-3.webp"
-              alt="startup template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-            <Image
-              src="https://assets.aceternity.com/templates/startup-4.webp"
-              alt="startup template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-          </div>
-        </div>
-      ),
-    },
-    {
-      title: "Blockchain integrated Solution Designing",
-      content: (
-        <div>
-          <p className="text-neutral-800 dark:text-neutral-200 text-md lg:text-lg font-normal mb-4">
-            We design and develop tailored blockchain solutions, ensuring secure architecture, efficient execution, and seamless integration for decentralized applications.
-          </p>
-          <div className="mb-8">
-            <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
-              ✅ Smart Contracts
-            </div>
-            <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
-              ✅ Middleware Architecture
-            </div>
-            <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
-              ✅ System Architecture for Component Interaction
-            </div>
-            <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
-              ✅ Technical Documentation
-            </div>
-          </div>
-          <div className="grid grid-cols-2 gap-4">
-            <Image
-              src="https://assets.aceternity.com/pro/hero-sections.png"
-              alt="hero template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-            <Image
-              src="https://assets.aceternity.com/features-section.png"
-              alt="feature template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-            <Image
-              src="https://assets.aceternity.com/pro/bento-grids.png"
-              alt="bento template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-            <Image
-              src="https://assets.aceternity.com/cards.png"
-              alt="cards template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-          </div>
-        </div>
-      ),
-    },
-    {
-      title: "Smart Contract Development",
-      content: (
-        <div>
-          <p className="text-neutral-800 dark:text-neutral-200 text-md lg:text-lg font-normal mb-8">
-            We develop and deploy secure smart contracts based on the designed architecture.
-          </p>
-          <div className="grid grid-cols-2 gap-4">
-            <Image
-              src="https://assets.aceternity.com/pro/hero-sections.png"
-              alt="hero template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-            <Image
-              src="https://assets.aceternity.com/features-section.png"
-              alt="feature template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-            <Image
-              src="https://assets.aceternity.com/pro/bento-grids.png"
-              alt="bento template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-            <Image
-              src="https://assets.aceternity.com/cards.png"
-              alt="cards template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-          </div>
-        </div>
-      ),
-    },
-    {
-      title: "UI and Admin Interface Development",
-      content: (
-        <div>
-          <p className="text-neutral-800 dark:text-neutral-200 text-md lg:text-lg font-normal mb-8">
-            We develop and deploy secure smart contracts based on the designed architecture.
-          </p>
-          <div className=" text-white p-8">
-            <div className="max-w-3xl mx-auto">
-              <h2 className="text-2xl font-bold mb-4">For user interface (frontend):</h2>
-              <ul className="mb-6 space-y-2">
-                {[
-                  "Creation of transaction",
-                  "Connection of web wallets",
-                  "Transaction of message to the chains",
-                  "Getting data from the chain and contract information",
-                ].map((item, index) => (
-                  <li key={index} className="flex items-center space-x-2">
-                    <span className="text-blue-500">&#x2022;</span>
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
+  const [openSection, setOpenSection] = useState(null);
+  const contentRef = useRef(null);
+  const scrollTimeout = useRef(null);
+  const [showScrollbar, setShowScrollbar] = useState(false);
 
-              <h2 className="text-2xl font-bold mb-4">For admin interface:</h2>
-              <p className="mb-4 text-gray-300">
-                Depending on the use case and requirements, there might be attributes that need to be added to the admin interface, for instance:
-              </p>
-              <ul className="space-y-2">
-                {[
-                  "Analytics of transactions and volume",
-                  "Managing platform/protocol fee",
-                  "User management",
-                ].map((item, index) => (
-                  <li key={index} className="flex items-center space-x-2">
-                    <span className="text-blue-500">&#x2022;</span>
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-      ),
-    },
-    {
-      title: "Component Integration",
-      content: (
-        <div>
-          <p className="text-neutral-800 dark:text-neutral-200 text-md lg:text-lg font-normal mb-8">
-            We integrate smart contracts and UI components, ensuring seamless workflow and efficient module testing.
-          </p>
-
-        </div>
-      ),
-    },
-    {
-      title: "UAT and QA on Testnets and Custom Environments",
-      content: (
-        <div>
-          <p className="text-neutral-800 dark:text-neutral-200 text-md lg:text-lg font-normal mb-8">
-            Thorough blockchain testing is conducted to ensure high client satisfaction and a smooth user experience.
-          </p>
-
-        </div>
-      ),
-    },
-    {
-      title: "Production Level Deployment",
-      content: (
-        <div>
-          <p className="text-neutral-800 dark:text-neutral-200 text-md lg:text-lg font-normal mb-8">
-            Following industry standards, we deploy blockchain products on various platforms for maximum accessibility.
-          </p>
-
-        </div>
-      ),
-    },
+  const sections = [
+    { id: 1, title: 'Requirement Gathering and Elicitation', icon: <HiOutlineLightBulb className="text-gradient text-3xl" /> },
+    { id: 2, title: 'Blockchain-Integrated Solution Designing', icon: <HiOutlineQrCode className="text-gradient text-3xl" /> },
+    { id: 3, title: 'Smart Contract Development', icon: <HiOutlineShieldCheck className="text-gradient text-3xl" /> },
+    { id: 4, title: 'UI and Admin Interface Development', icon: <HiOutlineDesktopComputer className="text-gradient text-3xl" /> },
+    { id: 5, title: 'Component Integration', icon: <HiOutlinePuzzle className="text-gradient text-3xl" /> },
+    { id: 6, title: 'UAT and QA on Testnets and Custom Environments', icon: <HiOutlineClipboardCheck className="text-gradient text-3xl" /> },
+    { id: 7, title: 'Production Level Deployment', icon: <HiOutlineCloudUpload className="text-gradient text-3xl" /> },
   ];
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!contentRef.current) return;
+      setShowScrollbar(true);
+      if (scrollTimeout.current) clearTimeout(scrollTimeout.current);
+      scrollTimeout.current = setTimeout(() => setShowScrollbar(false), 2000);
+    };
+    contentRef.current?.addEventListener('scroll', handleScroll);
+    return () => contentRef.current?.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <div className="w-full">
-      <Timeline data={data} />
-    </div>
+    <section className="px-4 sm:px-8 md:px-12 lg:px-20 py-12 max-w-7xl mx-auto">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        {/* Left Content */}
+        <div className="text-center lg:text-center space-y-6">
+          <h2 className="text-3xl lg:text-4xl font-bold text-gradient leading-tight">
+            Blockchain {" "}
+            <span className="bg-gradient-to-r from-blue-900 via-blue-600 to-blue-400 text-transparent bg-clip-text">
+              Development
+            </span> Process
+          </h2>
+          <div className="flex justify-center lg:justify-center">
+            <Image src="/images/blockchain/bctdevelopmentprocess.png" alt="Blockchain Development Process" width={350} height={350} className="rounded-lg shadow-lg" />
+          </div>
+        </div>
+
+        {/* Right Content - Scrollable Accordion */}
+        <motion.div 
+          className={`space-y-4 overflow-y-auto h-[70vh] p-4 transition-all duration-300 ${showScrollbar ? 'scrollbar-visible' : 'scrollbar-hidden'}`} 
+          ref={contentRef}
+          initial={{ opacity: 0 }} 
+          animate={{ opacity: 1 }} 
+          transition={{ duration: 0.5 }}
+        >
+          {sections.map((section) => (
+            <motion.div 
+              key={section.id} 
+              className="border border-gray-700 rounded-lg shadow-lg bg-gray-900 bg-opacity-50 backdrop-blur-lg p-4 transition-all duration-300 hover:scale-105"
+              whileHover={{ scale: 1.05 }}
+            >
+              <button
+                className="flex justify-between items-center w-full text-left p-2 hover:bg-gray-800 rounded-md transition-all duration-300"
+                onClick={() => setOpenSection(openSection === section.id ? null : section.id)}
+              >
+                <div className="flex items-center gap-3">
+                  {section.icon}
+                  <span className="text-lg font-semibold text-gradient">{section.title}</span>
+                </div>
+              </button>
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
+
+      {/* Scrollbar Styles */}
+      <style jsx>{`
+        .text-gradient {
+          background: linear-gradient(to right, #1e3a8a, #3b82f6);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+        .scrollbar-hidden::-webkit-scrollbar {
+          width: 8px;
+          opacity: 0;
+        }
+        .scrollbar-visible::-webkit-scrollbar {
+          width: 8px;
+          opacity: 1;
+        }
+        .scrollbar-visible::-webkit-scrollbar-thumb {
+          background: linear-gradient(to bottom, #1e3a8a, #2563eb, #3b82f6);
+          border-radius: 4px;
+        }
+        .scrollbar-visible::-webkit-scrollbar-track {
+          background: #1e293b;
+          border-radius: 4px;
+        }
+      `}</style>
+    </section>
   );
 }

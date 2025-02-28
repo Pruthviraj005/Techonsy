@@ -12,15 +12,9 @@ const IndustryExpertise = () => {
     { icon: <ShoppingCart />, name: 'Ecommerce', description: 'Digital retail solutions' },
     { icon: <Heart />, name: 'Healthcare', description: 'Medical & health systems' },
     { icon: <Home />, name: 'Real Estate', description: 'Property management solutions' },
-    { icon: <Play />, name: 'Media', description: 'Digital media platforms' },
     { icon: <Bot />, name: 'AI Software', description: 'Intelligent solutions' },
-    { icon: <Flame />, name: 'Oil & Gas', description: 'Energy sector solutions' },
     { icon: <Factory />, name: 'Manufacturing', description: 'Industrial automation' },
-    { icon: <Plane />, name: 'Travel & Hospitality', description: 'Tourism solutions' },
-    { icon: <Umbrella />, name: 'Insurance', description: 'Risk management systems' },
-    { icon: <Shield />, name: 'Security', description: 'Cybersecurity solutions' },
-    { icon: <LineChart />, name: 'Finance', description: 'Financial technology' },
-    { icon: <GraduationCap />, name: 'Education', description: 'Learning platforms' }
+    { icon: <GraduationCap />, name: 'Education', description: 'Learning platforms' },
   ];
 
   const trustedCompanies = [
@@ -42,8 +36,8 @@ const IndustryExpertise = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-bold mb-6">
-            <span className="text-white">Domain </span>
-            <span className="text-blue-500">Expertise</span>
+            <span className="text-white">Industries</span>
+            <span className="text-blue-500">We Serve</span>
           </h2>
           <p className="text-gray-400 text-lg max-w-3xl mx-auto">
             We bring deep industry knowledge and specialized expertise across various sectors
@@ -54,7 +48,7 @@ const IndustryExpertise = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
-          className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-6"
+          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6"
         >
           {industries.map((industry, index) => (
             <motion.div
@@ -85,7 +79,7 @@ const IndustryExpertise = () => {
         </motion.div>
 
         {/* Enhanced Trusted By Section */}
-        <div className="mt-24 text-center">
+        {/* <div className="mt-24 text-center">
           <h3 className="text-2xl font-semibold text-white mb-12">Trusted By Industry Leaders</h3>
           
           <div className="relative overflow-hidden h-20">
@@ -116,7 +110,8 @@ const IndustryExpertise = () => {
               ))}
             </motion.div>
           </div>
-        </div>
+        </div> */}
+        
       </div>
     </div>
   );

@@ -2,22 +2,22 @@
 import React from 'react'
 import IotBanner from './IotBanner'
 import IotDevelopment from './IotDevelopment'
-import IotServices from './IotServices'
-import IotModels from './IotModels'
-import TechnologyExpertise from './TechnologyExpertise'
-import IotIndustry from './IotIndustry'
-import IotProcess from './IotProcess'
+import IotSection from './IotSection'
+import WhyChooseUs from './WhyChooseUs'
+import IotIndustrySection from './IotIndustrySection'
+import RelatedBlogs from './RelatedBlogs'
+import IotBenefits from './IotBenefits'
 
 function page() {
   return (
     <>
       <IotBanner />
-      <IotServices />
+      <IotSection />
       <IotDevelopment />
-      <IotModels />
-      <TechnologyExpertise />
-      <IotIndustry />
-      <IotProcess />
+      <IotIndustrySection />
+      <IotBenefits />
+      <WhyChooseUs />
+      <RelatedBlogs />
     </>
   )
 }

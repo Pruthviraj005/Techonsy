@@ -2,11 +2,12 @@
 
 import CCBanner from "./CCBanner";
 import CCBenefits from "./CCBenefits";
-import CCIndustry from "./CCIndustry";
+import CCIndustrySection from "./CCIndustrySection";
 import CCModels from "./CCModels";
 import CCPlatformExpertise from "./CCPlatformExpertise";
 import CCProcess from "./CCProcess";
 import CCTechStack from "./CCTechStack";
+import RelatedBlogs from "./RelatedBlogs";
 
 export default function CloudComputing(){
   return(
@@ -15,10 +16,11 @@ export default function CloudComputing(){
       <CCBanner />
       <CCModels />
       <CCTechStack />
-      <CCIndustry />
+      <CCIndustrySection />
       <CCProcess />
       <CCPlatformExpertise />
       <CCBenefits />
+      <RelatedBlogs />
     </div>
     </>
   );
