@@ -1,6 +1,8 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
+import emailjs from "@emailjs/browser";
+import toast from "react-hot-toast";
 
 interface ContactProps {
   isPopup?: boolean;
@@ -12,11 +14,15 @@ const Contact = ({ isPopup = false, onClose }: ContactProps) => {
     name: "",
     email: "",
     message: "",
-    mobileno: ""
+    mobileno: "",
   });
 
   const [focusedField, setFocusedField] = useState<string | null>(null);
+  const [loading, setLoading] = useState(false);
+  const [successMessage, setSuccessMessage] = useState("");
+
   const textareaRef = useRef<HTMLTextAreaElement>(null);
+  const formRef = useRef<HTMLFormElement>(null);
 
   useEffect(() => {
     const adjustTextareaHeight = () => {
@@ -27,17 +33,56 @@ const Contact = ({ isPopup = false, onClose }: ContactProps) => {
     };
 
     adjustTextareaHeight();
-    textareaRef.current?.addEventListener('input', adjustTextareaHeight);
+    textareaRef.current?.addEventListener("input", adjustTextareaHeight);
     return () => {
-      textareaRef.current?.removeEventListener('input', adjustTextareaHeight);
+      textareaRef.current?.removeEventListener("input", adjustTextareaHeight);
     };
   }, []);
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log("Form submitted:", formData);
-  };
+  // const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  //   setFormData({ ...formData, [e.target.name]: e.target.value });
+  // };
 
+  // const handleFocus = (field: string) => {
+  //   setFocusedField(field);
+  // };
+
+  // const handleBlur = () => {
+  //   setFocusedField(null);
+  // };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+    setSuccessMessage("");
+    const toastId = toast.loading("Processing...");
+
+    const serviceId = "service_ab400os";
+    const templateId = "template_efmzke1";
+    const publicKey = "G_lU5tRXmTExcLdNI";
+
+    const templateParams = {
+      from_name: formData.name,
+      from_email: formData.email,
+      to_name: "",
+      message: formData.message,
+      mobile_no:formData.mobileno
+    };
+
+    try {
+      const response = await emailjs.send(serviceId, templateId, templateParams, publicKey);
+      console.log("Email sent successfully!", response);
+
+      setSuccessMessage("Your message has been sent successfully!");
+      setFormData({ name: "", email: "", message: "", mobileno: "" });
+      onClose();
+    } catch (error) {
+      console.error("Error sending email:", error);
+      setSuccessMessage("Failed to send message. Please try again.");
+    }
+    toast.success("Ticket send successfully!", { id: toastId });
+    setLoading(false);
+  };
   const inputClasses = `w-full rounded-xl border-2 bg-white/5 px-6 py-4 text-base outline-none transition-all duration-300
     ${focusedField ? 'border-primary shadow-lg shadow-primary/20' : 'border-gray-200 dark:border-gray-700'}
     dark:text-white backdrop-blur-sm
