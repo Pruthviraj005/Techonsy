@@ -11,24 +11,12 @@ import {
 } from "react-icons/fa";
 
 const industries = [
-  { name: "Healthcare", icon: <FaHeartbeat />, description: "Drug traceability, secure medical data transfer, and improved supply chain management." },
-  { name: "Finance", icon: <FaUniversity />, description: "Secure financial transactions, fraud prevention, and decentralized banking solutions." },
-  { name: "eCommerce", icon: <FaShoppingCart />, description: "Blockchain-powered transparent online marketplaces and fraud prevention." },
-  { name: "Logistics", icon: <FaTruck />, description: "Enhanced tracking, real-time updates, and secure supply chain management." },
-  { name: "Game", icon: <FaGamepad />, description: "True ownership of in-game assets, secure transactions, and decentralized gaming." },
-  { name: "Education", icon: <FaChalkboardTeacher />, description: "Blockchain for secure certifications, student records, and online learning integrity." },
-  { name: "Retail", icon: <FaStore />, description: "Improving supply chain transparency, loyalty programs, and fraud detection in retail." },
-  { name: "Government", icon: <FaBuilding />, description: "Secure voting systems, transparent governance, and improved data security." },
-  { name: "Entertainment", icon: <FaFilm />, description: "Blockchain-based royalties, anti-piracy measures, and secure media distribution." },
-  { name: "Travel", icon: <FaPlane />, description: "Blockchain for fraud-proof travel bookings, identity verification, and tracking." },
-  { name: "Manufacturing", icon: <FaCogs />, description: "Secure production tracking, counterfeit prevention, and supply chain transparency." },
-  { name: "Telecom", icon: <FaGlobe />, description: "Decentralized networks, fraud prevention, and improved security for communications." },
-  { name: "Energy", icon: <FaPlug />, description: "Blockchain solutions for energy trading, tracking, and secure distribution." },
-  { name: "Insurance", icon: <FaShieldAlt />, description: "Fraud detection, smart insurance contracts, and transparent policy management." },
-  { name: "Agriculture", icon: <FaLeaf />, description: "Supply chain tracking, food traceability, and enhanced farming security." },
-  { name: "Media", icon: <FaNewspaper />, description: "Blockchain-secured journalism, copyright protection, and digital content security." },
-  { name: "Oil and Gas", icon: <FaOilCan />, description: "Blockchain for energy distribution, fraud prevention, and improved efficiency." },
-  { name: "Supply Chain", icon: <FaIndustry />, description: "Complete supply chain visibility, fraud-proof tracking, and secure logistics." },
+  { name: "Ecommerce", icon: <FaShoppingCart />, description: "Enhancing trust and transparency in online marketplaces through blockchain solutions." },
+  { name: "Healthcare", icon: <FaHeartbeat />, description: "Ensuring secure patient records, drug traceability, and decentralized medical data." },
+  { name: "Real Estate", icon: <FaBuilding />, description: "Revolutionizing property transactions with smart contracts and secure ledgers." },
+  { name: "AI Software", icon: <FaCogs />, description: "Integrating blockchain for decentralized AI model training and secure data sharing." },
+  { name: "Manufacturing", icon: <FaIndustry />, description: "Improving supply chain visibility, product authenticity, and efficiency." },
+  { name: "Education", icon: <FaChalkboardTeacher />, description: "Providing verifiable certificates and student credentials using blockchain." },
 ];
 
 export default function BlockChainIndustrySection() {
@@ -54,18 +42,18 @@ export default function BlockChainIndustrySection() {
     <section className="bg-black text-white py-12 px-4 flex justify-center">
       <div className="w-[80%] mx-auto">
         <h2 className="text-2xl md:text-4xl font-bold text-center mb-8">
-          Industries We Have Transformed with Blockchain
+          Industries We Serve
         </h2>
 
         {/* 🔹 Large & Tablet Screens: Grid Layout (without icons) */}
-        <div className="hidden md:grid grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-3 md:gap-4 text-center">
+        <div className=" hidden lg:flex lg:flex-row justify-center md:grid md:grid-cols-3 gap-3 md:gap-4 text-center">
           {industries.map((industry, index) => (
             <button
               key={industry.name}
               onClick={() => setSelectedIndex(index)}
               className={`relative p-3 md:p-4 text-sm md:text-base font-semibold transition-all transform rounded-lg ${selectedIndex === index
-                  ? "text-blue-500"
-                  : "text-gray-300 hover:text-white"
+                ? "text-blue-500"
+                : "text-gray-300 hover:text-white"
                 }`}
             >
               {industry.name}

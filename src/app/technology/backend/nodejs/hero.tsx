@@ -4,6 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
 import bgData from "./bg.json"; // Import the JSON file
+import ButtonComp from "@/components/Common/ButtonComp";
 
 
 const Lottie = dynamic(() => import("react-lottie-player"), { ssr: false });
@@ -33,13 +34,7 @@ const Hero = () => {
             We deliver high-performance, scalable Node.js solutions tailored to your business needs. Our experts analyze your processes, identify challenges, and craft seamless, real-time applications that enhance efficiency and drive growth.
           </p>
           <div className="flex justify-center md:justify-start">
-            <motion.a
-              href="#"
-              whileHover={{ scale: 1.1 }}
-              className="inline-block bg-blue-600 text-white font-semibold text-lg py-3 px-6 rounded-lg shadow-md hover:bg-blue-700 transition-all duration-300"
-            >
-              Get Started →
-            </motion.a>
+            <ButtonComp/>
           </div>
         </div>
 

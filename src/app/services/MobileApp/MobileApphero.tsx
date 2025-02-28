@@ -6,48 +6,53 @@ import { FaUsers, FaLock, FaHeadphones, FaCode, FaThumbsUp, FaStar } from 'react
 
 const MobileAppHero = () => {
   return (
-    <div className="bg-black text-white min-h-screen flex items-center justify-center">
-      <div className="container mx-auto px-6 py-16">
-        <motion.h1
-          initial={{ opacity: 0, y: -50, scale: 0.8 }}
-          animate={{ opacity: 1, y: 0, scale: 1 }}
-          transition={{ duration: 1, ease: 'easeOut' }}
-          className="text-5xl font-bold text-center text-blue-500"
-        >
-          Leading Mobile App Developers
-        </motion.h1>
-
-        <div className="grid md:grid-cols-3 gap-10 items-center mt-16">
-          <div className="space-y-8">
-            <FeatureCard icon={<FaUsers />} title="Team of Experts" text="Top developers assigned to your project." />
-            <FeatureCard icon={<FaHeadphones />} title="1-ON-1 Meetings" text="Personalized guidance at every step." />
-            <FeatureCard icon={<FaCode />} title="Best Code Practices" text="Ensuring high-quality and scalable code." />
-          </div>
-
-          <motion.div
-            initial={{ scale: 0.8, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 0.8, ease: 'easeOut' }}
-            whileHover={{ rotate: 5, scale: 1.05 }}
-            className="flex justify-center"
+    <>
+      <div className="bg-black text-white min-h-screen flex items-center justify-center">
+        <div className="container mx-auto px-6 py-16">
+          <motion.h1
+            initial={{ opacity: 0, y: -50, scale: 0.8 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ duration: 1, ease: 'easeOut' }}
+            className="text-5xl font-bold text-center text-blue-500"
           >
-            <Image
-              src="/images/mobileApp/mobile-dev.png"
-              width={400}
-              height={1000}
-              alt="Mobile App"
-              className="rounded-lg shadow-xl transition-transform duration-300 ease-in-out"
-            />
-          </motion.div>
+            Transform Your Business with Cutting-Edge Mobile Development
+          </motion.h1>
 
-          <div className="space-y-8">
-            <FeatureCard icon={<FaLock />} title="Privacy & Security" text="Your data remains fully secure." />
-            <FeatureCard icon={<FaThumbsUp />} title="Cross-Platform Dev" text="Build for iOS and Android efficiently." />
-            <FeatureCard icon={<FaStar />} title="Support & Maintenance" text="Ongoing updates and assistance." />
+          <div className="grid md:grid-cols-3 gap-10 items-center mt-16">
+            <div className="space-y-8">
+              <FeatureCard icon={<FaUsers />} title="Team of Experts" text="Top developers assigned to your project." />
+              <FeatureCard icon={<FaHeadphones />} title="1-ON-1 Meetings" text="Personalized guidance at every step." />
+              <FeatureCard icon={<FaCode />} title="Best Code Practices" text="Ensuring high-quality and scalable code." />
+            </div>
+
+            <motion.div
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.8, ease: 'easeOut' }}
+              whileHover={{ rotate: 5, scale: 1.05 }}
+              className="flex justify-center"
+            >
+              <Image
+                src="/images/mobileApp/mobile-dev.png"
+                width={400}
+                height={1000}
+                alt="Mobile App"
+                className="rounded-lg shadow-xl transition-transform duration-300 ease-in-out"
+              />
+            </motion.div>
+
+            <div className="space-y-8">
+              <FeatureCard icon={<FaLock />} title="Privacy & Security" text="Your data remains fully secure." />
+              <FeatureCard icon={<FaThumbsUp />} title="Cross-Platform Dev" text="Build for iOS and Android efficiently." />
+              <FeatureCard icon={<FaStar />} title="Support & Maintenance" text="Ongoing updates and assistance." />
+            </div>
           </div>
         </div>
       </div>
-    </div>
+      <p className='text-center text-gray-400 font-light w-11/12 mx-auto'>
+        Empower your business with tailor-made mobile apps designed for performance, scalability, and seamless user experience. Our expert team blends innovation, intuitive design, and cutting-edge technology to create solutions that go beyond expectations. With agile development and robust architecture, we turn your ideas into impactful digital products. Let’s build something extraordinary
+      </p>
+    </>
   );
 };
 

@@ -20,7 +20,7 @@ const Lottie = dynamic(() => import("react-lottie-player"), { ssr: false });
 
 export default function Expertise() {
     return (
-        <section className="py-10 px-6 max-w-[1000px] mx-auto flex flex-col md:flex-row items-center relative">
+        <section className="py-10 px-6 max-w-6xl mx-auto flex flex-col md:flex-row items-center relative">
             {/* Left Image - Hidden on sm */}
             <div className="w-1/3 hidden md:block">
                 <Lottie

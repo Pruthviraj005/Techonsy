@@ -139,7 +139,7 @@ export default function Python () {
            
 
         <section className="py-16 border-y-[0.5px] border-slate-500">
-          <div className="mx-auto px-4 sm:px-6 text-center max-w-5xl">
+          <div className="mx-auto px-4 sm:px-6 text-center max-w-6xl">
             {/* Section Heading */}
             <h2 className="text-3xl sm:text-2xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6 md:mb-8">
               Craft Your Dream Web App with Python for Powerful and Scalable Business Growth
