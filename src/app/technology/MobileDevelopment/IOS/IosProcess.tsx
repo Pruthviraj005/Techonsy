@@ -20,7 +20,7 @@ export default function IosProcess() {
           and build high-quality iOS apps that add real value to users' lives.
         </p>
 
-        <Image src="/images/ios/process.png" alt="process" width={1200} height={1200} className="mt-20" />
+        <Image src="/images/ios/IosProcess.png" alt="process" width={1200} height={1200} className="mt-10" />
 
       </div>
     </section>

@@ -2,27 +2,29 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import { FaAndroid, FaApple, FaReact, FaAppStore } from 'react-icons/fa';
+import { SiFlutter } from 'react-icons/si';
 
 const MobileTechnologies = () => {
   const technologies = [
     {
       name: 'Android',
-      icon: '🤖',
+      icon: <FaAndroid className="text-green-500" size={40} />, 
       description: 'Native Android Development'
     },
     {
       name: 'iOS',
-      icon: '🍎',
+      icon: <FaApple className="text-gray-300" size={40} />, 
       description: 'Native iOS Development'
     },
     {
       name: 'Flutter',
-      icon: '💙',
+      icon: <SiFlutter className="text-blue-400" size={40} />, 
       description: 'Cross-platform Development'
     },
     {
-      name: 'React Native',
-      icon: '⚛️',
+      name: 'AppleStore',
+      icon: <FaAppStore className="text-blue-500" size={40} />, 
       description: 'Cross-platform JavaScript'
     }
   ];
@@ -32,18 +34,21 @@ const MobileTechnologies = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.3
+        staggerChildren: 0.25,
+        ease: 'easeInOut',
+        duration: 0.8
       }
     }
   };
 
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
+    hidden: { y: 50, opacity: 0 },
     visible: {
       y: 0,
       opacity: 1,
       transition: {
-        duration: 0.5
+        duration: 0.8,
+        ease: 'easeInOut'
       }
     }
   };
@@ -54,7 +59,7 @@ const MobileTechnologies = () => {
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.8, ease: 'easeInOut' }}
           className="text-center mb-12"
         >
           <h2 className="text-4xl font-bold mb-4">
@@ -67,17 +72,18 @@ const MobileTechnologies = () => {
         <motion.div
           variants={containerVariants}
           initial="hidden"
-          animate="visible"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
         >
           {technologies.map((tech, index) => (
             <motion.div
               key={tech.name}
               variants={itemVariants}
-              whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
+              whileHover={{ scale: 1.05, transition: { duration: 0.3, ease: 'easeOut' } }}
               className="bg-gray-800 rounded-lg p-6 text-center transform transition-all hover:shadow-xl hover:shadow-blue-500/20"
             >
-              <div className="text-4xl mb-4">{tech.icon}</div>
+              <div className="mb-4 flex justify-center">{tech.icon}</div>
               <h3 className="text-xl font-semibold text-white mb-2">{tech.name}</h3>
               <p className="text-gray-400">{tech.description}</p>
             </motion.div>

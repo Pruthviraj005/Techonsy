@@ -20,13 +20,11 @@ function CCBanner() {
         {/* Content */}
         <div className="relative text-center text-white px-4 sm:px-6 md:px-8 lg:px-12">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold">
-            Cloud <br /> Migration Services
+            Cloud Services
           </h1>
 
-          <p className="mt-4 text-sm sm:text-base md:text-lg lg:text-xl font-thin">
-            <span className='font-semibold'>Discover Your Business's Full Potential with Expert Cloud Migration</span>
-            <br/>
-            Tap into the blockchain universe with our world-class custom decentralized solutions
+          <p className="mt-4 text-sm sm:text-base md:text-lg lg:text-xl font-extralight w-1/2 mx-auto">
+          Seamlessly transition to a secure and scalable cloud environment with our tailored cloud solutions. We streamline migration, optimize performance, and minimize disruptions to your operations using the latest technologies and best practices.
           </p>
 
           <button className="relative mt-6 px-6 sm:px-8 py-2 sm:py-3 text-base sm:text-lg font-semibold text-white transition-all duration-300 ease-in-out rounded-lg shadow-lg group">
