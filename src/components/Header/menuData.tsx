@@ -37,7 +37,7 @@ const menuData: Menu[] = [
       {
         id: 413,
         title: "Ecommerce & CMS",
-        path: "/",
+        path: "/services/Ecommerce",
         newTab: false
       },
       {
@@ -49,7 +49,7 @@ const menuData: Menu[] = [
       {
         id: 415,
         title: "Quality Assurance",
-        path: "/",
+        path: "/services/qualityAssurance",
         newTab: false
       },
       {
