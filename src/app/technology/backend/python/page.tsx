@@ -1,4 +1,5 @@
-"use client"
+"use client";
+""
 import Image from "next/image";
 import img from '../../../../../public/images/technology/python-svgrepo-com.svg'
 import { useState, useEffect, useRef } from "react";

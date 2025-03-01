@@ -1,4 +1,5 @@
-'use client';
+"use client";
+'';
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { FaDesktop, FaMobileAlt, FaCloud, FaCogs, FaGamepad, FaSync, FaServer, FaWrench } from "react-icons/fa";

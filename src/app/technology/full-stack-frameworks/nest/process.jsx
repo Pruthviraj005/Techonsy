@@ -1,4 +1,4 @@
-'use client';
+'';
 
 import { motion } from 'framer-motion';
 import { Search, CloudRain, Layout, Code, Upload, ShieldCheck, FileText } from 'lucide-react';

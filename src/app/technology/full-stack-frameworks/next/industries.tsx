@@ -1,3 +1,4 @@
+"use client";
 import IndustryWeServe from "@/components/IndustryWeServe";
 import { FaShoppingCart, FaRegMoneyBillAlt, FaBuilding, FaUtensils, FaGraduationCap, FaHeartbeat, FaRocketchat } from "react-icons/fa";
 

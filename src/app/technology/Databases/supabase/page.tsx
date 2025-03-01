@@ -1,3 +1,4 @@
+"use client";
 import Hero from './hero'
 import Experiance from './experiance'
 import Section from './section'

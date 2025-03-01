@@ -1,4 +1,5 @@
-'use client';
+"use client";
+'';
 
 import { motion } from 'framer-motion';
 import { FaDollarSign, FaShieldAlt, FaRocket, FaExpand, FaGlobe, FaCogs } from 'react-icons/fa';

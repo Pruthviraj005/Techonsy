@@ -1,4 +1,5 @@
 "use client";
+"";
 import React from "react";
 import { motion } from "framer-motion";
 import { FaAws, FaMicrosoft, FaGoogle, FaDocker, FaGitAlt } from "react-icons/fa";

@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import ButtonComp from "@/components/Common/ButtonComp";
 import { motion } from "framer-motion";

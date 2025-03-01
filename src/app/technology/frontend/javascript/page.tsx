@@ -1,4 +1,5 @@
 "use client";
+"";
 
 import {services , technologies, cards, cards2, expertise} from "./data";
 import AnimetedLine from "../../../../components/Animation/Services/Javascript/Animatedline"

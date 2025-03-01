@@ -1,3 +1,4 @@
+"use client";
 import { FaLock, FaStopwatch, FaTachometerAlt, FaTools } from "react-icons/fa";
 
 // Features Data

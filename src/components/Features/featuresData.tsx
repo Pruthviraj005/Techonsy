@@ -1,3 +1,4 @@
+"use client";
 import { Feature } from "@/types/feature";
 
 const featuresData: Feature[] = [

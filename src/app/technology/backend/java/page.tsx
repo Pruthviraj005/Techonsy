@@ -1,3 +1,4 @@
+"use client";
 import Hero from "./Hero";
 import JavaDevelopment from "./JavaDevelopment";
 import JavaServices from "./JavaServices";

@@ -1,4 +1,5 @@
-'use client';
+"use client";
+'';
 
 import { Server, Layers, Settings, Code, CheckCircle, Database, BookOpen } from 'lucide-react';
 

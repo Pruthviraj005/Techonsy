@@ -1,4 +1,5 @@
-"use client"; // Required for Next.js
+"use client";
+""; // Required for Next.js
 
 import React from "react";
 import { motion } from "framer-motion";
