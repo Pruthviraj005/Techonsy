@@ -1,4 +1,5 @@
-'use client';
+"use client";
+'';
 import { FaCode, FaMobileAlt, FaBrain, FaPlug, FaDatabase, FaServer } from "react-icons/fa";
 import { FaShoppingCart, FaRegMoneyBillAlt, FaBuilding, FaUtensils, FaGraduationCap, FaHeartbeat, FaRocketchat } from "react-icons/fa";
 

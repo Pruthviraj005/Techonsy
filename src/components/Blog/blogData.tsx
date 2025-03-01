@@ -1,3 +1,4 @@
+"use client";
 import { Blog } from "@/types/blog";
 
 const blogData: Blog[] = [

@@ -1,3 +1,4 @@
+"use client";
 
 import { GiCyberEye, GiBrain, GiCloudUpload, GiNetworkBars, GiLockedChest, GiArtificialIntelligence, GiCube, GiPaintBrush, GiPieChart, GiRocket, GiCog, GiDigitalTrace, } from "react-icons/gi";
 import { GiStarGate, GiProcessor, GiSprint, GiPerspectiveDiceSixFacesOne, GiChart, GiDatabase } from "react-icons/gi";

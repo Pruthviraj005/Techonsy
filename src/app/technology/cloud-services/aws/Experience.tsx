@@ -1,4 +1,5 @@
-'use client';
+"use client";
+'';
 
 import { motion } from "framer-motion";
 import { RiShoppingCart2Fill } from "react-icons/ri";

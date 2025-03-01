@@ -1,3 +1,4 @@
+"use client";
 import Hero from "./Hero"
 import ReactNativeDevelopment from "./ReactNativeDevelopment"
 import ExpertiseSection from "./Expertise"

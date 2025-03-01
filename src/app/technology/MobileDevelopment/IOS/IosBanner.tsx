@@ -1,4 +1,5 @@
-'use client'
+"use client";
+''
 
 import ButtonComp from "@/components/Common/ButtonComp";
 import Image from "next/image";

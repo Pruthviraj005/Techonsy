@@ -1,4 +1,5 @@
 "use client";
+"";
 
 import dynamic from "next/dynamic";
 import animationData from "./experiance.json"; // Update the path as per your project structure

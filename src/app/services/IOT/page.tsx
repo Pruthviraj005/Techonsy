@@ -1,25 +1,43 @@
-'use client'
-import React from 'react'
-import IotBanner from './IotBanner'
-import IotDevelopment from './IotDevelopment'
-import IotSection from './IotSection'
-import WhyChooseUs from './WhyChooseUs'
-import IotIndustrySection from './IotIndustrySection'
-import RelatedBlogs from './RelatedBlogs'
-import IotBenefits from './IotBenefits'
+"use client";
 
-function page() {
+import dynamic from "next/dynamic";
+import { Suspense } from "react";
+
+// Lazy Loading Components for Faster Performance
+const IotBanner = dynamic(() => import("./IotBanner"), { ssr: false });
+const IotSection = dynamic(() => import("./IotSection"), { ssr: false });
+const IotDevelopment = dynamic(() => import("./IotDevelopment"), { ssr: false });
+const IotIndustrySection = dynamic(() => import("./IotIndustrySection"), { ssr: false });
+const IotBenefits = dynamic(() => import("./IotBenefits"), { ssr: false });
+const WhyChooseUs = dynamic(() => import("./WhyChooseUs"), { ssr: false });
+const RelatedBlogs = dynamic(() => import("./RelatedBlogs"), { ssr: false });
+
+function Page() {
   return (
     <>
-      <IotBanner />
-      <IotSection />
-      <IotDevelopment />
-      <IotIndustrySection />
-      <IotBenefits />
-      <WhyChooseUs />
-      <RelatedBlogs />
+      <Suspense fallback={<div className="text-center text-white py-10">Loading...</div>}>
+        <IotBanner />
+      </Suspense>
+      <Suspense fallback={<div className="text-center text-white py-10">Loading...</div>}>
+        <IotSection />
+      </Suspense>
+      <Suspense fallback={<div className="text-center text-white py-10">Loading...</div>}>
+        <IotDevelopment />
+      </Suspense>
+      <Suspense fallback={<div className="text-center text-white py-10">Loading...</div>}>
+        <IotIndustrySection />
+      </Suspense>
+      <Suspense fallback={<div className="text-center text-white py-10">Loading...</div>}>
+        <IotBenefits />
+      </Suspense>
+      <Suspense fallback={<div className="text-center text-white py-10">Loading...</div>}>
+        <WhyChooseUs />
+      </Suspense>
+      <Suspense fallback={<div className="text-center text-white py-10">Loading...</div>}>
+        <RelatedBlogs />
+      </Suspense>
     </>
-  )
+  );
 }
 
-export default page
+export default Page;

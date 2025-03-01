@@ -1,4 +1,5 @@
-'use client';
+"use client";
+'';
 import { FaCode, FaChartBar, FaUsers, FaSyncAlt, FaRocket, FaBolt } from "react-icons/fa";
 
 const features = [

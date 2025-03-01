@@ -1,4 +1,5 @@
-"use client"; // Ensures the use of React hooks
+"use client";
+""; // Ensures the use of React hooks
 
 import { useEffect } from "react";
 import AOS from "aos";

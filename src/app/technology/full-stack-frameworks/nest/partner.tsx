@@ -1,4 +1,5 @@
-'use client';
+"use client";
+'';
 
 import { useState } from 'react';
 import { Server, Layers, Settings, Code, CheckCircle, Database, BookOpen } from 'lucide-react';
