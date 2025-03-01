@@ -1,9 +1,14 @@
-import Hero from './Hero'
-import Service from './Service'
-import Benefits from  './Benifits'
-import Solutions from './Solutions'
-import IndustryWeServe from '@/components/IndustryWeServe'
-import Whyus from './Whyus'
+'use client'
+
+import dynamic from 'next/dynamic'
+
+const Hero = dynamic(() => import("./Hero"));
+const Service = dynamic(() => import("./Service"));
+const Benefits = dynamic(() => import("./Benifits"));
+const Solutions = dynamic(() => import("./Solutions"));
+const IndustryWeServe = dynamic(() => import("@/components/IndustryWeServe"));
+const Whyus = dynamic(() => import("./Whyus"));
+
 export default function Ecommerce(){
     return(<>
     <Hero/>
