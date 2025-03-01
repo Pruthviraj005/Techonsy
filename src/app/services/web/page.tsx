@@ -5,11 +5,11 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 
 // Lazy Load Components
-const WebBanner = dynamic(() => import("./WebBanner"), { ssr: false });
-const TailoredSolutions = dynamic(() => import("./TailoredSolutions"), { ssr: false });
-const TechGrid = dynamic(() => import("./Technologies"), { ssr: false });
-const IndustryWeServe = dynamic(() => import("./IndustryWeServe"), { ssr: false });
-const WebApplicationApproach = dynamic(() => import("./WebApplicationApproach"), { ssr: false });
+const WebBanner = dynamic(() => import("./WebBanner"));
+const TailoredSolutions = dynamic(() => import("./TailoredSolutions"));
+const TechGrid = dynamic(() => import("./Technologies"));
+const IndustryWeServe = dynamic(() => import("./IndustryWeServe"));
+const WebApplicationApproach = dynamic(() => import("./WebApplicationApproach"));
 
 export default function WebDevelopment() {
   const [benefits, setBenefits] = useState([]);

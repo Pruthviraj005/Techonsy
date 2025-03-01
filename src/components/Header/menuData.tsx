@@ -1,14 +1,6 @@
 "use client";
 import { Menu } from "@/types/menu";
 
-export async function getStaticPaths() {
-  return {
-    paths: [menuData], 
-    fallback: "blocking", // Ensure pages generate properly
-  };
-}
-
-
 const menuData: Menu[] = [
   {
     id: 1,

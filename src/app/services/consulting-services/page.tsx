@@ -1,13 +1,12 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import { Suspense } from "react";
 import { btn } from "./data";
 
 // Lazy loading components for better performance
-const ConsultingApproach = dynamic(() => import("./ConsultingApproach"), { ssr: false });
-const Approaches = dynamic(() => import("./Approaches"), { ssr: false });
-const RelatedBlogs = dynamic(() => import("./RelatedBlogs"), { ssr: false });
+const ConsultingApproach = dynamic(() => import("./ConsultingApproach"));
+const Approaches = dynamic(() => import("./Approaches"));
+const RelatedBlogs = dynamic(() => import("./RelatedBlogs"));
 
 
 export default function ConsultingServices() {
@@ -53,7 +52,7 @@ export default function ConsultingServices() {
   // }, [isDragging]);
 
   return (
-    <Suspense fallback={<div className="text-center text-white py-10">Loading...</div>}>
+   
       <div className="bg-gray-900 min-h-screen text-white">
 
         <section className="relative min-h-[70vh] flex items-center justify-center text-white text-center">
@@ -201,6 +200,5 @@ export default function ConsultingServices() {
       </section> */}
 
       </div>
-    </Suspense>
   );
 }

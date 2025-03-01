@@ -1,10 +1,13 @@
 
+
+import dynamic from 'next/dynamic';
+
 import React from 'react';
-import HeroSection from './HeroSection';
-import FeaturesSection from './FeaturesSection';
-import ProcessSection from './ProcessSection';
-import TechnologiesSection from './TechnologiesSection';
-import CTASection from './CTASection';
+const HeroSection = dynamic(() => import("./HeroSection"));
+const FeaturesSection = dynamic(() => import("./FeaturesSection"));
+const ProcessSection = dynamic(() => import("./ProcessSection"));
+const TechnologiesSection = dynamic(() => import("./CTASection"));
+const CTASection = dynamic(() => import("./HeroSection"));
 
 export const metadata = {
   title: 'NFT Marketplace Development | Techonsy',
