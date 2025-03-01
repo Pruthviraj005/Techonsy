@@ -40,7 +40,7 @@ const menuData: Menu[] = [
       {
         id: 415,
         title: "Quality Assurance",
-        path: "/",
+        path: "/services/qualityAssurance",
         newTab: false
       },
       {
