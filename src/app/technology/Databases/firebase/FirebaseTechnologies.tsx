@@ -1,4 +1,5 @@
-'use client';
+"use client";
+'';
 import Image from "next/image";
 import firebaseStore from '../../../../../public/images/technology/databases/firebase/firestore.svg'
 import mlkit from '../../../../../public/images/technology/databases/firebase/ML-Kit-for-Firebase-badge-light.png'

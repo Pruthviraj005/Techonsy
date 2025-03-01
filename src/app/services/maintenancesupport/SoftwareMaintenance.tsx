@@ -1,4 +1,5 @@
-'use client'
+"use client";
+''
 import React from 'react'
 import { offeringServices } from './data'
 import { btn } from '../consulting-services/data'

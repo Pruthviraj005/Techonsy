@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { btn, expertiseData } from "./data";
 

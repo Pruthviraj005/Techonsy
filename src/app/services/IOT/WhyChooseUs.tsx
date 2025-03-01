@@ -1,3 +1,4 @@
+"use client";
 import { motion } from "framer-motion";
 import { Server, ShieldCheck, Brain, PlugZap } from "lucide-react";
 

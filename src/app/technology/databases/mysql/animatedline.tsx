@@ -1,4 +1,5 @@
-'use client';
+"use client";
+'';
 
 const AnimatedLine=()=>{
     return(<div className="relative flex justify-center my-4">

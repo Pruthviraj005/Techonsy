@@ -1,10 +1,14 @@
 "use client";
-import React, { useState, useEffect, useRef } from "react";
-import { services, expertiseData, projects, blogs, btn } from "./data"
-import Image from "next/image";
-import ConsultingApproach from "./ConsultingApproach";
-import Approaches from "./Approaches";
-import RelatedBlogs from "./RelatedBlogs";
+
+import dynamic from "next/dynamic";
+import { Suspense } from "react";
+import { btn } from "./data";
+
+// Lazy loading components for better performance
+const ConsultingApproach = dynamic(() => import("./ConsultingApproach"), { ssr: false });
+const Approaches = dynamic(() => import("./Approaches"), { ssr: false });
+const RelatedBlogs = dynamic(() => import("./RelatedBlogs"), { ssr: false });
+
 
 export default function ConsultingServices() {
 
@@ -49,38 +53,42 @@ export default function ConsultingServices() {
   // }, [isDragging]);
 
   return (
-    <div className="bg-gray-900 min-h-screen text-white">
+    <Suspense fallback={<div className="text-center text-white py-10">Loading...</div>}>
+      <div className="bg-gray-900 min-h-screen text-white">
 
-      <section className="relative min-h-[70vh] flex items-center justify-center text-white text-center">
-        <div className="absolute inset-0 bg-gradient-to-r from-gray-900 to-indigo-900 opacity-75"></div>
-        <div className="relative z-10">
-          <h1 className="text-6xl font-bold">Expert IT Consulting Services</h1>
-          <p className="text-lg mt-6">
-            Delivering top-notch technology solutions to drive business growth and innovation.
-          </p>
-          <button className="mt-4 bg-transparent border-2 border-blue-600 px-6 py-2 rounded text-blue-600 hover:bg-transparent hover:border-blue-700 hover:text-white hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50 transition-all duration-300 glow-effect relative">
-            <span className="flex items-center">
-              <span className="absolute left-0 transform translate-x-[40%] pt-2 z-10">{btn.icon}</span>
-              <span className="pl-5">{'Contact Our Experts'}</span>
-            </span>
-          </button>
+        <section className="relative min-h-[70vh] flex items-center justify-center text-white text-center">
+          <div className="absolute inset-0 bg-gradient-to-r from-gray-900 to-indigo-900 opacity-75"></div>
+          <div className="relative z-10">
+            <h1 className="text-6xl font-bold">Expert IT Consulting Services</h1>
+            <p className="text-lg mt-6">
+              Delivering top-notch technology solutions to drive business growth and innovation.
+            </p>
+            <button className="mt-4 bg-transparent border-2 border-blue-600 px-6 py-2 rounded text-blue-600 hover:bg-transparent hover:border-blue-700 hover:text-white hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50 transition-all duration-300 glow-effect relative">
+              <span className="flex items-center">
+                <span className="absolute left-0 transform translate-x-[40%] pt-2 z-10">{btn.icon}</span>
+                <span className="pl-5">{'Contact Our Experts'}</span>
+              </span>
+            </button>
 
-        </div>
-      </section>
+          </div>
+        </section>
 
-      <section>
-        <ConsultingApproach />
-      </section>
+        <section>
+          <ConsultingApproach />
+        </section>
 
-      <section>
-        <Approaches />
-      </section>
+        <section>
+          <Approaches />
+        </section>
 
-      <section>
-        <RelatedBlogs />
-      </section>
+        <section>
+          <RelatedBlogs />
+        </section>
 
-      {/* <section className="container mx-auto py-20 px-5 flex  flex-col items-center">
+
+
+
+        {/* <section className="container mx-auto py-20 px-5 flex  flex-col items-center">
         <h2 className="text-3xl font-bold text-center mb-6">Our Services</h2>
         <div className="w-full text-center mb-6">
           <p className="text-gray-300 mx-auto max-w-3xl">
@@ -192,6 +200,7 @@ export default function ConsultingServices() {
         </div>
       </section> */}
 
-    </div>
+      </div>
+    </Suspense>
   );
 }

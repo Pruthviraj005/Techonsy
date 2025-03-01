@@ -1,4 +1,5 @@
 "use client";
+"";
 import React from "react";
 import { motion } from "framer-motion";
 import { FaCloud, FaServer, FaLock, FaExchangeAlt, FaCogs, FaNetworkWired } from "react-icons/fa";

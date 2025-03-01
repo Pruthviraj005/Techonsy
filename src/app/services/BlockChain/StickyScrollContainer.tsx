@@ -1,4 +1,5 @@
-'use client';
+"use client";
+'';
 
 import { useState, useEffect } from 'react';
 import { Code, ShieldCheck, Wallet, Layers, TrendingUp } from 'lucide-react';
@@ -29,7 +30,7 @@ export default function ServicesList() {
       <div className="max-w-4xl mx-auto bg-gradient-to-b from-blue-400 to-blue-800 p-6 rounded-lg">
         <ul className="space-y-3 sm:space-y-4">
           {services.map((service, index) => (
-            <>
+            
               <li
                 key={index}
                 className={`flex items-center space-x-4 text-lg md:text-xl transition-all duration-500 ${
@@ -38,9 +39,10 @@ export default function ServicesList() {
               >
                 <div className="p-2 rounded-lg">{service.icon}</div>
                 <span>{service.title}</span>
+                <hr className="border-gray-200" />
               </li>
-              <hr className="border-gray-200" />
-            </>
+
+            
           ))}
         </ul>
       </div>

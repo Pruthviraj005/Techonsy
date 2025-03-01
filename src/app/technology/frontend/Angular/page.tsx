@@ -1,3 +1,4 @@
+"use client";
 import React from 'react'
 import AngularBanner from './AngularBanner'
 import AngularDevelopment from './AngularDevelopment'

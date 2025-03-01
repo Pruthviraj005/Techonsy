@@ -1,4 +1,5 @@
-'use client';
+"use client";
+'';
 import DevelopmentProcess from "./DevelopmentProcess";
 import Hero from "./Hero";
 import ReactFeatures from "./reactFeatures";
