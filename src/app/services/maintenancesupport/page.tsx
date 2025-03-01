@@ -1,15 +1,14 @@
 "use client";
 import Head from "next/head";
 import dynamic from "next/dynamic";
-import { Suspense } from "react";
 import { btn } from "../consulting-services/data";
 
 // Lazy Load Components for Faster Performance
-const MaintenanceAndSupport = dynamic(() => import("./MaintenanceAndSupport"), { ssr: false });
-const OptimizationAndServices = dynamic(() => import("./OptimizationAndServices"), { ssr: false });
-const OurApproach = dynamic(() => import("./OurApproach"), { ssr: false });
-const MaintenanceForSeamlessUser = dynamic(() => import("./MaintenanceForSeamlessUser"), { ssr: false });
-const SoftwareMaintenance = dynamic(() => import("./SoftwareMaintenance"), { ssr: false });
+const MaintenanceAndSupport = dynamic(() => import("./MaintenanceAndSupport"));
+const OptimizationAndServices = dynamic(() => import("./OptimizationAndServices"));
+const OurApproach = dynamic(() => import("./OurApproach"));
+const MaintenanceForSeamlessUser = dynamic(() => import("./MaintenanceForSeamlessUser"));
+const SoftwareMaintenance = dynamic(() => import("./SoftwareMaintenance"));
 
 export default function Home() {
     return (
@@ -43,13 +42,13 @@ export default function Home() {
                 </section>
 
                 {/* 🚀 Lazy Loaded Components for Faster Performance */}
-                <Suspense fallback={<div className="text-center text-white py-10">Loading Services...</div>}>
-                    <MaintenanceAndSupport />
-                    <OptimizationAndServices />
-                    <OurApproach />
-                    <MaintenanceForSeamlessUser />
-                    <SoftwareMaintenance />
-                </Suspense>
+
+                <MaintenanceAndSupport />
+                <OptimizationAndServices />
+                <OurApproach />
+                <MaintenanceForSeamlessUser />
+                <SoftwareMaintenance />
+
 
                 {/* 🚀 Get in Touch Section */}
                 <section className="px-6 text-center lg:mt-[90%] mb-10">
