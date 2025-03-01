@@ -2,7 +2,7 @@ import Hero from './Hero'
 import PlugIn from './PlugIn'
 import Services from './Services'
 import Features from './Features'
-
+import Choose from './Choose'
 import IndustryWeServe from "@/components/IndustryWeServe";
 
 export default function Jenkins(){
@@ -12,5 +12,6 @@ export default function Jenkins(){
      <Services/>
      <Features/>
      <IndustryWeServe />
+     <Choose/>
     </>)
 }
