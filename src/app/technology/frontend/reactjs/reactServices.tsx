@@ -78,11 +78,6 @@ const ReactServices = () => {
                 Our expert developers stay ahead of trends, using the latest tools and techniques to deliver custom React applications that meet your business goals. We ensure efficient, on-time delivery while crafting seamless, high-performance digital experiences. Partner with us to bring your vision to life with ReactJS.
               </p>
             </motion.div>
-
-            <motion.div
-              whileTap={{ scale: 0.95 }}            >
-              <Button/>
-            </motion.div>
           </div>
         </motion.div>
       </div>

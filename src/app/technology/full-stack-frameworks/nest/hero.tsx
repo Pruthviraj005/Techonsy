@@ -13,7 +13,7 @@ const easeInAnimation = {
 
 const Hero = () => {
   return (
-    <section className="relative py-16 px-6 flex justify-center items-center min-h-screen overflow-hidden bg-gradient-to-br from-[#121921cb] via-[#161f30] to-[#0e151d]">
+    <section className="relative pb-16 lg:py-16 px-6 flex justify-center items-center lg:min-h-screen h-[90vh] pt-28 lg:pt-0 overflow-hidden bg-gradient-to-br from-[#121921cb] via-[#161f30] to-[#0e151d]">
       {/* SVG Background
       <div className="absolute inset-0">
         <svg className="absolute top-0 left-0 w-full h-full opacity-20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -61,7 +61,7 @@ const Hero = () => {
           transition={{ duration: 1, ease: "easeIn" }}
           className="flex justify-center w-full"
         >
-          <motion.div className="p-4 rounded-lg relative max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg">
+          <motion.div className="p-4 rounded-lg relative max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg lg:flex hidden md:flex">
             <Image
               src="/images/technology/backend/nest/nest_logo.svg"
               alt="NestJS"

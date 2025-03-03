@@ -1,34 +1,41 @@
 "use client";
 
+import ButtonComp from "@/components/Common/ButtonComp";
 import { FaChevronDown } from "react-icons/fa";
 
 const Hero = () => {
   return (
     <section 
-      className="relative h-screen flex items-center justify-center bg-cover bg-center text-white "
+      className="relative lg:h-screen md:h-[80vh] h-[80vh] flex items-center justify-center bg-cover bg-center text-white px-4"
       style={{ backgroundImage: "url('/images/technology/Java.png')" }}
     >
       {/* Background Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/90 to-transparent"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/80 to-transparent"></div>
 
       {/* Content Container */}
-      <div className="relative z-10 max-w-6xl text-center px-6 md:px-12 flex flex-col gap-6" >
+      <div className="relative z-10 max-w-5xl text-center flex flex-col gap-6 justify-center items-center px-6">
         {/* Java Themed Gradient Heading */}
-        <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-[#efe1d0fc] via-[#de9c5f] to-[#df6f82] bg-clip-text text-transparent">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold bg-gradient-to-r from-[#efe1d0fc] via-[#de9c5f] to-[#df6f82] bg-clip-text text-transparent leading-tight">
           Java Development Company
         </h1>
 
-        <p className="w-full text-lg md:text-2xl font-medium text-gray-300 py-6">
+        {/* Description */}
+        <p className="text-base sm:text-lg md:text-xl font-medium text-gray-300 px-2 md:px-6">
           Build secure, robust, and scalable web applications to revitalize your business.
         </p>
 
-        <p className="mt-3 text-sm md:text-lg max-w-2xl mx-auto text-gray-400">
+        <p className="text-sm sm:text-base md:text-lg max-w-2xl text-gray-400">
           At Radixweb, we offer cutting-edge Java app development services to meet the mobile and web application needs of varied enterprises.
         </p>
 
-        {/* Scroll Down Indicator with React Icon */}
-        <div className="mt-8 flex justify-center">
-          <FaChevronDown className="text-4xl text-[#f89820] animate-bounce" />
+        {/* Scroll Down Indicator */}
+        <div className="mt-6 flex justify-center">
+          <FaChevronDown className="text-3xl md:text-4xl text-[#f89820] animate-bounce" />
+        </div>
+
+        {/* Button Component */}
+        <div className="mt-4">
+          <ButtonComp />
         </div>
       </div>
     </section>

@@ -1,6 +1,7 @@
 "use client";
 '';
 
+import ButtonComp from '@/components/Common/ButtonComp';
 import background from '../../../../../public/images/technology/Devops_infrastructure/devops/Rect Light (3).svg';
 import logo from '../../../../../public/images/technology/Devops_infrastructure/devops/devops-2.svg';
 import { motion } from 'framer-motion';
@@ -57,7 +58,7 @@ export default function HeroSection() {
                         transition={{ duration: 0.8, delay: 0.5 }} 
                         className='mt-10'
                     >
-                        <motion.button
+                        {/* <motion.button
                             whileHover={{
                                 scale: 1.05, // Slightly enlarges on hover
                                 backgroundColor: "#0f172a", // Darker shade on hover
@@ -67,13 +68,13 @@ export default function HeroSection() {
                             className="relative px-8 py-3 text-lg font-bold border-cyan-500 border-[0.5px] text-gray-200 uppercase rounded-full bg-gradient-to-r from-gray-900 to-black shadow-lg transition-all duration-300 ease-in-out overflow-hidden"
                             >
                                 <span className="relative z-10 text-cyan-400">Get Started</span>
-
-                                {/* Background Effect */}
                                 <span className="absolute inset-0 bg-gray-800 opacity-20 transition duration-300 "></span>
 
-                                {/* Glowing Border Animation */}
                                 <span className="absolute inset-0 rounded-full border-2 border-transparent transition-all duration-500 "></span>
-                        </motion.button>
+                        </motion.button> */}
+                        <div className='flex justify-center '>
+                            <ButtonComp/>
+                        </div>
                     </motion.div>
                 </div>  
             </motion.div>

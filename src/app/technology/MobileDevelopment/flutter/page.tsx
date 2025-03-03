@@ -11,6 +11,6 @@ export default function Flutter(){
      <Services/>
      <Features/>
      <Process/>
-     <Blog/>
+     {/* <Blog/> */}
     </>)
 }

@@ -1,5 +1,4 @@
 "use client";
-''
 
 import { useState } from "react";
 import { FaLightbulb, FaPencilRuler, FaPaintBrush, FaCode, FaBug, FaClipboardCheck } from "react-icons/fa";
@@ -17,15 +16,17 @@ export default function Process() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <div className="relative flex flex-col items-center h-[60vh] justify-center w-full max-w-[1000px] mx-auto p-4 sm:p-6 md:p-10 lg:p-12 bg-gray-900 text-white rounded-2xl shadow-lg">
-      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-10 text-center bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent mt-28">
+    <div className="relative min-h-screen flex flex-col items-center justify-center bg-gray-900 text-white pb-12 px-4 sm:px-6 lg:px-8">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent mb-10">
         Flutter Application Development Process
       </h2>
-      <div className="relative flex flex-wrap justify-center gap-4 sm:gap-6 md:gap-8">
+
+      {/* Steps Grid */}
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 sm:gap-6 md:gap-8">
         {steps.map((step, index) => (
           <div
             key={index}
-            className={`w-32 sm:w-36 md:w-40 h-32 sm:h-36 md:h-40 flex flex-col items-center justify-center text-center p-4 sm:p-6 border-2 ${step.color} rounded-xl bg-gray-800 cursor-pointer shadow-md transition-all hover:shadow-lg`}
+            className={`flex flex-col items-center justify-center text-center w-28 sm:w-32 md:w-36 h-28 sm:h-32 md:h-36 p-3 sm:p-4 border-2 ${step.color} rounded-xl bg-gray-800 cursor-pointer shadow-md transition-all hover:shadow-lg hover:scale-105`}
             onClick={() => setActiveIndex(index)}
           >
             {step.icon}
@@ -33,11 +34,17 @@ export default function Process() {
           </div>
         ))}
       </div>
-      <div className="mt-6 w-[50%] flex flex-col items-center justify-center bg-gray-700 rounded-xl shadow-lg p-4 sm:p-6 md:p-8">
-        <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-center">{steps[activeIndex].title}</h3>
-        <ul className="text-xs sm:text-sm md:text-base mt-3">
+
+      {/* Active Step Details */}
+      <div className="mt-8 w-full max-w-md sm:max-w-lg md:max-w-2xl bg-gray-700 rounded-xl shadow-lg p-5 sm:p-6 md:p-8">
+        <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-center text-white">
+          {steps[activeIndex].title}
+        </h3>
+        <ul className="mt-4 space-y-2">
           {steps[activeIndex].details.map((detail, i) => (
-            <li key={i} className="text-gray-300">- {detail}</li>
+            <li key={i} className="text-gray-300 text-sm sm:text-base md:text-lg">
+              - {detail}
+            </li>
           ))}
         </ul>
       </div>

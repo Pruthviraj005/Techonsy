@@ -20,11 +20,11 @@ export default function Hero() {
       <section className="relative text-white py-10 px-6 md:px-16 flex flex-col md:flex-row items-center max-w-6xl mx-auto">
         {/* Left Section */}
         <div className="text-center md:text-left py-10">
-          <h2 className="text-3xl sm:text-6xl md:text-6xl font-bold mb-6 pt-10">
+          <h2 className="text-4xl sm:text-6xl md:text-6xl font-bold mb-6 pt-10">
             <span className="text-cyan-500">React Native</span> Development
           </h2>
           <div className="flex flex-col items-center md:items-start gap-6">
-            <p className="text-md sm:text-lg text-slate-300 text-center md:text-justify max-w-md">
+            <p className="text-md  sm:text-md text-slate-300 text-center md:text-justify max-w-md">
               Craft exceptional React Native applications that exhibit unparalleled speed, reliability, scalability, and captivating user experiences.
               Rely on our proficient team of app developers, boasting over a decade of expertise, to construct extraordinary apps that flawlessly align with your unique specifications and aspirations.
             </p>

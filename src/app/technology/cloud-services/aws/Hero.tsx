@@ -22,7 +22,7 @@ const Hero = () => {
       />
 
       <div className="container mx-auto max-w-6xl px-6 lg:py-28">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-12">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-12 ">
           {/* Text Content */}
           <motion.div 
             className="flex-1 text-white text-center md:text-left"
@@ -48,7 +48,9 @@ const Hero = () => {
               Future-proof your business with intelligent AWS development services. Build robust, scalable cloud infrastructure and manage seamless implementation for long-term success.
             </motion.p>
 
-            <ButtonComp/>
+            <div className='flex lg:justify-start md:justify-start items-center justify-center'>
+              <ButtonComp/>
+            </div>
           </motion.div>
 
           {/* Logo/Image Section - Hidden on Mobile */}

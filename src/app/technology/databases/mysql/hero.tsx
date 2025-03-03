@@ -11,7 +11,7 @@ const Hero = () => {
       <div className="mt-10 container mx-auto max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         {/* Left Content */}
         <div className="text-white max-w-lg p-4">
-          <h1 className="text-5xl md:text-5xl font-bold mb-4 text-center md:text-left">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-center md:text-left">
             <span className="text-blue-400">Power Your Business with Scalable &</span> Efficient MySQL Solutions
           </h1>
           <p className="text-lg leading-relaxed mb-6 text-center md:text-left text-slate-300">
@@ -34,7 +34,7 @@ const Hero = () => {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          className="flex justify-center"
+          className="ld:flex hidden md:flex justify-center"
         >
           <div className="bg-gray-800 p-4 rounded-lg shadow-xl shadow-gray-700 relative">
             <Image

@@ -80,7 +80,7 @@ export default function Python () {
           <div className="absolute bg-black w-full h-full bg-opacity-50 blur-[200px]"></div>
 
           {/* Content Section */}
-          <div className="max-w-6xl text-white flex flex-col justify-center items-center my-20 gap-4 z-10 text-center">
+          <div className="max-w-6xl text-white flex flex-col justify-center items-center my-20 gap-4 z-10 text-center pt-10 lg:pt-0">
             <div className="flex flex-col md:flex-row justify-center items-center gap-4">
               {/* Hide Image on Mobile */}
               <div className="hidden md:block">
@@ -93,9 +93,7 @@ export default function Python () {
               </div>
 
               {/* Gradient Heading */}
-              <h1 className="text-4xl lg:text-6xl font-bold text-center md:text-left 
-                            bg-gradient-to-r from-[#a3bfff] to-[#dfcd7c]
-                            bg-clip-text text-transparent">
+              <h1 className="text-4xl lg:text-6xl font-bold text-center md:text-left ">
                 Python Development Company
               </h1>
             </div>

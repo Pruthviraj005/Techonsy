@@ -1,17 +1,17 @@
 "use client";
-'';
+
 import { motion } from "framer-motion";
 
 export default function JavaDevelopment() {
   return (
-    <div className="bg-gradient-to-b from-black via-gray-900 to-black text-white py-16 px-6 md:px-20">
+    <div className="bg-gradient-to-b from-black via-gray-900 to-black text-white py-16 px-4 sm:px-6 md:px-20">
       <div className="max-w-6xl mx-auto">
-      {/* Header Section */}
+        {/* Header Section */}
         <motion.h2 
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-3xl md:text-5xl font-bold text-center text-white"
+          className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-white"
         >
           Custom <span className="text-blue-500 drop-shadow-lg">Java Development</span> Services for Your Business
         </motion.h2>
@@ -32,7 +32,7 @@ export default function JavaDevelopment() {
             initial={{ x: -100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.8 }}
-            className="w-full md:w-1/2"
+            className="w-full md:w-1/2 text-center md:text-left"
           >
             <h3 className="text-2xl font-bold text-white drop-shadow-md">Techonsy – Your Java Development Outsourcing Company</h3>
             <p className="mt-4 text-gray-300">
@@ -50,7 +50,7 @@ export default function JavaDevelopment() {
             <img 
               src="/images/technology/develop.png" 
               alt="Java Development"
-              className="rounded-lg shadow-lg w-full md:max-w-md hover:scale-105 transition-transform duration-300"
+              className="rounded-lg shadow-lg w-full max-w-xs sm:max-w-sm md:max-w-md hover:scale-105 transition-transform duration-300"
             />
           </motion.div>
         </div>
@@ -60,23 +60,15 @@ export default function JavaDevelopment() {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="mt-12 bg-gray-800 p-10 rounded-xl text-center shadow-xl"
+          className="mt-12 bg-gray-800 p-6 sm:p-10 rounded-xl text-center shadow-lg flex flex-col items-center justify-center"
         >
-          <h2 className="text-3xl font-bold text-white drop-shadow-md">
+          <h2 className="text-2xl sm:text-3xl font-bold text-white drop-shadow-md">
             Outsource Java Development Services to Techonsy
           </h2>
-          <p className="mt-4 text-gray-300">
+          <p className="mt-4 text-gray-300 max-w-2xl">
             We offer comprehensive outsourcing Java development services for your business needs using the latest Java frameworks.
             Consult Techonsy, the most trusted Java development outsourcing company, now!
           </p>
-          <motion.button
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, delay: 0.5 }}
-            className="mt-6 px-8 py-4 bg-blue-600 text-white font-bold rounded-full shadow-lg hover:bg-blue-700 hover:shadow-blue-500/50 transition-transform duration-300 ease-in-out transform hover:scale-105"
-          >
-            Get a Free Consultation →
-          </motion.button>
         </motion.div>
       </div>
     </div>

@@ -33,10 +33,10 @@ const features = [
 
 export default function Select() {
   return (
-    <section className="relative py-16 px-6 w-full flex justify-center">
+    <section className="relative py-16 px-6 w-full flex justify-center border-t-[0.5px] border-t-purple-900">
       <div className="max-w-[1000px] w-full text-white text-center overflow-hidden">
         {/* Background Gradient */}
-        <div className="absolute inset-0 bg-gradient-to-b from-blue-900 to-purple-900 opacity-30 -z-10"></div>
+        <div className="absolute inset-0 w-full h-full -z-10 opacity-30 bg-gradient-to-b from-[#260153] to-blue-900"></div>
 
         {/* Title */}
         <motion.h2

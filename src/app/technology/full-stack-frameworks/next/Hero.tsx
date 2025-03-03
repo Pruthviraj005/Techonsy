@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import ButtonComp from "@/components/Common/ButtonComp";
 
 export default function Hero() {
   return (
@@ -59,7 +60,7 @@ export default function Hero() {
             Leverage expert Next.js development for powerful server-side applications and seamless front-end integration. Our team specializes in crafting dynamic React.js-based web apps, Restful APIs, and custom solutions that elevate your projects to new heights. Partner with a leading Next.js development provider to achieve optimal performance and scalability.
           </motion.p>
 
-          <motion.button
+          {/* <motion.button
             whileHover={{
                 scale: 1.05, // Slightly enlarges on hover
                 backgroundColor: "#0f172a", // Darker shade on hover
@@ -70,11 +71,13 @@ export default function Hero() {
                   >
                     <span className="relative z-10 text-cyan-400">Get Started</span>
 
-                      {/* Background Effect */}
+                 
                       <span className="absolute inset-0 bg-gray-800 opacity-20 transition duration-300 "></span>
-                      {/* Glowing Border Animation */}
                       <span className="absolute inset-0 rounded-full border-2 border-transparent transition-all duration-500 "></span>
-            </motion.button>
+            </motion.button>*/}
+            <div className=" w-full flex justify-center items-center lg:items-start">
+              <ButtonComp/>
+            </div>
         </motion.div>
 
         {/* Right Side Logo */}

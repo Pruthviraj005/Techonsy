@@ -3,10 +3,11 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import ButtonComp from "@/components/Common/ButtonComp";
 
 const Hero = () => {
   return (
-    <section className="bg-[#1a252f] py-12 px-6 flex justify-center items-center min-h-screen">
+    <section className="bg-[#0d1b28]  px-6 flex justify-center items-center py-20 lg:py-0 lg:min-h-screen border-b-[0.5px] border-b-cyan-700">
       <div className="container mx-auto max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-10 items-center px-4">
         
         {/* Left Content */}
@@ -19,13 +20,7 @@ const Hero = () => {
             Leverage Supabase’s powerful tools for seamless integration and high-performance backend systems.
           </p>
           <div className="flex justify-center md:justify-start">
-            <motion.a
-              href="#"
-              whileHover={{ scale: 1.05 }}
-              className="inline-block bg-blue-600 text-white font-semibold text-lg py-3 px-6 rounded-lg shadow-md hover:bg-blue-700 transition-all duration-300"
-            >
-              Get Started →
-            </motion.a>
+            <ButtonComp/>
           </div>
         </div>
 
@@ -36,13 +31,13 @@ const Hero = () => {
           transition={{ duration: 0.5 }}
           className="flex justify-center w-full"
         >
-          <div className="bg-gray-800 p-6 rounded-lg shadow-xl shadow-gray-700 w-full max-w-[320px] sm:max-w-[350px] md:max-w-[400px]">
+          <div className="bg-gray-800 p-6 rounded-lg shadow-xl shadow-gray-700 w-2/3 lg:flex md:flex hidden">
             <Image
               src="/images/technology/databases/supabase/supabase.svg" // Replace with actual path
               alt="Supabase"
-              width={300}
-              height={300}
-              className="w-full h-auto object-contain"
+              width={250}
+              height={250}
+              className="w-full h-auto object-contain "
             />
           </div>
         </motion.div>
