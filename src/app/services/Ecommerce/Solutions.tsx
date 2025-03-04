@@ -28,7 +28,7 @@ const Solutions = () => {
           transition={{ duration: 0.5 }}
           className="text-3xl sm:text-4xl md:text-5xl font-bold text-white text-center mb-6"
         >
-          Types of <span className="text-purple-500">E-Commerce Solutions</span>
+          Types of <span className="text-blue-400">E-Commerce</span> <span className="text-blue-500">Solutions</span>
         </motion.h2>
 
         {/* App Shelf Grid */}
@@ -41,10 +41,10 @@ const Solutions = () => {
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.5, delay: index * 0.15 }}
               whileHover={{ scale: 1.05, rotate: 2 }}
-              className="bg-gray-800 p-6 rounded-xl flex flex-col items-center text-center shadow-lg border border-gray-700 hover:border-purple-400 hover:shadow-purple-500 transition-all duration-300"
+              className="bg-gray-800 p-6 rounded-xl flex flex-col items-center text-center shadow-lg border border-gray-700 hover:border-blue-400 hover:shadow-blue-500 transition-all duration-300"
             >
               <motion.div 
-                className="text-purple-400 text-4xl"
+                className="text-blue-400 text-4xl"
                 whileHover={{ scale: 1.2, rotate: -5 }}
               >
                 {item.icon}

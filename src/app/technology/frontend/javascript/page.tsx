@@ -1,6 +1,6 @@
 "use client";
 
-import {services , technologies, cards, cards2, expertise} from "./data";
+import {services , technologies, cards, cards2} from "./data";
 import AnimetedLine from "../../../../components/Animation/Services/Javascript/Animatedline"
 import IndustryWeServe from "@/components/IndustryWeServe";
 import Image from "next/image";

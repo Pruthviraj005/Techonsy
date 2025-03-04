@@ -1,9 +1,16 @@
 import Hero from "./Hero";
-import Integration from "./Integration"
-
+// import Integration from "./Integration"
+import Introduction from "./Introduction";
+import Benefits from "./Benifits";
+import Process from "./Process"
+import IndustryWeServe from "@/components/IndustryWeServe";
 export default function Rag(){
     return (<>
      <Hero/>
-     <Integration/>
+     <Introduction/>
+     {/* <Integration/> */}
+     <Benefits/>
+     <Process/>
+     <IndustryWeServe/>
     </>)
 }

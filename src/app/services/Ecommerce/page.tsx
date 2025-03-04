@@ -10,7 +10,8 @@ export default function Ecommerce(){
     <Service/>
     <Benefits/>
     <Solutions/>
-    <IndustryWeServe />
     <Whyus/>
+    <IndustryWeServe />
+    
     </>)
 }

@@ -11,7 +11,8 @@ export default function Jenkins(){
      <PlugIn/>
      <Services/>
      <Features/>
-     <IndustryWeServe />
      <Choose/>
+     <IndustryWeServe />
+     
     </>)
 }
