@@ -1,4 +1,5 @@
-'use client'
+"use client";
+''
 import AWSBenefitsSection from "./awsBenefits";
 import AWSCloudSection from "./AWSCloudSection";
 import ExperienceAcross from "./Experience";

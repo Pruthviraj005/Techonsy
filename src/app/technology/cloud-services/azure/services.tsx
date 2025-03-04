@@ -1,4 +1,5 @@
 "use client";
+"";
 
 import { motion } from "framer-motion";
 import { FaCloud, FaDollarSign, FaUsers, FaSync } from "react-icons/fa";

@@ -1,4 +1,5 @@
-'use client';
+"use client";
+'';
 
 import { motion } from 'framer-motion';
 import { FaCloud, FaDatabase, FaRocket, FaSync, FaShieldAlt, FaTools } from 'react-icons/fa';

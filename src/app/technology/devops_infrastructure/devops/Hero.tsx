@@ -1,4 +1,5 @@
-'use client';
+"use client";
+'';
 
 import background from '../../../../../public/images/technology/Devops_infrastructure/devops/Rect Light (3).svg';
 import logo from '../../../../../public/images/technology/Devops_infrastructure/devops/devops-2.svg';

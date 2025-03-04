@@ -1,4 +1,5 @@
-'use client';
+"use client";
+'';
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Code, CheckCircle, ArrowRight, Users, Lightbulb, Clock, Coffee, Rocket, Target, GitBranch, Database, Server } from 'lucide-react';

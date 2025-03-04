@@ -1,4 +1,5 @@
 "use client";
+"";
 import ButtonComp from '@/components/Common/ButtonComp';
 import img from '../../../../../public/images/technology/databases/firebase/Logomark_Full Color.svg';
 

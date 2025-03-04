@@ -1,3 +1,4 @@
+"use client";
 import Hero from './hero'
 import Services from './service';
 import Expertise from './expertise';

@@ -1,4 +1,5 @@
-'use client'
+"use client";
+''
 
 import { motion } from "framer-motion";
 import { FaChartLine, FaShieldAlt, FaCogs, FaMobileAlt, FaRocket, FaDatabase, FaReact } from "react-icons/fa";

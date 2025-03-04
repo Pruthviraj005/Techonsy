@@ -1,3 +1,4 @@
+"use client";
 import MeanCompetencies from "./CoreComponent";
 import Hero from "./Hero";
 import Industries from "./Industries";

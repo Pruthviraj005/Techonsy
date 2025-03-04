@@ -1,25 +1,35 @@
-'use client'
-import React from 'react'
-import IotBanner from './IotBanner'
-import IotDevelopment from './IotDevelopment'
-import IotServices from './IotServices'
-import IotModels from './IotModels'
-import TechnologyExpertise from './TechnologyExpertise'
-import IotIndustry from './IotIndustry'
-import IotProcess from './IotProcess'
+"use client";
 
-function page() {
+import dynamic from "next/dynamic";
+
+// Lazy Loading Components for Faster Performance
+const IotBanner = dynamic(() => import("./IotBanner"));
+const IotSection = dynamic(() => import("./IotSection"));
+const IotDevelopment = dynamic(() => import("./IotDevelopment"));
+const IotIndustrySection = dynamic(() => import("./IotIndustrySection"));
+const IotBenefits = dynamic(() => import("./IotBenefits"));
+const WhyChooseUs = dynamic(() => import("./WhyChooseUs"));
+const RelatedBlogs = dynamic(() => import("./RelatedBlogs"));
+
+function Page() {
   return (
     <>
+
       <IotBanner />
-      <IotServices />
+      <IotSection />
+
       <IotDevelopment />
-      <IotModels />
-      <TechnologyExpertise />
-      <IotIndustry />
-      <IotProcess />
+
+      <IotIndustrySection />
+
+      <IotBenefits />
+
+      <WhyChooseUs />
+
+      <RelatedBlogs />
+
     </>
-  )
+  );
 }
 
-export default page
+export default Page;

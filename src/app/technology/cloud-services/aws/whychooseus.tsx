@@ -1,4 +1,5 @@
-'use client';
+"use client";
+'';
 import React from 'react';
 import { motion } from 'framer-motion';
 import { MessageCircle, Users, DollarSign, Laptop, Clock, Shield } from 'lucide-react';

@@ -1,3 +1,4 @@
+"use client";
 import Hero from './Hero'
 import PlugIn from './PlugIn'
 import Services from './Services'

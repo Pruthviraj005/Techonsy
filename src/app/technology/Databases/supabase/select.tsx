@@ -1,4 +1,5 @@
 "use client";
+"";
 
 import { motion } from "framer-motion";
 import { FaLightbulb, FaChartLine, FaUsers, FaTasks } from "react-icons/fa";

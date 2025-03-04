@@ -1,3 +1,4 @@
+"use client";
 import { Menu } from "@/types/menu";
 
 const menuData: Menu[] = [
@@ -40,7 +41,7 @@ const menuData: Menu[] = [
       {
         id: 415,
         title: "Quality Assurance",
-        path: "/",
+        path: "/services/qualityAssurance",
         newTab: false
       },
       {

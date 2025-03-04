@@ -1,4 +1,5 @@
-'use client';
+"use client";
+'';
 
 import { motion } from 'framer-motion';
 import { Settings, Zap, Code, LifeBuoy } from 'lucide-react';

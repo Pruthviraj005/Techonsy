@@ -1,25 +1,30 @@
-'use client'
+"use client";
 
-import CCBanner from "./CCBanner";
-import CCBenefits from "./CCBenefits";
-import CCIndustry from "./CCIndustry";
-import CCModels from "./CCModels";
-import CCPlatformExpertise from "./CCPlatformExpertise";
-import CCProcess from "./CCProcess";
-import CCTechStack from "./CCTechStack";
+import dynamic from "next/dynamic";
 
-export default function CloudComputing(){
-  return(
+
+const CCBanner = dynamic(() => import('./CCBanner'));
+const CCBenefits = dynamic(() => import('./CCBenefits'));
+const CCIndustrySection = dynamic(() => import('./CCIndustrySection'));
+const CCModels = dynamic(() => import('./CCModels'));
+const CCPlatformExpertise = dynamic(() => import('./CCPlatformExpertise'));
+const CCProcess = dynamic(() => import('./CCProcess'));
+const CCTechStack = dynamic(() => import('./CCTechStack'));
+const RelatedBlogs = dynamic(() => import('./RelatedBlogs'));
+
+
+
+export default function CloudComputing() {
+  return (
     <>
-    <div>
       <CCBanner />
       <CCModels />
       <CCTechStack />
-      <CCIndustry />
+      <CCIndustrySection />
       <CCProcess />
       <CCPlatformExpertise />
       <CCBenefits />
-    </div>
+      <RelatedBlogs />
     </>
   );
 }

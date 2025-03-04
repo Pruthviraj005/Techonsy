@@ -1,3 +1,4 @@
+"use client";
 // components/AngularTools.js
 
 import React from 'react';

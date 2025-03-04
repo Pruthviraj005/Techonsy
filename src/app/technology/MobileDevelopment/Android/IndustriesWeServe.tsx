@@ -1,4 +1,5 @@
-'use client';
+"use client";
+'';
 
 import IndustryWeServe from '@/components/IndustryWeServe';
 import { FaMobileAlt, FaHeartbeat, FaWallet, FaShoppingCart, FaGraduationCap, FaGamepad, FaCar, FaUtensils, FaPlane, FaFilm } from 'react-icons/fa';

@@ -1,4 +1,5 @@
 "use client";
+"";
 import ButtonComp from "@/components/Common/ButtonComp";
 import img from "../../../../../public/images/technology/reactNative/react-native-logo.png";
 import Image from "next/image";

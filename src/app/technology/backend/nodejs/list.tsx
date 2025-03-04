@@ -1,4 +1,5 @@
-'use client';
+"use client";
+'';
 
 import { motion } from 'framer-motion';
 import { MessageCircle, Rocket, Layout, Video, Server, Database } from 'lucide-react';

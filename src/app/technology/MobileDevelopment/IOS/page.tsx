@@ -1,3 +1,4 @@
+"use client";
 import React from 'react'
 import IosBanner from './IosBanner'
 import IosApplications from './IosApplications'

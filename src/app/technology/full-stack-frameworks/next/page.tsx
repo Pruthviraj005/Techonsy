@@ -1,3 +1,4 @@
+"use client";
 
 import ExpertiseSection from './ExpertiseSection'
 import Hero from './Hero'

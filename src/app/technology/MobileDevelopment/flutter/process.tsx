@@ -1,4 +1,5 @@
-'use client'
+"use client";
+''
 
 import { useState } from "react";
 import { FaLightbulb, FaPencilRuler, FaPaintBrush, FaCode, FaBug, FaClipboardCheck } from "react-icons/fa";

@@ -1,4 +1,5 @@
 "use client";
+"";
 import { useEffect, useState } from "react";
 import { FaReact, FaNodeJs, FaDatabase, FaCreditCard, FaBell, FaCloud, FaTools, FaJs } from "react-icons/fa";
 

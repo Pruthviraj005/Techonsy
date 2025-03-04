@@ -1,3 +1,4 @@
+"use client";
 import Hero from './hero'
 import Services from './services'
 import Features from './features'
