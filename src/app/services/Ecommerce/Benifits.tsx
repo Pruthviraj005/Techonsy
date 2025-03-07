@@ -31,7 +31,7 @@ const BenefitsSection = () => {
         className="text-center"
       >
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white relative inline-block">
-          Why Choose <span className="text-purple-500">Our E-commerce Solutions?</span>
+          Why Choose <span className="text-blue-400">Our</span> <span className="text-blue-500">E-commerce Solutions?</span>
         </h2>
       </motion.div>
 
@@ -45,10 +45,10 @@ const BenefitsSection = () => {
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
             whileHover={{ scale: 1.05, rotate: 2 }}
-            className="bg-gray-900 p-6 rounded-2xl shadow-lg flex items-center gap-4 border border-gray-700 hover:border-purple-200 hover:shadow-lg hover:shadow-purple-400 transition-all duration-300"
+            className="bg-gray-900 p-6 rounded-2xl shadow-lg flex items-center gap-4 border border-gray-700 hover:border-blue-300 hover:shadow-lg hover:shadow-blue-500 transition-all duration-300"
           >
             <motion.div 
-              className="text-purple-400 text-3xl"
+              className="text-blue-400 text-3xl"
               whileHover={{ rotate: -5, scale: 1.2 }}
             >
               {benefit.icon}

@@ -7,7 +7,7 @@ import ButtonComp from "@/components/Common/ButtonComp";
 
 export default function HeroSection() {
   return (
-    <div className="relative flex min-h-screen items-center justify-center bg-gradient-to-r from-purple-950 to-gray-800 px-6 md:px-10 py-12 pt-[80px]">
+    <div className="relative flex min-h-screen items-center justify-center bg-gradient-to-r from-blue-950 to-gray-800 px-6 md:px-10 py-12 pt-[80px]">
       <div className="grid grid-cols-1 md:grid-cols-2 max-w-6xl w-full items-center gap-10">
         
         {/* Left Section (Content) */}
@@ -18,8 +18,12 @@ export default function HeroSection() {
           className="text-white space-y-6 text-center md:text-left flex-1"
         >
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-            E-Commerce Solutions for Growth and Engagement
+            <span className="text-blue-400">E-Commerce</span> Solutions for Growth and Engagement
           </h1>
+
+          {/* Responsive Separator Line */}
+          <div className="w-24 sm:w-32 md:w-40 lg:w-48 xl:w-56 h-1 bg-blue-400 mx-auto md:mx-0 rounded-full"></div>
+
           <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed max-w-[90%] mx-auto md:mx-0">
             We help E-Commerce businesses expand their reach and grow revenue with omnichannel strategies, customer insights, and user-focused solutions. Our services empower B2B and B2C clients to enhance customer satisfaction, increase audience engagement, and boost sales.
           </p>

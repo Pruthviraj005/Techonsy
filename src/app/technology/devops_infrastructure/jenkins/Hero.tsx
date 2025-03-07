@@ -15,7 +15,7 @@ const Hero = () => {
       <div className="w-full max-w-[1000px] flex flex-col md:flex-row items-center mt-16">
         {/* Left Content */}
         <div className="md:w-3/5 space-y-4 text-center md:text-left">
-          <h1 className="text-3xl md:text-5xl font-bold leading-tight">
+          <h1 className="text-3xl leading-text-3xl md:text-5xl font-bold leading-tight bg-gradient-to-r from-blue-600 via-blue-300 text-transparent bg-clip-text border-b border-gray-700 pb-4">
             Jenkins as a Service
           </h1>
           <p className="text-gray-300 text-base md:text-lg">

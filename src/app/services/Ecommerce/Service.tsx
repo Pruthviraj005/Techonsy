@@ -31,16 +31,23 @@ const Service = () => {
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-        className="flex-[1.5] text-center md:text-left space-y-4"
+        className="flex-[1.5] text-center md:text-left space-y-6"
       >
-        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-bold text-white">
-          Create Your Seamless <br /> Online Store with Expert <br /> E-commerce Solutions
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-bold text-white leading-tight">
+          Create Your Seamless <br />
+          <span className="text-blue-400">Online Store</span> with Expert <br />
+          <span className="text-blue-500">E-commerce Solutions</span>
         </h2>
         <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 leading-relaxed">
-          With the rapid rise of mobile devices and internet accessibility, eCommerce has surged, creating new opportunities for online businesses. We design scalable eCommerce solutions using the best software architecture practices to help your business grow effortlessly.
+          With the rapid rise of mobile devices and internet accessibility,
+          eCommerce has surged, creating new opportunities for online businesses. We design 
+           scalable eCommerce solutions using the best software 
+          architecture practices to help your business grow effortlessly.
         </p>
         <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 leading-relaxed">
-          Our custom eCommerce solutions help businesses expand efficiently, offering full-cycle development, including secure online payment processing and seamless integration.
+          Our custom eCommerce solutions help businesses expand efficiently, 
+          offering full-cycle development, including secure online 
+          payment processing and seamless integration.
         </p>
       </motion.div>
     </section>

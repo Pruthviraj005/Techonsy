@@ -31,7 +31,7 @@ const timelineData = [
 
 export default function JenkinsWhyChooseUs() {
   return (
-    <div className="flex flex-col items-center justify-center w-full py-10 px-4 bg-gray-900 text-white">
+    <div className="flex flex-col items-center justify-center w-full py-10 px-4 bg-black text-white">
       <h2 className="text-3xl font-bold text-center mb-12">
         Why Choose Us for Jenkins?
       </h2>
