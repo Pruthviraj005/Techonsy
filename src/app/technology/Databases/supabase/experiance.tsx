@@ -10,8 +10,9 @@ export default function Experiance() {
   return (
     <section className="relative flex justify-center items-center py-16 px-6 min-h-screen">
       {/* Background Effect */}
-      <div className="absolute inset-0 w-full opacity-50 bg-gradient-to-br from-[#182a44] to-[#084e7a] blur-[30px] animate-rotate rounded-full z-0"></div>
-
+      <div className="absolute inset-0 w-full h-full opacity-50 blur-3xl z-0 
+          bg-[radial-gradient(circle_at_center,_#1b3a6b_10%,_#0a2a52_40%,_#020617_90%)]">
+        </div>
       {/* Content */}
       <div className="relative z-10 max-w-[1000px] w-full flex flex-col md:flex-row items-center gap-10 p-10 rounded-lg shadow-lg bg-white/5 backdrop-blur-lg">
         
@@ -33,7 +34,7 @@ export default function Experiance() {
         </div>
 
         {/* Right Animation */}
-        <div className="md:w-1/2 flex justify-center">
+        <div className="md:w-1/2 flex justify-center ">
           <Lottie 
             animationData={animationData} 
             loop 

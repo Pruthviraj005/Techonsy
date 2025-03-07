@@ -12,7 +12,7 @@ const Lottie = dynamic(() => import("react-lottie-player"), { ssr: false });
 
 const Hero = () => {
   return (
-    <section className="relative flex justify-center items-center min-h-screen bg-gray-900 text-white py-16 px-6">
+    <section className="relative flex justify-center items-center lg:min-h-screen   bg-gray-900 text-white py-16 px-6">
       {/* Lottie Animation Background */}
       <Lottie
         animationData={bgData}
@@ -25,13 +25,13 @@ const Hero = () => {
       <div className="absolute inset-0 bg-gray-900/60" />
 
       {/* Content Wrapper */}
-      <div className="relative mt-10 container mx-auto max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      <div className="relative  container mx-auto max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-8 items-center pt-12 lg:pt-0">
         {/* Left Content */}
         <div className="max-w-lg p-4">
-          <h1 className="text-5xl md:text-5xl font-bold mb-4 text-center md:text-left">
+          <h1 className="lg:text-5xl md:text-5xl text-4xl font-bold mb-4 text-center md:text-left">
             Powering Innovation with Scalable <span className="text-[#339933]">Node.js</span> Solutions
           </h1>
-          <p className="text-lg leading-relaxed mb-6 text-center md:text-left">
+          <p className="lg:text-lg  leading-relaxed mb-6 text-center md:text-left">
             We deliver high-performance, scalable Node.js solutions tailored to your business needs. Our experts analyze your processes, identify challenges, and craft seamless, real-time applications that enhance efficiency and drive growth.
           </p>
           <div className="flex justify-center md:justify-start">
@@ -45,7 +45,7 @@ const Hero = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
           whileHover={{ scale: 1.05, rotate: 3 }}
-          className="flex justify-center"
+          className="lg:flex md:flex hidden justify-center "
         >
           <motion.div
             animate={{

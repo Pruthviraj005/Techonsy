@@ -5,6 +5,7 @@ import Expertise from './expertise'
 import Benefits from './Benefits'
 import Services from './services'
 import ExperienceAcross from './ExperienceAcross'
+import IndustryWeServe from '@/components/IndustryWeServe';
 
 export default function Azure(){
     return(<>
@@ -13,6 +14,7 @@ export default function Azure(){
      <Expertise/>
      <Benefits/>
      <Services/>
-     <ExperienceAcross/>
+     {/* <ExperienceAcross/> */}
+     <IndustryWeServe/>
     </>)
 }

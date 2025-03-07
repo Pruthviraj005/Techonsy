@@ -8,7 +8,7 @@ const Hero = () => {
   return (
     <section className="relative flex flex-col md:flex-row items-center max-h-screen justify-between px-6 md:px-16 py-12 md:py-24 bg-gray-900 text-white overflow-hidden border-b-[0.5px] border-b-cyan-900">
       {/* Left Content */}
-      <div className="max-w-6xl flex flex-col md:flex-row items-center justify-between mx-auto mt-9">
+      <div className="max-w-6xl flex flex-col md:flex-row items-center justify-between mx-auto mt-20 lg:mt-9">
         <div className="max-w-6xl text-center md:text-left">
           <motion.h1
             initial={{ opacity: 0, y: -20 }}
@@ -22,7 +22,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-lg text-gray-300 mb-6"
+            className="text-lg text-gray-400 mb-6"
           >
             Build fast, scalable applications with a seamless user interface, combining stunning visuals and powerful functionality for optimal performance.
           </motion.p>

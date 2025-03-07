@@ -1,5 +1,6 @@
 "use client";
 '';
+import ButtonComp from '@/components/Common/ButtonComp';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 
@@ -19,9 +20,9 @@ export default function Hero() {
   ];
 
   return (
-    <div className="w-full">
+    <div className="relative w-full lg:min-h-screen md:max-h-[70vh] h-[80vh] ">
       <motion.div 
-        className="absolute inset-0 z-0"
+        className="absolute inset-0 z-0 h-full"
         animate={{
           background: [
             'linear-gradient(45deg, #001a35, #000b1a)',
@@ -32,7 +33,7 @@ export default function Hero() {
         }}
         transition={{ duration: 20, repeat: Infinity, repeatType: 'mirror' }}
       />
-      <div className="relative min-h-screen mx-auto flex  items-center justify-center overflow-hidden px-4 sm:px-6 lg:px-8 pt-20 md:py-20 max-w-6xl">
+      <div className="relative   mx-auto flex  items-center justify-center overflow-hidden px-4 sm:px-6 lg:px-8 pt-28 lg:pt-40 md:pt-40 max-w-6xl">
         <div className="relative z-10 max-w-7xl mx-auto w-full text-center flex flex-col">
           <motion.h1 
             className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-6 md:mb-8"
@@ -82,10 +83,12 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
+            className='mx-auto'
           >
-            <button className="px-4 py-2 sm:px-4 sm:py-2 md:px-8 md:py-3 text-base sm:text-lg md:text-xl font-semibold bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl hover:rounded-2xl transition-all duration-300 shadow-xl hover:shadow-2xl">
+            <ButtonComp/>
+            {/* <button className="px-4 py-2 sm:px-4 sm:py-2 md:px-8 md:py-3 text-base sm:text-lg md:text-xl font-semibold bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl hover:rounded-2xl transition-all duration-300 shadow-xl hover:shadow-2xl">
               Start Building Now
-            </button>
+            </button> */}
           </motion.div>
         </div>
       </div>

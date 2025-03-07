@@ -21,7 +21,7 @@ const ManagedMySql=()=>{
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
-              className="flex justify-center"
+              className="lg:flex md:flex hidden justify-center"
             >
               <Image
                 src="/images/technology/databases/mysql/image-01.svg"

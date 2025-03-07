@@ -15,7 +15,7 @@ export default function JavaScript() {
   <>
     {/* hero */}
     <section className="bg-gradient-to-br from-[#060912] to-[#012b4b6f] px-6 lg:px-24 flex flex-col z-1 relative">
-      <div className="h-[85vh] md:h-[70vh] flex items-center relative overflow-hidden mt-12">
+      <div className="lg:h-[80vh] h-[70vh] flex items-center relative overflow-hidden mt-8 lg:mt-20 ">
         
         {/* Text Content */}
         <div className="relative z-10 max-w-xl mx-auto md:ml-12 lg:ml-20 text-left text-white">

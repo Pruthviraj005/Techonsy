@@ -11,14 +11,14 @@ const Unlock = () => {
   return (
     <section className="relative min-h-screen flex justify-center items-center py-16 px-6">
       {/* Glowing Gradient Background */}
-      <div className="relative z-10 container max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      <div className="relative  container max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
 
         {/* Left Animated Image */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
-          className="flex justify-center"
+          className=" lg:flex md:flex justify-center hidden"
         >
           <Lottie loop animationData={mysqlAnimation} play style={{ width: 400, height: 400 }} />
         </motion.div>

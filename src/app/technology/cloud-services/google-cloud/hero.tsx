@@ -7,12 +7,12 @@ import ButtonComp from "@/components/Common/ButtonComp";
 
 const HeroSection = () => {
   return (
-    <section className="bg-[#050d1c] py-12 px-6 flex justify-center items-center min-h-screen border-b-[0.5px] border-b-cyan-800">
+    <section className="bg-[#050d1c] py-20 px-6 flex justify-center items-center md:min-h-0 lg:min-h-screen border-b-[0.5px] border-b-cyan-800">
       <div className="container mx-auto max-w-6xl grid grid-cols-1 lg:grid-cols-2 gap-8 items-center my-6">
         
         {/* Left Content */}
         <div className="text-white p-4 text-center lg:text-left">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 leading-tight">
+          <h1 className="text-4xl sm:text-4xl md:text-5xl font-bold mb-4 leading-tight">
             <span className="text-[#4285F4]">G</span>
             <span className="text-[#ff311e]">o</span>
             <span className="text-[#ffaa00]">o</span>
@@ -33,7 +33,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          className="flex justify-center"
+          className="lg:flex md:flex hidden justify-center"
         >
           <div className="bg-gray-800 p-6 rounded-lg shadow-xl shadow-gray-700 relative w-full max-w-[250px] sm:max-w-[300px] md:max-w-[350px]">
             <Image

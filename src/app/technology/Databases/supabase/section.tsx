@@ -39,9 +39,9 @@ const features = [
 
 export default function Section() {
   return (
-    <section className="relative py-16 px-6 max-w-6xl mx-auto text-white text-center min-h-screen overflow-y-auto">
+    <section className="relative py-16 px-6  mx-auto text-white text-center min-h-screen overflow-y-auto">
       {/* Background Animation */}
-      <div className="absolute inset-0 w-full h-full -z-10 opacity-30 bg-gradient-to-b from-blue-900 to-purple-900"></div>
+      <div className="absolute inset-0 w-full h-full -z-10 opacity-30 bg-gradient-to-b from-blue-900 to-[#260153]"></div>
 
       <motion.h2 
         initial={{ opacity: 0, y: -20 }} 
@@ -53,7 +53,7 @@ export default function Section() {
       </motion.h2>
 
       {/* Timeline Section */}
-      <div className="relative flex flex-col items-center h-auto">
+      <div className="relative flex flex-col items-center h-auto max-w-6xl mx-auto">
         <div className="absolute w-1 h-full bg-gradient-to-b from-blue-500 to-purple-500 left-1/2 transform -translate-x-1/2" />
         
         {features.map((feature, index) => (
