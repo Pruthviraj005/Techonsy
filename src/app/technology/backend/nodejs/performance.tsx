@@ -1,17 +1,14 @@
 "use client";
-"";
-
-
 import { motion } from "framer-motion";
 import { FaRocket, FaClock, FaBolt, FaShieldAlt, FaSyncAlt } from "react-icons/fa";
 
 export default function NodeJsShowcase() {
   const features = [
-    { icon: <FaRocket size={50} />, title: "Node Package Manager (NPM)", desc: "Accelerate development with a vast repository of reusable modules.", color: "text-blue-400" },
-    { icon: <FaClock size={50} />, title: "Asynchronous Model", desc: "Achieve high efficiency with non-blocking operations.", color: "text-yellow-400" },
-    { icon: <FaBolt size={50} />, title: "Exceptional Speed", desc: "Powered by Google’s V8 engine, delivering lightning-fast execution.", color: "text-red-400" },
-    { icon: <FaShieldAlt size={50} />, title: "Real-Time Authorization", desc: "Secure and instant authentication mechanisms for real-time apps.", color: "text-green-400" },
-    { icon: <FaSyncAlt size={50} />, title: "Event-Driven Architecture", desc: "Optimized for scalability, processing multiple tasks concurrently.", color: "text-purple-400" }
+    { id: "npm", icon: <FaRocket size={50} />, title: "Node Package Manager (NPM)", desc: "Accelerate development with a vast repository of reusable modules.", color: "text-blue-400" },
+    { id: "async", icon: <FaClock size={50} />, title: "Asynchronous Model", desc: "Achieve high efficiency with non-blocking operations.", color: "text-yellow-400" },
+    { id: "speed", icon: <FaBolt size={50} />, title: "Exceptional Speed", desc: "Powered by Google’s V8 engine, delivering lightning-fast execution.", color: "text-red-400" },
+    { id: "auth", icon: <FaShieldAlt size={50} />, title: "Real-Time Authorization", desc: "Secure and instant authentication mechanisms for real-time apps.", color: "text-green-400" },
+    { id: "event-driven", icon: <FaSyncAlt size={50} />, title: "Event-Driven Architecture", desc: "Optimized for scalability, processing multiple tasks concurrently.", color: "text-purple-400" }
   ];
 
   return (
@@ -23,17 +20,18 @@ export default function NodeJsShowcase() {
         transition={{ duration: 1 }}
       >
         <h1 className="text-4xl bg-clip-text text-transparent font-bold bg-gradient-to-r from-[#00bcd4] to-[#b388eb]">
-          Unleash Unleash the Power of High-Performance Node.js Development
-           
+          Unleash the Power of High-Performance Node.js Development
         </h1>
+        
         <div className="flex flex-wrap justify-center gap-6">
           {features.map((feature, index) => (
             <motion.div 
-              key={index} 
-              className="flex flex-col items-center p-6 bg-gray-800 rounded-xl shadow-lg w-60"
+              key={feature.id} 
+              className="flex flex-col items-center p-6 bg-gray-800 rounded-xl shadow-lg w-60 transition-transform hover:scale-105 hover:shadow-2xl"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
+              aria-label={feature.title}
             >
               <motion.div className={feature.color} whileHover={{ scale: 1.2 }}>
                 {feature.icon}

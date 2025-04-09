@@ -1,14 +1,11 @@
-"use client";
-'';
-
 import Image from "next/image";
 import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
 import bgData from "./bg.json"; // Import the JSON file
-import ButtonComp from "@/components/Common/ButtonComp";
 
-
+// Lazy-load Lottie and Button for better performance
 const Lottie = dynamic(() => import("react-lottie-player"), { ssr: false });
+const ButtonComp = dynamic(() => import("@/components/Common/ButtonComp"), { ssr: false });
 
 const Hero = () => {
   return (
@@ -19,6 +16,7 @@ const Hero = () => {
         play
         loop
         className="absolute inset-0 w-full h-full object-cover"
+        suppressHydrationWarning
       />
 
       {/* Dark Overlay for readability */}
@@ -35,7 +33,7 @@ const Hero = () => {
             We deliver high-performance, scalable Node.js solutions tailored to your business needs. Our experts analyze your processes, identify challenges, and craft seamless, real-time applications that enhance efficiency and drive growth.
           </p>
           <div className="flex justify-center md:justify-start">
-            <ButtonComp/>
+            <ButtonComp />
           </div>
         </div>
 
@@ -64,6 +62,7 @@ const Hero = () => {
               alt="Node.js Logo"
               width={300}
               height={300}
+              priority
               className="object-contain"
             />
           </motion.div>

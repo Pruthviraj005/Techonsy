@@ -1,10 +1,8 @@
-"use client";
-'';
-
 import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
 import svgimg from "./service.json";
 
+// Lazy-load Lottie for better performance
 const Lottie = dynamic(() => import("react-lottie-player"), { ssr: false });
 
 const Service = () => {
@@ -40,7 +38,8 @@ const Service = () => {
           animationData={svgimg}
           play
           loop
-          className="w-[90%] max-w-[400px] h-auto object-contain"
+          className="w-full max-w-[400px] h-auto object-contain"
+          suppressHydrationWarning
         />
       </motion.div>
     </section>

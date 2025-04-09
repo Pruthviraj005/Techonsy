@@ -1,6 +1,5 @@
 "use client";
-'';
-import React from 'react';
+import React, { useMemo } from 'react';
 import { motion } from 'framer-motion';
 
 const benefits = [
@@ -43,17 +42,22 @@ const AWSBenefitsSection = () => {
     }
   };
 
+  // ✅ Store randomized positions using useMemo (Only runs once)
+  const randomPositions = useMemo(() => 
+    Array.from({ length: 20 }).map(() => ({
+      left: `${Math.random() * 100}%`,
+      top: `${Math.random() * 100}%`,
+    })), []
+  );
+
   return (
-    <div className=" min-h-screen py-20 px-4 relative overflow-hidden">
+    <div className="min-h-screen py-20 px-4 relative overflow-hidden">
       {/* Animated background elements */}
-      {[...Array(20)].map((_, i) => (
+      {randomPositions.map((pos, i) => (
         <motion.div
           key={i}
           className="absolute w-1 h-1 bg-blue-400/20 rounded-full"
-          style={{
-            left: `${Math.random() * 100}%`,
-            top: `${Math.random() * 100}%`,
-          }}
+          style={{ left: pos.left, top: pos.top }}
           animate={{
             y: [0, -30, 0],
             opacity: [0.2, 0.5, 0.2],

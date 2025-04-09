@@ -1,5 +1,4 @@
 "use client";
-"";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
@@ -8,6 +7,15 @@ import "swiper/css/autoplay";
 import { Brand } from "@/types/brand";
 import brandsData from "./brandsData";
 import Image from "next/image";
+
+const breakpoints = {
+  320: { slidesPerView: 2, spaceBetween: 15 },
+  480: { slidesPerView: 3, spaceBetween: 20 },
+  640: { slidesPerView: 3, spaceBetween: 25 },
+  768: { slidesPerView: 4, spaceBetween: 30 },
+  1024: { slidesPerView: 5, spaceBetween: 35 },
+  1280: { slidesPerView: 6, spaceBetween: 40 },
+};
 
 const Brands = () => {
   return (
@@ -28,28 +36,19 @@ const Brands = () => {
 
         {/* Swiper Carousel */}
         <div className="relative px-4 sm:px-6">
-          {/* Gradient Overlays for smooth edges */}
+          {/* Gradient overlays */}
           <div className="absolute left-0 top-0 bottom-0 w-12 sm:w-16 md:w-20 bg-gradient-to-r from-gray-50 to-transparent dark:from-gray-900 z-10" />
           <div className="absolute right-0 top-0 bottom-0 w-12 sm:w-16 md:w-20 bg-gradient-to-l from-gray-50 to-transparent dark:from-gray-900 z-10" />
 
+          {/* First row */}
           <Swiper
             modules={[Autoplay]}
             spaceBetween={20}
             slidesPerView={2}
-            loop={true}
-            autoplay={{
-              delay: 0,
-              disableOnInteraction: false,
-            }}
+            loop
+            autoplay={{ delay: 0, disableOnInteraction: false }}
             speed={3000}
-            breakpoints={{
-              320: { slidesPerView: 2, spaceBetween: 15 },
-              480: { slidesPerView: 3, spaceBetween: 20 },
-              640: { slidesPerView: 3, spaceBetween: 25 },
-              768: { slidesPerView: 4, spaceBetween: 30 },
-              1024: { slidesPerView: 5, spaceBetween: 35 },
-              1280: { slidesPerView: 6, spaceBetween: 40 },
-            }}
+            breakpoints={breakpoints}
             className="w-full py-6 sm:py-8"
           >
             {brandsData.map((brand) => (
@@ -59,26 +58,15 @@ const Brands = () => {
             ))}
           </Swiper>
 
-          {/* Second row moving in opposite direction */}
+          {/* Second row (reverse direction) */}
           <Swiper
             modules={[Autoplay]}
             spaceBetween={20}
             slidesPerView={2}
-            loop={true}
-            autoplay={{
-              delay: 0,
-              disableOnInteraction: false,
-              reverseDirection: true,
-            }}
+            loop
+            autoplay={{ delay: 0, disableOnInteraction: false, reverseDirection: true }}
             speed={3000}
-            breakpoints={{
-              320: { slidesPerView: 2, spaceBetween: 15 },
-              480: { slidesPerView: 3, spaceBetween: 20 },
-              640: { slidesPerView: 3, spaceBetween: 25 },
-              768: { slidesPerView: 4, spaceBetween: 30 },
-              1024: { slidesPerView: 5, spaceBetween: 35 },
-              1280: { slidesPerView: 6, spaceBetween: 40 },
-            }}
+            breakpoints={breakpoints}
             className="w-full py-6 sm:py-8"
           >
             {brandsData.map((brand) => (
@@ -101,9 +89,9 @@ const SingleBrand = ({ brand }: { brand: Brand }) => {
   return (
     <div className="group">
       <div className="flex items-center justify-center px-2 sm:px-3 py-2 sm:py-4 rounded-lg transition-all duration-300 hover:bg-white/50 dark:hover:bg-gray-800/50">
-        <a 
-          href={href} 
-          target="_blank" 
+        <a
+          href={href}
+          target="_blank"
           rel="nofollow noreferrer"
           className="block w-full transition-transform duration-300 group-hover:-translate-y-1"
         >
@@ -112,6 +100,8 @@ const SingleBrand = ({ brand }: { brand: Brand }) => {
             alt={name}
             width={150}
             height={50}
+            priority
+            loading="eager"
             className="dark:hidden w-auto h-[25px] sm:h-[35px] md:h-[40px] object-contain mx-auto filter grayscale hover:grayscale-0 transition-all duration-300"
           />
           <Image
@@ -119,6 +109,8 @@ const SingleBrand = ({ brand }: { brand: Brand }) => {
             alt={name}
             width={150}
             height={50}
+            priority
+            loading="eager"
             className="hidden dark:block w-auto h-[25px] sm:h-[35px] md:h-[40px] object-contain mx-auto filter grayscale hover:grayscale-0 transition-all duration-300"
           />
         </a>

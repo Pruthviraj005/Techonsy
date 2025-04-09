@@ -26,6 +26,7 @@
     "eslint": "^8.56.0",
     "eslint-config-next": "^14.1.0",
     "framer-motion": "^12.4.7",
+    "js-cookie": "^3.0.5",
     "lucide-react": "^0.263.1",
     "mini-svg-data-uri": "^1.4.4",
     "next": "^15.2.0",
