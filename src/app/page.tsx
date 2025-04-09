@@ -1,4 +1,3 @@
-
 import AboutSectionOne from "@/components/About/AboutSectionOne";
 import AboutSectionTwo from "@/components/About/AboutSectionTwo";
 import Blog from "@/components/Blog";
@@ -9,16 +8,26 @@ import Features from "@/components/Features";
 import Hero from "@/components/Hero";
 import Technology from "@/components/HomeTechnologies";
 import IndustryWeServe from "@/components/IndustryWeServe";
-// import Pricing from "@/components/Pricing";
 import Testimonials from "@/components/Testimonials";
-import Video from "@/components/Video";
+
+
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Techonsy Pvt. Ltd.",
-  description: "Techonsy Pvt. Ltd.",
-  // other metadata
+  title: "Techonsy Pvt. Ltd. | IT Solutions Company",
+  description: "We provide top-notch software solutions tailored to your business needs.",
+  keywords: ["Techonsy", "IT Company", "Software Development", "Web Development", "Mobile App"],
+  authors: [{ name: "Techonsy Pvt. Ltd." }],
+  openGraph: {
+    title: "Techonsy Pvt. Ltd.",
+    description: "Top-tier IT solutions and services.",
+    type: "website",
+    url: "https://www.techonsy.com",
+  },
 };
+
+
+export const dynamic = "force-static";
 
 export default function Home() {
   return (
@@ -26,8 +35,8 @@ export default function Home() {
       <ScrollUp />
       <Hero />
       <Features />
-      <Technology/>
-      <IndustryWeServe/>
+      <Technology />
+      <IndustryWeServe />
       {/* <Video /> */}
       <Brands />
       {/* <AboutSectionOne /> */}

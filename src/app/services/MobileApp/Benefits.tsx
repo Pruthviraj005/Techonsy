@@ -1,5 +1,4 @@
 "use client";
-'';
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
@@ -12,54 +11,14 @@ const Benefits = () => {
   const [activeIndex, setActiveIndex] = useState(null);
 
   const benefits = [
-    {
-      icon: <Clock />,
-      title: 'Ongoing Support',
-      description: '24/7 technical support and regular maintenance updates',
-      color: 'from-blue-400 to-indigo-600'
-    },
-    {
-      icon: <Banknote />,
-      title: 'Competitive Pricing',
-      description: 'Cost-effective solutions without compromise',
-      color: 'from-indigo-400 to-purple-600'
-    },
-    {
-      icon: <Users />,
-      title: 'Expert Team',
-      description: 'Skilled professionals with deep expertise',
-      color: 'from-purple-400 to-pink-600'
-    },
-    {
-      icon: <LineChart />,
-      title: 'Time Efficiency',
-      description: 'Quick turnaround and timely delivery',
-      color: 'from-pink-400 to-rose-600'
-    },
-    {
-      icon: <Layout />,
-      title: 'User Experience',
-      description: 'Intuitive and engaging interfaces',
-      color: 'from-rose-400 to-orange-600'
-    },
-    {
-      icon: <Award />,
-      title: 'Proven Success',
-      description: 'Track record of successful solutions',
-      color: 'from-orange-400 to-amber-600'
-    },
-    {
-      icon: <Smartphone />,
-      title: 'App Optimization',
-      description: 'Enhanced platform visibility',
-      color: 'from-amber-400 to-yellow-600'
-    },
-    {
-      icon: <Settings />,
-      title: 'Custom Solutions',
-      description: 'Tailored to your business needs',
-      color: 'from-yellow-400 to-blue-600'
-    }
+    { icon: <Clock />, title: 'Ongoing Support', description: '24/7 technical support and regular maintenance updates', color: 'from-blue-400 to-indigo-600' },
+    { icon: <Banknote />, title: 'Competitive Pricing', description: 'Cost-effective solutions without compromise', color: 'from-indigo-400 to-purple-600' },
+    { icon: <Users />, title: 'Expert Team', description: 'Skilled professionals with deep expertise', color: 'from-purple-400 to-pink-600' },
+    { icon: <LineChart />, title: 'Time Efficiency', description: 'Quick turnaround and timely delivery', color: 'from-pink-400 to-rose-600' },
+    { icon: <Layout />, title: 'User Experience', description: 'Intuitive and engaging interfaces', color: 'from-rose-400 to-orange-600' },
+    { icon: <Award />, title: 'Proven Success', description: 'Track record of successful solutions', color: 'from-orange-400 to-amber-600' },
+    { icon: <Smartphone />, title: 'App Optimization', description: 'Enhanced platform visibility', color: 'from-amber-400 to-yellow-600' },
+    { icon: <Settings />, title: 'Custom Solutions', description: 'Tailored to your business needs', color: 'from-yellow-400 to-blue-600' }
   ];
 
   return (
@@ -81,28 +40,6 @@ const Benefits = () => {
         </motion.div>
 
         <div className="relative min-h-[800px]">
-          {/* DNA Helix Structure */}
-          <div className="absolute inset-0 flex items-center justify-center">
-            {[...Array(20)].map((_, i) => (
-              <motion.div
-                key={`strand-${i}`}
-                className="absolute w-full h-2"
-                style={{
-                  top: `${(i * 5)}%`,
-                  transform: `rotate(${i % 2 ? 45 : -45}deg)`,
-                }}
-                animate={{
-                  backgroundColor: `hsla(${(i * 20) % 360}, 70%, 50%, 0.1)`,
-                }}
-                transition={{
-                  duration: 2,
-                  repeat: Infinity,
-                  repeatType: "reverse",
-                }}
-              />
-            ))}
-          </div>
-
           {/* Benefits Flow */}
           <div className="relative">
             {benefits.map((benefit, index) => {
@@ -111,7 +48,7 @@ const Benefits = () => {
 
               return (
                 <motion.div
-                  key={benefit.title}
+                  key={`benefit-${index}`} // ✅ Fixed Hydration Key
                   className={`absolute w-80 ${isLeft ? 'left-0' : 'right-0'}`}
                   style={{ top: yOffset }}
                   initial={{ opacity: 0, x: isLeft ? -100 : 100 }}
@@ -122,9 +59,7 @@ const Benefits = () => {
                 >
                   <motion.div
                     className="relative"
-                    animate={{
-                      scale: activeIndex === index ? 1.05 : 1,
-                    }}
+                    animate={{ scale: activeIndex === index ? 1.05 : 1 }}
                   >
                     {/* Connecting Line */}
                     <motion.div
@@ -138,17 +73,13 @@ const Benefits = () => {
                     <div className="relative p-6">
                       <motion.div
                         className={`absolute inset-0 bg-gradient-to-r ${benefit.color} opacity-5 rounded-xl`}
-                        animate={{
-                          opacity: activeIndex === index ? 0.2 : 0.05,
-                        }}
+                        animate={{ opacity: activeIndex === index ? 0.2 : 0.05 }}
                       />
                       
                       <div className="relative flex items-center gap-4">
                         <motion.div
                           className={`w-12 h-12 rounded-full bg-gradient-to-r ${benefit.color} p-0.5`}
-                          animate={{
-                            rotate: activeIndex === index ? 360 : 0,
-                          }}
+                          animate={{ rotate: activeIndex === index ? 360 : 0 }}
                           transition={{ duration: 2 }}
                         >
                           <div className="w-full h-full rounded-full bg-[#0B1425] flex items-center justify-center text-blue-400">
@@ -172,28 +103,31 @@ const Benefits = () => {
             })}
           </div>
 
-          {/* Floating Particles */}
-          {[...Array(30)].map((_, i) => (
-            <motion.div
-              key={`particle-${i}`}
-              className="absolute w-1 h-1 rounded-full bg-blue-400"
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-              }}
-              animate={{
-                y: [0, Math.random() * 100 - 50],
-                x: [0, Math.random() * 100 - 50],
-                opacity: [0, 0.5, 0],
-              }}
-              transition={{
-                duration: 2 + Math.random() * 2,
-                repeat: Infinity,
-                repeatType: "reverse",
-                delay: Math.random() * 2,
-              }}
-            />
-          ))}
+          {/* Floating Particles (Fixed) */}
+          {[...Array(30)].map((_, i) => {
+            const left = (i * 3) % 100; // ✅ Replaces Math.random() with a predictable pattern
+            const top = (i * 7) % 100;
+            const movement = (i % 5) * 10; // Predictable animation
+
+            return (
+              <motion.div
+                key={`particle-${i}`}
+                className="absolute w-1 h-1 rounded-full bg-blue-400"
+                style={{ left: `${left}%`, top: `${top}%` }}
+                animate={{
+                  y: [0, movement - 5, 0],
+                  x: [0, movement - 5, 0],
+                  opacity: [0, 0.5, 0],
+                }}
+                transition={{
+                  duration: 2 + (i % 3), // Vary durations in a deterministic way
+                  repeat: Infinity,
+                  repeatType: "reverse",
+                  delay: (i % 10) * 0.2, // Predictable delay
+                }}
+              />
+            );
+          })}
         </div>
       </div>
     </div>
