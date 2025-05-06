@@ -194,7 +194,16 @@ const Technology = () => {
               </div>
             </motion.div>
           </div>
+          <div className="flex items-center">
+            <Link
+              href="/technology"
+              className="ml-auto text-white hover:underline"
+            >
+              See more
+            </Link>
+          </div>
         </motion.div>
+        
       </div>
     </section>
   );

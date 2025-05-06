@@ -14,9 +14,14 @@ const Hero = () => {
   useEffect(() => {
     const solutions = [
       "DevOps Development",
-      "Web App Development",
+      // "Web App Development",
       "AI Development",
-      "UI & UX Designing",
+      // "UI & UX Designing",
+      "Retrieval-Augmented Generation",
+      "Agentic AI",
+      "Generative AI (GenAI)",
+      "Augmented Analytics",
+      "Custom LLM Fine-Tuning & Deployment"
     ];
 
     let currentIndex = 0;
