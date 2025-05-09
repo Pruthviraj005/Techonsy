@@ -1,6 +1,7 @@
 "use client";
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
+import Link from "next/link";
 import React, { useState } from "react";
 
 export const HoverEffect = ({
@@ -20,12 +21,13 @@ export const HoverEffect = ({
   return (
     <div className={cn("grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-10 gap-6", className)}>
       {items.map((item, idx) => (
-        <div
-          key={idx} // Removed Link, making it non-clickable
-          className="relative group block p-2 h-full w-full cursor-default"
-          onMouseEnter={() => setHoveredIndex(idx)}
-          onMouseLeave={() => setHoveredIndex(null)}
-        >
+       <Link
+       key={idx}
+       href={item.link}
+       className="relative group block p-2 h-full w-full cursor-pointer"
+       onMouseEnter={() => setHoveredIndex(idx)}
+       onMouseLeave={() => setHoveredIndex(null)}
+     >
           <AnimatePresence>
             {hoveredIndex === idx && (
               <motion.span
@@ -44,7 +46,7 @@ export const HoverEffect = ({
             <CardDescription>{item.description}</CardDescription>
           </Card>
 
-        </div>
+        </Link>
       ))}
     </div>
   );
